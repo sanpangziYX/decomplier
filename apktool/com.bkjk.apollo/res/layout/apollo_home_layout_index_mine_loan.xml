@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/home_loan_title_rl" android:layout_width="fill_parent" android:layout_height="@dimen/x80">
+        <TextView android:textSize="@dimen/x28" android:textColor="@color/apollo_home_c_333333" android:id="@id/home_loan_detail_title_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x92" android:text="我的借款记录" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/x28" android:textColor="@color/apollo_home_c_999999" android:id="@id/home_loan_date_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/x40" android:text="2017/08/06" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <View android:background="@color/apollo_home_c_14999999" android:layout_width="fill_parent" android:layout_height="@dimen/x1" android:layout_marginLeft="@dimen/x92" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <RelativeLayout android:orientation="horizontal" android:id="@id/apollo_home_ll_loan_record" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/apollo_home_ll_loan" android:layout_width="wrap_content" android:layout_height="@dimen/x238">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/x28" android:textColor="@color/apollo_home_c_999999" android:id="@id/apollo_home_tv_loan_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x92" android:text="@string/apollo_home_index_loan_num" />
+                <TextView android:textSize="@dimen/x48" android:textColor="@color/apollo_home_c_333333" android:id="@id/home_loan_money_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x30" android:text="200000.00" android:singleLine="true" />
+                <TextView android:textSize="@dimen/x28" android:textColor="@color/apollo_home_c_333333" android:id="@id/home_loan_money_unit_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="万元" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x16">
+                <TextView android:textSize="@dimen/x28" android:textColor="@color/apollo_home_c_999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x92" android:text="@string/apollo_home_index_repay_way" />
+                <TextView android:textSize="@dimen/x28" android:textColor="@color/apollo_home_c_333333" android:id="@id/home_pay_back_mode_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x30" android:text="等额本息" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x16">
+                <TextView android:textSize="@dimen/x28" android:textColor="@color/apollo_home_c_999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x92" android:text="@string/apollo_home_index_fin" />
+                <TextView android:textSize="@dimen/x28" android:textColor="@color/apollo_home_c_333333" android:id="@id/home_loan_name_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x30" android:text="王晨溪" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:id="@id/apollo_home_v_divider" android:background="@color/apollo_home_c_14999999" android:layout_width="@dimen/x1" android:layout_height="@dimen/x108" android:layout_marginLeft="@dimen/x530" android:layout_centerVertical="true" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/apollo_home_ll_progress" android:layout_width="wrap_content" android:layout_height="@dimen/x238" android:layout_marginLeft="@dimen/x20" android:layout_toRightOf="@id/apollo_home_v_divider">
+            <TextView android:textSize="@dimen/x32" android:textColor="@color/apollo_home_c_59A3FF" android:id="@id/home_loan_progress_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="合同审核中" />
+            <TextView android:textSize="@dimen/x28" android:textColor="@color/apollo_home_c_999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x8" android:text="借款进度" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

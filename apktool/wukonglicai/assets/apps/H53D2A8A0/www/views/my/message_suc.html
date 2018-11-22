@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/message.css"/>
+		<script type="text/javascript" src="../../js/rem.js"></script>
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/fastclick.js"></script>
+		<title>我的消息</title>
+	</head>
+	<body>
+		<header class="clearfix bgcolor_main">
+			<div class="headerback_box">
+				<img src="../../img/header_back.png" />
+			</div>
+			<p>我的消息</p>
+		</header>
+		<section class="section">
+			<div class="message_list">
+				<div class="icon clearfix">
+					<img src="../../img/message_iconsucc.png" alt=""/>
+				</div>
+				
+				<div class="suc_content">
+					<h3 class="bg_box">
+						
+					</h3>
+					<p>
+						
+					</p>
+					<div>
+						
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+<script type="text/javascript">
+	needrefresh=true;
+	function doinit(){
+		var title = getQueryString("title");
+		var createTime = getQueryString("createTime");
+		var content = getQueryString("content")+"<br>如有问题，请随时联系悟空理财客服：400-810-8818";
+		$(".bg_box").html(title);
+		$(".suc_content p").html(content);
+		$(".suc_content div").html(createTime);
+	}
+</script>
+</html>

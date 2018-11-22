@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/desk_c_FFFFFF" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@color/desk_c_FFFFFF" android:paddingLeft="@dimen/x40" android:paddingTop="@dimen/x24" android:paddingRight="@dimen/x40" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/x32" android:textColor="@color/desk_c_333333" android:id="@id/tv_desk_sign_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/x30" android:layout_toLeftOf="@id/iv_desk_sign_ok" />
+        <TextView android:textSize="@dimen/x24" android:textColor="@color/desk_c_999999" android:id="@id/tv_desk_sign_detail" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/x30" android:layout_toLeftOf="@id/iv_desk_sign_ok" android:layout_below="@id/tv_desk_sign_title" />
+        <ImageView android:id="@id/iv_desk_sign_ok" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/desk_icon_xuanze" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <View android:id="@id/view_desk_sign_divider" android:background="@color/desk_c_21979797" android:layout_width="fill_parent" android:layout_height="@dimen/x2" android:layout_marginTop="@dimen/x22" android:layout_below="@id/tv_desk_sign_detail" />
+    </RelativeLayout>
+</RelativeLayout>

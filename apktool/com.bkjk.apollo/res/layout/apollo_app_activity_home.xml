@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_main_bottom" android:background="@color/apollo_app_c_FFFFFF" android:layout_width="fill_parent" android:layout_height="49.0dip" android:layout_alignParentBottom="true">
+        <RelativeLayout android:id="@id/rl_index" android:paddingTop="@dimen/x8" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:onClick="onTabClicked">
+            <ImageView android:id="@id/iv_index_icon" android:duplicateParentState="true" android:layout_width="@dimen/x50" android:layout_height="@dimen/x50" android:src="@drawable/apollo_app_index_image_selected" android:scaleType="centerInside" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/apollo_app_clicked_text_color" android:id="@id/tv_index_text" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="@string/app_mainpage" android:layout_below="@id/iv_index_icon" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_im" android:paddingTop="@dimen/x8" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:onClick="onTabClicked">
+            <ImageView android:id="@id/iv_im" android:duplicateParentState="true" android:layout_width="@dimen/x50" android:layout_height="@dimen/x50" android:src="@drawable/apollo_app_im_image_selected" android:scaleType="centerInside" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/apollo_app_clicked_text_color" android:id="@id/tv_im" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="@string/app_product" android:layout_below="@id/iv_im" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_mine" android:paddingTop="@dimen/x8" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:onClick="onTabClicked">
+            <ImageView android:id="@id/iv_mine_icon" android:duplicateParentState="true" android:layout_width="@dimen/x50" android:layout_height="@dimen/x50" android:src="@drawable/apollo_app_uc_image_selected" android:scaleType="centerInside" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/apollo_app_clicked_text_color" android:id="@id/tv_mine_text" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="@string/app_mine" android:layout_below="@id/iv_mine_icon" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:id="@id/view_temp" android:background="@color/apollo_uc_c_999999" android:layout_width="fill_parent" android:layout_height="0.100000024dip" android:layout_above="@id/ll_main_bottom" android:alpha="0.1" />
+    <RelativeLayout android:id="@id/rl_fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/view_temp" />
+</RelativeLayout>

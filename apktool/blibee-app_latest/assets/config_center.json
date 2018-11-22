@@ -1,0 +1,20 @@
+{
+  "localPackage": {
+    "qpUpdateTimeout": 0
+  },
+  "barcodeScannerView": {
+    "barcodeScannerType": "scandit",
+    "postBarcodeScannerType": "wscan",
+    "scanditDeadLine": "20181211",
+
+    "shouldRecord": true,
+    "shouldUpload": true,
+    "invalidImageFrame": 5,
+    "locationImageIncludeSuccessMs": 3000,
+    "locationImageExcludeSuccessMs": 3000,
+    "maxUploadVideoOneDay": 3,
+    "diffTypeSuccessMaxInterval": 1000,
+
+    "autoFocusInterval": 500
+  }
+}

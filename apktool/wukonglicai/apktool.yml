@@ -1,0 +1,55 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: wukonglicai.apk
+compressionType: false
+doNotCompress:
+- arsc
+- assets/keystore_unicorn
+- assets/keystore_unicorn2
+- dgc
+- jar
+- js
+- css
+- assets/apps/H53D2A8A0/www/css/mui.min.css
+- assets/apps/H53D2A8A0/www/js/dropload.min.js
+- assets/apps/H53D2A8A0/www/js/echarts.simple.min.js
+- assets/apps/H53D2A8A0/www/js/es6-promise.auto.js
+- assets/apps/H53D2A8A0/www/js/fastclick.min.js
+- assets/apps/H53D2A8A0/www/js/jquery-1.12.1.min.js
+- assets/apps/H53D2A8A0/www/js/jsrender.min.js
+- assets/apps/H53D2A8A0/www/js/mui.locker.js
+- assets/apps/H53D2A8A0/www/js/mui.min.js
+- assets/apps/H53D2A8A0/www/js/mui.pullToRefresh.js
+- assets/apps/H53D2A8A0/www/js/mui.pullToRefresh.material.js
+- assets/apps/H53D2A8A0/www/js/vconsole.min.js
+- assets/apps/H53D2A8A0/www/js/zepto.min.js
+- assets/apps/H53D2A8A0/www/plugins/jsencrypt.min.js
+- assets/apps/H53D2A8A0/www/plugins/jsrender.min.js
+- assets/apps/H53D2A8A0/www/plugins/drag/jquery.drag.js
+- assets/apps/H53D2A8A0/www/plugins/dropload/dropload.min.js
+- assets/apps/H53D2A8A0/www/plugins/echart/echarts.min.js
+- assets/apps/H53D2A8A0/www/plugins/mobiscroll/css/mobiscroll.custom-3.0.0-beta6.min.css
+- assets/apps/H53D2A8A0/www/plugins/mobiscroll/js/mobiscroll.custom-3.0.0-beta6.min.js
+- assets/apps/H53D2A8A0/www/plugins/poppicker/mui.min.css
+- assets/apps/H53D2A8A0/www/plugins/poppicker/mui.min.js
+- assets/apps/H53D2A8A0/www/plugins/poppicker/mui.picker.min.css
+- assets/apps/H53D2A8A0/www/plugins/poppicker/mui.picker.min.js
+- assets/apps/H53D2A8A0/www/plugins/swiper/swiper.jquery.min.js
+- assets/apps/H53D2A8A0/www/plugins/swiper/swiper.min.css
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '15'
+  targetSdkVersion: '22'
+sharedLibrary: false
+unknownFiles:
+  io/dcloud/all.js: '8'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.2.4
+versionInfo:
+  versionCode: '317'
+  versionName: 3.1.7

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+	<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/expireHandlePage.css" />
+	<script type="text/javascript" src="../../js/rem.js"></script>
+	<script type="text/javascript" src="../../js/zepto.min.js"></script>
+	<script type="text/javascript" src="../../js/common.js"></script>
+	<script type="text/javascript" src="../../js/fastclick.js"></script>
+	<script type="text/javascript" src="expireHandlePage.js"></script>
+	<script type="text/javascript" src="../../js/jsrender.min.js"></script>
+	<title>到期处理方式</title>
+</head>
+
+<body>
+	<header class="clearfix bgcolor_main">
+		<div class="headerback_box">
+			<img src="../../img/header_back.png" />
+		</div>
+		<p>到期处理方式</p>
+	</header>
+	<div id="renderDiv"></div>
+	<!--弹出框-->
+	<div class="showAlert">
+		<div class="mask"></div>
+
+		<div class="content_wrap content_wrap1">
+			<span class="add"></span>
+		</div>
+
+		<div class="content_wrap content_wrap5">
+			<h3>提示</h3>
+			<div class="txt">
+				当前产品续投至月账户活动已经下线，如果您现在修改续投方式，后续将不可再续投至月账户
+			</div>
+			<div class="btn_box clearfix">
+				<button onclick="closeExpire()">再想想</button>
+				<button onclick="expireHandle()">确定</button>
+			</div>
+		</div>
+		
+		<div class="content_wrap content_wrap7">
+			<h3>修改到期处理方式后，将不再延续原订单收益率，是否确定修改？</h3>
+			<div class="btn_box clearfix">
+				<button onclick="closeExpire()">再想想</button>
+				<button onclick="btoclick()">确定</button>
+			</div>
+		</div>
+		<div class="content_wrap content_wrap8">
+			<h3>续投成功</h3>
+			<div class="txt">
+				<p></p>
+			</div>
+			<button class="showbtn_2" onclick="toGoBack()">好的</button>
+		</div>
+		
+		<div class="content_wrap content_wrap11">
+			<h3>续投活动规则 </h3>
+			<ul>
+				<li id="expireContent1"></li>
+				<li id="expireContent2"></li>
+				<li id="expireContent3"></li>
+			</ul>
+			<div class="btn_box11">
+				<button onclick="closeAlert()">我知道了</button>
+			</div>
+		</div>
+		
+	</div>
+	
+<script type="text/x-jsrender" id="expireTemp">
+	<div class="section2">
+		<div class="detail">
+			<div class="date ">
+				<p class="left">封闭期结束日期:{{:endTime}}</p>
+				<p class="right">剩余<span class="spe">{{:restTime}}</span>天</p>
+			</div>
+			<div class="money">
+				<div class="left">
+					<p class="word">自有本金</p>
+					<p class="num">{{:amount}}</p>
+				</div>
+				<div class="right">
+					<p class="word">累计期望回报(元)</p>
+					<p class="num">{{:totalIncome}}</p>
+				</div>
+			</div>
+		</div>
+		<p class="choose_way border" onclick="xuRule()">
+			【续投奖励】特权加息至少+0.5%<em></em>
+		</p>
+		<p class="choose_way2">
+			选择封闭期结束处理方式：
+		</p>
+		<div class="bx arrow circleSum">
+			<div class="head_content border {{if handleWaySubstr2=='BX' || handleWaySubstr2=='DQ' || handleWaySubstr2=='dq'}}open{{else}}{{/if}}">
+				<h3>本息续投</h3>
+				<p>封闭期结束债权转让，本金与期望回报自动出借</p>
+			</div>
+			<ul class="body_content border" {{if handleWaySubstr2=='BX' || handleWaySubstr2=='DQ' || handleWaySubstr2=='dq'}}style="display:block"{{else}}style="display:none"{{/if}}>
+				{{if mProductFlag== 'F'}}
+					{{if handleWay== 'BXM'}}
+						<li >
+							<p class="rights">{{:productMProfit}}</p>
+							<p class="type">月账户</p>
+							<span id="BXM" class="circle {{if handleWay=='BXM'}}current{{else}}{{/if}}"></span>
+						</li>
+					{{/if}}
+				{{else}}
+					<li >
+						<p class="rights">{{:productMProfit}}</p>
+						<p class="type">月账户</p>
+						<span id="BXM" class="circle {{if handleWay=='BXM'}}current{{else}}{{/if}}"></span>
+					</li>
+				{{/if}}
+				<li >
+					<p class="rights">{{:productQ3}}% {{if handleWay== 'BXQ3' && productExtraQ3 >0}}+{{:productExtraQ3}}%{{/if}}{{if extraInfoQ3}}+<span>{{:extraInfoQ3}}</span>{{/if}}</p>
+					<p class="type">季账户-3个月</p>
+					<span id="BXQ3" class="circle {{if handleWay=='BXQ3'}}current{{else}}{{/if}}"></span>
+				</li>
+				<li >
+					<p class="rights">{{:productQ6}}% {{if handleWay=='BXQ6' && productExtraQ6 >0}}+{{:productExtraQ6}}%{{/if}}{{if extraInfoQ6}}+<span>{{:extraInfoQ6}}</span>{{/if}}</p>
+					<p class="type">季账户-6个月</p>
+					<span id="BXQ6" class="circle {{if handleWay=='BXQ6'}}current{{else}}{{/if}}"></span>
+				</li>
+				<li >
+					<p class="rights">{{:productQ9}}% {{if handleWay=='BXQ9' && productExtraQ9 >0}}+{{:productExtraQ9}}%{{/if}}{{if extraInfoQ9}}+<span>{{:extraInfoQ9}}</span>{{/if}}</p>
+					<p class="type">季账户-9个月</p>
+					<span id="BXQ9" class="circle {{if handleWay=='BXQ9'}}current{{else}}{{/if}}"></span>
+				</li>
+				<li >
+					<p class="rights">{{:productY}}% {{if handleWay=='BXY12' && productExtraY >0}}+{{:productExtraY}}%{{/if}}{{if extraInfoY}}+<span>{{:extraInfoY}}</span>{{/if}}</p>
+					<p class="type">年账户-12个月</p>
+					<span id="BXY12" class="circle {{if handleWay=='BXY12'}}current{{else}}{{/if}}"></span>
+				</li>
+				<li >
+					<p class="rights">{{:productY24}}% {{if handleWay=='BXY24' && productExtraY24 >0}}+{{:productExtraY24}}%{{/if}}{{if extraInfoY24}}+<span>{{:extraInfoY24}}</span>{{/if}}</p>
+					<p class="type">年账户-24个月</p>
+					<span id="BXY24" class="circle {{if handleWay=='BXY24'}}current{{else}}{{/if}}"></span>
+				</li>
+			</ul>
+		</div>
+		{{if amount < continueLimitAmount}}
+		<div class="bj mt24 arrow circleSum">
+			<div class="head_content head_content2  border2">
+				<h3>本金续投</h3>
+				<p>您该笔资金<1000元，暂不支持本金续投</p>
+			</div>
+		</div>
+		{{/if}}
+		{{if amount >= continueLimitAmount}}
+		<div class="bj mt24 arrow circleSum {{if handleWaySubstr2=='BJ'}}open{{else}}{{/if}}">
+			<div class="head_content  border2">
+				<h3>本金续投</h3>
+				<p>封闭期结束债权转让，实际收益自动退回原银行卡，本金自动出借</p>
+			</div>
+			<ul class="body_content border" {{if handleWaySubstr2=='BJ'}} style="display:block" {{else}} style="display:none" {{/if}}>
+				{{if mProductFlag== 'F'}}
+					{{if handleWay== 'BJM'}}
+						<li >
+							<p class="rights">{{:productMProfit}}</p>
+							<p class="type">月账户</p>
+							<span id="BJM" class="circle {{if handleWay=='BJM'}}current{{else}}{{/if}}"></span>
+						</li>
+					{{/if}}
+				{{else}}
+					<li>
+						<p class="rights">{{:productMProfit}}</p>
+						<p class="type">月账户</p>
+						<span id="BJM" class="circle {{if handleWay=='BJM'}}current{{else}}{{/if}}"></span>
+					</li>
+				{{/if}}
+				<li >
+					<p class="rights">{{:productQ3}}% {{if handleWay=='BJQ3' &&  productExtraQ3 >0}}+{{:productExtraQ3}}%{{/if}}{{if extraInfoQ3}}+<span>{{:extraInfoQ3}}</span>{{/if}}</p>
+					<p class="type">季账户-3个月</p>
+					<span id="BJQ3" class="circle {{if handleWay=='BJQ3'}}current{{else}}{{/else}}"></span>
+				</li>
+				<li>
+					<p class="rights">{{:productQ6}}% {{if handleWay=='BJQ6' && productExtraQ6 >0}}+{{:productExtraQ6}}%{{/if}}{{if extraInfoQ6}}+<span>{{:extraInfoQ6}}</span>{{/if}}</p>
+					<p class="type">季账户-6个月</p>
+					<span id="BJQ6" class="circle {{if handleWay=='BJQ6'}}current{{else}}{{/else}}"></span>
+				</li>
+				<li >
+					<p class="rights">{{:productQ9}}% {{if handleWay=='BJQ9' && productExtraQ9 >0}}+{{:productExtraQ9}}%{{/if}}{{if extraInfoQ9}}+<span>{{:extraInfoQ9}}</span>{{/if}}</p>
+					<p class="type">季账户-9个月</p>
+					<span id="BJQ9" class="circle {{if handleWay=='BJQ9'}}current{{else}}{{/else}}"></span>
+				</li>
+				<li>
+					<p class="rights">{{:productY}}% {{if handleWay=='BJY12' && productExtraY >0}}+{{:productExtraY}}%{{/if}}{{if extraInfoY}}+<span>{{:extraInfoY}}</span>{{/if}}</p>
+					<p class="type">年账户-12个月</p>
+					<span id="BJY12" class="circle {{if handleWay=='BJY12'}}current{{else}}{{/else}}"></span>
+				</li>
+				<li>
+					<p class="rights">{{:productY24}}% {{if handleWay=='BJY24' && productExtraY24 >0}}+{{:productExtraY24}}%{{/if}}{{if extraInfoY24}}+<span>{{:extraInfoY24}}</span>{{/if}}</p>
+					<p class="type">年账户-24个月</p>
+					<span id="BJY24" class="circle {{if handleWay=='BJY24'}}current{{else}}{{/else}}"></span>
+				</li>
+			</ul>
+		</div>
+		{{/if}}
+		<div class="dq mt24 circleSum2">
+			<div class="head_content head_content2 border2 ">
+				<h3>到期转让</h3>
+				<p>封闭期结束债权转让，本金及实际收益自动退回到原银行卡</p>
+				<span id="DQSH" class="circle {{if handleWaySubstr2 == 'DQ' || handleWaySubstr2 == 'dq'}}current{{else}}{{/if}}"></span>
+			</div>
+		</div>
+		<div class="buttons">
+			<button class="footer_btn" onclick="btoclickExpire()">确定</button>
+		</div>
+		<div class="words">
+			<p class="word1">*封闭期结束前的5个工作日内（最晚至：{{:before5}}）不可修改转让退出方式，每日最多可以修改2次</p>
+			<p class="word2">期望回报并非平台承诺收益，市场有风险，投资需谨慎</p>
+		</div>
+	</div>
+	
+</script>
+</body>
+
+</html>

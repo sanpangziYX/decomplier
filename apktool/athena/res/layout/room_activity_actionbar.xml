@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="@dimen/x88"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/room_activity_title_back" android:background="@drawable/core_header_back" android:paddingLeft="@dimen/x30" android:paddingRight="@dimen/x30" android:layout_width="@dimen/x45" android:layout_height="@dimen/x45" android:layout_marginLeft="@dimen/x30" android:scaleType="centerInside" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <TextView android:textSize="17.0sp" android:textColor="@android:color/black" android:gravity="center" android:id="@id/room_activity_title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:singleLine="true" android:maxLength="16" android:layout_centerInParent="true" />
+    <ImageButton android:id="@id/room_activity_title_right" android:background="@drawable/room_back_selector" android:visibility="gone" android:layout_width="@dimen/x88" android:layout_height="@dimen/x88" android:layout_alignParentRight="true" />
+</RelativeLayout>

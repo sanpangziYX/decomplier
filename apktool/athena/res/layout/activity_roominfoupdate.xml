@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/matrix_room_list_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/matrix_change_roomName_txt" android:padding="@dimen/x20" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/room_infoupdate_title" />
+    <EditText android:ellipsize="end" android:gravity="right" android:id="@id/room_infoupdate_text" android:background="@android:color/white" android:padding="@dimen/x20" android:paddingTop="@dimen/x30" android:paddingBottom="@dimen/x30" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:maxLength="16" android:layout_below="@id/matrix_change_roomName_txt" />
+</RelativeLayout>

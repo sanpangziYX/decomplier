@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.view.ViewPager android:id="@id/vp_guide" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/x220" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <ImageView android:layout_gravity="center_vertical" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/apollo_app_shixin_point" />
+        <ImageView android:layout_gravity="center_vertical" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x24" android:src="@drawable/apollo_app_kongxin_point" />
+        <ImageView android:layout_gravity="center_vertical" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x24" android:src="@drawable/apollo_app_kongxin_point" />
+    </LinearLayout>
+    <Button android:textSize="@dimen/x30" android:textColor="@color/white" android:id="@id/btn_enter_home" android:background="@drawable/apollo_app_guide_in_selector" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/x160" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

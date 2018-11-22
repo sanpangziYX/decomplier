@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bg_round_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:gravity="center_horizontal" android:id="@id/title" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="图片选择" />
+    <View android:background="#fff3f3f3" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <TextView android:textSize="12.0sp" android:gravity="center" android:id="@id/camera" android:background="@drawable/bg_dialog_left_white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="相机拍照" android:layout_weight="1.0" />
+        <View android:background="#fff3f3f3" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+        <TextView android:textSize="12.0sp" android:gravity="center" android:id="@id/ablum" android:background="@drawable/bg_dialog_right_white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="相册选择" android:layout_weight="1.0" />
+    </LinearLayout>
+    <TextView android:textSize="16.0sp" android:gravity="center_horizontal" android:id="@id/common_cancel" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="取消" />
+</LinearLayout>

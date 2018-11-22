@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+	<title>转让退出银行卡</title>
+	<script type="text/javascript" src="../../js/rem.js"></script>
+	<link rel="stylesheet" href="../../css/base.css" />
+	<link rel="stylesheet" href="../../css/cash.css" />
+	<link rel="stylesheet" href="../../css/orderDetail.css" />
+	<link rel="stylesheet" type="text/css" href="../../plugins/layer/layer.css"/>
+	<script type="text/javascript" src="../../js/zepto.min.js"></script>
+	<script type="text/javascript" src="../../js/common.js"></script>
+	<script type="text/javascript" src="../../js/fastclick.js"></script>
+	<script type="text/javascript" src="redeemInvest.js"></script>
+</head>
+
+<body>
+
+	<header class="clearfix bgcolor_main">
+		<div class="headerback_box" keepalive="true">
+			<img src="../../img/header_back.png" />
+		</div>
+		<p>转让退出银行卡</p>
+		<div class="right_box">
+		</div>
+	</header>
+
+	<section>
+		<div class="m-ord-content">
+			<span class="n-ht"><img src="../../img/od-dtail-ht.png" alt=""></span>
+			<div class="m-ord-dtl out_dtl">
+				<!-- 详情退出状态添加样式 content_gray-->
+				<div class="n-titl">
+					<p class="n-t1">可赎回金额（元）</p>
+				</div>
+				<ul class="n-sum-box">
+					<!--<li>&lt;</li>-->
+					<li id="canRedeemAmount">1,000.25</li>
+					<!--<li>&gt;</li>-->
+				</ul>
+			</div>
+			<!-- 轮齿装饰图片-->
+			<div class="n-ordzs">
+				<img src="../../img/parting_linemain.png" alt="">
+			</div>
+			<!--详情退出状态替换图片为parting_line.png-->
+			<!-- /轮齿装饰图片 -->
+			<div class="m-info-box">
+				<ul class="m-list">
+					<li>
+						<span>预计到账日：</span>
+						<p id="arrivalDate">2016-10-30</p>
+					</li>
+				</ul>
+
+				<ul class="m-list">
+					<li>
+						<span class="long">赎回手续费：</span>
+						<p id="charge">0元</p>
+					</li>
+				</ul>
+				
+			</div>
+			
+			
+			<div class="redeem_card">
+				<div class="list_1 clearfix">
+					<span>银行卡</span>
+					<p class="list_logo"></p>
+				</div>
+				<div class="list_2">
+					<span>￥</span>
+					<input type="text" name="" id="redeemAmount" value="" placeholder="" readonly="readonly" />
+				</div>
+			</div>
+			
+			<button class="step_btn" onclick="redeem()">下一步</button>
+		</div>
+		
+		</section>
+		<!--输入金额弹窗-->
+		<div id="card_pop">
+			<!--<div id="mask3"></div>-->
+			<table id='key_board' border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td class="key_delete" rowspan="2">
+						<img src="../../img/key_delete.png" />
+					</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+					<td class="key_sure" rowspan="2">确定</td>
+				</tr>
+				<tr>
+					<td class="key_dot">.</td>
+					<td>0</td>
+					<td class="gray"></td>
+				</tr>
+
+			</table>
+		</div>
+		
+	
+	
+	<div class="foot-cyp">
+		<p>期望回报并非平台承诺收益，市场有风险，投资需谨慎</p>
+	</div>
+	<!--弹出框-->
+	<div class="showAlert">
+		<div class="mask"></div>
+		<div class="content_wrap content_wrap1">
+			<span class="add"></span>
+		</div>
+		
+		<div class="content_wrap content_wrap3">
+			<div class="la-ball-fall la-2x">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<p>赎回中</p>
+		</div>
+		
+		<div class="content_wrap content_wrap7">
+			<div class="txt2 txt3">
+				<p></p>
+			</div>
+			<div class="btn_box clearfix">
+				<button onclick="closeAlert()">暂不赎回</button>
+				<button onclick="toRedeemState()">确定赎回</button>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<title>债权列表</title>
+		<!--<script type="text/javascript" src="../../js/rem.js"></script>-->
+		<script src="../../js/headerlib.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" href="../../css/claims.css" />
+
+	</head>
+
+	<body>
+		<div>
+			<div id="hidenheader"></div>
+			<header id="header" class="wk-header wk-header-theme-a">
+				<div class="wk-header-left mui-action-back" id="goback"><img style="width:.22rem;" src="../../img/header_back.png" /></div>
+				<h3>债权列表</h3>
+				<!--<div class="wk-header-right"></div>-->
+			</header>
+		</div>
+		<!--<header class="bgcolor_main">
+			<div class="headerback_box  mui-action-back" keepalive="true">
+				<img src="../../img/header_back.png" />
+			</div>
+			<p>债权列表</p>
+		</header>-->
+
+		<section id="wk-contentinfo">
+			<div class="m-calaims-centent">
+				<div id="zpInfo" v-if="list && list.length>0">
+					<div class="m-calaims-list" v-for="(item,index) in list" :key="index">
+						<ul>
+							<li>借款方：{{item.loanName}}</li>
+							<li>身份证：{{item.loanIdCardNo}}</li>
+							<li>借款用途：{{item.loanUse}}</li>
+							<li>借款金额：{{item.loanAmount}}</li>
+
+							<li v-if="item.overdueFlag=='T'">逾期次数：{{item.delaySize}}</li>
+							<li v-if="item.overdueFlag=='T'">逾期金额：{{item.delayAmount}}</li>
+
+							<li>借款期限：{{item.timeLong}}</li>
+							<li v-if="item.repayStatus=='1'">还款状态：未到期</li>
+							<li v-if="item.repayStatus=='2'">还款状态：已到期</li>
+							<li v-if="item.repayStatus=='3'">还款状态：提前还款到期</li>
+							<li v-if="item.policyNo">保单号：{{item.policyNo}}</li>
+						</ul>
+						<a v-if="item.url" href="#" class="n-link-change" @click="downloadorOpen(item.url,'债权协议');"></a>
+					</div>
+				</div>
+				<div v-else class="m-calaims-list">
+					<ul>
+						<li>预约债权中</li>
+					</ul>
+				</div>
+
+				<div class="m-c-btn" v-if="showURL">
+					<a href="#" class="n-link"  @click="downloadorOpen(showURL,tractName);">{{tractName}}</a>
+				</div>
+				<div class="m-c-btn" v-if="showFxqURL">
+					<a href="#" class="n-link"  @click="downloadorOpen(showFxqURL,contractFxqName);">{{contractFxqName}}</a>
+				</div>
+				<div class="m-c-btn" v-if="showDcURL">
+					<a href="#" class="n-link" @click="downloadorOpen(showDcURL,contractDcName);">{{contractDcName}}</a>
+				</div>
+
+			</div>
+
+			<div>
+				<div class="footer-tips" style="position: static;padding:.15rem 0;">预期收益并非平台承诺收益，市场有风险，投资需谨慎</div>
+			</div>
+		</section>
+
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/jsrender.min.js"></script>
+		<script src="../../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../../js/fastclick.js"></script>
+		<script src="../../plugins/vue/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/vuefilter/index.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="claims_list.js"></script>
+
+	</body>
+
+</html>

@@ -1,0 +1,94 @@
+<properties>
+	<features>
+		<!-- 二维码 -->
+		<feature name="Barcode" value="io.dcloud.feature.barcode.BarcodeFeatureImpl"/>
+		<!-- 讯飞语音 -->
+		<!--<feature name="Speech" value="io.dcloud.feature.speech.SpeechFeatureImpl">
+			<module name="iFly" value="io.dcloud.feature.speech.IflySpeechEngine"/>
+		</feature>-->
+		<!-- 百度地图 -->
+		<!--<feature name="Maps" value="io.dcloud.js.map.amap.JsMapPluginImpl"/>-->
+        <!--<feature name="Maps" value="io.dcloud.js.map.JsMapPluginImpl"/>-->
+		<!--<feature name="Geolocation" value="io.dcloud.js.geolocation.GeolocationFeatureImpl"/>-->
+		<!-- Hbuilder基础包 -->
+		<feature name="Contacts" value="io.dcloud.feature.contacts.ContactsFeatureImpl"/>
+		<feature name="Console" value="io.dcloud.feature.pdr.LoggerFeatureImpl"/>
+		<!-- 信息 -->
+		<feature name="Messaging" value="io.dcloud.adapter.messaging.MessagingPluginImpl"/>
+		<!-- 摄像头 -->
+		<feature name="Camera" value="io.dcloud.js.camera.CameraFeatureImpl"/>
+		<!-- 设备信息 -->
+		<feature name="Device" value="io.dcloud.feature.device.DeviceFeatureImpl"/>
+		<!-- 文件系统 -->
+		<feature name="File" value="io.dcloud.js.file.FileFeatureImpl"/>
+		<!-- 传感器 -->
+		<feature name="Proximity" value="io.dcloud.feature.sensor.ProximityFeatureImpl"/>
+		<feature name="Accelerometer" value="io.dcloud.feature.sensor.AccelerometerFeatureImpl"/>
+		<feature name="Orientation" value="io.dcloud.feature.sensor.OrientationFeatureImpl"/>
+		<feature name="NativeObj" value="io.dcloud.feature.nativeObj.FeatureImpl"/>
+		<!-- 存储 -->
+		<feature name="Storage" value="io.dcloud.feature.pdr.NStorageFeatureImpl"/>
+		<feature name="Cache" value="io.dcloud.feature.pdr.CoreCacheFeatureImpl"/>
+		<!-- 某种调用 -->
+		<feature name="Invocation" value="io.dcloud.invocation.Invocation"/>
+		<!-- 底层ui调用 -->
+		<feature name="Navigator" value="io.dcloud.feature.ui.navigator.NavigatorUIFeatureImpl"/>
+		<feature name="NativeUI" value="io.dcloud.feature.ui.nativeui.NativeUIFeatureImpl"/>
+		<feature name="UI" value="io.dcloud.feature.ui.UIFeatureImpl">
+			<module name="Navigator" value="io.dcloud.feature.ui.NavView"/>
+		</feature>
+		<!-- 不知道是啥，但是不能删 -->
+		<feature name="Gallery" value="io.dcloud.js.gallery.GalleryFeatureImpl"/>
+		<!-- 下载 -->
+		<feature name="Downloader" value="io.dcloud.net.DownloaderFeatureImpl"/>
+		<!-- 上传 -->
+		<feature name="Uploader" value="io.dcloud.net.UploadFeature"/>
+		<!-- 个推 -->
+		<feature name="Push" value="io.dcloud.feature.aps.APSFeatureImpl">
+			<module name="igexin" value="io.dcloud.feature.apsGt.GTPushService"/>
+			<!-- mkeypush -->
+		</feature>
+		<!-- 压缩与解压 -->
+		<feature name="Zip" value="io.dcloud.feature.pdr.ZipFeature"/>
+		<!-- 音 -->
+		<feature name="Audio" value="io.dcloud.feature.audio.AudioFeatureImpl"/>
+		<!-- 运行时数据 -->
+		<feature name="Runtime" value="io.dcloud.feature.pdr.RuntimeFeatureImpl"/>
+		<!-- xml -->
+		<feature name="XMLHttpRequest" value="io.dcloud.net.XMLHttpRequestFeature"/>
+		<!-- 友盟统计 -->
+		<feature name="Statistic" value="io.dcloud.feature.statistics.StatisticsFeatureImpl"/>
+		<!-- 支付系统 -->
+		<!--<feature name="Payment" value="io.dcloud.feature.payment.PaymentFeatureImpl">
+			<module name="AliPay" value="io.dcloud.feature.payment.alipay.AliPay"/>
+			<module name="Payment-Weixin" value="io.dcloud.feature.payment.weixin.WeiXinPay"/>
+			<module name="Payment-Qihoo" value="io.dcloud.feature.payment.qihoopay.QihooPay"/>
+		</feature>-->
+		<feature name="Share" value="io.dcloud.share.ShareFeatureImpl">
+			<!--<module name="Sina" value="io.dcloud.share.sina.SinaWeiboApiManager"/>
+			<module name="Tencent" value="io.dcloud.share.tencent.TencentWeiboApiManager"/>-->
+			<module name="Weixin" value="io.dcloud.share.mm.WeiXinApiManager"/>
+		</feature>
+		<feature name="OAuth" value="io.dcloud.feature.oauth.OAuthFeatureImpl">
+			<module name="OAuth-Weixin" value="io.dcloud.feature.oauth.weixin.WeiXinOAuthService"/>
+			<!--<module name="OAuth-QQ" value="io.dcloud.feature.oauth.qq.QQOAuthService"/>
+			<module name="OAuth-Sina" value="io.dcloud.feature.oauth.sina.SinaOAuthService"/>
+			<module name="OAuth-Qihoo" value="io.dcloud.oauth.qihoo.QihooOAuthService"/>
+			<module name="OAuth-MiUi" value="io.dcloud.feature.oauth.miui.MiUiOAuthService"/>-->
+		</feature>
+		<feature name="Stream" value="io.dcloud.appstream.js.StreamAppFeatureImpl"/>
+		<!-- 客服的插件 -->
+		<feature name="KefuP" value="io.dcloud.feature.kefu.Kefu"/>
+	</features>
+
+	<services>
+		<!-- 个推 -->
+		<service name="push" value="io.dcloud.feature.aps.APSFeatureImpl"/>
+		<!-- 友盟 -->
+		<service name="Statistic" value="io.dcloud.feature.statistics.StatisticsBootImpl"/>
+		<!-- 下载 -->
+		<service name="Downloader" value="io.dcloud.net.DownloaderBootImpl"/>
+		<!-- 百度地图 -->
+        <!--<service name="Maps" value="io.dcloud.js.map.MapInitImpl"/>-->
+	</services>
+</properties>

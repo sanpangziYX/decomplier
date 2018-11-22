@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="50" android:drawable="@drawable/apollo_app_loading_image0001" />
+    <item android:duration="50" android:drawable="@drawable/apollo_app_loading_image0002" />
+    <item android:duration="50" android:drawable="@drawable/apollo_app_loading_image0003" />
+    <item android:duration="50" android:drawable="@drawable/apollo_app_loading_image0004" />
+    <item android:duration="50" android:drawable="@drawable/apollo_app_loading_image0005" />
+    <item android:duration="50" android:drawable="@drawable/apollo_app_loading_image0006" />
+    <item android:duration="50" android:drawable="@drawable/apollo_app_loading_image0007" />
+    <item android:duration="50" android:drawable="@drawable/apollo_app_loading_image0008" />
+    <item android:duration="50" android:drawable="@drawable/apollo_app_loading_image0009" />
+    <item android:duration="50" android:drawable="@drawable/apollo_app_loading_image0010" />
+    <item android:duration="50" android:drawable="@drawable/apollo_app_loading_image0011" />
+    <item android:duration="50" android:drawable="@drawable/apollo_app_loading_image0012" />
+    <item android:duration="50" android:drawable="@drawable/apollo_app_loading_image0013" />
+    <item android:duration="50" android:drawable="@drawable/apollo_app_loading_image0014" />
+    <item android:duration="50" android:drawable="@drawable/apollo_app_loading_image0015" />
+    <item android:duration="50" android:drawable="@drawable/apollo_app_loading_image0016" />
+    <item android:duration="50" android:drawable="@drawable/apollo_app_loading_image0017" />
+    <item android:duration="50" android:drawable="@drawable/apollo_app_loading_image0018" />
+    <item android:duration="50" android:drawable="@drawable/apollo_app_loading_image0019" />
+    <item android:duration="50" android:drawable="@drawable/apollo_app_loading_image0020" />
+    <item android:duration="50" android:drawable="@drawable/apollo_app_loading_image0021" />
+    <item android:duration="50" android:drawable="@drawable/apollo_app_loading_image0022" />
+    <item android:duration="50" android:drawable="@drawable/apollo_app_loading_image0023" />
+    <item android:duration="50" android:drawable="@drawable/apollo_app_loading_image0024" />
+    <item android:duration="50" android:drawable="@drawable/apollo_app_loading_image0025" />
+    <item android:duration="50" android:drawable="@drawable/apollo_app_loading_image0026" />
+    <item android:duration="50" android:drawable="@drawable/apollo_app_loading_image0027" />
+    <item android:duration="50" android:drawable="@drawable/apollo_app_loading_image0028" />
+    <item android:duration="50" android:drawable="@drawable/apollo_app_loading_image0029" />
+    <item android:duration="50" android:drawable="@drawable/apollo_app_loading_image0030" />
+</animation-list>

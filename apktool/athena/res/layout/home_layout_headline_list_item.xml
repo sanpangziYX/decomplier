@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/home_c_FFFFFF" android:paddingLeft="@dimen/x40" android:paddingTop="@dimen/x36" android:paddingRight="@dimen/x40" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.bkjk.athena_home.widgets.MyAlignTextView android:textSize="@dimen/x32" android:textColor="@color/home_c_333333" android:ellipsize="end" android:gravity="start|center" android:id="@id/tv_home_headline_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="3" />
+    <TextView android:textSize="@dimen/x28" android:textColor="@color/home_c_999999" android:id="@id/tv_home_headline_content" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x14" />
+    <TextView android:textSize="@dimen/x24" android:textColor="@color/home_c_999999" android:id="@id/tv_home_headline_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x14" />
+    <View android:background="@color/home_c_21979797" android:layout_width="fill_parent" android:layout_height="@dimen/x2" android:layout_marginTop="@dimen/x32" />
+</LinearLayout>

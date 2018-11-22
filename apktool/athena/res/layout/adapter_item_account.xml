@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@color/room_background" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/layout_avatar" android:padding="4.0dip" android:layout_width="@dimen/member_list_avatar_size" android:layout_height="@dimen/member_list_avatar_size">
+        <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/round_avatar" />
+    </FrameLayout>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="#ff000000" android:layout_gravity="center_vertical" android:id="@id/accountAdapter_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="An account name" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="#ff000000" android:layout_gravity="center_vertical" android:id="@id/accountAdapte_userId" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="a matrix Id" />
+    </LinearLayout>
+</LinearLayout>

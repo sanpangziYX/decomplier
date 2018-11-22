@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/ll_app_pwd" android:layout_width="fill_parent" android:layout_height="95.0dip" android:layout_marginTop="62.0dip">
+        <RelativeLayout android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <ImageView android:id="@id/tv_app_username" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="26.0dip" android:src="@drawable/apollo_app_login_username" android:layout_centerVertical="true" />
+            <EditText android:textSize="@dimen/app_ts_normal" android:textColor="@color/c_333333" android:textColorHint="@color/apollo_app_c_999999" android:id="@id/apollo_app_et_username" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="104.0dip" android:text="" android:hint="@string/apollo_app_hint_user_num" android:singleLine="true" android:inputType="number" />
+        </RelativeLayout>
+        <View android:background="@color/apollo_app_c_59A3FF" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="83.0dip" android:layout_marginTop="17.0dip" android:layout_marginRight="62.0dip" />
+        <RelativeLayout android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="18.0dip" android:layout_weight="1.0">
+            <ImageView android:id="@id/tv_app_pwd" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="26.0dip" android:src="@drawable/apollo_app_login_password" android:layout_centerVertical="true" />
+            <EditText android:textSize="@dimen/app_ts_normal" android:textColor="@color/c_333333" android:textColorHint="@color/apollo_app_c_999999" android:id="@id/apollo_app_et_pwd" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="104.0dip" android:text="" android:hint="@string/app_hint_pwd" android:singleLine="true" android:inputType="textPassword" />
+        </RelativeLayout>
+        <View android:background="@color/apollo_app_c_59A3FF" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="83.0dip" android:layout_marginTop="17.0dip" android:layout_marginRight="62.0dip" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/ysf_text_size_14" android:textColor="@color/ysf_grey_666666" android:id="@id/ysf_message_form_item_label" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="请输入您的发货地址" android:layout_weight="1.0" />
+    <TextView android:textSize="@dimen/ysf_text_size_14" android:textColor="@color/ysf_blue_5092e1" android:gravity="center" android:id="@id/ysf_message_form_item_required" android:layout_width="20.0dip" android:layout_height="wrap_content" android:text="*" />
+</LinearLayout>

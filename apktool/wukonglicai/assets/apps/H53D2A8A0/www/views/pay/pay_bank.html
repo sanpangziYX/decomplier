@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>付款</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../plugins/layer/layer.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/pay_bank.css" />
+		<script type="text/javascript" src="../../js/rem.js"></script>
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../plugins/layer/layer.js" defer="defer"></script>
+		<script type="text/javascript" src="../../js/fastclick.min.js"></script>
+		<script type="text/javascript" src="../../js/validatorUtil.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" defer="defer"></script>
+		<script type="text/javascript" src="../../js/http/fund.js"></script>
+		<script type="text/javascript" src="pay_bank.js" defer="defer"></script>
+		<!--<script type="text/javascript" src="../../js/vconsole.min.js" ></script>-->
+	</head>
+	</head>
+
+	<body>
+		<header class="clearfix bgcolor_main">
+			<div class="headerback_box dlyshow" >
+				<img src="../../img/header_back.png" />
+			</div>
+			<p>付款</p>
+		</header>
+		<input type="hidden" id="llbankCardNo" />
+		<input type="hidden" id="llbankName" />
+		<input type="hidden" id="yjbankCardNo" />
+		<input type="hidden" id="yjbankName" />
+		<input type="hidden" id="fybankCardNo" />
+		<input type="hidden" id="fybankName" />
+		<section class=" dlyshow" >
+			<div id="hint2">请在十分钟内完成支付，以免被其他施主抢占额度</div>
+			<div class="wait_pay dlyshow" style="padding-bottom: .3rem;">
+				<p class="money"></p>
+				<p class="intro">待支付金额(元)</p>
+				<p class="hx_bank">出借资金将通过华夏银行完成出借</p>
+			</div>
+			<div class="pay_way dlyshow clearfix">
+				<div class="one same fl current" style="display: block;" >
+					<p class="pay_word">一键支付</p>
+					<span class="other">全新支付体验</span>
+				</div>
+				<div class="line same fr" style="display: block;" >
+					<p class="pay_word">连连快捷支付</p>
+					<span class="other">安全又省心</span>
+				</div>
+				<div class="fuyou2 current same fl" style="display: none;" >
+					<p class="pay_word">富友支付</p>
+					<span class="other">选择富友安全支付</span>
+				</div>
+			</div>
+			<!--选银行-->
+			<ul class="choose_bank" id = "yjchoose" style="display: none;">
+				<li class="clearfix">
+					<span class="fl">银行</span>
+					<span class="arrow fr">请选择</span>
+				</li>
+				<li class="clearfix">
+					<span class="fl">卡号</span>
+					<span class="cards fr" maxlength="22">请输入借记卡号</span>
+					<span class="delete fr"></span>
+				</li>
+			</ul>
+			<ul class="choose_bank" id = "llchoose" style="display: none;">
+				<li class="clearfix">
+					<span class="fl">银行</span>
+					<span class="arrow fr">请选择</span>
+				</li>
+				<li class="clearfix">
+					<span class="fl">卡号</span>
+					<span class="cards fr" maxlength="22">请输入借记卡号</span>
+					<span class="delete fr"></span>
+				</li>
+			</ul>
+			
+			<!--显示已有银行-->
+			<dl class="show_bank" id="yijianbank" style="display: none;">
+				<dt></dt>
+				<dd>	
+					<h3></h3>
+					<span class="other"></span>
+				</dd>
+			</dl>
+			
+			<!--显示已有银行-->
+			<dl class="show_bank" id="fyBankCard" style="display: none;">
+				<dt></dt>
+				<dd>	
+					<h3></h3>
+					<span class="other"></span>
+				</dd>
+			</dl>
+			<!--显示已有银行-->
+			<div class="bank_list_wrap" id="lianlianbank" style="display: block;">
+					<ul class=" bank_list2">
+						
+						
+					</ul>
+			</div>
+			
+			<!--显示玖富宝支付方式-->
+			<div class="wkb_pay"  id="wkbbank" style="display: none;">
+				<!--<h2>使用余额支付：</h2>
+				<dl class="show_bank" >
+					<dt><img src="../../img/icon-wkb.png"/></dt>
+					<dd>	
+						<h3>玖富宝</h3>
+						<span class="other">可用余额 18000.00元</span>
+					</dd>
+				</dl>
+			</div>-->
+		</section>
+		<div class="pay-foot-msg">
+			<em><img src="../../img/icon-pay-bh.png" alt=""></em>太平洋保险承保账户资金安全
+		</div>
+		<div class="word_footer2 " >
+			
+		</div>
+		<!--<div class="button_footer " onclick="toBuy();">
+			确认支付
+		</div>-->
+		<div class="bottom_btn " onclick="toBuy();">
+			<button class="btn_bg">确认支付</button>
+		</div>
+	
+		<!--确认支付弹窗-->
+		<div class="showAlert" >
+			<div class="mask"></div>
+			<div class="content_wrap">
+				<span class="img"></span>
+				<h3>安全支付</h3>
+				<span class="add">将跳转至第三方支付平台付款</span>
+			</div>		
+		</div>
+		<!--银行弹窗-->
+		<div id="bank_pop">
+			<div id="mask2"></div>
+			<div class="bank_content">
+				<ul class="bank_list clearfix" id="bank_List">
+				</ul>
+			</div>
+		</div>
+		<!--卡号弹窗-->
+		<div id="card_pop">
+			<!--<div id="mask3"></div>-->
+			<table id='key_board' border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+						<td class="key_delete" rowspan="2">
+							<img src="../../img/key_delete.png" />
+						</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>5</td>
+						<td>6</td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td>8</td>
+						<td>9</td>
+						<td class="key_sure" rowspan="2">确定</td>
+					</tr>
+					<tr>
+						<td class="gray"></td>
+						<td>0</td>
+						<td class="gray"></td>
+					</tr>
+				
+			</table>
+			
+		</div>
+		
+	</body>
+		
+		
+</html>

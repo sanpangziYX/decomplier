@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/app_message_list" android:background="@color/app_base_gray" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="150.0px" android:divider="@null" android:dividerHeight="10.0px" />
+    <RelativeLayout android:id="@id/app_bar" android:background="@color/app_keyboardbackground" android:layout_width="fill_parent" android:layout_height="150.0px" android:layout_alignParentBottom="true">
+        <View android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <Button android:id="@id/app_send" android:layout_width="220.0px" android:layout_height="120.0px" android:layout_marginRight="20.0px" android:text="发送" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <EditText android:id="@id/message_content" android:layout_width="fill_parent" android:layout_height="120.0px" android:layout_marginLeft="20.0px" android:layout_marginRight="20.0px" android:layout_toLeftOf="@id/app_send" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

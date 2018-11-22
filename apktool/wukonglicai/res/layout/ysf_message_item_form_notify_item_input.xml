@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/ysf_message_item_form_notify_item_title" />
+    <EditText android:textSize="@dimen/ysf_text_size_16" android:textColor="@color/ysf_black_2b2b2b" android:id="@id/ysf_message_form_item_input_edit" android:background="@drawable/ysf_input_bg" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:maxLines="2" android:maxLength="100" />
+    <TextView android:textSize="@dimen/ysf_text_size_14" android:textColor="@color/ysf_red_e64340" android:id="@id/ysf_message_form_item_error" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="此信息不得为空" />
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">贝壳管家</string>
+    <string name="openpgp_key_selected">已经选中密钥</string>
+    <string name="openpgp_no_key_selected">尚未选择密钥</string>
+    <string name="call_error_user_not_responding">对方未接听</string>
+    <string name="message_failed_to_upload">发送失败</string>
+    <string name="notice_display_name_changed_from">%1$s(%2$s) 修改昵称为：%3$s</string>
+    <string name="notice_display_name_set">%1$s 修改昵称为：%2$s</string>
+    <string name="notice_incoming_call">已取消</string>
+    <string name="notice_outgoing_call">已取消</string>
+    <string name="notice_room_invite">%1$s 邀请 %2$s 加入聊天</string>
+    <string name="notice_room_join">%1$s 加入聊天</string>
+    <string name="notice_room_kick">%1$s 踢出 %2$s</string>
+    <string name="notice_room_leave">%1$s 退出聊天</string>
+    <string name="notice_room_name_changed">%1$s 修改群聊名称为: %2$s</string>
+    <string name="activity_room_voice">按住 说话</string>
+    <string name="activity_room_voice_end">松开 结束</string>
+    <string name="zeffect_recordbutton_finger_up_to_cancal_send">手指上滑，取消发送</string>
+    <string name="zeffect_recordbutton_releasing_finger_to_cancal_send">松开手指，取消发送</string>
+    <string name="zeffect_recordbutton_time_too_short">说话时间太短</string>
+</resources>

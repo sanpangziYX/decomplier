@@ -1,0 +1,39 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: athena.apk
+compressionType: false
+doNotCompress:
+- arsc
+- assets/exurl
+- apkhash
+- cer
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '19'
+  targetSdkVersion: '25'
+sharedLibrary: false
+unknownFiles:
+  com/j256/ormlite/android/LICENSE.txt: '8'
+  com/j256/ormlite/android/README.txt: '8'
+  com/j256/ormlite/core/LICENSE.txt: '8'
+  com/j256/ormlite/core/README.txt: '8'
+  com/sina/weibo/sdk/net/cacert_cn.cer: '8'
+  com/sina/weibo/sdk/net/cacert_com.cer: '8'
+  org/bouncycastle/x509/CertPathReviewerMessages.properties: '8'
+  org/bouncycastle/x509/CertPathReviewerMessages_de.properties: '8'
+  org/jsoup/nodes/entities-base.properties: '8'
+  org/jsoup/nodes/entities-full.properties: '8'
+  org/jsoup/nodes/entities-xhtml.properties: '8'
+  pinyindb/pinyin_gwoyeu_mapping.xml: '8'
+  pinyindb/pinyin_mapping.xml: '8'
+  pinyindb/unicode_to_hanyu_pinyin.txt: '8'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.2.4
+versionInfo:
+  versionCode: '21'
+  versionName: 2.2.0

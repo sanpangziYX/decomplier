@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/desk_c_FFFFFF" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:background="@color/desk_c_20979797" android:layout_width="fill_parent" android:layout_height="@dimen/desk_size_0.5" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/desk_c_333333" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/desk_size_20" android:layout_marginTop="@dimen/desk_size_23" android:text="@string/desk_use_help_place_question" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/desk_c_666666" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/desk_size_41" android:layout_marginTop="@dimen/desk_size_11" android:layout_marginRight="@dimen/desk_size_20" android:text="@string/desk_use_help_place_answer" />
+        <View android:background="@color/desk_c_20979797" android:layout_width="fill_parent" android:layout_height="@dimen/desk_size_0.5" android:layout_marginLeft="@dimen/desk_size_11" android:layout_marginTop="@dimen/desk_size_20" android:layout_marginRight="@dimen/desk_size_20" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/desk_c_333333" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/desk_size_20" android:layout_marginTop="@dimen/desk_size_22" android:text="@string/desk_use_help_no_place_question" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/desk_c_666666" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/desk_size_41" android:layout_marginTop="@dimen/desk_size_10" android:layout_marginRight="@dimen/desk_size_20" android:text="@string/desk_use_help_no_place_answer" />
+        <View android:background="@color/desk_c_20979797" android:layout_width="fill_parent" android:layout_height="@dimen/desk_size_0.5" android:layout_marginLeft="@dimen/desk_size_21" android:layout_marginTop="@dimen/desk_size_20" android:layout_marginRight="@dimen/desk_size_20" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/desk_c_666666" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/desk_size_41" android:layout_marginTop="@dimen/desk_size_12" android:layout_marginRight="@dimen/desk_size_20" android:text="@string/desk_use_feedback" />
+    </LinearLayout>
+</RelativeLayout>

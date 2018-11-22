@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+
+		<script type="text/javascript" src="../js/rem.js"></script>
+		<style>
+			.headerback_box2 {
+				position: absolute;
+				width: 1rem;
+				height: 100%;
+				z-index: 200;
+			}
+			
+			header .headerback_box2 img {
+				padding: 0.68rem 0 0 0.3rem;
+				width: 0.19rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="clearfix bgcolor_main" id="header">
+			<div class="headerback_box2">
+				<img src="../img/header_back.png" />
+			</div>
+			<p id="title">
+			</p>
+		</header>
+	</body>
+
+</html>
+<script type="text/javascript" src="../js/zepto.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script>
+	$(function() {
+		$(".headerback_box2").click(function() {
+			toback();
+		});
+	});
+
+	function toback() {
+		// zhaoxin add 解决 首页banner 详情页面返回后状态栏颜色不恢复问题
+		console.log(parentid)
+		if(isPresistPage(parentid)) {
+			plus.navigator.setStatusBarStyle("light");
+		}
+		subview.canBack(function(e) {
+			if(e.canBack) {
+				subview.back();
+			} else {
+				try {
+					if(refreshparent) {
+						plus.webview.getWebviewById(parentid).evalJS("doinit()");
+					}
+				} catch(e) {}
+				try {
+					subview.close();
+				} catch(e) {}
+				plus.webview.currentWebview().close("slide-out-right", 200);
+			}
+		});
+		/*
+		try{
+			subview.close();
+		}catch(e){}
+		plus.webview.currentWebview().close("slide-out-right",200);
+		*/
+	}
+
+	function setTitle(title) {
+		$("#title").html(title);
+	}
+	var windowstyles = {
+		render: 'always',
+		bounce: 'none',
+		'popGesture': 'close',
+		'scrollIndicator': 'none',
+		hardwareAccelerated: isHardwareAccelerated()
+	};
+	var subview = null;
+	document.addEventListener("plusready", function() {
+		setTimeout(function() {
+			try {
+				plus.key.removeEventListener('backbutton', addBackFunc);
+			} catch(e) {
+				console.log(e)
+			}
+
+			plus.key.addEventListener('backbutton', function(e) {
+				toback();
+			});
+		}, 1000);
+		var wv = plus.webview.currentWebview();
+		// UI 和 产品商量去掉远端页面右滑效果
+//		if(isHardwareAccelerated()) {
+//			wv.drag({
+//				direction: 'right',
+//				moveMode: 'followFinger'
+//			}, {
+//				view: 'wkindex.html',
+//				moveMode: 'silent'
+//			}, function(e) {
+//				if(e.type == 'end' && e.result) {
+//					try {
+//						if(refreshparent) {
+//							plus.webview.getWebviewById(parentid).evalJS("doinit()");
+//						}
+//					} catch(e) {}
+//					try {
+//						subview.close();
+//					} catch(e) {}
+//					plus.webview.currentWebview().close("none");
+//				}
+//			});
+//		}
+	})
+	var refreshparent = false;
+	var parentid = '';
+
+	function doinit() {
+		console.log('webviewextra_str'+localStorage.getItem("webviewextra_str"))
+		var title = getQueryString("title");
+		setTitle(title);
+		var jumpUrl = getQueryString("url");
+		console.log('jumpUrl'+ jumpUrl)
+		opensubpage(0, jumpUrl);
+		parentid = getQueryString("parentid");
+		console.log(parentid+' parentid')
+		refreshparent = getQueryString("refreshparent");
+	}
+
+	function opensubpage(topoffset, url) {
+		var id = plus.webview.currentWebview().id;
+		var height = $("header").height();
+		var windowheight = $(window).height() - height;
+		windowstyles["top"] = height;
+		windowstyles["bottom"] = 0;
+		subview = plus.webview.create(null, "subbrowser.html", windowstyles);
+		plus.webview.currentWebview().append(subview);
+		subview.loadURL(url);
+		subview.addEventListener("loaded", function() {
+			subview.evalJS("window.pid='" + "browser.html" + "'");
+		});
+
+		subview.addEventListener("titleUpdate", function(e) {
+			setTimeout(function() {
+				plus.navigator.setStatusBarStyle("dark");
+			}, 1000);
+			setTitle(e.title||getQueryString("title"));
+		}, false);
+	}
+</script>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="@dimen/x30" android:id="@id/search_header" android:background="@drawable/matrix_search_edit" android:paddingLeft="@dimen/x150" android:paddingTop="@dimen/x15" android:paddingBottom="@dimen/x15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x10" android:layout_marginRight="@dimen/x10" android:adjustViewBounds="true" android:hint="@string/action_search_room" android:drawableLeft="@drawable/icon_menu_search" android:drawablePadding="@dimen/x20" android:layout_centerVertical="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

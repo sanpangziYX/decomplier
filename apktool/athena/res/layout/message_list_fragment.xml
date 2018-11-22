@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:orientation="horizontal" android:id="@id/email_income_title_rl" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <ImageView android:id="@id/email_back_icon_iv" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/email_back" android:layout_centerVertical="true" />
+            <LinearLayout android:id="@id/email_income_ll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <TextView android:textSize="18.0sp" android:textColor="@color/email_c_333333" android:id="@id/email_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/email_incoming_box" android:drawablePadding="5.0dip" />
+                <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:src="@drawable/email_drop" android:layout_centerVertical="true" />
+            </LinearLayout>
+            <ImageView android:id="@id/email_new_email_iv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:src="@drawable/email_write" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center" android:background="@drawable/bg_email_search" android:layout_width="fill_parent" android:layout_height="38.0dip" android:layout_marginLeft="20.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="5.0dip">
+            <EditText android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/email_search_" android:drawableLeft="@drawable/email_search" android:drawablePadding="10.0dip" android:imeOptions="actionSearch" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="@color/email_c_21979797" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <android.support.v4.widget.SwipeRefreshLayout android:id="@id/swiperefresh" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ListView android:id="@id/message_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@android:color/transparent" android:layout_weight="5.0" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/loAlertHeader" android:background="@drawable/bg_actionsheet_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/textSize_actionsheet_title" android:textColor="@color/textColor_actionsheet_title" android:gravity="center" android:id="@id/tvAlertTitle" android:background="@drawable/alert_rootview_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/textSize_actionsheet_msg" android:textColor="@color/textColor_actionsheet_msg" android:gravity="center" android:id="@id/tvAlertMsg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/marginBottom_actionsheet_msg" />
+        <ListView android:id="@id/alertButtonListView" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@android:color/transparent" android:divider="@null" android:layout_weight="1.0" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/textSize_alert_button" android:textStyle="bold" android:gravity="center" android:id="@id/tvAlertCancel" android:background="@drawable/bg_actionsheet_cancel" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/height_alert_button" android:layout_marginTop="@dimen/margin_actionsheet_left_right" />
+</LinearLayout>

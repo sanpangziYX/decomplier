@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<!--<link rel="stylesheet" type="text/css" href="../../css/mui.min.css">-->
+		<script type="text/javascript" src="../../js/rem.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../plugins/layer/layer.css"/>
+		<link rel="stylesheet" type="text/css" href="../../plugins/swiper/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../../plugins/dropload/magic_stick.css" />
+
+		<!--<script type="text/javascript" src="../../js/vconsole.min.js"></script>-->
+		<title>首页</title>
+	</head>
+	<style type="text/css">
+
+	</style>
+
+	<body>
+		<div id="loadBox">
+			<dl>
+				<dt></dt>
+				<dd>正在加载...</dd>
+			</dl>
+		</div>
+		<div class="slidehid">
+			<div id="app">
+			
+			</div>
+
+			
+
+<a href="#mhjh">
+				<span id="float_wonderful">
+				悟空理财新玩法，出借立拿好东西
+				<img src="../../img/arrow_bottom.png" class="move">
+			</span>
+			</a>
+
+			<!--滚动后头部-->
+			<div class="common_new_header">
+				<div class="empty_part"></div>
+				<div class="main_part ">
+					<h3>悟空理财</h3>
+				</div>
+			</div>
+			<span class="news" onclick="toMessage();"></span>
+
+			<!--美好计划浮标入口-->
+			<div id="app-olduser">
+
+				<!--小浮标-->
+				<span id="float_monkey" style="display: none;"><img src="../../img/float.png" alt="" /></span>
+				<!--头部-新用户-->
+				<div class="index_header1" style="display: none;">
+					<div class="index_banner">
+						<img src="https://m.wukonglicai.com/applauncher/index.png" onerror="this.src='../../img/index_banner.png'" />
+					</div>
+					<button class="footer_btn" onclick="goLogin()">马上注册</button>
+					<div class="login_wrap">
+						<h3>我是老用户，点击<span class="login" onclick="goLogin()">登录</span></h3>
+						<span class="arrow" onclick="goLogin()"></span>
+					</div>
+				</div>
+				<!--头部-老用户-->
+				<div class="index_header2" style="display: none;">
+					<!--小分队-->
+					<span class="wkgroup" style="display: none;"></span>
+					<h3 class="open">昨日收益(元)<span class="eyes"></span><!--<span class="news" onclick="toMessage();"></span>--></h3>
+					<h4 class="money1" id="yesterdayAmount" onclick="toMyAmount('0')">--</h4>
+					<ul class="assets">
+						<li>
+							<h5>总资产(元)</h5>
+							<span class="money2" id="assetsAmount" onclick="toMyAmount('1')">--</span>
+						</li>
+						<li>
+							<h5>累计收益(元)</h5>
+							<span class="money3" id="cumulativeAmount" onclick="toMyAmount('2')">--</span>
+						</li>
+					</ul>
+				</div>
+				<div class="notice" style="display: none;">
+					<span class="img"></span>
+					<div class="wrap_noticeContent" id="wrap_noticeContent">
+						<ul id="noticeContent" class="noticeContent">
+
+						</ul>
+						<ul id="noticeContent2" class="noticeContent">
+						</ul>
+					</div>
+					<span class="close"></span>
+				</div>
+				<!--banner-->
+				<div class="swiper-container banner_part_wrap mt24">
+					<ul class="banner_part swiper-wrapper" id="bannerInfo" style="display: none;">
+					</ul>
+					<div class="swiper-pagination"></div>
+				</div>
+				<div class="section2">
+					<!--新手标-->
+					<div class="new_user_rights mt24 same_part" style="display: none;" onclick="goTFBinvest();">
+						<div class="new_user_banner">
+							<h3>15<span>%</span></h3></div>
+						<ul class="new_user_list">
+							<li>封闭期21天</li>
+							<li>1000元起投</li>
+							<li>限投5万</li>
+						</ul>
+					</div>
+					<!--新手续投-->
+					<div class="user_continue mt24 same_part" style="display: none;" id="newOrderContinue">
+						<div class="user_continue_banner">
+							<h3><span class="span1">新手标</span><span class="span2">续投至月账户</span></h3>
+							<h4>
+							<span id="noc1">期望年化回报率5.0%起</span>
+							<span class="blank"></span>
+							<span id="noc2">逐月＋0.5%</span>
+							<span class="blank"></span>
+							<span id="noc3">最高9.0%</span>
+							<span class="blank"></span>
+						</h4>
+							<button class="footer_btn2" id="noc4">随用随取 马上续投<span class="arrow"></span></button>
+						</div>
+					</div>
+					<!--即将到期的产品-->
+					<div class="soon_outofdate mt24 same_part2" id="rewardProduct" style="display: none;">
+						<h3>即将到期产品<span class="more" onclick="goRewardListPage('0')">更多</span></h3>
+						<div class="content">
+							<span class="dqzr" onclick="goRewardPage()">到期转让</span>
+							<h4></h4>
+							<p class="rate"></p>
+							<p class="intro">期望年化回报率</p>
+							<ul class="intro2">
+								<li>出借金额元</li>
+								<li></li>
+								<li>剩余天</li>
+							</ul>
+							<button class="footer_btn" onclick="goRewardPage()">马上续投</button>
+						</div>
+						<p class="hei20"></p>
+					</div>
+					<div class="soon_outofdate mt24 same_part2 same_part3" style="display: none;">
+						<h3>即将到期产品</h3>
+						<div class="add_wrap add_mt">
+							<p class="add clearfix">
+								<span class="txt" id="rewardInfo"></span>
+								<span class="more" onclick="goRewardListPage('1')">查看更多</span>
+							</p>
+						</div>
+					</div>
+					<!--您近期投资的产品-->
+					<div class="recent_invest mt24 same_part2" id="lastInvest" style="display: none;">
+						<h3>您近期出借的产品</h3>
+						<div class="recent_invest_content" onclick="goLastProduct();">
+							<ul class="clearfix content2 same_content">
+								<li>
+									<div class="type">
+									</div>
+									<div class="bottom">
+										<div class="left">
+											<p class="p1"></p>
+											<p class="p2"></p>
+										</div>
+										<div class="center  center2">
+										</div>
+										<div class="right"><button class="footer_btn">再来一笔</button></div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="add_wrap" id="lastInvestNext" style="display: none;">
+							<p class="add">
+								出借以上产品的用户还出借了<span class="spe">年账户-1年 我也试试</span>
+							</p>
+						</div>
+					</div>
+					<!--特供专区-->
+					<div class="spe_area today_hot  mt24 same_part2" id="specialInfo" style="display: none;">
+						<h3>特供专区</h3>
+						<div class="spe_area_content today_hot_content">
+							<!--正常推荐的样式-->
+							<ul class="clearfix content2 same_content" id="tproductInfo">
+							</ul>
+						</div>
+					</div>
+
+					<!--<div style="padding:.1rem;text-align: center;" onclick="openPage('my_set.html','my_set.html',{})">open account</div>-->
+					<!--<div style="padding:.15rem" onclick="openNoTitleBrowser({url:'http://10.40.38.56:8020/test/wukongapp.html'})">apple</div>-->
+					<!--今日热门-->
+					<div class="today_hot mt24 same_part2">
+						<h3>今日热门</h3>
+						<div class="today_hot_content">
+
+							<!--特别推荐的样式-->
+							<ul class="clearfix content1 same_content" id="hotProductInfo">
+							</ul>
+							<!--正常推荐的样式-->
+							<ul class="clearfix content2 same_content" id="hotproductInfo">
+							</ul>
+						</div>
+						<div class="check_all" onclick="toInvest();">
+							查看全部产品
+						</div>
+					</div>
+					<!--美好计划-->
+					<div class="mhjh mt24 same_part2" id="mhjh" style="display: none;">
+						<h3></h3>
+						<p class="step">
+							<img src="../../img/mhjh_step.png" alt="" />
+						</p>
+						<ul class="mhjh_lists">
+							<!--跳转商品详情页-->
+						</ul>
+						<div class="check_all"></div>
+						<!--跳转商品列表页-->
+					</div>
+					<!--增信-->
+					<div class="add_faith_wrap mt24 swiper-container">
+						<ul class="swiper-wrapper add_faith" id="moduleInfo" style="display: none;">
+						</ul>
+					</div>
+					<!--底部-->
+					<div class="word_footer4">
+						<!--<p class="big">期望回报并非平台承诺收益，市场有风险，投资需谨慎</p>
+					<p class="small">悟空理财由玖富悟空(北京)科技有限公司全权运营管理,隶属玖富集团 </p>
+					<p class="small">京ICP备07003840号-6</p>-->
+					</div>
+				</div>
+				<div class="showAlert">
+					<div class="mask"></div>
+					<div class="content_wrap content_wrap1">
+						<span class="add" id="alertMsg"></span>
+					</div>
+
+					<div class="content_wrap content_wrap5">
+						<div class="txt">
+							当前版本不是最新版本，是否更新最新版本？
+						</div>
+						<div class="btn_box clearfix">
+							<button onclick="noUpdate()">暂不更新</button>
+							<button onclick="updateApp()">现在更新</button>
+						</div>
+					</div>
+					<div class="content_wrap content_wrap9">
+						<h3>提示</h3>
+						<div class="txt">
+							<p>已为您设定风险成熟度最低的谨慎性偏好</p>
+						</div>
+						<button class="showbtn_2" onclick="skipAndInvest()">好哒，立即投资</button>
+						<a onclick="gotoriskpage()">不太相符，去测评</a>
+					</div>
+
+				</div>
+			</div>
+			<div class="nav_footer">
+				<ul class="tab_footer">
+					<li class="current"><span class="monkey"></span>悟空</li>
+					<li><span class="invest"></span>投资</li>
+					<li><span class="monkeyfan"></span>空粉</li>
+					<li><span class="myself"></span>我</li>
+				</ul>
+			</div>
+		</div>
+		<script type="x-template" id="invetNotemplate">
+			<div id="app">	
+			<!--登录后头图信息-->
+			<div class="index_header2" v-if="isToken">
+				<!--小分队-->
+				<span class="wkgroup" style="display: none;"></span>
+				<h3 :class="{open: isEye}">昨日收益(元)<span class="eyes" @click="closeEye"></span><!--<span class="news" onclick="toMessage();"></span>--></h3>
+				<h4 class="money1" id="newYesterdayAmount" onclick="toMyAmount('0')">--</h4>
+				<ul class="assets">
+					<li>
+						<h5>总资产(元)</h5>
+						<span class="money2" id="newAssetsAmount" onclick="toMyAmount('1')">--</span>
+					</li>
+					<li>
+						<h5>累计收益(元)</h5>
+						<span class="money3" id="newCumulativeAmount" onclick="toMyAmount('2')">--</span>
+					</li>
+				</ul>
+			</div>
+			<!-- 未登录头图 -->
+			<div class="nov-banner" v-else>
+				<img :src="messages.topImageUrl" />
+				<span class="n-login" @click="openPage('login')">{{ messages.loginButton }}</span>
+				<div class="btn-box">
+					<button class="n-btn" @click="openPage('login')">{{ messages.registerButton }}</button>
+				</div>
+			</div>
+
+			<!-- 登录后滚动banner -->
+			<div class="swiper-box" v-if="isToken" :class="{ 'wiper-box-token nov-mt0': isToken }" key="login">
+				<div class="swiper-container nov-swiper">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide" v-for="(swp,index) in swipers" :key="swp.id" :href="swp.appUrl"><img :src="swp.picUrl" alt=""></li>
+					</ul>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+
+			<div class="nov-constainer">
+				<!-- 新手产品展示 -->
+				<div class="nov-sec-prc" :class=" { 'nov-mt24': isToken }">
+
+					<span @click="openInvest(messages.TFB.productCode)"><img :src="messages.tfbUrl"/></span>
+					<!-- 其他用户滚动信息 -->
+					<div id="testScroll">
+						<ul class="otr-info-list">
+							<li v-for="item in otherUserInfos" :key="item.id">{{ item }}</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 未登录滚动banner -->
+				<div class="swiper-box" v-if="!isToken" key="unlogin">
+					<div class="swiper-container nov-swiper">
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide"  :href="swp.appUrl" v-for="swp in swipers"><img :src="swp.picUrl" alt=""></li>
+						</ul>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+
+				<!-- 已拥有空粉信息 -->
+				<div class="fan-box">
+					<!--<div style="padding:.15rem" onclick="openNoTitleBrowser({url:'http://10.40.37.32:8083/index.html/#/novice-triple-gift'})">apple</div>-->
+
+					<dl>
+						<dt><span>{{ messages.kfnumber }}</span></dt>
+						<dd>已拥有空粉(人)</dd>
+					</dl>
+					<dl>
+						<dt><span>{{ messages.kfTotalYield }}</span></dt>
+						<dd>已为空粉赚取(元)</dd>
+					</dl>
+				</div>
+				<!-- v-if="isToken"  征信 -->
+				<div class="credit-box" v-if="isToken">
+					<div class="swiper-container credit-swiper">
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide" v-for="item in messages.module" @click="openLink('悟空理财', item.moduleUrl)"><img :src="item.moduleImgUrl" /></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- 法务警示信息 -->
+			<div class="footer-box">
+				<div class="n-hm">
+					<img :src="messages.fawuImageUrl" />
+				</div>
+			</div>
+			<!-- 新手弹框 -->
+			<!-- 遮罩透明层 -->
+			<transition name="nov">
+				<div id="popBox" v-if="isAlertShow">
+					<div id="mask" @click="closeAlert"></div>
+					<div id="nov-pop-box">
+						<img :src="messages.showAlertModuleList[0].moduleImgUrl" />
+						<button class="n-btn" @click="openPageBtn(messages.showAlertModuleList[0].moduleUrl)"><img :src="messages.showAlertModuleList[0].buttonDesc"/></button>
+						<a class="n-detail-link" @click="openDetail(messages.showicon.actUrl)">了解详情<em class="n-icon"><img src="../../img/icon-right-row.png"/></em></a>
+						<em class="n-close" @click="closeAlert"><img src="../../img/icon-close-c.png"/></em>
+					</div>
+				</div>
+			</transition>
+			<!--小浮标-->
+			<span id="float_monkey" v-if="messages.showicon.isShow == 'T'" @click="openDetail(messages.showicon.actUrl)"><img :src="messages.showicon.imgUrl" alt="" /></span>
+			</div>
+		</script>
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script src="../../plugins/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../plugins/vue/vue.js"></script>
+		<script type="text/javascript" src="../../js/fastclick.js"></script>
+		<script type="text/javascript" src="../../js/jsrender.min.js"></script>
+		<script type="text/javascript" src="../../plugins/swiper/swiper.jquery.min.js"></script>
+		<script type="text/javascript" src="../../plugins/countup/countUp.js"></script>
+		
+		<script type="text/javascript" src="../../plugins/dropload/dropload.min.js"></script>
+<script type="text/javascript" src="../../plugins/drag/jquery.drag.js"></script>
+		<script type="text/javascript" src="wkindex.js"></script>
+		
+		<script type="text/javascript" src='../../js/kefu.js'></script>
+		<script src="../../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>
+<script type="text/x-jsrender" id="bannerTmpl">
+	<li class="swiper-slide" onclick="toAnyPage('{{:remarks}}','{{:appUrl}}')"><img src="{{:picUrl}}" alt="" /></li>
+</script>
+<!--美好计划-->
+<script type="text/x-jsrender" id="wProductTmpl">
+	<li>
+		<div class="left">
+			<h4>{{:yieldRate.toFixed(1)}}<span>%</span></h4>
+			<span class="add2">期望年化回报率</span>
+		</div>
+		<div class="center">
+			<h4>{{:skuName}}</h4>
+			<p class="price">市场价：<del>¥{{:price}}</del></p>
+			<span class="circle">{{:tips}}</span>
+		</div>
+		<div class="right">
+			<img src="{{:imageUrl}}" alt="" />
+		</div>
+	</li>
+</script>
+<script type="text/x-jsrender" id="moduleTmpl">
+	<li class="swiper-slide" onclick="toAnyPage('{{:moduleName}}','{{:moduleUrl}}')">
+		<img src="{{:moduleImgUrl}}" alt="" />
+	</li>
+</script>
+<script type="text/x-jsrender" id="dProductTmpl">
+	<li>
+		<div class="type" onclick="openInvest('{{:productCode}}')">
+			<p class="left day_type">{{:productName}}</p>
+			<p class="left hint">{{if productType === 'J'}}货币基金{{else productType === 'D'}}其他{{/if}}</p>
+			<p class="right">今日关注<span>{{:recommendCount}}</span>次</p>
+		</div>
+		<div class="bottom">
+			<div class="circle" onclick="openInvest('{{:productCode}}')">
+				<h4>{{:baseYields}}<span>%</span></h4>
+				<p class="others">七日年化收益率</p>
+			</div>
+			<p class="word" onclick="openInvest('{{:productCode}}')">{{:hdesc}}</p>
+			{{if isUser == 'T'}}
+			<button class="footer_btn" onclick="login('{{:productCode}}')">马上投资{{/if}}</button> {{else}}
+			<button class="footer_btn" onclick="login('{{:productCode}}')">马上加入</button> {{/if}}
+		</div>
+	</li>
+</script>
+<script type="text/x-jsrender" id="qyProductTmpl">
+	<li>
+		<div class="type" onclick="openInvest('{{:productCode}}')">
+			<p class="left {{if productType.substr(0,1)=='Q'}}season_type{{else}}year_type{{/if}}">
+				<span class="span1">{{:productName}}</span>
+				<span class="span2">{{:accountSign}}</span>
+			</p>
+			<p class="left hint">网贷</p>
+			<p class="right">今日关注<span>{{:recommendCount}}</span>次</p>
+		</div>
+		<div class="bottom">
+			<div class="circle" onclick="openInvest('{{:productCode}}')">
+				<h4>{{:baseYields}}<span>%</span></h4>
+				<p class="others">期望年化回报率</p>
+			</div>
+			<p class="word" onclick="openInvest('{{:productCode}}')"><span>投1万元期望回报</span>{{:hdesc}}<span>元</span></p>
+			{{if isUser == 'T'}} {{if restAmount >0}}
+			<button class="footer_btn" onclick="login('{{:productCode}}')">马上出借</button> {{else}}
+			<button class="footer_btn footer_btng">已抢光</button> {{/if}} {{else}}
+			<button class="footer_btn" onclick="login('{{:productCode}}')">马上加入</button> {{/if}}
+		</div>
+	</li>
+</script>
+<script type="text/x-jsrender" id="tProductTmpl">
+	<li>
+		<div class="type" onclick="openInvest('{{:productCode}}')">
+			<p class="left day_type">{{:productName}}</p>
+			<p class="left hint">网贷</p>
+			<p class="right">今日关注<span>{{:recommendCount}}</span>次</p>
+		</div>
+		<div class="bottom">
+			<div class="circle" onclick="openInvest('{{:productCode}}')">
+				<h4>{{:baseYields}}<span>%</span></h4>
+				<p class="others">期望年化回报率</p>
+			</div>
+			<p class="word" onclick="openInvest('{{:productCode}}')"><span>投1万元期望回报</span>{{:hdesc}}<span>元</span></p>
+			{{if isUser == 'T'}} {{if restAmount >0}}
+			<button class="footer_btn" onclick="login('{{:productCode}}')">马上出借</button> {{else}}
+			<button class="footer_btn footer_btng">已抢光</button> {{/if}} {{else}}
+			<button class="footer_btn" onclick="login('{{:productCode}}')">马上加入</button> {{/if}}
+		</div>
+	</li>
+</script>
+<script type="text/x-jsrender" id="mProductTmpl">
+	<li>
+		<div class="type" onclick="openInvest('{{:productCode}}')">
+			<p class="left day_type">月账户</p>
+			<p class="left hint">网贷</p>
+			<p class="right">今日关注<span>{{:recommendCount}}</span>次</p>
+		</div>
+		<div class="bottom">
+			<div class="circle" onclick="openInvest('{{:productCode}}')">
+				<h4 class="small">{{:baseYields}}<span class="wave">~</span>{{:maxProfit}}<span>%</span></h4>
+				<p class="others">期望年化回报率最高</p>
+			</div>
+			<p class="word" onclick="openInvest('{{:productCode}}')">每月可转让1次</p>
+			{{if isUser == 'T'}} {{if restAmount >0}}
+			<button class="footer_btn" onclick="login('{{:productCode}}')">马上出借</button> {{else}} {{if isShowGreen == 'T'}}
+			<button class="footer_btn" onclick="login('{{:productCode}}')">绿色通道</button> {{else}}
+			<button class="footer_btn footer_btng">已抢光</button> {{/if}} {{/if}} {{else}}
+			<button class="footer_btn" onclick="login('{{:productCode}}')">马上加入</button> {{/if}}
+		</div>
+	</li>
+</script>
+<script type="text/x-jsrender" id="mproductTmpl">
+	<li>
+		<div class="type" onclick="openInvest('{{:productCode}}')">
+			<p class="left day_type">
+				月账户
+			</p>
+			<span class="left hint">网贷</span>
+			<p class="right">今日关注<span>{{:recommendCount}}</span>次</p>
+		</div>
+		<div class="bottom">
+			<div class="left" onclick="openInvest('{{:productCode}}')">
+				<p class="p1">{{:baseYields}}<span class="wave">~</span>{{:maxProfit}}<span>%</span></p>
+				<p class="p2">期望年化回报率</p>
+			</div>
+			<div class="center  center2" onclick="openInvest('{{:productCode}}')">
+				每月可转让1次
+			</div>
+			<div class="right">
+				{{if isUser == 'T'}} {{if restAmount >0}}
+				<button class="footer_btn" onclick="login('{{:productCode}}')">马上出借</button> {{else}} {{if isShowGreen == 'T'}}
+				<button class="footer_btn" onclick="login('{{:productCode}}')">绿色通道</button> {{else}}
+				<button class="footer_btn footer_btng">已抢光</button> {{/if}} {{/if}} {{else}}
+				<button class="footer_btn" onclick="login('{{:productCode}}')">马上加入</button> {{/if}}
+			</div>
+		</div>
+	</li>
+</script>
+<script type="text/x-jsrender" id="dproductTmpl">
+	<li>
+		<div class="type" onclick="openInvest('{{:productCode}}')">
+			<p class="left day_type">
+				{{:productName}}
+			</p>
+			<span class="left hint">{{if productType === 'J'}}货币基金{{else  productType === 'D'}}其他{{/if}}</span>
+			<p class="right">今日关注<span>{{:recommendCount}}</span>次</p>
+		</div>
+		<div class="bottom">
+			<div class="left" onclick="openInvest('{{:productCode}}')">
+				<p class="p1">{{:baseYields}}<span>%</span></p>
+				<p class="p2">七日年化收益率</p>
+			</div>
+			<div class="center  center2" onclick="openInvest('{{:productCode}}')">
+				{{:hdesc}}
+			</div>
+			<div class="right">
+				{{if isUser == 'T'}}
+				<button class="footer_btn" onclick="login('{{:productCode}}')">马上投资</button> {{else}}
+				<button class="footer_btn" onclick="login('{{:productCode}}')">马上加入</button> {{/if}}
+			</div>
+		</div>
+	</li>
+</script>
+<script type="text/x-jsrender" id="qyproductTmpl">
+	<li>
+		<div class="type" onclick="openInvest('{{:productCode}}')">
+			<p class="left {{if productType.substr(0,1)=='Q'}}season_type{{else}}year_type{{/if}}">
+				<span class="span1">{{:productName}}</span>
+				<span class="span2">{{:accountSign}}</span>
+			</p>
+			<span class="left hint">网贷</span>
+			<p class="right">今日关注<span>{{:recommendCount}}</span>次</p>
+		</div>
+		<div class="bottom">
+			<div class="left" onclick="openInvest('{{:productCode}}')">
+				<p class="p1">{{:baseYields}}<span>%</span></p>
+				<p class="p2">期望年化回报率</p>
+			</div>
+			<div class="center" onclick="openInvest('{{:productCode}}')">
+				<p class="p1">{{:hdesc}}元</p>
+				<p class="p2">出借1万元期望回报</p>
+			</div>
+			<div class="right">
+				{{if isUser == 'T'}} {{if restAmount >0}}
+				<button class="footer_btn" onclick="login('{{:productCode}}')">马上出借</button> {{else}}
+				<button class="footer_btn footer_btng">已抢光</button> {{/if}} {{else}}
+				<button class="footer_btn" onclick="login('{{:productCode}}')">马上加入</button> {{/if}}
+			</div>
+		</div>
+	</li>
+</script>
+<script type="text/x-jsrender" id="tproductTmpl">
+	<li>
+		<div class="type" onclick="openInvest('{{:productCode}}')">
+			<p class="left day_type">
+				{{:productName}}
+			</p>
+			<span class="left hint">网贷</span>
+			<p class="right">今日关注<span>{{:recommendCount}}</span>次</p>
+		</div>
+		<div class="bottom">
+			<div class="left" onclick="openInvest('{{:productCode}}')">
+				<p class="p1">{{:baseYields}}<span>%</span></p>
+				<p class="p2">期望年化回报率</p>
+			</div>
+			<div class="center" onclick="openInvest('{{:productCode}}')">
+				<p class="p1">{{:hdesc}}元</p>
+				<p class="p2">出借1万元期望回报</p>
+			</div>
+			<div class="right">
+				{{if isUser == 'T'}} {{if restAmount >0}}
+				<button class="footer_btn" onclick="login('{{:productCode}}')">马上出借</button> {{else}}
+				<button class="footer_btn footer_btng">已抢光</button> {{/if}} {{else}}
+				<button class="footer_btn" onclick="login('{{:productCode}}')">马上加入</button> {{/if}}
+			</div>
+		</div>
+	</li>
+</script>
+<script type="text/x-jsrender" id="sproductTmpl">
+	<li>
+		<div class="type" onclick="openInvest('{{:productCode}}')">
+			<p class="left day_type">
+				{{:productName}}
+			</p>
+			<span class="left hint">网贷</span>
+			<p class="right"></p>
+		</div>
+		<div class="bottom">
+			<div class="left" onclick="openInvest('{{:productCode}}')">
+				<p class="p1">{{:baseYields}}<span>%</span></p>
+				<p class="p2">期望年化回报率</p>
+			</div>
+			<div class="center" onclick="openInvest('{{:productCode}}')">
+				<p class="p1">{{:hdesc}}元</p>
+				<p class="p2">出借1万元期望回报</p>
+			</div>
+
+			<div class="right">
+				{{if isUser == 'T'}} {{if restAmount >0}}
+				<button class="footer_btn" onclick="login('{{:productCode}}')">马上出借</button> {{else}}
+				<button class="footer_btn footer_btng">已抢光</button> {{/if}} {{else}}
+				<button class="footer_btn" onclick="login('{{:productCode}}')">马上加入</button> {{/if}}
+			</div>
+		</div>
+	</li>
+</script>
+
+<script>
+	function plusReady() {
+
+		if(plus.os.name == 'Android') {
+			if(plus.os.version.toString().substr(0, 1) <= 4 && plus.os.version.toString().substr(2, 1) <= 4) {
+				var dropload = $('.slidehid').dropload({
+					domUp: {
+						domClass: 'dropload-up',
+						domRefresh: '<div class="dropload-refresh">↓下拉刷新</div>',
+						domUpdate: '<div class="dropload-update">↑释放更新</div>',
+						domLoad: '<div class="dropload-load">加载中...</div>'
+					},
+					loadUpFn: function(me) {
+						//加遮罩层 防止tab切换
+						$('body').append('<div id="dropload-mask"></div>');
+						setTimeout(function() {
+							me.resetload();
+							//移除遮罩层 
+							$('#dropload-mask').remove();
+						}, 600);
+
+					}
+				});
+			}
+		} else {
+			var dropload = $('.slidehid').dropload({
+				domUp: {
+					domClass: 'dropload-up',
+					domRefresh: '<div class="dropload-refresh"><div class="magic_stick"></div></div>',
+					domUpdate: '<div class="dropload-update"><div class="magic_stick"></div></div>',
+					domLoad: '<div class="dropload-load"><div class="magic_stick"></div></div>'
+				},
+				loadUpFn: function(me) {
+					//加遮罩层 防止tab切换
+					$('body').append('<div id="dropload-mask"></div>');
+					$('.magic_stick').addClass('magic_stick2');
+					/*情况2-转几圈变形飞走*/
+					setTimeout(function() {
+						$('.magic_stick').addClass('big');
+
+					}, 0)
+					setTimeout(function() {
+						$('.magic_stick').addClass('rotate');
+					}, 300)
+					setTimeout(function() {
+						$('.magic_stick').addClass('gone');
+						setTimeout(function() {
+							me.resetload();
+							//移除遮罩层 
+							$('#dropload-mask').remove();
+						}, 600)
+					}, 1200)
+				}
+			});
+		}
+	}
+	if(window.plus) {
+		plusReady();
+	} else {
+		document.addEventListener("plusready", plusReady, false);
+	}
+</script>

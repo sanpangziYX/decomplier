@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingLeft="2.0dip" android:paddingTop="2.0dip" android:paddingRight="2.0dip" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foregroundGravity="center"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/desk_img_select_iv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <ImageView android:layout_gravity="right" android:id="@id/desk_view_alpha" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x6" android:layout_marginRight="@dimen/x6" android:src="@drawable/desk_icon_pic_choice" />
+</FrameLayout>

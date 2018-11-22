@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/x167"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:gravity="center_vertical" android:id="@id/tv_lv_item_tag" android:background="#ffe6e6e6" android:paddingLeft="10.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/x47" android:text="Z" />
+    <View android:id="@id/view_lv_item_line" android:background="#ff999999" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="10.0dip" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/x120">
+        <ImageView android:layout_gravity="center|left" android:id="@id/staffSelected" android:clickable="true" android:layout_width="@dimen/x47" android:layout_height="@dimen/x47" android:layout_marginLeft="@dimen/x24" android:src="@drawable/matrix_staff_selected" android:layout_weight="0.1" />
+        <org.matrix.console.view.CircleImageView android:layout_gravity="center_vertical" android:id="@id/staffFlag" android:layout_width="@dimen/x80" android:layout_height="@dimen/x80" app:border_width="0.0dip" app:border_color="@android:color/transparent" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="@dimen/x80" android:layout_weight="0.7">
+            <TextView android:textSize="@dimen/x34" android:textColor="#ff333333" android:gravity="center|left" android:id="@id/staffName" android:layout_width="fill_parent" android:layout_height="@dimen/x50" android:layout_marginLeft="@dimen/x10" android:text="白淼" />
+            <TextView android:textSize="@dimen/x26" android:gravity="center|left" android:id="@id/staffMsg" android:layout_width="fill_parent" android:layout_height="@dimen/x30" android:layout_marginLeft="@dimen/x10" android:text="职业经理|双井事业部" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

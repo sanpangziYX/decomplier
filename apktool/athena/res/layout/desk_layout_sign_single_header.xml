@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.bkjk.athena.appdesk.widget.datepicker.DeskDatePicker android:id="@id/dp_desk_date_picker" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <View android:background="@color/desk_c_20979797" android:layout_width="fill_parent" android:layout_height="@dimen/x20" />
+    <FrameLayout android:id="@id/fl_desk_single_day" android:paddingLeft="@dimen/x40" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="25.0dip">
+        <TextView android:textSize="@dimen/x36" android:textColor="@color/desk_c_3B6DFF" android:id="@id/tv_desk_single_day" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="09/17" android:layout_centerVertical="true" />
+        <ImageView android:layout_gravity="bottom" android:layout_width="@dimen/x44" android:layout_height="@dimen/x44" android:layout_marginLeft="@dimen/x114" android:src="@drawable/desk_icon_sign_time_flag" />
+    </FrameLayout>
+    <TextView android:textSize="18.0sp" android:textColor="@color/desk_c_999999" android:layout_gravity="center_horizontal" android:id="@id/tv_desk_single_no_data" android:paddingTop="@dimen/x150" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/desk_sign_no_list" />
+</LinearLayout>

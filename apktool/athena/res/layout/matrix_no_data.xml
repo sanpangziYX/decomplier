@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ImageView android:id="@id/matrix_shade_image" android:layout_width="@dimen/x100" android:layout_height="@dimen/x100" android:src="@drawable/matrix_search_no_result" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="16.0sp" android:textColor="#ff666666" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x16" android:text="@string/matrix_no_result" android:layout_below="@id/matrix_shade_image" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@color/desk_c_FFFFFF" android:paddingLeft="@dimen/x40" android:paddingRight="@dimen/x40" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/x32" android:textColor="@color/desk_c_333333" android:gravity="left" android:id="@id/tv_desk_team_detatil_time" android:layout_width="@dimen/x122" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x25" android:text="16:16" />
+    <FrameLayout android:id="@id/desk_line_fl" android:layout_width="@dimen/x26" android:layout_height="fill_parent">
+        <View android:background="@color/desk_c_DDDDDD" android:layout_width="@dimen/x1" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/x13" />
+        <ImageView android:layout_width="@dimen/x26" android:layout_height="@dimen/x26" android:layout_marginTop="@dimen/x28" android:src="@drawable/desk_icon_time_point" />
+    </FrameLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x20">
+        <TextView android:textSize="16.0sp" android:textColor="@color/desk_c_333333" android:id="@id/tv_desk_team_detatil_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x16" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/desk_c_999999" android:id="@id/tv_desk_sign_team_detatil" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/tv_desk_team_detatil_title" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/desk_c_333333" android:id="@id/tv_desk_sign_team_customer" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/tv_desk_sign_team_detatil" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/desk_c_333333" android:id="@id/tv_desk_sign_team_customer_name" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/tv_desk_sign_team_customer" />
+        <com.bkjk.core.service_component.widget.FlowLayout android:id="@id/desk_todo_fl" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x10" android:layout_below="@id/tv_desk_sign_team_customer_name" app:lineSpacing="@dimen/x16" />
+        <com.bkjk.athena.appdesk.widget.NoScrollGridView android:id="@id/dl_desk_sign_team_picture" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x10" android:horizontalSpacing="@dimen/x8" android:verticalSpacing="@dimen/x8" android:numColumns="4" android:layout_below="@id/desk_todo_fl" />
+        <TextView android:textSize="@dimen/x32" android:textColor="@color/desk_c_3587F2" android:id="@id/tv_desk_look_more" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x10" android:text="@string/desk_more" android:layout_below="@id/dl_desk_sign_team_picture" />
+        <TextView android:textSize="@dimen/x28" android:textColor="@color/desk_c_333333" android:id="@id/desk_sign_item_note_tv" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x6" android:text="@string/desk_sign_note_record" android:layout_below="@id/tv_desk_look_more" />
+        <android.support.v4.widget.Space android:layout_width="fill_parent" android:layout_height="@dimen/x20" android:layout_below="@id/desk_sign_item_note_tv" />
+    </RelativeLayout>
+</LinearLayout>

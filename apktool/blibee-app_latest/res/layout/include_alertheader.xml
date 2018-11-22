@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/loAlertHeader" android:paddingLeft="@dimen/padding_alert_msg_left_right" android:paddingTop="@dimen/padding_alert_msg_top_bottom" android:paddingRight="@dimen/padding_alert_msg_left_right" android:paddingBottom="@dimen/padding_alert_msg_top_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/textSize_alert_title" android:textStyle="bold" android:textColor="@color/textColor_alert_title" android:gravity="center" android:id="@id/tvAlertTitle" android:background="@drawable/alert_rootview_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:textSize="@dimen/textSize_alert_msg" android:textColor="@color/textColor_alert_msg" android:gravity="center" android:id="@id/tvAlertMsg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/marginTop_alert_msg" />
+</LinearLayout>

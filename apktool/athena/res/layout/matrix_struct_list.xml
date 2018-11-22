@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/contact_depart_rl" android:background="@drawable/listitem_selector" android:paddingLeft="@dimen/x20" android:paddingTop="@dimen/x15" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/x100"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/x30" android:textColor="#ff333333" android:id="@id/matrix_group_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" />
+    <TextView android:textSize="@dimen/x30" android:id="@id/matrix_group_total" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x15" android:layout_toRightOf="@id/matrix_group_name" android:layout_centerVertical="true" />
+    <View android:background="@color/room_gray_20" android:layout_width="fill_parent" android:layout_height="@dimen/x1" android:layout_alignParentBottom="true" />
+</RelativeLayout>

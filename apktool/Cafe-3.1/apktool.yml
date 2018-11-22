@@ -1,0 +1,22 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: Cafe-3.1.apk
+compressionType: false
+doNotCompress:
+- arsc
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '7'
+  targetSdkVersion: '17'
+sharedLibrary: false
+unknownFiles: {}
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.2.4
+versionInfo:
+  versionCode: '17'
+  versionName: 4.2-eng.luxiaoyu.20130706.144040

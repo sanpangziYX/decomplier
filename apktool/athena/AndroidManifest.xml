@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.athena" platformBuildVersionCode="25" platformBuildVersionName="7.1.1">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <meta-data android:name="com.bkjk.core.service_component.imageloader.glide.ConfigGlideModule" android:value="GlideModule"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.any" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:glEsVersion="0x00020000" android:required="false"/>
+    <uses-feature android:name="android.hardware.microphone" android:required="false"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE"/>
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT"/>
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE"/>
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT"/>
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <permission android:name="com.athena.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.athena.permission.C2D_MESSAGE"/>
+    <meta-data android:name="android.support.VERSION" android:value="25.3.1"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <permission android:description="@string/read_attachment_desc" android:label="@string/read_attachment_label" android:name="com.athena.permission.READ_ATTACHMENT" android:permissionGroup="android.permission-group.MESSAGES" android:protectionLevel="dangerous"/>
+    <uses-permission android:name="com.athena.permission.READ_ATTACHMENT"/>
+    <permission android:description="@string/remote_control_desc" android:label="@string/remote_control_label" android:name="com.athena.permission.REMOTE_CONTROL" android:permissionGroup="android.permission-group.MESSAGES" android:protectionLevel="dangerous"/>
+    <uses-permission android:name="com.athena.permission.REMOTE_CONTROL"/>
+    <permission android:description="@string/read_messages_desc" android:label="@string/read_messages_label" android:name="com.athena.permission.READ_MESSAGES" android:permissionGroup="android.permission-group.MESSAGES" android:protectionLevel="dangerous"/>
+    <uses-permission android:name="com.athena.permission.READ_MESSAGES"/>
+    <permission android:description="@string/delete_messages_desc" android:label="@string/delete_messages_label" android:name="com.athena.permission.DELETE_MESSAGES" android:permissionGroup="android.permission-group.MESSAGES" android:protectionLevel="dangerous"/>
+    <uses-permission android:name="com.athena.permission.DELETE_MESSAGES"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.ACCESS_WIMAX_STATE"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BODY_SENSORS"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIMAX_STATE"/>
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="android.permission.PERSISTENT_ACTIVITY"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.READ_CELL_BROADCASTS"/>
+    <uses-permission android:name="android.permission.READ_INSTALL_SESSIONS"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.READ_SOCIAL_STREAM"/>
+    <uses-permission android:name="android.permission.READ_SYNC_STATS"/>
+    <uses-permission android:name="android.permission.READ_USER_DICTIONARY"/>
+    <uses-permission android:name="android.permission.RECEIVE_MMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_WAP_PUSH"/>
+    <uses-permission android:name="android.permission.REORDER_TASKS"/>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.SET_TIME_ZONE"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS"/>
+    <uses-permission android:name="android.permission.SUBSCRIBED_FEEDS_READ"/>
+    <uses-permission android:name="android.permission.SUBSCRIBED_FEEDS_WRITE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.TRANSMIT_IR"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.USE_SIP"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG"/>
+    <uses-permission android:name="android.permission.WRITE_PROFILE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+    <uses-permission android:name="android.permission.WRITE_SOCIAL_STREAM"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_USER_DICTIONARY"/>
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS"/>
+    <uses-permission android:name="com.android.browser.permission.WRITE_HISTORY_BOOKMARKS"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE"/>
+    <uses-permission android:name="com.android.voicemail.permission.ADD_VOICEMAIL"/>
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID_NOTIFICATION"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.OTHER_SERVICES"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.YouTubeUser"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.adsense"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.adwords"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.ah"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.android"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.androidsecure"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.blogger"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.cl"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.cp"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.dodgeball"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.finance"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.gbase"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.grandcentral"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.groups2"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.health"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.ig"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.jotspot"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.knol"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.lh2"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.local"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.mail"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.mobile"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.news"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.notebook"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.orkut"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.print"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.sierra"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.sierraqa"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.sierrasandbox"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.sitemaps"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.speech"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.speechpersonalization"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.talk"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.wifi"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.wise"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.writely"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.youtube"/>
+    <uses-permission android:name="com.google.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.google.android.providers.talk.permission.READ_ONLY"/>
+    <uses-permission android:name="com.google.android.providers.talk.permission.WRITE_ONLY"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.READ_OWNER_DATA"/>
+    <uses-permission android:name="android.permission.WRITE_OWNER_DATA"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <uses-permission android:name="android.permission.BATTERY_STATS"/>
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="com.qihoo.appstore.rtservice.ACCESS_RTSERVICE"/>
+    <uses-permission android:name="android.permission.SEND_DOWNLOAD_COMPLETED_INTENTS"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+    <application android:allowBackup="true" android:allowTaskReparenting="false" android:icon="@mipmap/ic_launcher" android:label="@string/app_app_name" android:name="com.athena.AthenaApplication" android:resizeableActivity="true" android:supportsRtl="true" android:theme="@style/AppTheme">
+        <meta-data android:name="com.amap.api.v2.apikey" android:value="b05fa256a6d2ec86208dfb0f672124d2"/>
+        <activity android:name="com.athena.activity.AppLaunchActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.Launch">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:launchMode="singleTask" android:name="com.athena.activity.AppHomeActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="bkjk.com" android:path="/app.home" android:scheme="athena"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.athena.activity.AppLoginActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="bkjk.com" android:path="/app.login" android:scheme="athena"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTask" android:name="com.athena.activity.AppWebViewActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="bkjk.com" android:path="/app.webview" android:scheme="athena"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.athena.activity.AppGuideActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.athena.activity.AppPluginTestActivity" android:screenOrientation="portrait"/>
+        <service android:name="org.openudid.OpenUDID_service">
+            <intent-filter>
+                <action android:name="org.openudid.GETUDID"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="true" android:name="ly.count.android.sdk.ReferrerReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="true" android:name="com.athena.wxapi.WXEntryActivity"/>
+        <activity android:icon="@drawable/copy" android:label="复制文件下载链接" android:name="com.athena.activity.AppAttachActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <receiver android:enabled="true" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService"/>
+        <activity android:label="@string/create_account" android:name="org.matrix.console.activity.AccountCreationActivity" android:screenOrientation="portrait"/>
+        <activity android:name="org.matrix.console.activity.MatrixSearchActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/login" android:name="org.matrix.console.activity.FallbackLoginActivity" android:screenOrientation="portrait"/>
+        <activity android:name="org.matrix.console.activity.SplashActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme"/>
+        <activity android:label="@string/title_activity_home" android:name="org.matrix.console.activity.HomeActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_room" android:launchMode="singleTop" android:name="org.matrix.console.activity.RoomActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:label="@string/title_activity_settings" android:name="org.matrix.console.activity.SettingsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:label="@string/title_activity_notification_settings" android:name="org.matrix.console.activity.NotificationSettingsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:label="@string/title_activity_member_details" android:name="org.matrix.console.activity.MemberDetailsActivity" android:screenOrientation="portrait"/>
+        <activity android:clearTaskOnLaunch="true" android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleTop" android:name="org.matrix.console.activity.LockScreenActivity" android:screenOrientation="portrait" android:taskAffinity="" android:theme="@android:style/Theme.Holo.Light.Dialog"/>
+        <activity android:name="org.matrix.console.activity.ImageWebViewActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity android:name="org.matrix.console.activity.ImageSliderActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity android:name="org.matrix.console.activity.CallViewActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <receiver android:exported="true" android:name="com.google.android.gms.gcm.GcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="org.matrix.console.gcm"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="org.matrix.console.gcm.MatrixGcmListenerService">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="org.matrix.console.gcm.MatrixInstanceIDListenerService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID"/>
+            </intent-filter>
+        </service>
+        <service android:name="org.matrix.console.services.EventStreamService"/>
+        <receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.analytics.CampaignTrackingReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.gms.analytics.CampaignTrackingService"/>
+        <activity android:name="org.matrix.console.activity.MatrixDepartmentActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="bkjk.com" android:path="/im.departments" android:scheme="athena"/>
+            </intent-filter>
+        </activity>
+        <activity android:enabled="true" android:exported="true" android:name="org.matrix.console.activity.MatrixContactStaffDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name="org.matrix.console.activity.RoomDetailActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.ActionBar"/>
+        <activity android:name="org.matrix.console.activity.RoomAllMembersActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.ActionBar"/>
+        <activity android:name="org.matrix.console.activity.RoomInfoUpdateActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.ActionBar"/>
+        <activity android:name="org.matrix.console.activity.MatrixRouterActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.ActionBar"/>
+        <activity android:name="org.matrix.console.activity.MatrixStaffActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.ActionBar"/>
+        <provider android:authorities="com.athena.google_measurement_service" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementContentProvider"/>
+        <receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.gms.measurement.UPLOAD"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <activity android:name="com.bkjk.athena_home.activity.HomeSearchActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="bkjk.com" android:path="/home.homesearch" android:scheme="athena"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.bkjk.athena_home.activity.HomeHeadLineActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bkjk.athena_home.activity.HomeNewsAndBusiActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bkjk.athena_home.activity.HomeNBSearchActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible"/>
+        <activity android:name="com.bkjk.athena_home.activity.HomeBusiSearchActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:launchMode="singleTask" android:name="com.bkjk.athena.appdesk.activity.DeskSignInActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="bkjk.com" android:path="/desk.desksignin" android:scheme="athena"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.bkjk.athena.appdesk.activity.DeskSignInSuccessActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bkjk.athena.appdesk.activity.DeskSingleRecordActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bkjk.athena.appdesk.activity.DeskSignTeamActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bkjk.athena.appdesk.activity.DeskSignTeamDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bkjk.athena.appdesk.activity.DeskQuestionActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bkjk.athena.appdesk.activity.DeskCaptureActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bkjk.athena.appdesk.activity.DeskPicListActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bkjk.athena.appdesk.activity.DeskSignInPlaceActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bkjk.athena.appdesk.activity.DeskPhotoPagerActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bkjk.athena.appuc.activity.UCFeedBackActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bkjk.athena.appuc.activity.UCAboutAppActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bkjk.athena.appuc.activity.UCSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bkjk.athena.appuc.activity.UCChangeSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bkjk.athena.appuc.activity.UCSetGestureActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="bkjk.com" android:path="/uc.gesture" android:scheme="athena"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.bkjk.athena.appuc.activity.UCModGestureActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bkjk.athena.appuc.activity.UCFingerPrintActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="bkjk.com" android:path="/uc.fingerprint" android:scheme="athena"/>
+            </intent-filter>
+        </activity>
+        <meta-data android:name="titleHeight" android:value="88"/>
+        <meta-data android:name="width" android:value="720"/>
+        <meta-data android:name="height" android:value="1280"/>
+        <meta-data android:name="headerBtHeight" android:value="45"/>
+        <meta-data android:name="headerBtWidth" android:value="45"/>
+        <meta-data android:name="headerBtMargin" android:value="30"/>
+        <meta-data android:name="headerBtPadding" android:value="15"/>
+        <meta-data android:name="loadingwidth" android:value="120"/>
+        <meta-data android:name="loadingheight" android:value="120"/>
+        <meta-data android:name="titletextsize" android:value="36"/>
+        <meta-data android:name="android.app.default_searchable" android:value="com.fsck.k9.activity.Search"/>
+        <activity android:configChanges="locale" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.fsck.k9.activity.Accounts" android:uiOptions="splitActionBarWhenNarrow">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="bkjk.com" android:path="/email.main" android:scheme="athena"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="locale" android:excludeFromRecents="true" android:label="@string/prefs_title" android:name="com.fsck.k9.activity.setup.Prefs" android:taskAffinity="com.athena.activity.setup.Prefs"/>
+        <activity android:configChanges="locale" android:label="@string/welcome_message_title" android:name="com.fsck.k9.activity.setup.WelcomeMessage"/>
+        <activity android:configChanges="locale" android:name="com.fsck.k9.activity.setup.OpenPgpAppSelectDialog" android:theme="@style/Theme.K9.Transparent"/>
+        <activity android:configChanges="locale" android:label="@string/font_size_settings_title" android:name="com.fsck.k9.activity.setup.FontSizeSettings"/>
+        <activity android:configChanges="locale" android:label="@string/account_setup_basics_title" android:name="com.fsck.k9.activity.setup.AccountSetupBasics"/>
+        <activity android:configChanges="locale" android:label="@string/account_setup_account_type_title" android:name="com.fsck.k9.activity.setup.AccountSetupAccountType"/>
+        <activity android:configChanges="locale" android:label="@string/account_setup_incoming_title" android:name="com.fsck.k9.activity.setup.AccountSetupIncoming"/>
+        <activity android:configChanges="locale" android:label="@string/account_settings_composition_title" android:name="com.fsck.k9.activity.setup.AccountSetupComposition"/>
+        <activity android:configChanges="locale" android:label="@string/account_setup_outgoing_title" android:name="com.fsck.k9.activity.setup.AccountSetupOutgoing"/>
+        <activity android:configChanges="locale" android:label="@string/account_setup_options_title" android:name="com.fsck.k9.activity.setup.AccountSetupOptions"/>
+        <activity android:configChanges="locale" android:label="@string/account_setup_names_title" android:name="com.fsck.k9.activity.setup.AccountSetupNames"/>
+        <activity android:configChanges="locale" android:label="@string/choose_folder_title" android:name="com.fsck.k9.activity.ChooseFolder" android:noHistory="true" android:theme="@style/Theme.K9Dialog"/>
+        <activity android:configChanges="locale" android:label="@string/choose_identity_title" android:name="com.fsck.k9.activity.ChooseIdentity" android:theme="@style/Theme.K9Dialog"/>
+        <activity android:configChanges="locale" android:label="@string/manage_identities_title" android:name="com.fsck.k9.activity.ManageIdentities"/>
+        <activity android:configChanges="locale" android:label="@string/edit_identity_title" android:name="com.fsck.k9.activity.EditIdentity"/>
+        <activity android:excludeFromRecents="true" android:launchMode="singleTop" android:name="com.fsck.k9.activity.NotificationDeleteConfirmation" android:taskAffinity="" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|locale|orientation" android:label="@string/account_setup_check_settings_title" android:name="com.fsck.k9.activity.setup.AccountSetupCheckSettings"/>
+        <activity android:configChanges="locale" android:label="@string/account_settings_title_fmt" android:name="com.fsck.k9.activity.setup.AccountSettings"/>
+        <activity android:configChanges="locale" android:label="@string/folder_settings_title" android:name="com.fsck.k9.activity.setup.FolderSettings" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:configChanges="locale" android:name="com.fsck.k9.activity.FolderList" android:uiOptions="splitActionBarWhenNarrow">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="locale" android:launchMode="singleTop" android:name="com.fsck.k9.activity.MessageList" android:uiOptions="splitActionBarWhenNarrow">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:host="messages" android:scheme="email"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="locale" android:enabled="false" android:label="@string/app_name" android:name="com.fsck.k9.activity.MessageCompose">
+            <intent-filter>
+                <action android:name="android.intent.action.SENDTO"/>
+                <data android:scheme="mailto"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <data android:mimeType="*/*"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <data android:mimeType="*/*"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:scheme="mailto"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.autocrypt.PEER_ACTION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="locale" android:label="@string/search_action" android:name="com.fsck.k9.activity.Search" android:uiOptions="splitActionBarWhenNarrow">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/searchable"/>
+        </activity>
+        <activity android:configChanges="locale" android:label="@string/shortcuts_title" android:name="com.fsck.k9.activity.LauncherShortcuts">
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="locale" android:name="com.fsck.k9.activity.EmailAddressList"/>
+        <activity android:name="com.fsck.k9.activity.UnreadWidgetConfiguration">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/upgrade_databases_title" android:name="com.fsck.k9.activity.UpgradeDatabases"/>
+        <receiver android:enabled="true" android:name="com.fsck.k9.service.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.BACKGROUND_DATA_SETTING_CHANGED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.android.sync.SYNC_CONN_STATUS_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:name="com.fsck.k9.service.RemoteControlReceiver" android:permission="com.athena.permission.REMOTE_CONTROL">
+            <intent-filter>
+                <action android:name="com.athena.K9RemoteControl.set"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.athena.K9RemoteControl.requestAccounts"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.fsck.k9.service.CoreReceiver"/>
+        <receiver android:enabled="true" android:name="com.fsck.k9.service.StorageReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_MOUNTED"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:icon="@drawable/icon" android:label="@string/unread_widget_label" android:name="com.fsck.k9.provider.UnreadWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/unread_widget_info"/>
+        </receiver>
+        <receiver android:icon="@drawable/message_list_widget_preview" android:label="@string/mail_list_widget_text" android:name="com.fsck.k9.widget.list.MessageListWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/message_list_widget_info"/>
+        </receiver>
+        <service android:enabled="true" android:name="com.fsck.k9.widget.list.MessageListWidgetService" android:permission="android.permission.BIND_REMOTEVIEWS"/>
+        <service android:enabled="true" android:name="com.fsck.k9.service.MailService"/>
+        <service android:enabled="true" android:name="com.fsck.k9.notification.NotificationActionService"/>
+        <service android:enabled="true" android:name="com.fsck.k9.service.PushService"/>
+        <service android:enabled="true" android:name="com.fsck.k9.service.PollService"/>
+        <service android:enabled="true" android:name="com.fsck.k9.service.RemoteControlService" android:permission="com.athena.permission.REMOTE_CONTROL"/>
+        <service android:enabled="true" android:name="com.fsck.k9.service.SleepService"/>
+        <service android:exported="false" android:name="com.fsck.k9.service.DatabaseUpgradeService"/>
+        <provider android:authorities="com.athena.attachmentprovider" android:exported="true" android:grantUriPermissions="true" android:multiprocess="true" android:name="com.fsck.k9.provider.AttachmentProvider" android:readPermission="com.athena.permission.READ_ATTACHMENT">
+            <meta-data android:name="de.cketti.safecontentresolver.ALLOW_INTERNAL_ACCESS" android:value="true"/>
+        </provider>
+        <provider android:authorities="com.athena.messageprovider" android:exported="true" android:grantUriPermissions="true" android:multiprocess="true" android:name="com.fsck.k9.provider.MessageProvider" android:readPermission="com.athena.permission.READ_MESSAGES" android:writePermission="com.athena.permission.DELETE_MESSAGES"/>
+        <provider android:authorities="com.athena.provider.email" android:exported="false" android:name="com.fsck.k9.provider.EmailProvider"/>
+        <provider android:authorities="com.athena.decryptedfileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.fsck.k9.provider.DecryptedFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/decrypted_file_provider_paths"/>
+        </provider>
+        <provider android:authorities="com.athena.tempfileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.fsck.k9.provider.AttachmentTempFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/temp_file_provider_paths"/>
+        </provider>
+        <service android:name="com.amap.api.location.APSService"/>
+        <provider android:authorities="com.athena.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
+        <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser" android:windowSoftInputMode="adjustResize"/>
+    </application>
+</manifest>

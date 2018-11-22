@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="@dimen/chat_avatar_size" android:layout_height="@dimen/chat_avatar_size"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <org.matrix.console.view.CircleImageView android:id="@id/avatar_img" android:layout_width="fill_parent" android:layout_height="fill_parent" app:border_width="0.0dip" app:border_color="@android:color/transparent" />
+    <ImageView android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/avatar_mask" />
+    <ImageView android:id="@id/imageView_presenceRing" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/presence_ring" />
+    <ImageView android:id="@id/avatar_typing_img" android:visibility="gone" android:layout_width="@dimen/chat_avatar_keyboard_size" android:layout_height="@dimen/chat_avatar_keyboard_size" android:src="@drawable/icon_keyboard" />
+</FrameLayout>

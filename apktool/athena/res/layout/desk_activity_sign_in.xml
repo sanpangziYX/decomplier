@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/desk_sign_in_title_rl" android:background="@color/desk_c_FFFFFF" android:layout_width="fill_parent" android:layout_height="@dimen/desk_size_44">
+        <ImageView android:id="@id/iv_desk_back_sign" android:layout_width="@dimen/x45" android:layout_height="@dimen/x45" android:layout_marginLeft="@dimen/desk_size_21" android:src="@drawable/desk_header_back" android:layout_centerVertical="true" />
+        <TextView android:textSize="17.0sp" android:textColor="@color/desk_c_333333" android:id="@id/tv_desk_sign_in_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/desk_sign" android:layout_centerInParent="true" />
+        <ImageView android:id="@id/iv_desk_question" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/desk_size_7" android:src="@drawable/desk_icon_wenti" android:layout_toRightOf="@id/tv_desk_sign_in_title" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/iv_desk_sign_calendar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/desk_size_20" android:src="@drawable/desk_icon_xuanrili" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <View android:background="@color/desk_c_20979797" android:layout_width="fill_parent" android:layout_height="@dimen/desk_size_0.5" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <Button android:enabled="false" android:textSize="@dimen/x36" android:textColor="@color/desk_c_FFFFFF" android:id="@id/bt_desk_sign_submit" android:background="@drawable/desk_submit_btn_bg_selector" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/x98" android:text="@string/desk_sign_submit" android:layout_alignParentBottom="true" />
+    <ScrollView android:id="@id/desk_sign_in_container_sl" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/bt_desk_sign_submit" android:layout_below="@id/desk_sign_in_title_rl">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:background="@color/desk_c_FFFFFF" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x36">
+                    <View android:id="@id/view_desk_left" android:background="@color/desk_c_20979797" android:layout_width="@dimen/desk_size_90" android:layout_height="@dimen/desk_size_0.5" android:layout_marginLeft="@dimen/desk_size_21" android:layout_centerVertical="true" />
+                    <TextView android:textSize="14.0sp" android:textColor="@color/desk_c_999999" android:id="@id/tv_desk_to_do" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/desk_size_21" android:text="@string/desk_to_do" android:layout_toRightOf="@id/view_desk_left" android:layout_centerVertical="true" />
+                    <View android:background="@color/desk_c_20979797" android:layout_width="@dimen/desk_size_90" android:layout_height="@dimen/desk_size_0.5" android:layout_marginLeft="@dimen/desk_size_21" android:layout_toRightOf="@id/tv_desk_to_do" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <com.bkjk.core.service_component.widget.FlowLayout android:id="@id/tv_desk_flowlayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/x20" android:layout_marginTop="@dimen/desk_size_21" android:layout_marginRight="@dimen/x20" android:layout_marginBottom="@dimen/desk_size_20" app:lineSpacing="@dimen/x30">
+                    <CheckBox android:id="@id/rb_interview" android:text="@string/desk_sign_interview" style="@style/Checkbox_SignLabel" />
+                    <CheckBox android:id="@id/rb_pauper" android:text="@string/desk_sign_pauper" style="@style/Checkbox_SignLabel" />
+                    <CheckBox android:id="@id/rb_customer_accompany_sign" android:text="@string/desk_sign_customer_accompany_sign" style="@style/Checkbox_SignLabel" />
+                    <CheckBox android:id="@id/rb_morningmeeting" android:text="@string/desk_sign_morningmeeting" style="@style/Checkbox_SignLabel" />
+                    <CheckBox android:id="@id/rb_afternoonmeeting" android:text="@string/desk_sign_afternoonmeeting" style="@style/Checkbox_SignLabel" />
+                    <CheckBox android:id="@id/rb_room_accompany_sign" android:text="@string/desk_sign_room_accompany_sign" style="@style/Checkbox_SignLabel" />
+                    <CheckBox android:id="@id/rb_togethervisit" android:text="@string/desk_sign_togethervisit" style="@style/Checkbox_SignLabel" />
+                    <CheckBox android:id="@id/rb_train" android:text="@string/desk_sign_train" style="@style/Checkbox_SignLabel" />
+                    <CheckBox android:id="@id/rb_interview_broker" android:text="@string/desk_sign_interview_broker" style="@style/Checkbox_SignLabel" />
+                    <CheckBox android:id="@id/rb_other" android:text="@string/desk_sign_other" style="@style/Checkbox_SignLabel" />
+                </com.bkjk.core.service_component.widget.FlowLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/desk_group_ll" android:background="@color/desk_c_FFFFFF" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_desk_sign_in_select_place" android:layout_width="fill_parent" android:layout_height="@dimen/x86">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x40" android:src="@drawable/desk_icon_location" />
+                    <TextView android:textSize="@dimen/x32" android:textColor="@color/desk_c_333333" android:ellipsize="end" android:id="@id/tv_desk_first_place" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="@dimen/x50" android:text="昆泰国际" android:maxLines="1" android:drawableRight="@drawable/desk_icon_sign_next" />
+                </LinearLayout>
+                <View android:background="@color/desk_c_21979797" android:layout_width="fill_parent" android:layout_height="@dimen/x1" android:layout_marginLeft="@dimen/x40" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_desk_sign_in_relate_customer" android:layout_width="fill_parent" android:layout_height="@dimen/x86">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x40" android:src="@drawable/desk_icon_group" />
+                    <TextView android:textSize="@dimen/x32" android:textColor="@color/desk_c_333333" android:id="@id/tv_desk_to_relate_customer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="关联客户" />
+                    <ImageView android:id="@id/desk_todo_must_flag_iv" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x5" android:src="@drawable/desk_icon_xing_flag" />
+                    <TextView android:textSize="@dimen/x28" android:textColor="@color/desk_c_999999" android:gravity="end" android:id="@id/desk_customer_relate" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x20" android:layout_marginRight="@dimen/x20" android:maxLines="1" android:layout_weight="1.0" />
+                    <ImageView android:layout_gravity="end|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/x50" android:src="@drawable/desk_icon_sign_next" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="@color/desk_c_F5F5F5" android:layout_width="fill_parent" android:layout_height="@dimen/x20" />
+            <GridView android:id="@id/gv_sign_in_pictures" android:background="@color/desk_c_FFFFFF" android:padding="@dimen/x10" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:stretchMode="columnWidth" android:numColumns="4" />
+            <View android:background="@color/desk_c_F5F5F5" android:layout_width="fill_parent" android:layout_height="@dimen/x20" />
+            <LinearLayout android:orientation="vertical" android:background="@color/desk_c_FFFFFF" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/x32" android:textColor="@color/desk_c_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x44" android:layout_marginTop="@dimen/x24" android:text="@string/desk_sign_note" />
+                <EditText android:textSize="@dimen/x28" android:textColor="@color/desk_c_333333" android:textColorHint="@color/desk_c_999999" android:gravity="center|left|top" android:id="@id/desk_sign_in_note_et" android:background="@drawable/desk_sign_in_note_bg" android:paddingLeft="@dimen/x24" android:paddingTop="@dimen/x12" android:paddingRight="@dimen/x24" android:paddingBottom="@dimen/x12" android:layout_width="fill_parent" android:layout_height="@dimen/x236" android:layout_marginLeft="@dimen/x44" android:layout_marginTop="@dimen/x24" android:layout_marginRight="@dimen/x44" android:layout_marginBottom="@dimen/x44" android:hint="@string/desk_sign_note_hint" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

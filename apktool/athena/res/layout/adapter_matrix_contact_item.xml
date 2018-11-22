@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/listitem_selector" android:layout_width="fill_parent" android:layout_height="@dimen/x130"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/contact_item_check" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x30" android:layout_centerVertical="true" />
+    <ImageView android:id="@id/contact_item_avatar" android:layout_width="@dimen/x80" android:layout_height="@dimen/x80" android:layout_marginLeft="@dimen/x30" android:layout_toRightOf="@id/contact_item_check" android:layout_centerVertical="true" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x20" android:layout_toRightOf="@id/contact_item_avatar" android:layout_centerVertical="true">
+        <TextView android:textSize="18.0sp" android:textColor="@color/gray333" android:id="@id/contact_item_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="name" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/contact_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/contact_item_name">
+            <TextView android:textSize="14.0sp" android:textColor="@color/gray" android:id="@id/contact_item_depart" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="depart" />
+            <View android:background="@color/gray" android:layout_width="@dimen/x1" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/x10" android:layout_marginRight="@dimen/x10" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/gray" android:id="@id/contact_item_job" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="job" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:background="@color/room_gray_20" android:layout_width="fill_parent" android:layout_height="@dimen/x1" android:layout_marginLeft="@dimen/x30" android:layout_alignParentBottom="true" />
+</RelativeLayout>

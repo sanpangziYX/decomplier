@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip">
+        <CheckBox android:id="@id/checkbox_room_creation" android:layout_width="30.0dip" android:layout_height="30.0dip" />
+        <TextView android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/room_creation_public" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip">
+        <TextView android:textSize="15.0sp" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/room_creation_room_name" android:layout_weight="0.2" />
+        <EditText android:textSize="15.0sp" android:id="@id/editText_roomName" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/room_creation_room_name_hint" android:maxLines="1" android:lines="1" android:layout_weight="0.8" /> />
+</LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip">
+        <TextView android:textSize="15.0sp" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="\#" android:layout_weight="0.05" />
+        <EditText android:textSize="15.0sp" android:id="@id/editText_roomAlias" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/room_creation_room_alias_hint" android:maxLines="1" android:lines="1" android:layout_weight="0.65" />
+        <TextView android:textSize="15.0sp" android:id="@id/textView_homeServer" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text=":homeserver" android:layout_weight="0.3" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip">
+        <TextView android:textSize="15.0sp" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/room_creation_participants" android:layout_weight="0.2" />
+        <EditText android:textSize="15.0sp" android:id="@id/editText_participants" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/room_creation_participants_hint" android:maxLines="1" android:lines="1" android:layout_weight="0.8" /> />
+</LinearLayout>
+</LinearLayout>

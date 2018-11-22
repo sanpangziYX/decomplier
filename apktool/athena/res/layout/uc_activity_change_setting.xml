@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/uc_c_FFF5F5F5" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_uc_change_role_title" android:background="@color/uc_c_FFFFFF" android:layout_width="fill_parent" android:layout_height="44.0dip">
+        <ImageView android:id="@id/iv_uc_change_role_back" android:layout_width="@dimen/x30" android:layout_height="@dimen/x30" android:layout_marginLeft="20.0dip" android:src="@drawable/uc_header_back" android:layout_centerVertical="true" />
+        <TextView android:textSize="17.0sp" android:textColor="@color/uc_c_333333" android:id="@id/tv_uc_change_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/uc_change_department" android:layout_centerInParent="true" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/uc_c_979797" android:id="@id/tv_uc_sure" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:text="@string/uc_sure" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ListView android:id="@id/lv_uc_change_setting" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:divider="@null" android:layout_below="@id/rl_uc_change_role_title" />
+</RelativeLayout>

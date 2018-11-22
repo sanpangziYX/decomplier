@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="actionSheetBackground" format="reference|color" />
+    <attr name="cancelButtonBackground" format="reference|color" />
+    <attr name="otherButtonTopBackground" format="reference|color" />
+    <attr name="otherButtonTitleBackground" format="reference|color" />
+    <attr name="otherButtonMiddleBackground" format="reference|color" />
+    <attr name="otherButtonBottomBackground" format="reference|color" />
+    <attr name="otherButtonSingleBackground" format="reference|color" />
+    <attr name="cancelButtonTextColor" format="reference|color" />
+    <attr name="otherButtonTextColor" format="reference|color" />
+    <attr name="destructiveButtonTextColor" format="reference|color" />
+    <attr name="titleButtonTextColor" format="reference|color" />
+    <attr name="actionSheetPadding" format="reference|dimension" />
+    <attr name="otherButtonSpacing" format="reference|dimension" />
+    <attr name="cancelButtonMarginTop" format="reference|dimension" />
+    <attr name="actionSheetTextSize" format="reference|dimension" />
+    <attr name="actionSheetStyle" format="reference" />
+    <attr name="ysf_fntText" format="string" />
+    <attr name="ysf_fntTextColor" format="color" />
+    <attr name="ysf_fntTextSize" format="dimension" />
+    <attr name="ysf_fntMaxLines" format="integer" />
+    <attr name="fadeDuration" format="integer" />
+    <attr name="viewAspectRatio" format="float" />
+    <attr name="placeholderImage" format="reference" />
+    <attr name="placeholderImageScaleType">
+        <enum name="center" value="4" />
+        <enum name="centerCrop" value="6" />
+        <enum name="centerInside" value="5" />
+        <enum name="fitCenter" value="2" />
+        <enum name="fitEnd" value="3" />
+        <enum name="fitStart" value="1" />
+        <enum name="fitXY" value="0" />
+        <enum name="focusCrop" value="7" />
+        <enum name="none" value="-1" />
+    </attr>
+    <attr name="retryImage" format="reference" />
+    <attr name="retryImageScaleType">
+        <enum name="center" value="4" />
+        <enum name="centerCrop" value="6" />
+        <enum name="centerInside" value="5" />
+        <enum name="fitCenter" value="2" />
+        <enum name="fitEnd" value="3" />
+        <enum name="fitStart" value="1" />
+        <enum name="fitXY" value="0" />
+        <enum name="focusCrop" value="7" />
+        <enum name="none" value="-1" />
+    </attr>
+    <attr name="failureImage" format="reference" />
+    <attr name="failureImageScaleType">
+        <enum name="center" value="4" />
+        <enum name="centerCrop" value="6" />
+        <enum name="centerInside" value="5" />
+        <enum name="fitCenter" value="2" />
+        <enum name="fitEnd" value="3" />
+        <enum name="fitStart" value="1" />
+        <enum name="fitXY" value="0" />
+        <enum name="focusCrop" value="7" />
+        <enum name="none" value="-1" />
+    </attr>
+    <attr name="progressBarImage" format="reference" />
+    <attr name="progressBarImageScaleType">
+        <enum name="center" value="4" />
+        <enum name="centerCrop" value="6" />
+        <enum name="centerInside" value="5" />
+        <enum name="fitCenter" value="2" />
+        <enum name="fitEnd" value="3" />
+        <enum name="fitStart" value="1" />
+        <enum name="fitXY" value="0" />
+        <enum name="focusCrop" value="7" />
+        <enum name="none" value="-1" />
+    </attr>
+    <attr name="progressBarAutoRotateInterval" format="integer" />
+    <attr name="actualImageScaleType">
+        <enum name="center" value="4" />
+        <enum name="centerCrop" value="6" />
+        <enum name="centerInside" value="5" />
+        <enum name="fitCenter" value="2" />
+        <enum name="fitEnd" value="3" />
+        <enum name="fitStart" value="1" />
+        <enum name="fitXY" value="0" />
+        <enum name="focusCrop" value="7" />
+        <enum name="none" value="-1" />
+    </attr>
+    <attr name="backgroundImage" format="reference" />
+    <attr name="overlayImage" format="reference" />
+    <attr name="pressedStateOverlayImage" format="reference" />
+    <attr name="roundAsCircle" format="boolean" />
+    <attr name="roundedCornerRadius" format="dimension" />
+    <attr name="roundTopLeft" format="boolean" />
+    <attr name="roundTopRight" format="boolean" />
+    <attr name="roundBottomRight" format="boolean" />
+    <attr name="roundBottomLeft" format="boolean" />
+    <attr name="roundWithOverlayColor" format="color" />
+    <attr name="roundingBorderWidth" format="dimension" />
+    <attr name="roundingBorderColor" format="color" />
+    <attr name="roundingBorderPadding" format="dimension" />
+    <attr name="riv_corner_radius" format="dimension" />
+    <attr name="riv_corner_radius_top_left" format="dimension" />
+    <attr name="riv_corner_radius_top_right" format="dimension" />
+    <attr name="riv_corner_radius_bottom_left" format="dimension" />
+    <attr name="riv_corner_radius_bottom_right" format="dimension" />
+    <attr name="riv_border_width" format="dimension" />
+    <attr name="riv_border_color" format="color" />
+    <attr name="riv_mutate_background" format="boolean" />
+    <attr name="riv_oval" format="boolean" />
+    <attr name="riv_tile_mode">
+        <enum name="clamp" value="0" />
+        <enum name="mirror" value="2" />
+        <enum name="repeat" value="1" />
+    </attr>
+    <attr name="riv_tile_mode_x">
+        <enum name="clamp" value="0" />
+        <enum name="mirror" value="2" />
+        <enum name="repeat" value="1" />
+    </attr>
+    <attr name="riv_tile_mode_y">
+        <enum name="clamp" value="0" />
+        <enum name="mirror" value="2" />
+        <enum name="repeat" value="1" />
+    </attr>
+    <attr name="ysf_siv_border_width" format="dimension" />
+    <attr name="ysf_siv_border_color" format="color" />
+    <attr name="ysf_siv_border_overlay" format="boolean" />
+    <attr name="ysf_siv_fill_color" format="color" />
+    <attr name="ysf_siv_shape" format="integer" />
+</resources>

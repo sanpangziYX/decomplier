@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/cumulative_profit.css" />
+		<script type="text/javascript" src="../../js/rem.js"></script>
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/fastclick.js"></script>
+		<script type="text/javascript" src="cumulative_profit.js"></script>
+		<script type="text/javascript" src="../../js/jsrender.min.js"></script>
+		<title>累计收益</title>
+	</head>
+	<body>
+		<header class="clearfix bgcolor_main">
+			<div class="headerback_box">
+				<img src="../../img/header_back.png" />
+			</div>
+			<p>累计收益</p>
+		</header>
+		<section>
+			<ul class="tab_content flex flex-vc flex-hc ">
+				<li id="J" onclick="initDate('J')" style="display: none;">玖富宝</li>
+				<li id="D" onclick="initDate('D')" style="display: none;">日账户</li>
+				<li id="M" onclick="initDate('M')" class="current">月账户</li>
+				<li id="Q" onclick="initDate('Q')">季账户</li>
+				<li id="Y" onclick="initDate('Y')">年账户</li>
+				<li id="T" onclick="initDate('T')">特供</li>
+				<li id="W" onclick="initDate('W')" style="display: none;">美好计划</li>
+			</ul>
+			<div class="sum_asset">
+				<h3>累计期望回报(元)</h3>
+				<p class="money">0.00</p>
+				<span class="check" onclick="toMoneyFlow()">查看资金流水</span>
+			</div>
+			<ul class="list_content">
+			</ul>
+			<div class="word_footer">期望回报并非平台承诺收益，市场有风险，投资需谨慎</div>
+		</section>
+	</body>
+</html>
+<script>
+	$(function(){
+		$('.tab_content li').click(function(){
+			$('.tab_content li').removeClass('current');
+			$(this).addClass('current');
+		})
+	})
+</script>
+
+<script id="itemTmplD" type="text/x-jsrender">
+	<li class="clearfix">
+		<p class="left"><span class="time"></span>{{:earning_day}}</p>
+		<p class="right">+{{:earning}}</p>
+	</li>
+</script>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<title>身份认证</title>
+		<script type="text/javascript" src="../../js/rem.js" ></script>
+		<link rel="stylesheet" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../plugins/layer/layer.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/register.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/user_id.css"/>
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/validatorUtil.js"></script>
+		<script type="text/javascript" src="../../js/idCardNoValidate.js"></script>
+		<script type="text/javascript" src="../../js/fastclick.js"></script>
+		<script type="text/javascript" src="user_id.js"></script>
+	</head>
+	<body>
+		<img src="../../img/succeed.png" width="38" height="38" style="margin:0 auto;display: none;" />
+		<header class="clearfix">
+			<div class="headback_box" keepalive="true">
+				<img src="../../img/header_back.png" />
+			</div>
+			<p>身份认证</p>
+		</header>
+		<section class="section">
+			<!--TODO:-->
+			<p class="message_tips">
+				请填写真实信息完成实名认证，保障您的账户资金安全
+			</p>
+			<form action="" method="" onsubmit="return false">
+				<ul class="register_list clearfix">
+					<li>
+						<input type="text" name="" id="firstname" value="" placeholder="请输入您的真实姓名" />
+						<div class="delete_ipt fr" data-id="firstname">
+							<img src="../../img/delete.png"/>
+						</div>
+					</li>
+					<li>
+						<input type="text" name="" id="idcardNumber" value="" placeholder="请输入您的身份证号" maxlength="18" />
+						<div class="delete_ipt fr" data-id="idcardNumber">
+							<img src="../../img/delete.png"/>
+						</div>
+					</li>
+				</ul>
+			
+				<button class="register_btn certificate">马上认证</button>
+			</form>
+			
+			<footer class="foot-cyp">
+							<div class="reg-foot-mag">
+				<span>
+					<img src="http://test4.wukonglicai.com/images/img-kfb-1.png" />
+				</span>
+			</div>
+				<p>期望回报并非平台承诺收益，市场有风险，投资需谨慎</p>
+			</footer>
+
+		</section>
+		
+		<div class="showAlert">
+			<div class="mask"></div>
+			<div class="content_wrap content_wrap1">
+				<span class="add">该身份证号已被注册，请选择对应的账户进行登录</span>
+			</div>
+			
+			<div class="content_wrap content_wrap2">
+				<h3>请您再次确认您的个人信息</h3>
+				<div class="id_num id_num1 clearfix">
+					<i>姓名</i>
+					<input type="text" name="" id="name" value="" placeholder=""/>
+				</div>
+				<div class="id_num id_num2 clearfix">
+					<i>身份证号</i>
+					<input type="text" name="" id="cardNo" value="" placeholder=""/>
+				</div>
+				<p>
+					请确保信息准确，以免影响您的出借与取现操作
+				</p>
+				<div class="btn_box clearfix">
+					<button class="showbtn_2">修改</button>
+					<button class="showbtn_3">确定</button>
+				</div>
+			</div>
+			
+			<div class="content_wrap content_wrap3">
+				<div style="padding:.4rem 0 .4rem;" >
+                    <img src="../../img/succeed.png"  style="width:.96rem;height:auto;display: block; margin: 0 auto;" />
+                </div>
+				<p style="padding-bottom:.14rem">认证成功</p>
+				<p>可领取999空粉币</p>
+			</div>
+			
+			<div class="content_wrap content_wrap4">
+				<p>认证成功！可领取999空粉币</p>
+			</div>
+			
+			<div class="content_wrap content_wrap8">
+				<h3>提示</h3>
+				<div class="txt">
+					<p></p>
+				</div>
+				<button class="showbtn_1" onclick="goIndex()">好的</button>
+			</div>
+		</div>
+		<script src="../../plugins/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
+

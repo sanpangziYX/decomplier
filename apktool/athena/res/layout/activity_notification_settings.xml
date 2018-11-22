@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/settings_layout" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/notif_settings_disable_all_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:id="@id/notif_settings_disable_all_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/notification_settings_disable_all" style="@style/Base.TextAppearance.AppCompat.Body2" />
+            <TextView android:id="@id/notification_settings_disable_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/notification_settings_enable_notifications_warning" style="@style/Base.TextAppearance.AppCompat.Caption" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/settings_items_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/notification_settings_global_info" style="@style/Base.TextAppearance.AppCompat.Caption" />
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/notification_settings_per_word_notifications" style="@style/Base.TextAppearance.AppCompat.Title" />
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/notification_settings_per_word_info" style="@style/Base.TextAppearance.AppCompat.Caption" />
+            <LinearLayout android:orientation="vertical" android:id="@id/per_word_notifications_layout" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" />
+            <ListView android:id="@id/listView_perWord" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/notification_settings_per_room_notifications" style="@style/Base.TextAppearance.AppCompat.Title" />
+            <LinearLayout android:orientation="vertical" android:id="@id/per_rooms_notifications_layout" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <ListView android:id="@id/listView_perRoom" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/notification_settings_per_sender_notifications" style="@style/Base.TextAppearance.AppCompat.Title" />
+            <LinearLayout android:orientation="vertical" android:id="@id/per_sender_notifications_layout" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <ListView android:id="@id/listView_perSender" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/notification_settings_other_alerts" style="@style/Base.TextAppearance.AppCompat.Title" />
+            <LinearLayout android:orientation="horizontal" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip">
+                <CheckBox android:layout_gravity="center_vertical" android:id="@id/contain_my_user_name_check" android:layout_width="30.0dip" android:layout_height="30.0dip" android:checked="true" />
+                <TextView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/notification_settings_contain_my_user_name" android:labelFor="@id/contain_my_user_name_check" style="@style/Base.TextAppearance.AppCompat.Caption" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip">
+                <CheckBox android:layout_gravity="center_vertical" android:id="@id/contain_my_display_name_check" android:layout_width="30.0dip" android:layout_height="30.0dip" android:checked="true" />
+                <TextView android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/notification_settings_contain_my_display_name" android:labelFor="@id/contain_my_display_name_check" style="@style/Base.TextAppearance.AppCompat.Caption" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip">
+                <CheckBox android:layout_gravity="center_vertical" android:id="@id/just_sent_to_me_check" android:layout_width="30.0dip" android:layout_height="30.0dip" android:checked="true" />
+                <TextView android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/notification_settings_just_sent_to_me" android:labelFor="@id/just_sent_to_me_check" style="@style/Base.TextAppearance.AppCompat.Caption" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip">
+                <CheckBox android:layout_gravity="center_vertical" android:id="@id/invite_to_new_room_check" android:layout_width="30.0dip" android:layout_height="30.0dip" android:checked="true" />
+                <TextView android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/notification_settings_invite_to_a_new_room" android:labelFor="@id/invite_to_new_room_check" style="@style/Base.TextAppearance.AppCompat.Caption" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip">
+                <CheckBox android:layout_gravity="center_vertical" android:id="@id/people_leave_join_room_check" android:layout_width="30.0dip" android:layout_height="30.0dip" android:checked="true" />
+                <TextView android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/notification_settings_people_join_leave_rooms" android:labelFor="@id/people_leave_join_room_check" style="@style/Base.TextAppearance.AppCompat.Caption" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip">
+                <CheckBox android:layout_gravity="center_vertical" android:id="@id/receive_a_call_check" android:layout_width="30.0dip" android:layout_height="30.0dip" android:checked="true" />
+                <TextView android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/notification_settings_receive_a_call" android:labelFor="@id/receive_a_call_check" style="@style/Base.TextAppearance.AppCompat.Caption" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip">
+                <CheckBox android:layout_gravity="center_vertical" android:id="@id/suppress_from_bots_check" android:layout_width="30.0dip" android:layout_height="30.0dip" android:checked="true" />
+                <TextView android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/notification_settings_suppress_from_bots" android:labelFor="@id/suppress_from_bots_check" style="@style/Base.TextAppearance.AppCompat.Caption" />
+            </LinearLayout>
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/notification_settings_by_default" style="@style/Base.TextAppearance.AppCompat.Title" />
+            <LinearLayout android:orientation="horizontal" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip">
+                <CheckBox android:layout_gravity="center_vertical" android:id="@id/notify_all_others_check" android:layout_width="30.0dip" android:layout_height="30.0dip" android:checked="true" />
+                <TextView android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/notification_settings_notify_all_other" android:labelFor="@id/notify_all_others_check" style="@style/Base.TextAppearance.AppCompat.Caption" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/apollo_certification_title_rl" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="@dimen/x88">
+        <TextView android:textSize="@dimen/x36" android:textColor="@color/apollo_uc_c_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/apollo_uc_string_certification" android:layout_centerInParent="true" />
+        <View android:background="@color/apollo_uc_line_D4D4D4" android:layout_width="fill_parent" android:layout_height="@dimen/x1" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <ImageView android:id="@id/apollo_uc_certification_state_iv" android:layout_width="@dimen/x280" android:layout_height="@dimen/x280" android:layout_marginTop="@dimen/x120" android:src="@drawable/apollo_uc_shiming" android:layout_below="@id/apollo_certification_title_rl" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="@dimen/x36" android:textColor="@color/apollo_uc_c_333333" android:layout_gravity="center_horizontal" android:id="@id/apollo_uc_certification_state_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x60" android:text="@string/apollo_uc_certification_success" android:layout_below="@id/apollo_uc_certification_state_iv" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="@dimen/x36" android:textColor="@color/apollo_uc_c_59A3FF" android:layout_gravity="center_horizontal" android:id="@id/apollo_uc_certification_state_action_tv" android:background="@drawable/apollo_uc_bg_certification_state" android:padding="@dimen/x20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x80" android:text="@string/apollo_uc_certification_comp_i_known" android:layout_below="@id/apollo_uc_certification_state_tv" android:layout_centerHorizontal="true" />
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/room_attach_icon" android:background="@drawable/room_attach_bg" android:layout_width="@dimen/x100" android:layout_height="@dimen/x100" android:layout_marginTop="@dimen/x25" android:scaleType="centerInside" />
+    <TextView android:gravity="center_horizontal" android:id="@id/room_attach_name" android:layout_width="@dimen/x110" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x10" android:layout_marginBottom="@dimen/x25" />
+</LinearLayout>

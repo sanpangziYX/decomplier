@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/common_back" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/home_search_ll1" android:background="@color/home_c_FFFFFF" android:layout_width="fill_parent" android:layout_height="@dimen/x100">
+        <TextView android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/home_search_tv" android:background="@drawable/home_bg_search_bar_round" android:paddingLeft="@dimen/x40" android:layout_width="0.0dip" android:layout_height="@dimen/x60" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:hint="@string/home_search_hint" android:drawableLeft="@drawable/home_icon_search" android:drawablePadding="@dimen/x10" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/x18" android:textColor="@color/home_c_666666" android:layout_gravity="center_vertical" android:id="@id/home_scan_tv" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginRight="@dimen/x40" android:text="@string/home_scan" android:includeFontPadding="false" android:drawableTop="@drawable/home_scan" />
+    </LinearLayout>
+    <com.bkjk.athena_home.widgets.PtrFrameLayoutWithViewPager android:id="@id/home_ptr_refresh_view" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/home_search_ll1" app:ptr_resistance="1.7" app:ptr_ratio_of_header_height_to_refresh="1.2" app:ptr_duration_to_close="200" app:ptr_duration_to_close_header="500" app:ptr_pull_to_fresh="false" app:ptr_keep_header_when_refresh="true">
+        <com.bkjk.athena_home.widgets.HomeListView android:id="@id/lv_index" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" />
+    </com.bkjk.athena_home.widgets.PtrFrameLayoutWithViewPager>
+    <include android:visibility="gone" layout="@layout/home_layout_show_fail" />
+</RelativeLayout>

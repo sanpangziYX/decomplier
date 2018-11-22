@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/activity_wechat_capture" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <SurfaceView android:id="@id/preview_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.bkjk.athena.appdesk.view.AutoScannerView android:id="@id/autoscanner_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

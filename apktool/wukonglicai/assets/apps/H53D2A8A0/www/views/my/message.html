@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+	<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/message.css"/>
+	<script type="text/javascript" src="../../js/rem.js"></script>
+	<script type="text/javascript" src="../../js/zepto.min.js"></script>
+	<script type="text/javascript" src="../../js/common.js"></script>
+	<script type="text/javascript" src="../../js/fastclick.js"></script>
+	<script type="text/javascript" src="message.js"></script>
+	<script type="text/javascript" src="../../js/jsrender.min.js"></script>
+	<title>我的消息</title>
+</head>
+<body>
+	<header class="clearfix bgcolor_main">
+		<div class="headerback_box">
+			<img src="../../img/header_back.png" />
+		</div>
+		<p>我的消息</p>
+	</header>
+	<section class="section">
+		<ul class="message_list">
+			<div class="icon clearfix">
+				<img src="../../img/message_icon.png" alt=""/>
+			</div>
+		</ul>
+	</section>
+</body>
+<!--
+	作者：lich
+	时间：2017-05-23
+	描述：站内信模板
+-->
+<script id="msg" type="text/x-jsrender">
+	<li>
+		<div class="bg_box {{if isRead=='T'}}bg_cur{{/if}}"></div>
+		<div class="content_box" onclick="subMessage('{{:title}}','{{:createTime}}','{{:content}}','{{:mid}}')">
+			<h3 class="clearfix">
+				{{:title}}
+				<span>{{:createTime}}</span>
+			</h3>
+			<p>{{:contentSon}}</p>
+		</div>
+	</li>
+</script>
+</html>

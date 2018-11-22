@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/monkeyfan_index.css" />
+		<script type="text/javascript" src="../../js/rem.js"></script>
+		<script type="text/javascript" src="../../js/fastclick.js"></script>
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src='../../js/kefu.js'></script>
+		<title>空粉首页</title>
+		<style>
+			body{
+				background: #FFFFFF;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="clearfix bgcolor_red">
+			<p>空粉俱乐部<span class="get" id="get_coins" onclick="toJfTask();">获取空粉币</span></p>
+		</header>
+		<div class="nav_footer">
+			<ul class="tab_footer">
+				<li><span class="monkey"></span>悟空</li>
+				<li><span class="invest"></span>投资</li>
+				<li class="current"><span class="monkeyfan"></span>空粉</li>
+				<li><span class="myself"></span>我</li>
+			</ul>
+		</div>
+	</body>
+
+</html>
+<script>
+	var subview=null;
+	var lasttoken="";
+	var lastts=0;
+	function doinit(){
+		initwindow();
+		var currts=getTS();
+		var token=getToken();
+		if(null != token && undefined != token && "" != token) {
+			setKeFu();
+		}
+		if(!token||token.length<1){
+			token="wk";
+		}
+		var url=serverMurl+'weixin/app/jf/'+token+'/integralAppNew.html';
+		console.log(url);
+		if(lasttoken==token){
+			if(currts-lastts<5*60*1000){
+				try{
+					if(subview.getURL()==url){
+						return;
+					}
+				}catch(e){}
+				
+			}
+		}
+		//console.log(url);
+		subview.loadURL(url);
+		lastts=currts;
+		lasttoken=token;
+		
+		
+	}
+	function getRealPx(virtualPx){
+		var docEl = document.documentElement;
+		var clientWidth = docEl.clientWidth;
+		var htmlFontsize = (clientWidth >= 720 ? 100 : clientWidth / 7.5) ;
+		var realPx=parseInt(htmlFontsize*virtualPx/100)
+		return realPx;
+	}
+	function doreload(){
+		lastts=0;
+		doinit();
+	}
+	function toJfTask(){
+		var token=getToken();
+		if(token.length<1){
+			token='';
+			openPage('../login/login.html','login.html');
+			return;
+		}
+		var url=serverMurl+'weixin/'+token+'/jfTaskApp.html?versionFlag=3.0&app=IOS';
+		console.log(url);
+		openBrowser({title:'我的空粉币',url:url})
+	}
+	var inited=false;
+	function initwindow(){
+		if(inited){
+			return;
+		}
+		inited=true;
+		var windowstyles = {
+			render: 'always',
+			bounce: 'none',
+			'popGesture': 'close',
+			'scrollIndicator': 'none',
+			hardwareAccelerated: isHardwareAccelerated()
+		};
+		var top=$("header").height();
+		var height=$(".nav_footer").height();
+		windowstyles["bottom"]=height+getRealPx(24);
+		windowstyles["top"]=top;
+		//var windowheight=$(window).height()-height-top;
+		//windowstyles["height"]=windowheight;
+		subview=plus.webview.create(null,'kfwv',windowstyles);
+		plus.webview.currentWebview().append(subview);
+		subview.addEventListener("error",function(){
+			lastts=0;
+		})
+	}
+	document.addEventListener("plusready",function(){
+		
+		var agent = plus.navigator.getUserAgent();
+		var needinitkf=true;
+		if(plus.os.name == "Android") {
+			var agent = plus.navigator.getUserAgent();
+			if(agent.indexOf("Android 4") > 0) {
+				needinitkf=false;
+			}
+		}
+		if(needinitkf){
+			setTimeout(function(){
+				doinit();
+			},1000);
+		}
+
+	})
+	
+//function receiveCount(data){
+//  try {
+//      var tempCount = parseInt(data);
+//      localStorage.setItem("kefuCount", data+"");
+//      if(tempCount > 0){
+//          $('.myself').addClass('news_on');
+//      } else {
+//		    $('.myself').removeClass('news_on');
+//      }
+//  } catch(e) {}
+//}
+//
+//function setKeFu(){
+//  try{       
+//      plus.KefuP.addUnreadCountChangeListener(function( result ) {});
+//      receiveCount(localStorage.getItem("kefuCount"));
+//  }catch(e){}
+//}
+
+</script>

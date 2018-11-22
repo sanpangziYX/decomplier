@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/apollo_uc_line_D4D4D4" android:layout_width="fill_parent" android:layout_height="@dimen/x1" />
+    <FrameLayout android:id="@id/apollo_uc_certification_step" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/apollo_certification_title_linear">
+        <include android:id="@id/apollo_uc_certification_layout1" layout="@layout/apollo_uc_name_id_layout" />
+        <include android:id="@id/apollo_uc_certification_layout2" android:visibility="gone" layout="@layout/apollo_uc_bank_info_layout" />
+        <include android:id="@id/apollo_uc_certification_layout3" android:visibility="gone" layout="@layout/apollo_uc_idcard_camera_layout" />
+    </FrameLayout>
+    <Button android:enabled="false" android:textSize="@dimen/x36" android:textColor="@color/apollo_uc_c_FFFFFF" android:id="@id/apollo_uc_certification_step_bt" android:background="@drawable/apollo_uc_bg_certification_normal" android:layout_width="fill_parent" android:layout_height="@dimen/x100" android:layout_marginLeft="@dimen/x42" android:layout_marginTop="@dimen/x80" android:layout_marginRight="@dimen/x42" android:text="@string/apollo_uc_string_xiayibu" android:layout_below="@id/apollo_uc_certification_step" />
+    <Button android:enabled="false" android:textSize="@dimen/x36" android:textColor="@color/apollo_uc_c_FFFFFF" android:id="@id/apollo_uc_certification_id_card_bt" android:background="@drawable/apollo_uc_bg_certification_id_card" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/x100" android:text="@string/apollo_uc_string_idcard_submit_upload" android:layout_alignParentBottom="true" />
+    <RelativeLayout android:id="@id/apollo_certification_title_linear" android:layout_width="fill_parent" android:layout_height="@dimen/x200" android:layout_alignParentStart="true">
+        <ImageView android:id="@id/apollo_uc_certification_step_status" android:background="@drawable/apollo_uc_step1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x40" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="@dimen/x28" android:textColor="@color/apollo_uc_c_59A3FF" android:id="@id/apollo_uc_certification_step_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x70" android:layout_marginTop="@dimen/x30" android:text="@string/apollo_uc_string_certification_id" android:layout_below="@id/apollo_uc_certification_step_status" android:layout_alignParentLeft="true" />
+        <TextView android:textSize="@dimen/x28" android:textColor="@color/apollo_uc_c_999999" android:id="@id/apollo_uc_certification_step_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x30" android:text="@string/apollo_uc_string_certification_critidCard" android:layout_below="@id/apollo_uc_certification_step_status" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="@dimen/x28" android:textColor="@color/apollo_uc_c_999999" android:id="@id/apollo_uc_certification_step_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x30" android:layout_marginRight="@dimen/x80" android:text="@string/apollo_uc_string_upload_idimage" android:layout_below="@id/apollo_uc_certification_step_status" android:layout_alignParentRight="true" />
+        <View android:background="@color/apollo_uc_c_999999" android:layout_width="fill_parent" android:layout_height="@dimen/x1" android:layout_alignParentBottom="true" android:alpha="0.2" />
+    </RelativeLayout>
+</RelativeLayout>

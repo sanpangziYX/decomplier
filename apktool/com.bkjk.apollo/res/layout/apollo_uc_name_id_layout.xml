@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/apollo_certification_title_linear"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/x130">
+        <TextView android:textSize="@dimen/x32" android:textColor="@color/apollo_uc_c_59A3FF" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x40" android:text="@string/apollo_uc_certificationinfo_name_title" android:layout_centerVertical="true" />
+        <EditText android:textSize="@dimen/x28" android:textColor="@color/apollo_uc_c_333333" android:textColorHint="@color/apollo_uc_c_999999" android:id="@id/apollo_certification_et_name" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x178" android:text="" android:hint="@string/apollo_uc_string_certification_name" android:singleLine="true" android:layout_centerVertical="true" />
+        <View android:background="@color/apollo_uc_c_999999" android:layout_width="fill_parent" android:layout_height="@dimen/x1" android:layout_marginLeft="@dimen/x40" android:layout_marginRight="@dimen/x40" android:layout_alignParentBottom="true" android:alpha="0.2" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/x130">
+        <TextView android:textSize="@dimen/x32" android:textColor="@color/apollo_uc_c_59A3FF" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x40" android:text="@string/apollo_uc_certificationinfo_idcard_title" android:layout_centerVertical="true" />
+        <EditText android:textSize="@dimen/x28" android:textColor="@color/apollo_uc_c_333333" android:textColorHint="@color/apollo_uc_c_999999" android:id="@id/apollo_regist_et_shouji" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x178" android:text="" android:hint="@string/apollo_uc_string_certification_idcard" android:singleLine="true" android:maxLength="18" android:layout_centerVertical="true" />
+        <View android:background="@color/apollo_uc_c_999999" android:layout_width="fill_parent" android:layout_height="@dimen/x1" android:layout_marginLeft="@dimen/x40" android:layout_marginRight="@dimen/x40" android:layout_alignParentBottom="true" android:alpha="0.2" />
+    </RelativeLayout>
+</LinearLayout>

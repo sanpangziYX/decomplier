@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="@dimen/ysf_bubble_max_width" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/ysf_text_size_16" android:textColor="@color/ysf_black_222222" android:id="@id/ysf_tv_logistic_label" android:paddingLeft="8.0dip" android:paddingTop="10.0dip" android:paddingRight="8.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <include layout="@layout/ysf_include_divider" />
+    <TextView android:textSize="@dimen/ysf_text_size_15" android:textColor="@color/ysf_black_222222" android:id="@id/ysf_tv_logistic_title" android:paddingLeft="8.0dip" android:paddingTop="10.0dip" android:paddingRight="8.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.qiyukf.unicorn.widget.ScrollListView android:id="@id/ysf_lv_logistic_transport_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@android:color/transparent" android:divider="@null" />
+    <include layout="@layout/ysf_message_item_bot_footer" />
+</LinearLayout>

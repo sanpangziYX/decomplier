@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<script type="text/javascript" src="../../js/headerlib.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../plugins/layer/layer.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../plugins/iosselect/iosSelect.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/fund.css" />
+		<title>个人信息管理</title>
+	</head>
+
+	<body>
+		<div>
+			<div id="hidenheader" ></div>
+			<header id="header" class="wk-header wk-header-theme-a">
+				<div class="wk-header-left mui-action-back" id="goback"><img style="width:.22rem;" src="../../img/header_back.png" /></div>
+				<h3>个人信息管理</h3>
+				<!--<div class="wk-header-right"></div>-->
+			</header>
+		</div>
+		<section class="wk-content" id="wk-contentinfo" style="padding-top: .25rem;">
+			
+		</section>
+<script type="x-template" id="editaccoutntemplate">
+	<form id="openAccountform">
+				<ul class="flexlist">
+					<li>
+						<div class="editlable">职业</div>
+						<div class="text-right flexable justify-end flex-align-center" @click="showprofession">
+							<input type="text" placeholder="请选择职业" id="banks"  v-model="userinfo.vocationName" readonly="readonly" />
+							<input type="hidden" name="vocationCode" id="vocationCode" v-model="userinfo.vocationCode" />
+							<img class="to-right" src="../../img/to_right.png" alt="" />
+						</div>
+					</li>
+					<li>
+						<div class="editlable" style="min-width: 20%;">居住地区</div>
+						<div class="text-right flexable justify-end flex-align-center" id="bankswarp" @click="showAddress">
+							<div v-if="!userinfo.address" class=" textplaceholder">请选择居住地区</div>
+							<div v-else v-text="userinfo.address" class="addresstext ">请选择居住地区</div>
+							
+							<input type="hidden" placeholder="请选择居住地区"   v-model="userinfo.address" name="address" readonly="readonly" />
+							<img class="to-right" src="../../img/to_right.png" alt="" />
+						</div>
+					</li>
+				</ul>
+				<ul class="flexlist">
+					<li>
+						<div class="editlable">实际控制人</div>
+						<div class="text-right flexableright">
+							<input type="text" placeholder="姓名" v-model="userinfo.controller" name="controller" id="controller" />
+							<img class="tip-icon" src="../../img/fund/tip-icon.png"  @click="showTips('实际控制人，是指虽不是公司的股东，但通过投资关系、协议或者其他安排，能够实际支配公司行为的人')" />
+						</div>
+					</li>
+					<li>
+						<div class="editlable">实际受益人</div>
+						<div class="text-right flexableright">
+							<input type="text" placeholder="姓名" v-model="userinfo.beneficiary"  name="beneficiary" id="beneficiary"  />
+							<img class="tip-icon" src="../../img/fund/tip-icon.png" alt="" @click="showTips('实际受益人，是指人身保险合同中由被保险人或者投保人指定的享有保险金请求权的人，投保人、被保险人可以为受益人。')" />
+						</div>
+					</li>
+
+				</ul>
+				<div class="btn-wrap" style="padding-top: .6rem;">
+					<button type="button" @click="accountConfirm" :disabled="!canSubmit">确认修改</button>
+				</div>
+				<div>
+					<footer class="footer-tips">预期收益并非平台承诺收益，市场有风险，投资需谨慎</footer>
+				</div>
+			</form>
+</script>	
+		<script src="../../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugins/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugins/iosselect/iscroll.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugins/iosselect/iosSelect.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugins/vue/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="editaccountinfo.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

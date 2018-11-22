@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+	<title>日账户2号</title>
+	<link rel="stylesheet" href="../../css/base.css" />
+	<link rel="stylesheet" href="../../css/day_asset.css" />
+	<link rel="stylesheet" type="text/css" href="../../plugins/layer/layer.css"/>
+	<script type="text/javascript" src="../../js/rem.js"></script>
+	<script type="text/javascript" src="../../js/zepto.min.js"></script>
+	<script src="../../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="../../plugins/layer/layer.js" defer="defer"></script>
+	<script type="text/javascript" src="../../js/common.js"></script>
+	<script src="../../js/http/fund.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="current_detail.js"></script>
+	<style type="text/css">
+		.fund-userinfo{
+			padding:.6rem 0 .34rem 0;
+			text-align: center;
+			font-size: .22rem;
+			color: #ccc;
+		}
+		.fund-userinfo img{
+			width:0.08rem;display: inline-block;margin-left: .2rem;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- 日账户tittle -->
+	<header class="clearfix" id="Dtitle">
+		<div class="headerback_box" keepalive="true">
+			<img src="../../img/header_backfff.png" />
+		</div>
+		<p></p>
+		<div class="right_box">
+			<img src="../../img/icon-zjls.png" alt="" id="gotoFlowFund">
+		</div>
+	</header>
+	<!-- 玖富宝title -->
+	<header class="clearfix bgcolor_red" id="Jtitle">
+			<div class="empty_part"></div>
+			<div class="main_part ">
+				<h3 style="display: inline-block;"><b class="main">玖富宝</b><b class="arrow"></b></h3>
+				<b class="back toback"></b>
+				<b class="gone" id="gotoFlow"></b>
+			</div>
+			<!--弹窗框-->
+			<ul class="popBox">
+				<li id="J"  class="current">玖富宝</li>
+				<li id="D" style="display: none;">日账户</li>
+				<li id="M">月账户</li>
+				<li id="Q">季账户</li>
+				<li id="Y">年账户</li>
+				<li id="T">特供</li>
+				<li id="W" style="display: none;">美好计划</li>
+			</ul>
+			<div id="mask2"></div>
+		</header>
+	<section class="section">
+		<div id="container">
+			<div class="m-aset-head">
+				<div class="n-total">
+					<p class="n-tit"></p>
+					<p class="n-mny" id="account_balance">0.00</p>
+					<input type="hidden" id="account_amount">
+				</div>
+				<div class="m-aset-detal">
+					<div class="n-left">
+						<dl>
+							<dt><em><img src="../../img/icon-rzh.png" alt=""></em><span id="yesdesc"></span></dt>
+							<dd id="last_earning">0.00</dd>
+						</dl>
+					</div>
+					<div class="n-right">
+						<dl>
+							<dt><em><img src="../../img/icon-lj.png" alt=""></em><span id="earnDesc"></span></dt>
+							<dd id="total_earning">0.00</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div class="m-aset-centent" id="serenEarncontent" style="display: none;">
+				<div class="m-day-income">
+					<h3 class="n-tit">您最近七日的收益</h3>
+					<div >
+						<ul class="m-histogram">
+						<li class="n-histogram-list">
+							<span class="n-bubble">0.00元<em></em></span>
+							<div class="n-list-bj">
+								<span class="n-qj"style="height: 100%;"></span>
+							</div>
+							<p><!--24日--></p>
+						</li>
+						<li class="n-histogram-list">
+							<span class="n-bubble">0.00元<em></em></span>
+							<div class="n-list-bj">
+								<span class="n-qj"style="height: 100%;"></span>
+							</div>
+							<p><!--25日--></p>
+						</li>
+						<li class="n-histogram-list">
+							<span class="n-bubble">0.00元<em></em></span>
+							<div class="n-list-bj">
+								<span class="n-qj" style="height: 100%;"></span>
+							</div>
+							<p><!--26日--></p>
+						</li>
+						<li class="n-histogram-list">
+							<span class="n-bubble">0.00元<em></em></span>
+							<div class="n-list-bj">
+								<span class="n-qj"style="height: 100%;"></span>
+							</div>
+							<p><!--27日--></p>
+						</li>
+						<li class="n-histogram-list">
+							<span class="n-bubble">0.00元<em></em></span>
+							<div class="n-list-bj">
+								<span class="n-qj"style="height: 100%;"></span>
+							</div>
+							<p><!--28日--></p>
+						</li>
+						<li class="n-histogram-list">
+							<span class="n-bubble">0.00元<em></em></span>
+							<div class="n-list-bj">
+								<span class="n-qj"style="height: 100%;"></span>
+							</div>
+							<p><!--01日--></p>
+						</li>
+						<li class="n-histogram-list active">
+							<span class="n-bubble">0.00元<em></em></span>
+							<div class="n-list-bj">
+								<span class="n-qj" style="height: 100%;"></span>
+							</div>
+							<p><!--02日--></p>
+						</li>
+					</ul>
+					</div>
+
+				</div>
+			</div>
+			<div class="wrap_no_list_day" id="noInvest" style="display: none;">
+				<div class="no_list_day">
+					<p class="no_order"></p>
+					<h3>亲，您暂无资产哦～</h3>
+					<button class="footer_btn" onclick="goInvest()" id="no_order">马上投资</button>
+				</div>
+			</div>
+		</div>
+		<div class="fund-userinfo" id="openMorePage" >
+			<span id="openmoretext">个人信息管理</span> <img src="../../img/to_right.png"/>
+		</div>
+		<div class="foot-cyp">
+			<p>预期收益并非平台承诺收益，市场有风险，投资需谨慎</p>
+		</div>
+		
+		<div class="bottom_btn bottom_btn2" id="day2">
+			<button class="btn_line btn_short" onclick="redeemInvest()">转让退出</button>
+			<button class="btn_bg btn_short" onclick="goInvest()">马上投资</button>
+		</div>
+		
+		<div class="bottom_btn" id="day1">
+			<button class="btn_bg" onclick="redeemInvest()">转让退出</button>
+		</div>
+		<div class="bottom_btn bottom_btn2" id="Jsubmit">
+			<button class="btn_line flexbutton" onclick="redeemInvest()">转出</button>
+			<button class="btn_bg flexbutton" onclick="goInvest()">马上投资</button>
+		</div>
+		
+	</section>
+	<!--弹出框-->
+	<div class="showAlert">
+		<div class="mask"></div>
+		<div class="content_wrap content_wrap1">
+			<span class="add"></span>
+		</div>
+		<div class="content_wrap content_wrap5">
+			<div class="txt">
+				订单起息次日即可赎回
+			</div>
+			<div class="btn_box clearfix">
+				<button onclick="openRule()">查看规则</button>
+				<button onclick="closeAlert()">好的</button>
+			</div>
+		</div>
+		
+		<div class="content_wrap content_wrap6">
+			<div class="txt2">
+				<p></p>
+			</div>
+			<div class="btn_box clearfix">
+				<button onclick="closeAlert()">再想想</button>
+				<button onclick="redeem()">确定</button>
+			</div>
+		</div>
+	</div>
+	
+	<div id="mask2" style="display: none;"></div>
+</body>
+
+</html>

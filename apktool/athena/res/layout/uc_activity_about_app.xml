@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/uc_c_20999999" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+    <ImageView android:layout_width="158.0dip" android:layout_height="158.0dip" android:layout_marginTop="113.0dip" android:src="@drawable/bkjk_about2" android:layout_centerHorizontal="true" />
+    <ImageView android:id="@id/iv_uc_update_scan" android:layout_width="142.0dip" android:layout_height="142.0dip" android:layout_marginTop="117.0dip" android:src="@drawable/uc_icon_update_version" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="18.0sp" android:textColor="@color/uc_c_3587F2" android:id="@id/tv_uc_app_version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x30" android:layout_below="@id/iv_uc_update_scan" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/uc_c_999999" android:id="@id/tv_uc_app_scan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/uc_scan_load" android:layout_below="@id/tv_uc_app_version" android:layout_centerHorizontal="true" />
+    <Button android:textSize="18.0sp" android:id="@id/bt_uc_update" android:background="@drawable/uc_bg_update_button" android:layout_width="200.0dip" android:layout_height="48.0dip" android:layout_marginTop="66.0dip" android:text="@string/uc_update_check" android:layout_below="@id/tv_uc_app_scan" android:layout_centerHorizontal="true" />
+</RelativeLayout>

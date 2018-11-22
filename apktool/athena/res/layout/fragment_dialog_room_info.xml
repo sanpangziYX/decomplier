@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="15.0sp" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/room_info_room_name" android:layout_weight="1.0" />
+        <EditText android:textSize="15.0sp" android:id="@id/editText_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/room_info_room_name_hint" android:layout_weight="2.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="15.0sp" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/room_info_room_topic" android:layout_weight="1.0" />
+        <EditText android:textSize="15.0sp" android:id="@id/editText_topic" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/room_info_room_topic_hint" android:layout_weight="2.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="15.0sp" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/room_info_room_canonical_alias" android:layout_weight="1.0" />
+        <EditText android:textSize="15.0sp" android:id="@id/editText_canonical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/room_info_room_canonical_hint" android:layout_weight="2.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?android:attr/buttonBarStyle">
+        <Button android:id="@id/room_info_cancel" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@android:string/cancel" android:layout_weight="1.0" style="?android:attr/buttonBarButtonStyle" />
+        <Button android:enabled="false" android:id="@id/room_info_ok" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@android:string/ok" android:layout_weight="1.0" style="?android:attr/buttonBarButtonStyle" />
+    </LinearLayout>
+</LinearLayout>

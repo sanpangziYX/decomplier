@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/desk_c_FFFFFF" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/desk_c_20979797" android:layout_width="fill_parent" android:layout_height="@dimen/desk_size_10" />
+    <FrameLayout android:orientation="horizontal" android:paddingLeft="@dimen/x40" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="25.0dip">
+        <TextView android:textSize="@dimen/x36" android:textColor="@color/desk_c_3B6DFF" android:id="@id/tv_desk_team_day" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="09/17" android:layout_centerVertical="true" />
+        <ImageView android:layout_gravity="bottom" android:layout_width="@dimen/x44" android:layout_height="@dimen/x44" android:layout_marginLeft="@dimen/x114" android:src="@drawable/desk_icon_sign_time_flag" />
+    </FrameLayout>
+</LinearLayout>

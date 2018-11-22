@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/home_news_top_iv" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x25" android:layout_marginRight="@dimen/x40" android:layout_alignParentRight="true" />
+    <TextView android:textSize="@dimen/x20" android:textColor="@color/home_c_FFFFFF" android:id="@id/home_news_type_tv" android:background="@drawable/home_bg_news_type" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x25" android:layout_marginRight="@dimen/x40" android:text="人事" android:layout_alignParentRight="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/desk_contain_ll" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/home_news_type_tv">
+        <TextView android:textSize="@dimen/x30" android:textStyle="bold" android:textColor="@color/home_c_333333" android:ellipsize="end" android:id="@id/home_news_title_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x35" android:layout_marginTop="@dimen/x20" android:layout_marginRight="@dimen/x30" android:lines="1" android:layout_toRightOf="@id/home_news_type_tv" />
+        <TextView android:textSize="@dimen/x24" android:textColor="@color/home_c_999999" android:id="@id/home_news_desc_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x35" android:layout_marginTop="@dimen/x5" android:layout_marginRight="@dimen/x30" android:layout_marginBottom="@dimen/x20" android:layout_toRightOf="@id/home_news_type_tv" />
+    </LinearLayout>
+    <View android:id="@id/home_news_divider_tv" android:background="@color/core_base_gray" android:layout_width="fill_parent" android:layout_height="@dimen/x1" android:layout_marginLeft="@dimen/x35" android:layout_below="@id/desk_contain_ll" />
+</RelativeLayout>

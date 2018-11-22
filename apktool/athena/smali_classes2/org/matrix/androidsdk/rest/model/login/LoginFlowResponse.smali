@@ -1,0 +1,28 @@
+.class public Lorg/matrix/androidsdk/rest/model/login/LoginFlowResponse;
+.super Ljava/lang/Object;
+.source "LoginFlowResponse.java"
+
+
+# instance fields
+.field public flows:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Lorg/matrix/androidsdk/rest/model/login/LoginFlow;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 23
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

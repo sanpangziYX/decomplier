@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/invest_detail.css" />
+		<script type="text/javascript" src="../../js/rem.js"></script>
+		<title>资产详情</title>
+	</head>
+
+	<body>
+		<div class="headerbg"></div>
+		<div class="newheader ">
+			<div class="top">
+				<div class="empty_part"></div>
+				<div class="main_part ">
+					<h3 class="clearable"></h3>
+					<span class="clearable"></span>
+					<b class="back toback"></b>
+				</div>
+			</div>
+			<div class="bottom">
+				<div class="circle_part">
+					<h3 class="clearable"></h3>
+					<span>期望年化回报率(%)</span>
+				</div>
+
+				<div class="other_part">
+					<div class="left">
+						<h4 class="clearable"></h4>
+						<span>封闭期限(天)</span>
+					</div>
+					<div class="right">
+						<h4 class="clearable"></h4>
+						<span>起投金额(元)</span>
+					</div>
+				</div>
+				<div class="wrap_other_part2 dlyshow">
+					<p class="other_part2 "></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrap_content1 dlyshow">
+			<!--玖富宝-->
+			<ul class="content1 item_day" id="Jcontent" style="display: none;">
+				<li class="item itemj2">
+					<img class="tipsimg" src="../../img/fund/flexible.png" alt="" style="width:.5rem;height:.5rem;" />
+					<span class="span2"></span>
+					<span class="span3"></span>
+				</li>
+			</ul>
+			<!--日-->
+			<ul class="content1 item_day" id="Dcontent" style="display: none;">
+				<li class="item">
+					<span class="span1"></span>
+					<span class="span2"></span>
+					<span class="span3"></span>
+				</li>
+			</ul>
+			<!--月-->
+			<ul class="content1 item_month" id="Mcontent" style="display: none;">
+				<li class="item" style="display: none;">
+					<span class="span1_2"></span>
+					<span class="span2">特权活动</span>
+					<span class="span4">
+					</span>
+				</li>
+				<li class="item">
+					<span class="span1"></span>
+					<span class="span2"></span>
+					<span class="span3"></span>
+				</li>
+				<li class="item" style="display: none;">
+					<span class="span1_3"></span>
+					<span class="span2"></span>
+					<span class="span3"></span>
+					<span class="span5" onclick="showAlert();"></span>
+				</li>
+				<!--银行存管-->
+				<li class="item" style="display: none;">
+					<span class="span1_4"></span>
+					<span class="span2"></span>
+					<span class="span3"></span>
+				</li>
+			</ul>
+			<!--季-->
+			<ul class="content1 item_season" id="Qcontent" style="display: none;">
+				<li class="item" style="display: none;">
+					<span class="span1_2"></span>
+					<span class="span2">特权活动</span>
+					<span class="span4">
+					</span>
+				</li>
+				<li class="item">
+					<span class="span1"></span>
+					<span class="span2"></span>
+					<span class="span3"></span>
+				</li>
+				<li class="item" style="display: none;">
+					<span class="span1_3"></span>
+					<span class="span2"></span>
+					<span class="span3"></span>
+					<span class="span5" onclick="showAlert();"></span>
+				</li>
+				<!--银行存管-->
+				<li class="item" style="display: none;">
+					<span class="span1_4"></span>
+					<span class="span2"></span>
+					<span class="span3"></span>
+				</li>
+			</ul>
+			<!--年
+			<ul class="content1 item_year" id = "Ycontent" style="display: none;">
+				<li class="item">
+					<span class="span1"></span>
+					<span class="span2_2">轻松赚钱</span>
+					<span class="span3">出借1万元，每日期望回报<b>1.22元</b></span>
+				</li>
+				<li class="item">
+					<span class="span1_3"></span>
+					<span class="span2_3">安全保障</span>
+					<span class="span3">履约保证保险＋账户资金安全险</span>
+					<span class="span5"></span>
+				</li>
+			</ul>
+			-->
+		</div>
+		<div class="addExplain" style="display: none;">
+			悟空理财网站及app为信息流推荐服务与管理应用，网贷撮合交易均由玖富普惠公司完成
+		</div>
+		<div class="wrap_content2 dlyshow">
+			<!-- 玖富宝 -->
+			<div class="content2 item_day" id="Jchart" style="display: none;padding-top: .2rem;">
+				<div class="div1" style="height: auto;padding:.45rem 0;">
+					<span class="span1">13点前购买当天计息</span>
+					<span class="span2">13点后购买第二天起息</span>
+				</div>
+				<div class="div2">
+
+				</div>
+			</div>
+			<div id="chartLine" style="display: none;">
+				<h2>七日年化收益率<span class="tips"></span></h2>
+				<div id="echartLine" style="display: none;width:100%;height:4.1rem;left:center;background-color: #fff;">
+				
+			</div>
+			</div>
+			
+			<!--日-->
+			<div class="content2 item_day" id="Dchart" style="display: none;">
+				<div class="div1">
+					<span class="span1">13点前购买当天计息</span>
+					<span class="span2">13点后购买第二天起息</span>
+				</div>
+				<div class="div2">
+
+				</div>
+			</div>
+			<!--月-->
+			<div class="content2 item_day" id="Mchart" style="display: none;">
+				<div class="div3">
+					<p class="p1">期望年化回报率逐月递增,次月补齐收益率差</p>
+					<p class="p2">
+						<span>第<b class="b1 day"></b>个月期望年化<b class="b1 rate"></b></span><span class="blank clearfix"></span><span>出借1万元期望回报<b class="b2 profit">394.52元</b></span>
+					</p>
+				</div>
+				<div class="div4">
+
+					<!--仿图表-->
+					<div id="charts">
+						<ul class="arrow"></ul>
+						<ul class="bar"></ul>
+						<ul class="time"></ul>
+					</div>
+				</div>
+			</div>
+			<!--季-->
+			<div class="content2 item_season" id="Qchart" style="display: none;">
+				<div class="div1">
+					<span class="span1"><b></b><b>撮合成功当天计息</b></span>
+					<span class="span2"><b></b><b>续投／转让</b></span>
+				</div>
+				<div class="div2">
+
+				</div>
+			</div>
+			<!--年
+			<div class="content2 item_year">
+				<div class="div1">
+					<span class="span1"><b>2017-4-18</b><b>撮合成功当天计息</b></span>
+					<span class="span2"><b>2017-07-17</b><b>续投／转让</b></span>
+				</div>
+				<div class="div2">
+
+				</div>
+			</div>
+			-->
+		</div>
+		<div class="wrap_content3 dlyshow" style="display: none;">
+			<div class="content3">
+				<span class="img"><img src="../../img/time.png" alt="" /></span>
+				<p>距离募集结束还有12小时12分</p>
+			</div>
+		</div>
+		<ul class="content4">
+			<li id="loan" style="display: none;">
+				<p class="left">
+					<!--借款信息-->
+				</p>
+				<p class="right">
+					<span></span>
+				</p>
+			</li>
+			<li id="investCount" style="display: none;">
+				<p class="left">
+					<!--出借记录-->
+				</p>
+				<p class="right">
+					<!--32,456人已投-->
+					<span></span>
+				</p>
+			</li>
+			<li id="detailIntroduce">
+				<p class="left">详情介绍</p>
+				<p class="right">
+					<span></span>
+				</p>
+			</li>
+			<li id="commonQuestion" style="display: none;">
+				<p class="left">常见问题</p>
+				<p class="right">
+					<span></span>
+				</p>
+			</li>
+			<!--历史产品-->
+			<li id="historyProduct" style="display: none;">
+				<p class="left">
+					<!--历史产品-->
+				</p>
+				<p class="right">
+					<span></span>
+				</p>
+			</li>
+		</ul>
+		<!--<p class="word_footer3">期望回报并非平台承诺收益，市场有风险，投资需谨慎</p>-->
+		<div class="word_footer3 word_footer4 word_footer5">
+			<img src="https://m.wukonglicai.com/applauncher/invest-detal-tips.png" onerror="this.src='../../img/invest-detal-tips.png'" />
+		</div>
+		<div class="nav_footer2 nav_footer3">
+			<span class="img calculator"></span>
+			<button class="footer_btn">马上出借</button>
+		</div>
+
+		<!--计算器-->
+		<div id="calculator">
+			<div id="mask2"></div>
+			<div class="calculator_content">
+				<h1>收益计算器<span class="close"></span></h1>
+				<ul class="condition">
+					<li>
+						<p class="left">出借金额(元)</p>
+						<p class="right"><input type="text" readonly="readonly" value="10000" class="money" /><span class="delete" data-index='0'></span></p>
+					</li>
+					<li>
+						<p class="left">出借天数(天)</p>
+						<p class="right"><input type="text" readonly="readonly" value="90" class="days" id="input_days" /><span class="delete" id="delete" data-index='1'></span></p>
+					</li>
+				</ul>
+				<div class="result">
+					<p class="left">期望回报：<span class="totalProfit">0.00</span></p>
+					<p class="right">期望年化：<span class="rates">8.0%</span></p>
+				</div>
+				<div class="buttons">
+					<button class="footer_btn buy_btn" style="display: none;"></button>
+					<button class="footer_btn" id="goBuy" onclick="goBuy();">按此金额买入</button>
+				</div>
+				<ul class="number_box">
+					<li class="li01">1<span>&nbsp;</span></li>
+					<li class="li02">2<span>ABC</span></li>
+					<li class="li03">3<span>DEF</span></li>
+					<li class="li04">4<span>GHI</span></li>
+					<li class="li05">5<span>JKL</span></li>
+					<li class="li06">6<span>MNO</span></li>
+					<li class="li07">7<span>PQRS</span></li>
+					<li class="li08">8<span>TUV</span></li>
+					<li class="li09">9<span>WXYZ</span></li>
+					<li class="li10">.<span>&nbsp;</span></li>
+					<li class="li11">0</li>
+					<li class="li12"><img src="../../img/key_delete.png"></img>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!--安全保障弹窗-->
+		<div class="showAlert" style="display: none;">
+			<div class="mask"></div>
+			<div class="content_wrap safe_pop">
+				<!--<h2>履约保证保险</h2>
+				<p class="words">
+					太平财险承保借款人履约保证保险，担保公司在补充备用金范围内承担保险担保责任。
+				</p>
+				<h2>账户资金安全险</h2>
+				<p class="words">
+					发生投保人（借款人）未按照与被保险人（出借人）签订的借款协议约定履行还款义务，保险责任担保方在补偿备用金范围内为承保人的履约保证保险承担担保责任，当补偿备用金为零时，承保人按照保险条款约定的赔偿方式对被保险人进行赔偿。
+				</p>
+				<p class="know">我知道了</p>-->
+			</div>
+
+			<div class="content_wrap content_wrap1">
+				<span class="add"></span>
+			</div>
+			<!--还有机会弹窗-->
+			<div class="content_wrap content_wrap8">
+				<h3>温馨提示</h3>
+				<div class="txt">
+					<p>cccc</p>
+				</div>
+				<button class="showbtn_2">我知道啦</button>
+			</div>
+			<div class="content_wrap content_wrap9">
+				<h3>提示</h3>
+				<div class="txt">
+					<p>已为您设定风险成熟度最低的谨慎性偏好</p>
+				</div>
+				<button class="showbtn_2" onclick="skipAndInvest()">好哒，立即出借</button>
+				<a href="###" onclick="gotoriskpage()">不太相符，去测评</a>
+			</div>
+
+			<div class="content_wrap content_wrap12">
+				<h3>提示</h3>
+				<div class="txt">
+					<p>施主，您尚未进行日账户风险测评，请先完成测评</p>
+				</div>
+				<button class="showbtn_2" onclick="gotoriskpage()">去测评</button>
+			</div>
+			<div class="content_wrap content_wrap13">
+				<h3>提示</h3>
+				<div class="txt">
+					<p>施主，您尚未进行玖富宝风险测评，请先完成测评</p>
+				</div>
+				<button class="showbtn_2" onclick="gotoriskpage('J')">去测评</button>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../js/zepto.min.js"></script>
+	<script type="text/javascript" src="../../js/common.js"></script>
+	<script type="text/javascript" src="../../js/fastclick.js"></script>
+	<script src="../../js/lineChart.js"></script>
+	<script src="../../plugins/echart/echarts.min.js"></script>
+	<script type="text/javascript" src="invest_detail.js"></script>
+
+</html>

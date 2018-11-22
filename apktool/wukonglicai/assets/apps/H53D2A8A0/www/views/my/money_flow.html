@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/money_flow.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/flex.css" />
+		<script type="text/javascript" src="../../js/rem.js"></script>
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/fastclick.js"></script>
+		<script type="text/javascript" src="money_flow.js"></script>
+		<script src="../../js/http/fund.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../../js/jsrender.min.js"></script>
+		<title>资金流水</title>
+		<style type="text/css">
+			.page-container {
+				z-index: 1;
+				position: relative;
+				left: 0;
+				top: 0;
+				width: 100%;
+				margin-top: 1.45rem;
+				box-sizing: border-box;
+				overflow-x: hidden;
+				overflow-y: auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="page-wrapper">
+			<header class="clearfix bgcolor_main">
+				<div class="headerback_box">
+					<img src="../../img/header_back.png" />
+				</div>
+				<p>资金流水</p>
+			</header>
+			<section class="page-container">
+				<ul class="tab_content flex flex-vc flex-hc">
+					<li id="J" onclick="initDate('J')" style="display: none;">玖富宝</li>
+					<li id="D" onclick="initDate('D')" style="display: none;">日账户</li>
+					<li id="M" onclick="initDate('M')" class="current">月账户</li>
+					<li id="Q" onclick="initDate('Q')">季账户</li>
+					<li id="Y" onclick="initDate('Y')">年账户</li>
+					<li id="T" onclick="initDate('T')">特供</li>
+					<li id="W" onclick="initDate('W')" style="display: none;">美好计划</li>
+				</ul>
+				<div class="sum_asset">
+					<h3>账户资产(元)</h3>
+					<p class="money">0.00</p>
+				</div>
+				<ul class="list_content">
+				</ul>
+				<div class="word_footer">期望回报并非平台承诺收益，市场有风险，投资需谨慎</div>
+			</section>
+		</div>
+	</body>
+
+</html>
+<script id="itemTmpl" type="text/x-jsrender">
+	<li class="clearfix">
+		<p class="left"><span class="time"></span>{{:manageTime}}</p>
+		<p class="right">{{if manageType=='0'}}+{{else}}-{{/if}}{{:amount}}</p>
+	</li>
+</script>
+<script id="itemTmplD" type="text/x-jsrender">
+	<li class="clearfix">
+		<p class="left"><span class="time"></span>{{:detailTime}}</p>
+		<p class="right">{{if detailType=='0'}}+{{else}}-{{/if}}{{:detailAmount}}</p>
+	</li>
+</script>
+<script id="itemTmplFund" type="text/x-jsrender">
+	<li class="clearfix fundli">
+		<div class="flexable justify-between">
+			<div class="fund-type">{{if businessType=='4' }}支付-{{:toProductName}}{{else businessType=='3'}}转入{{else}}转出{{/if}}</div>
+			<!--
+				交易处理中的转出没有减号
+            -->
+			<div class="fund-red">{{if businessType=='3' }}+{{else confirmTradeStatus!='1'}}-{{/if}}{{:amount}}</div>
+		</div>
+		<div class="flexable justify-between">
+			<div class="fund-grey flexable">{{:applyTime }}
+				<div class="fund-icon">{{if channelCode==='wukong' }}悟空理财{{else}}玖富金融{{/if}}</div>
+			</div>
+			<div class="fund-grey">{{if confirmTradeStatus==='2' }}成功{{else confirmTradeStatus==='3' }}失败{{else confirmTradeStatus==='4' }}等待银行处理{{else}}交易处理中{{/if}}</div>
+		</div>
+	</li>
+</script>

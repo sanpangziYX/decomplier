@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/x312"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/x32" android:textColor="@color/apollo_home_c_999999" android:id="@id/apollo_home_tv_no_ver" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x60" android:text="@string/apollo_home_index_no_ver" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="@dimen/x32" android:textColor="@color/apollo_home_c_59A3FF" android:gravity="center" android:background="@drawable/apollo_home_bg_go_login" android:layout_width="@dimen/x240" android:layout_height="@dimen/x80" android:layout_marginTop="@dimen/x50" android:text="@string/apollo_home_index_go_ver" android:layout_below="@id/apollo_home_tv_no_ver" android:layout_centerHorizontal="true" />
+</RelativeLayout>

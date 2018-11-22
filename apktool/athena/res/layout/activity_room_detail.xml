@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/room_activity_actionbar" />
+    <ScrollView android:background="@color/matrix_room_list_background" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <GridView android:id="@id/room_detail_grid" android:background="@android:color/white" android:padding="@dimen/x20" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x2" android:numColumns="5" />
+            <LinearLayout android:gravity="center" android:id="@id/room_detail_moreuser" android:background="@drawable/listitem_selector" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:gravity="center" android:background="@android:color/transparent" android:padding="@dimen/x20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/room_detail_moreuser" android:drawableRight="@drawable/room_detail_moreuser" />
+            </LinearLayout>
+            <RelativeLayout android:id="@id/room_detail_infoupdate" android:background="@drawable/listitem_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x30">
+                <TextView android:gravity="center" android:padding="@dimen/x30" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/room_detail_roomname" />
+                <TextView android:ellipsize="end" android:gravity="center" android:id="@id/room_detail_roomname" android:padding="@dimen/x30" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/room_detail_roomname" android:maxEms="16" android:singleLine="true" android:drawableRight="@drawable/room_detail_moreuser" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <RelativeLayout android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x2">
+                <TextView android:gravity="center" android:padding="@dimen/x30" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/room_detail_disnotify" />
+                <ToggleButton android:gravity="center" android:id="@id/room_detail_notifyset" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/switch_selector" android:textOn="" android:textOff="" android:text="" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <Button android:textColor="@android:color/white" android:id="@id/room_detail_leaveroom" android:background="@drawable/room_detail_button_selector" android:padding="@dimen/x20" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/x35" android:text="@string/room_detail_leaveroom" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

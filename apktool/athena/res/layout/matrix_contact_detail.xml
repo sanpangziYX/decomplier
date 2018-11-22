@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/matrix_contact_detail_header" android:background="@drawable/matrix_contact_detail_background" android:layout_width="fill_parent" android:layout_height="@dimen/x339">
+        <ImageView android:id="@id/image_back" android:padding="@dimen/x20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x13" android:src="@drawable/back_ico_square" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/staffHead" android:layout_width="@dimen/x100" android:layout_height="@dimen/x100" android:layout_marginBottom="@dimen/x100" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="@dimen/x36" android:textColor="#ff333333" android:layout_gravity="center_horizontal" android:id="@id/matrix_staffName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x10" android:lines="1" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <LinearLayout android:layout_gravity="center_horizontal" android:id="@id/matrix_system_id_tx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x24" android:layout_below="@id/matrix_contact_detail_header" android:layout_centerHorizontal="true">
+        <TextView android:textSize="@dimen/x28" android:textColor="#ff787878" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="系统号:   " />
+        <TextView android:textSize="@dimen/x28" android:textColor="#ff787878" android:id="@id/staffSysID" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10001010" />
+    </LinearLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/matrix_system_id_tx">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/x90" android:paddingTop="@dimen/x50" android:paddingRight="@dimen/x90" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/x32" android:textColor="#ff787878" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="部       门" />
+                    <TextView android:textSize="@dimen/x32" android:textColor="#ff787878" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x60" android:text="职务等级" />
+                    <TextView android:textSize="@dimen/x32" android:textColor="#ff787878" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x60" android:text="手       机" />
+                    <TextView android:textSize="@dimen/x32" android:textColor="#ff787878" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x60" android:text="邮       箱" />
+                </LinearLayout>
+                <View android:background="#ffe4e4e4" android:layout_width="@dimen/x2" android:layout_height="@dimen/x340" android:layout_marginLeft="@dimen/x32" />
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x44">
+                    <TextView android:textSize="@dimen/x32" android:textColor="#ff333333" android:id="@id/staffDepartment" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textSize="@dimen/x32" android:textColor="#ff333333" android:id="@id/staffPosition" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x60" />
+                    <TextView android:textSize="@dimen/x32" android:textColor="#ff0076ff" android:id="@id/staffPhoneNum" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x60" />
+                    <TextView android:textSize="@dimen/x32" android:textColor="#ff333333" android:id="@id/staffEmail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x60" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:textSize="@dimen/x36" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/btnSendMsg" android:background="@drawable/matrix_rectangle_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x32" android:layout_marginTop="@dimen/x100" android:layout_marginRight="@dimen/x32" android:layout_marginBottom="@dimen/x100" android:text="发消息" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HybridId: " style="@style/pub_react_DevTextView" />
+        <EditText android:id="@id/dev_jsbundle_et_add" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/pub_react_DevEditText" />
+    </LinearLayout>
+    <Button android:layout_gravity="bottom" android:id="@id/dev_jsbundle_way_add_confirm" android:layout_width="fill_parent" android:text="添加" style="@style/pub_react_DevButton" />
+</LinearLayout>

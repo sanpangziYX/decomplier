@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.rnx.react.views.baidumapview.BMapView android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.baidu.mapapi.map.MapView android:id="@id/map_view" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:id="@id/view_mask" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageButton android:id="@id/button_my_location" android:background="@drawable/my_location" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginBottom="15.0dip" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:layout_marginStart="15.0dip" />
+            <ImageView android:id="@id/map_pin" android:background="@drawable/map_pin" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+            <TextView android:textColor="#ffffffff" android:ellipsize="end" android:linksClickable="false" android:id="@id/tv_pin_label" android:background="#ff000000" android:padding="5.0dip" android:visibility="invisible" android:longClickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="14.0dip" android:maxWidth="150.0dip" android:text="TextViewTextViewTextViewTextViewTextViewTextViewTextViewT" android:maxLines="2" android:layout_above="@id/map_pin" android:layout_centerHorizontal="true" android:alpha="0.6" android:fontFamily="monospace" android:textAlignment="center" />
+        </RelativeLayout>
+    </FrameLayout>
+</com.rnx.react.views.baidumapview.BMapView>

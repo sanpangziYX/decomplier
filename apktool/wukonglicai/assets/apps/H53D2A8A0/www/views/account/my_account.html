@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+	<title>资产总览</title>
+	<link rel="stylesheet" href="../../css/base.css" />
+	<link rel="stylesheet" href="../../css/my_account.css" />
+	<script type="text/javascript" src="../../js/rem.js"></script>
+	<script type="text/javascript" src="../../js/zepto.min.js"></script>
+	<script type="text/javascript" src="../../js/echarts.simple.min.js"></script>
+	<script type="text/javascript" src="../../js/common.js"></script>
+	<script type="text/javascript" src="../../js/jsrender.min.js"></script>
+	<script type="text/javascript" src="../../js/baiduTemplate.js"></script>
+	<script type="text/javascript" src="my_account.js"></script>
+</head>
+
+<body>
+	<header class="bgcolor_main">
+		<div class="headerback_box" keepalive="true">
+			<img src="../../img/header_back.png" />
+		</div>
+		<p>资产总览</p>
+	</header>
+	<section id="wrap">
+		<div id="container">
+			<ul class="m-asset-tab">
+				<li id="zuo"><span>昨日期望回报</span></li>
+				<li id="zong" class="active"><span>总资产</span></li>
+				<li id="lei"><span>累计期望回报</span></li>
+			</ul>
+			<!--小分队-->
+			<span class="wkgroup2" style="display: none;"></span>
+			<div class="m-asset-centent">
+				<div class="m-pie">
+					<div id="myAssetsPie"></div>
+					<div class="m-astotal">
+						<!--<p>昨日期望回报(元)</p>
+						<span>9.85</span>-->
+						<p></p>
+						<span></span>
+					</div>
+				</div>
+			</div>
+			<ul class="m-mact-main m-asset-main">
+			</ul>
+			<button class="n-tlbtn-tz" onclick="openPage('../invest/invest.html','invest.html',{productType:'Q6'});">马上出借</button>
+		</div>
+		<div class="foot-cyp">
+			<p>期望回报并非平台承诺收益 市场有风险，投资需谨慎</p>
+		</div>
+	</section>
+<script>
+
+</script>
+<!--
+	作者：lich
+	时间：2017-05-08
+	描述：资产详细模板
+-->
+<!--<script id="content" type="text/x-jsrender">
+	
+	<li>				
+		<a onclick="toCumulativeProfit('{{:pt}}')">
+			<span class="n-left">
+				<em class="{{:zsClass}}"></em>
+				<p class="n-text">{{:name}}</p>
+			</span>
+			<span class="n-right">
+				<em class="n-mx">{{:value}}
+				<em class="n-jt-r">
+				<img src="../../img/to_right.png"/></em>
+			</span>
+		</a>
+	</li>
+</script>-->
+<script id="content" type="text/html">
+	<%for(var i=0;i < datalist.length;i++){
+		var itemData = datalist[i];
+	%>
+	<li >				
+		<a onclick="toCumulativeProfit('<%=itemData.pt%>')">
+			<span class="n-left">
+				<em class="<%=itemData.zsClass%>"></em>
+				<p class="n-text"><%=itemData.name%></p>
+			</span>
+			<span class="n-right">
+				<em class="n-mx"><%=itemData.value%></em>
+				<em class="n-jt-r">
+				<img src="../../img/to_right.png"/></em>
+			</span>
+		</a>
+	</li>
+	<%}%>
+</script>
+</body>
+</html>

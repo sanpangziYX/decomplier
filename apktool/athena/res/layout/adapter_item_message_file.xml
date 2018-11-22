@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:visibility="gone" layout="@layout/message_header" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/messagesAdapter_roundAvatar_left" layout="@layout/round_avatar" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingBottom="5.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="0.0dip" android:layout_weight="1.0">
+            <include layout="@layout/message_sender" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include android:id="@id/message_timestamp_layout_left" layout="@layout/message_timestamp" />
+                <FrameLayout android:id="@id/messagesAdapter_body_layout" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <RelativeLayout android:layout_gravity="right" android:id="@id/messagesAdapter_file_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <org.matrix.androidsdk.view.PieFractionView android:id="@id/content_download_piechart" android:layout_width="@dimen/chat_avatar_size" android:layout_height="@dimen/chat_avatar_size" android:layout_centerInParent="true" />
+                            <org.matrix.androidsdk.view.PieFractionView android:id="@id/content_upload_piechart" android:layout_width="@dimen/chat_avatar_size" android:layout_height="@dimen/chat_avatar_size" android:layout_centerInParent="true" />
+                            <ImageView android:id="@id/upload_event_failed" android:layout_width="@dimen/chat_avatar_size" android:layout_height="@dimen/chat_avatar_size" android:src="@drawable/file_upload_failed" android:layout_alignParentBottom="true" />
+                            <ImageView android:id="@id/messagesAdapter_image_type" android:layout_width="@dimen/chat_avatar_size" android:layout_height="@dimen/chat_avatar_size" android:src="@drawable/filetype_image" />
+                            <TextView android:autoLink="none" android:id="@id/messagesAdapter_filename" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="A filename here" />
+                        </LinearLayout>
+                        <ProgressBar android:id="@id/upload_event_spinner" android:layout_width="@dimen/chat_avatar_size" android:layout_height="@dimen/chat_avatar_size" android:layout_centerInParent="true" />
+                    </RelativeLayout>
+                </FrameLayout>
+                <include android:id="@id/message_timestamp_layout_right" layout="@layout/message_timestamp" />
+            </LinearLayout>
+        </LinearLayout>
+        <include android:id="@id/messagesAdapter_roundAvatar_right" layout="@layout/round_avatar" />
+    </LinearLayout>
+    <include layout="@layout/message_separator" />
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:enabled="false" android:textSize="@dimen/x36" android:textColor="@color/desk_c_FFFFFF" android:id="@id/desk_confirm_choice" android:background="@drawable/desk_submit_btn_bg_selector" android:layout_width="fill_parent" android:layout_height="@dimen/x100" android:text="完成" android:layout_alignParentBottom="true" />
+    <GridView android:id="@id/desk_photo_gv" android:paddingLeft="2.0dip" android:paddingTop="4.0dip" android:paddingRight="2.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:stretchMode="columnWidth" android:numColumns="4" android:layout_above="@id/desk_confirm_choice" />
+</RelativeLayout>

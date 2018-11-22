@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/view_line" android:background="@color/home_c_21979797" android:layout_width="fill_parent" android:layout_height="@dimen/x2" />
+    <ListView android:id="@id/lv_home_list_headline" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@null" android:layout_below="@id/view_line" />
+    <include android:id="@id/ic_home_layout_fail" android:visibility="gone" layout="@layout/home_layout_show_fail" />
+</RelativeLayout>

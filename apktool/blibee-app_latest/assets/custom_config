@@ -1,0 +1,16 @@
+[
+    {
+        "featureType":"poilabel",
+        "elementType":"labels.text.stroke",
+        "stylers":{
+            "visibility":"off"
+        }
+    },
+    {
+        "featureType":"poilabel",
+        "elementType":"labels.text.fill",
+        "stylers":{
+            "visibility":"off"
+        }
+    }
+]

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:orientation="horizontal" android:id="@id/home_fragment_busi_item_ll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x10">
+        <TextView android:layout_gravity="center_vertical" android:id="@id/home_fragment_news_item_readstatus" android:background="@drawable/home_unread" android:layout_width="@dimen/x20" android:layout_height="@dimen/x20" />
+        <TextView android:textSize="@dimen/x32" android:textStyle="bold" android:textColor="#ff333333" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/home_fragment_news_item_title" android:paddingLeft="@dimen/x50" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" />
+    </FrameLayout>
+    <TextView android:textSize="@dimen/x24" android:textColor="@color/home_c_999999" android:id="@id/home_fragment_news_item_time" android:paddingLeft="@dimen/x50" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x10" android:layout_below="@id/home_fragment_busi_item_ll" />
+    <View android:background="@color/home_c_35979797" android:layout_width="fill_parent" android:layout_height="@dimen/x1" android:layout_marginTop="@dimen/x20" android:layout_below="@id/home_fragment_news_item_time" />
+</RelativeLayout>

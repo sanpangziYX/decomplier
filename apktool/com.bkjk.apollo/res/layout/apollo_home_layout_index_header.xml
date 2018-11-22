@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/apollo_home_c_F8F9FA" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/home_index_body_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/rl_home_index_banner" android:background="@color/apollo_home_c_FFFFFF" android:focusable="true" android:focusableInTouchMode="true" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/home_banner_def_iv" android:layout_width="fill_parent" android:layout_height="@dimen/x450" android:src="@drawable/apollo_home_icon_banner_def" android:scaleType="centerCrop" />
+            <RelativeLayout android:orientation="vertical" android:id="@id/home_banner_rl" android:focusable="true" android:focusableInTouchMode="true" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.bkjk.apollo_home.widgets.AutoScrollViewPager android:id="@id/asvp_home_slide_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_home_layout_dot" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/x28" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/apollo_home_ll_location" android:background="@drawable/apollo_home_bg_location" android:paddingLeft="@dimen/x25" android:paddingRight="@dimen/x20" android:layout_width="@dimen/x135" android:layout_height="@dimen/x55" android:layout_marginLeft="@dimen/x30" android:layout_marginTop="@dimen/x25">
+                <TextView android:textSize="@dimen/x28" android:textColor="@color/apollo_home_c_FFFFFF" android:id="@id/home_city_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="北京" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/apollo_hone_down_next" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/apollo_home_scan" android:background="@drawable/apollo_home_bg_scan" android:layout_width="@dimen/x72" android:layout_height="@dimen/x72" android:layout_marginLeft="@dimen/x30" android:layout_marginTop="@dimen/x25" android:layout_marginRight="@dimen/x40" android:layout_alignParentRight="true">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/apollo_home_icon_sao" android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/apollo_home_ll_recommend" android:background="@color/apollo_home_c_FFFFFF" android:layout_width="fill_parent" android:layout_height="@dimen/x280" />
+        <LinearLayout android:orientation="vertical" android:id="@id/apollo_home_ll_loan_product" android:background="@color/apollo_home_c_FFFFFF" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x20" />
+        <LinearLayout android:orientation="vertical" android:id="@id/apollo_home_ll_hot" android:background="@color/apollo_home_c_FFFFFF" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x20" />
+    </LinearLayout>
+</LinearLayout>

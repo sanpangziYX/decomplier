@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@color/uc_c_FFFFFF" android:layout_width="fill_parent" android:layout_height="56.0dip">
+        <TextView android:textSize="16.0sp" android:textColor="@color/uc_c_333333" android:id="@id/tv_uc_setting_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="业务一中心" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/iv_uc_setting_ok" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:src="@drawable/uc_icon_xuanze" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <View android:id="@id/view_uc_setting_divider" android:background="@color/uc_c_21979797" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="20.0dip" android:layout_marginTop="16.0dip" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</RelativeLayout>

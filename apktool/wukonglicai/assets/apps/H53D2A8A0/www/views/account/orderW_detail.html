@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<title>美好计划-订单详情</title>
+		<script type="text/javascript" src="../../js/rem.js" ></script>
+		<link rel="stylesheet" href="../../css/base.css" />
+		<link rel="stylesheet" href="../../css/orderW_detail.css" />
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/baiduTemplate.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script src="../../js/validatorUtil.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../../js/fastclick.js"></script>
+		<script type="text/javascript" src="orderW_detail.js"></script>
+	</head>
+	<body>
+		<header class="clearfix bgcolor_main">
+			<div class="headerback_box" keepalive="true">
+				<img src="../../img/header_back.png" />
+			</div>
+			<p>订单详情</p>
+		</header>
+		<section class="section" id="orderWinfo">
+		</section>
+		<div class="word_footer fine_footer">
+			期望回报并非平台承诺收益，市场有风险，投资需谨慎
+		</div>
+	</body>
+</html>
+<script id="wdetails" type="text/html">
+	<p class="list_space">出借项目</p>
+			<ul class="p_o_list">
+				<li>
+					投资本金(元)
+					<span><%=toThousands(orderDetails.investorAmount)%></span>
+				</li>
+				<li>
+					累计期望回报(元)
+					<span><%=toThousands(orderDetails.currentYields)%></span>
+				</li>
+			</ul>
+			
+			<ul class="p_o_list">
+				<li>
+					期望年化回报率
+					<span>
+						<%=orderDetails.baseYields||''%>%
+						<%if(orderDetails.extraYields){%>
+						<i class="colorred">+<%=orderDetails.extraYields%>%</i>
+						<%}%>
+					</span>
+				</li>
+				<li>
+					封闭期
+					<span><%=orderDetails.closurePeriod||''%>天</span>
+				</li>
+			</ul>
+			
+			<ul class="p_o_list">
+				<li>
+					投资时间
+					<span><%=orderDetails.investTime||''%></span>
+				</li>
+				<li>
+					计息日
+					<span><%=orderDetails.interestTime||''%></span>
+				</li>
+				<li>
+					到期日
+					<span><%=orderDetails.endTime||''%></span>
+				</li>
+			</ul>
+			
+			<ul class="p_o_list">
+				<li>
+					到期处理方式
+					<%
+						var continueStatus = orderDetails.continueStatus;
+						if (orderDetails.restWorkDay > 5){ 
+					%>
+								<span class="green" onclick="orderContinue('<%=orderDetails.investNo%>')" >
+									<%if (continueStatus=='bjxt') {%>本金续投
+									<%}else if(continueStatus=='bxxt') {%>本息续投
+									<% }else if(continueStatus=='dqtc'){%>到期转让
+									<%} else if(continueStatus.substr(0,2)=='BX'){%>本息续投
+									<%} else if (continueStatus.substr(0,2)=='BJ') {%>本金续投
+									<%}else{%>到期转让<%}%>
+								</span>
+						<%} else {%>
+								<span class="green" >
+									<%if (continueStatus=='bjxt') {%>本金续投
+									<%}else if(continueStatus=='bxxt') {%>本息续投
+									<% }else if(continueStatus=='dqtc'){%>到期转让
+									<%} else if(continueStatus.substr(0,2)=='BX'){%>本息续投
+									<%} else if (continueStatus.substr(0,2)=='BJ') {%>本金续投
+									<%}else{%>到期转让<%}%>
+								</span>
+						<%}%>
+				</li>
+				<%if(orderDetails.shiftType==1 && orderDetails.restDay >0){%>
+				<li>
+					债权信息
+					<span class="green" onclick="showZP('<%=orderDetails.investNo%>')">查看</span>
+				</li>
+				<%}%>
+			</ul>
+			
+			<ul class="p_o_list no_border">
+				<li>
+					订单来源
+					<span><%=orderDetails.openSource||''%></span>
+				</li>
+				<li>
+					订单号
+					<span><%=orderDetails.investNo||''%></span>
+				</li>
+			</ul>
+			<% if(productDetails){%>
+			<p class="list_space">商品信息</p>
+			
+			<ul class="p_o_list">
+				<li>
+					快递公司
+					<span><%=productDetails.courierCompany||'暂无'%></span>
+				</li>
+				<li>
+					快递单号
+					<span><%=productDetails.trackingNumber||'暂无'%></span>
+				</li>
+				<li>
+					发货状态
+					<span>			
+						<%if (productDetails.expressStatus === '100'){%>
+						未发货
+						<%}else if (productDetails.expressStatus === '101'){%>
+						已发货
+						<%}else if (productDetails.expressStatus === '102'){%>
+						已送达
+						<%}%>
+					</span>
+				</li>	
+			</ul>
+			<div class="user_address">
+				<h3>
+					<%=productDetails.receiver||''%> <%=hidenIphone(productDetails.consigneeNumber)%>
+				</h3>
+				<p>收货地址：<%=productDetails.deliveryAddress%></p>
+			</div>
+			<div class="product clearfix">
+				<div class="left"><img src="<%=productDetails.imageUrl||''%>" alt="<%=productDetails.skuName||''%>" /></div>
+				<div class="right">
+					<h4><%=productDetails.skuName||''%></h4>
+					<p class="p_attr">属性：<i><%=productDetails.skuAttr||''%></i></p>
+					<p class="p_money">市场价：<i>¥<%=productDetails.price||''%></i></p>
+				</div>
+			</div>
+		<%} else{%>
+			<p class="list_space">商品好像迷路了，稍后再来试一下吧</p>
+		<%}%>	
+</script>	

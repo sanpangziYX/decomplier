@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		
+		<script type="text/javascript" src="../js/rem.js"></script>
+		<style>
+		
+			.headerback_box2 {
+				position: absolute;
+				width: 1rem;
+				height: 100%;
+				z-index: 200;
+			}
+			
+			header .headerback_box2 img {
+				padding: 0.68rem 0 0 0.3rem;
+				width: 0.19rem;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<header class="clearfix bgcolor_main" id = "header">
+			<p id="title">
+			</p>
+		</header>
+	</body>
+</html>
+<script type="text/javascript" src="../js/zepto.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script>
+	$(function(){
+		$(".headerback_box2").click(function(){
+			
+		});
+	});
+	function doclearAndGoBack(){
+		try{
+			subview.clear();
+		}catch(e){}
+		try{
+			titleview.clear();
+		}catch(e){}
+		try{
+			subview.close();
+		}catch(e){}
+		try{
+			titleview.close();
+		}catch(e){}
+		
+		
+		plus.webview.currentWebview().close("slide-out-right",200);
+	}
+</script>
+<script>
+	function setTitle(title){
+		$("#title").html(title);
+	}
+	var windowstyles = {
+		render: 'always',
+		bounce: 'none',
+		'popGesture': 'close',
+		'scrollIndicator': 'none',
+		hardwareAccelerated: isHardwareAccelerated()
+	};
+	var windowstylestitle = {
+		render: 'always',
+		bounce: 'none',
+		'popGesture': 'close',
+		'scrollIndicator': 'none',
+		hardwareAccelerated: isHardwareAccelerated()
+	};
+	var subview=null;
+	var titleview=null;
+	document.addEventListener("plusready",function(){
+		plus.key.addEventListener('backbutton', function(e) {
+			return false;
+		});
+	})
+	function doinit(){
+		try{
+			plus.webview.close("title.html","none");
+		}catch(e){}
+		try{
+			plus.webview.close("subpay.html","none");
+		}catch(e){}
+		
+		var title = getQueryString("title");
+		//setTitle(title);
+		var jumpUrl = getQueryString("url");
+		var payType = getQueryString("payType");
+		var reqdata = getQueryString("reqdata");
+		opensubpage(0,jumpUrl,payType,reqdata);
+		//titleview.evalJS('setTitle("'+title+'")');
+		
+	}
+	function opensubpage(topoffset,url,payType,reqdata){
+		
+		var id=plus.webview.currentWebview().id;
+		var height=$("header").height();
+		var windowheight=$(window).height()-height;
+		windowstylestitle["height"]=height;
+		console.log(height+'height')
+		var title="支付";
+		windowstyles["z-index"]=1;
+		windowstyles["bottom"] = 0;
+		// 子页面的窗口垂直向下偏移量为标题高度
+		windowstyles['top'] = height
+		if(payType == 1){
+			// 遮挡连连的标题
+			windowstyles["top"]=12;
+			title="连连支付";
+			// titleview=plus.webview.create("lltitle.html","title.html",windowstylestitle);
+		}else{
+			title="一键支付";
+		}
+		// 合并成一个title文件
+		titleview=plus.webview.create("title.html","title.html",windowstylestitle);
+		// titleview 加载完成后 设置title
+		titleview.onloaded=function(){
+			titleview.evalJS('setTitle("'+title+'")');
+		};
+		// windowstyles["height"]=windowheight+50;
+		subview=plus.webview.create(null,"subpay.html",windowstyles);
+		plus.webview.currentWebview().append(subview);
+		plus.webview.currentWebview().append(titleview);
+		if(payType == 1){
+			subview.loadURL('llpay.html');
+		}else{
+			subview.loadURL(url);
+		}
+		
+		//subview.appendJsFile('appendjs/ext.js');
+		var loadedfunction=function(){
+			subview.removeEventListener("loaded",loadedfunction);
+			if(payType == 1){
+				subview.evalJS("posttoll('"+url+"','"+reqdata+"')")
+			}
+		};
+		subview.addEventListener("loaded",loadedfunction);
+	}
+</script>

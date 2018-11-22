@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>玖富宝支付</title>
+		<script type="text/javascript" src="../../js/headerlib.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css">
+		<link rel="stylesheet" href="../../css/fuyou_pay.css">
+		<link rel="stylesheet" type="text/css" href="../../css/fund.css" />
+		<style>
+			button.disablebtn {
+				background-color: #ccc;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header id="header" class="wk-header wk-header-theme-a">
+			<div class="wk-header-left" id="goback"><img style="width:.22rem;" src="../../img/header_back.png" /></div>
+			<h3>玖富宝支付</h3>
+		</header>
+		<section class="wk-content pb230" id="wk-content">
+
+		</section>
+		<div class="foot-tips">
+			<p class="tips">预期收益并非平台承诺收益，市场有风险，投资需谨慎</p>
+		</div>
+	</body>
+	<script id="templ" type="text/html">
+		<div class="white-box n-center fouyou-pay-box">
+			<h4 style="">支付<%=amountsum%>元</h4>
+			<div class="tips" style="padding-bottom: .6rem;padding-top: .1rem;" id="paytips">短信验证码已发送至
+				<%=phonenumber%>
+			</div>
+			<div class="layui-m-layercont">
+				<input type="tel" id="smscode" maxlength="6" style="position: absolute;z-index: -1;left:-100%;opacity: 0">
+				<ul class="sms-wrap" id="focusonsms">
+					<li id="focusonpwd1"></li>
+					<li id="focusonpwd2"></li>
+					<li id="focusonpwd3"></li>
+					<li id="focusonpwd4"></li>
+					<li id="focusonpwd5"></li>
+					<li id="focusonpwd6"></li>
+				</ul>
+				<div class="send-smscode pb80"></div>
+			</div>
+			<div class="w61">
+				<button id="submitPay" class="footer_btn disablebtn">确认支付</button>
+			</div>
+		</div>
+	</script>
+	<script src="../../js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="../../js/common.js"></script>
+	<script type="text/javascript" src="../../js/baiduTemplate.js"></script>
+	<script type="text/javascript" src="walletFund_pay.js"></script>
+</html>

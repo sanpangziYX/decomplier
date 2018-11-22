@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/app_uc__aboat_icon" android:layout_width="@dimen/x200" android:layout_height="@dimen/x200" android:layout_marginTop="@dimen/x150" android:src="@drawable/apollo_uc_app_icon" android:scaleType="centerCrop" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="@dimen/x36" android:textColor="@color/apollo_uc_c_666666" android:id="@id/app_uc__aboat_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x20" android:text="贝壳金控" android:layout_below="@id/app_uc__aboat_icon" android:layout_centerHorizontal="true" />
+    <RelativeLayout android:id="@id/app_uc__aboat_ll1" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="@dimen/x120" android:layout_marginTop="@dimen/x100" android:layout_below="@id/app_uc__aboat_text">
+        <TextView android:textSize="@dimen/x32" android:textColor="@color/apollo_uc_c_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x30" android:text="@string/apollo_uc_check_new_version" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textColor="@color/apollo_uc_c_999999" android:id="@id/apollo_uc_aboat_version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/x60" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/x30" android:src="@drawable/apollo_uc_next" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/app_uc__aboat_ll2" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="@dimen/x120" android:layout_marginTop="@dimen/x20" android:layout_below="@id/app_uc__aboat_ll1" android:layout_alignParentStart="true">
+        <TextView android:textSize="@dimen/x32" android:textColor="@color/apollo_uc_c_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x30" android:text="@string/apollo_uc_office_web" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textColor="@color/apollo_uc_c_999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/x60" android:text="www.bkjk.com" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/x30" android:src="@drawable/apollo_uc_next" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/x60" android:text="@string/apollo_uc_office_tag" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

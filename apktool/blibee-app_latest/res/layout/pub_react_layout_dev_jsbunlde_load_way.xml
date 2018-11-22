@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/pub_react_bgColor_alertview_alert_start" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="@color/pub_react_loading_color" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:textSize="16.0dip" android:textColor="@color/pub_react_common_white" android:id="@id/back_button" android:background="@color/pub_react_loading_color" android:layout_width="wrap_content" android:layout_height="40.0dip" android:text="后退" />
+        <TextView android:textSize="16.0dip" android:textColor="@color/pub_react_common_white" android:gravity="center" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="JS BUNDLE 加载配置" />
+    </LinearLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/dev_jsbundle_container" android:padding="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <com.rnx.react.devsupport.view.ReactJsBundleListView android:orientation="vertical" android:id="@id/dev_jsbundle_hybridId_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" />
+            </ScrollView>
+            <Button android:layout_gravity="bottom" android:id="@id/dev_jsbundle_btn_add" android:layout_width="fill_parent" android:text="新增" style="@style/pub_react_DevButton" />
+        </LinearLayout>
+        <com.rnx.react.devsupport.view.ReactJsBundleAddView android:orientation="vertical" android:id="@id/dev_jsbundle_add_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="10.0dip" android:layout_weight="1.0" />
+        <com.rnx.react.devsupport.view.ReactJsBundleSettingView android:orientation="vertical" android:id="@id/dev_jsbundle_detail_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    </FrameLayout>
+</LinearLayout>

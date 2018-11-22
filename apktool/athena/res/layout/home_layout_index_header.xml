@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/home_index_body_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:orientation="vertical" android:id="@id/home_banner_fl" android:background="@color/home_c_FFFFFF" android:focusable="true" android:focusableInTouchMode="true" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.bkjk.athena_home.widgets.AutoScrollViewPager android:id="@id/asvp_home_slide_view" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/x60" android:layout_marginRight="@dimen/x60" />
+            <LinearLayout android:gravity="center" android:layout_gravity="bottom|center" android:orientation="horizontal" android:id="@id/ll_home_layout_dot" android:paddingBottom="@dimen/x20" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <View android:background="@color/home_c_FFFFFF" android:layout_width="fill_parent" android:layout_height="@dimen/x50" />
+        <RelativeLayout android:id="@id/rl_home_customer_manager" android:background="@color/home_c_FFFFFF" android:layout_width="fill_parent" android:layout_height="@dimen/x44">
+            <View android:id="@id/view_home_blue" android:background="@color/home_c_4D7BFE" android:layout_width="3.0dip" android:layout_height="14.0dip" android:layout_marginLeft="20.0dip" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/x32" android:textColor="@color/home_c_333333" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x15" android:text="@string/home_customer_management" android:layout_toRightOf="@id/view_home_blue" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/tv_home_customer_next" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="19.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                <TextView android:textSize="@dimen/home_ts_small" android:textColor="@color/home_c_999999" android:gravity="center_vertical" android:id="@id/tv_home_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_see_more" />
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_home_next" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="0.0dip" android:src="@drawable/home_icon_small_next" />
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:background="@color/home_c_FFFFFF" android:paddingTop="@dimen/x24" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:gravity="center_horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="30.0sp" android:textColor="@color/home_c_4D7BFE" android:gravity="center_horizontal" android:id="@id/tv_home_num_new" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_def_customer_num" android:layout_centerHorizontal="true" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/home_c_999999" android:gravity="center_horizontal" android:id="@id/tv_home_new" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="@string/home_new_customer" android:layout_below="@id/tv_home_num_new" android:layout_centerHorizontal="true" />
+                <RelativeLayout android:id="@id/rl_home_new" android:visibility="gone" android:layout_width="14.0dip" android:layout_height="24.0dip" android:layout_marginLeft="2.0dip" android:layout_toRightOf="@id/tv_home_num_new">
+                    <View android:background="@color/home_c_3587F2" android:layout_width="0.5dip" android:layout_height="10.0dip" android:layout_centerInParent="true" />
+                    <View android:background="@color/home_c_3587F2" android:layout_width="10.0dip" android:layout_height="0.5dip" android:layout_centerInParent="true" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center_horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="30.0sp" android:textColor="@color/home_c_4D7BFE" android:gravity="center_horizontal" android:id="@id/tv_home_num_deal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_def_customer_num" android:layout_centerHorizontal="true" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/home_c_999999" android:gravity="center_horizontal" android:id="@id/tv_home_deal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="@string/home_deal_customer" android:layout_below="@id/tv_home_num_deal" android:layout_centerHorizontal="true" />
+                <RelativeLayout android:id="@id/rl_home_deal" android:visibility="gone" android:layout_width="14.0dip" android:layout_height="24.0dip" android:layout_marginLeft="2.0dip" android:layout_toRightOf="@id/tv_home_num_deal">
+                    <View android:background="@color/home_c_3587F2" android:layout_width="0.5dip" android:layout_height="10.0dip" android:layout_centerInParent="true" />
+                    <View android:background="@color/home_c_3587F2" android:layout_width="10.0dip" android:layout_height="0.5dip" android:layout_centerInParent="true" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center_horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="30.0sp" android:textColor="@color/home_c_4D7BFE" android:gravity="center_horizontal" android:id="@id/tv_home_num_interview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_def_customer_num" android:layout_centerHorizontal="true" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/home_c_999999" android:gravity="center_horizontal" android:id="@id/tv_home_interview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="@string/home_interview_customer" android:layout_below="@id/tv_home_num_interview" android:layout_centerHorizontal="true" />
+                <RelativeLayout android:id="@id/rl_home_interview" android:visibility="gone" android:layout_width="14.0dip" android:layout_height="24.0dip" android:layout_marginLeft="2.0dip" android:layout_toRightOf="@id/tv_home_num_interview">
+                    <View android:background="@color/home_c_3587F2" android:layout_width="0.5dip" android:layout_height="10.0dip" android:layout_centerInParent="true" />
+                    <View android:background="@color/home_c_3587F2" android:layout_width="10.0dip" android:layout_height="0.5dip" android:layout_centerInParent="true" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center_horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="30.0sp" android:textColor="@color/home_c_4D7BFE" android:gravity="center_horizontal" android:id="@id/tv_home_num_visit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_def_customer_num" android:layout_centerHorizontal="true" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/home_c_999999" android:gravity="center_horizontal" android:id="@id/tv_home_visit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="@string/home_visit_customer" android:layout_below="@id/tv_home_num_visit" android:layout_centerHorizontal="true" />
+                <RelativeLayout android:id="@id/rl_home_visit" android:visibility="gone" android:layout_width="14.0dip" android:layout_height="24.0dip" android:layout_marginLeft="2.0dip" android:layout_toRightOf="@id/tv_home_num_visit">
+                    <View android:background="@color/home_c_3587F2" android:layout_width="0.5dip" android:layout_height="10.0dip" android:layout_centerInParent="true" />
+                    <View android:background="@color/home_c_3587F2" android:layout_width="10.0dip" android:layout_height="0.5dip" android:layout_centerInParent="true" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <View android:background="@color/home_c_FFFFFF" android:layout_width="fill_parent" android:layout_height="18.0dip" />
+        <View android:background="@color/home_c_F5F5F5" android:layout_width="fill_parent" android:layout_height="@dimen/x20" />
+        <FrameLayout android:id="@id/fl_home_notice" android:background="@color/home_c_FFFFFF" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <View android:background="@color/home_c_F5F5F5" android:layout_width="fill_parent" android:layout_height="@dimen/x20" />
+        <WebView android:id="@id/wb_home_news" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+</LinearLayout>

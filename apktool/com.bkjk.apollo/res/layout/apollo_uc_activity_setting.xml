@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/apollo_uc_c_F7F8FA" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true" android:layout_alignParentStart="true">
+        <RelativeLayout android:id="@id/rl_uc_set_msg_sound" android:background="@drawable/apollo_uc_item_selector" android:paddingRight="@dimen/x35" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/x100" android:layout_marginTop="@dimen/x20">
+            <TextView android:textSize="16.0sp" android:textColor="@color/apollo_uc_c_FF343434" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="@string/apollo_uc_set_sound" android:layout_centerVertical="true" />
+            <ToggleButton android:id="@id/uc_set_msg_sound_switch" android:background="@drawable/apollo_uc_selector_toggle" android:layout_width="@dimen/x100" android:layout_height="@dimen/x62" android:button="@null" android:textOn="" android:textOff="" android:text="" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <View android:background="@color/core_line_color" android:layout_width="fill_parent" android:layout_height="@dimen/x1" />
+        <RelativeLayout android:id="@id/rl_uc_set_msg_shock" android:background="@drawable/apollo_uc_item_selector" android:paddingRight="@dimen/x35" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/x100">
+            <TextView android:textSize="16.0sp" android:textColor="@color/apollo_uc_c_FF343434" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="@string/apollo_uc_set_shock" android:layout_centerVertical="true" />
+            <ToggleButton android:id="@id/uc_set_msg_shock_switch" android:background="@drawable/apollo_uc_selector_toggle" android:layout_width="@dimen/x100" android:layout_height="@dimen/x62" android:button="@null" android:textOn="" android:textOff="" android:text="" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <View android:background="@color/apollo_uc_c_21979797" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="20.0dip" />
+        <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/apollo_uc_item_selector" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="10.0dip">
+            <TextView android:textSize="16.0sp" android:textColor="@color/apollo_uc_c_FF343434" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="@string/apollo_uc_sound_notice" />
+            <com.bkjk.apollo_uc.widget.UcSwitchButton android:id="@id/usb_uc_voice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="22.0dip" android:layout_alignParentRight="true" app:sb_checked="true" app:sb_show_indicator="false" />
+        </RelativeLayout>
+        <View android:background="@color/apollo_uc_c_21979797" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="20.0dip" />
+        <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/apollo_uc_item_selector" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:textSize="16.0sp" android:textColor="@color/apollo_uc_c_FF343434" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="@string/apollo_uc_vibrat_alert" />
+            <com.bkjk.apollo_uc.widget.UcSwitchButton android:id="@id/usb_uc_vibrate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="22.0dip" android:layout_alignParentRight="true" app:sb_checked="true" app:sb_show_indicator="false" />
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/rl_uc_mod_password" android:background="@drawable/apollo_uc_item_selector" android:layout_width="fill_parent" android:layout_height="@dimen/x100" android:layout_marginTop="10.0dip">
+            <TextView android:textSize="16.0sp" android:textColor="@color/apollo_uc_c_FF343434" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="@string/apollo_uc_mod_password" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/apollo_uc_c_999999" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:drawableRight="@drawable/apollo_uc_icon_next" android:drawablePadding="12.0dip" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <View android:background="@color/core_line_color" android:layout_width="fill_parent" android:layout_height="@dimen/x1" />
+        <RelativeLayout android:id="@id/rl_uc_set_gesture" android:background="@drawable/apollo_uc_item_selector" android:paddingRight="@dimen/x35" android:layout_width="fill_parent" android:layout_height="@dimen/x100">
+            <TextView android:textSize="16.0sp" android:textColor="@color/apollo_uc_c_FF343434" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="@string/apollo_uc_set_gesture" android:layout_centerVertical="true" />
+            <ToggleButton android:id="@id/tb_on_or_off_gesture" android:background="@drawable/apollo_uc_selector_toggle" android:layout_width="@dimen/x100" android:layout_height="@dimen/x62" android:button="@null" android:textOn="" android:textOff="" android:text="" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <View android:background="@color/core_line_color" android:layout_width="fill_parent" android:layout_height="@dimen/x1" />
+        <RelativeLayout android:gravity="center_vertical" android:id="@id/rl_uc_mod_gesture" android:background="@drawable/apollo_uc_item_selector" android:layout_width="fill_parent" android:layout_height="@dimen/x100">
+            <TextView android:textSize="16.0sp" android:textColor="@color/apollo_uc_c_FF343434" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="@string/apollo_uc_mod_gesture" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/apollo_uc_c_999999" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:drawableRight="@drawable/apollo_uc_icon_next" android:drawablePadding="12.0dip" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center" android:orientation="horizontal" android:id="@id/rl_uc_finger_print" android:background="@drawable/apollo_uc_item_selector" android:paddingRight="@dimen/x35" android:layout_width="fill_parent" android:layout_height="@dimen/x100" android:layout_marginTop="@dimen/x20">
+            <TextView android:textSize="16.0sp" android:textColor="@color/apollo_uc_c_FF343434" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="@string/apollo_uc_set_finger_print" android:layout_centerVertical="true" />
+            <ToggleButton android:id="@id/tb_on_or_off_finger" android:background="@drawable/apollo_uc_selector_toggle" android:layout_width="@dimen/x100" android:layout_height="@dimen/x62" android:button="@null" android:textOn="" android:textOff="" android:text="" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <View android:background="@color/core_line_color" android:layout_width="fill_parent" android:layout_height="@dimen/x1" />
+        <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/rl_uc_clear_cache" android:background="@drawable/apollo_uc_item_selector" android:layout_width="fill_parent" android:layout_height="@dimen/x100">
+            <TextView android:textSize="16.0sp" android:textColor="@color/apollo_uc_c_FF343434" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="@string/apollo_uc_clear_cache" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/apollo_uc_c_999999" android:layout_gravity="center_vertical" android:id="@id/tv_uc_cache" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:text="100.23M" android:drawableRight="@drawable/apollo_uc_icon_next" android:drawablePadding="12.0dip" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center" android:orientation="horizontal" android:id="@id/rl_uc_login_out" android:background="@drawable/apollo_uc_item_selector" android:layout_width="fill_parent" android:layout_height="@dimen/x100" android:layout_marginTop="@dimen/x20">
+            <TextView android:textSize="16.0sp" android:textColor="@color/apollo_uc_c_FF3434" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/apollo_uc_login_out" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

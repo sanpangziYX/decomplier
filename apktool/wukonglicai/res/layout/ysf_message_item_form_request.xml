@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ysf_message_form_request_container" android:layout_width="@dimen/ysf_bubble_max_width" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

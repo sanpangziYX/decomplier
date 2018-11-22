@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>设置手势密码</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/locker.css"/>
+		<script type="text/javascript" src="../../js/rem.js"></script>
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/mui.locker.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<p>设置手势密码</p>
+		</header>
+		<section class="section">
+			<ul class="little_locker">
+				<li class="clearfix">
+					<div class="r_0 "></div>
+					<div class="r_1 "></div>
+					<div class="r_2 "></div>
+				</li>
+				<li class="clearfix">
+					<div class="r_3 "></div>
+					<div class="r_4 "></div>
+					<div class="r_5 "></div>
+				</li>
+				<li class="clearfix">
+					<div class="r_6 "></div>
+					<div class="r_7 "></div>
+					<div class="r_8 "></div>
+				</li>
+			</ul>
+			
+			<div class="mui-content">
+				<!--<div id='alert'>&nbsp;</div>-->
+				<!--首次登陆提示-->
+				<div id='alert' initstr='为了您的账户安全，请至少连续绘制4个点'></div>
+				<div id='holder' class="mui-locker" data-locker-options='{"ringColor":"#ccc","fillColor":"#fff"}' data-locker-width='300' data-locker-height='300'></div>
+			</div>
+			
+			<footer class="locker_footer">
+				期望回报并非平台承诺收益，市场有风险，投资需谨慎
+			</footer>
+		</section>
+	</body>
+
+</html>
+
+<script>
+	var transportObj;
+	var token;
+	var test = document.getElementById('holder');
+	
+	(function($, doc) {
+		
+		var holder = doc.querySelector('#holder'),
+			alert = doc.querySelector('#alert'),
+			record = [];
+		//打开首页	
+		function openIndex(){
+			setTimeout(function(){
+				alert.innerText = '';
+				openPage('../index/wkindex.html','wkindex.html',{});
+				hideCacheWV();
+				try{
+					setTimeout(function(){
+						plus.webview.currentWebview().hide("slide-out-bottom");
+					},1500);
+				
+				}catch(e){}
+			},200);
+		}
+		//打开别的页面
+		function openOther(url){
+			console.log(url);
+			setTimeout(function(){
+				alert.innerText = '';
+				closeOthers();
+				openBrowser({"title":'美好计划',"url":url})	
+				try{
+					setTimeout(function(){
+						plus.webview.currentWebview().hide("slide-out-bottom");
+					},800);
+				
+				}catch(e){}
+			},1000);	
+		}
+		//处理事件
+		holder.addEventListener('done', function(event) {
+			var rs = event.detail;
+			if(rs.points.length < 4) {
+				alert.innerText = '设定的手势太简单了';
+				alert.style.color = '#FF5C6C';
+				record = [];
+				rs.sender.clear();
+				return;
+			}
+			console.log(rs.points.join(''));
+			record.push(rs.points.join(''));
+			try{
+				for(var i=0;i<9;i++){
+					try{
+						doc.querySelector('.color_main').classList.remove("color_main");
+					}catch(e){}
+				}
+				for(var i=0;i<rs.points.length;i++){
+					var v=rs.points[i];
+					doc.querySelector('.r_'+v).classList.add("color_main");
+				}
+			}catch(e){console.log(e);}
+			
+			if(record.length >= 2) {
+				if(record[0] == record[1]) {
+					alert.innerText = '手势设定完成';
+					alert.style.color = '#888888';
+					rs.sender.clear();
+					localStorage.psw=record[0];			
+					if(transportObj&&transportObj.source){	
+						if(transportObj.returnUrl){		
+							console.log("&&&&&&&&&&&&&&"+JSON.stringify(transportObj));
+							var url=serverWurl+transportObj.returnUrl+'?count='+transportObj.count+'&skuId='+transportObj.sku_id+'&bId='+transportObj.b_id+'&channelSource='+transportObj.channel_source+'&uToken='+token+''
+							localStorage.removeItem("transportObj");
+							openOther(url);
+										
+						}else{			
+							openIndex();
+						}
+					}else{		
+						openIndex();	
+					}
+					
+					//是否显示金额的变化（显示）
+					localStorage.setItem("countMoneyFlag", "T");
+					reloadwkindex();
+				} else {
+					alert.innerText = '两次手势设定不一致';
+					alert.style.color = '#FF5C6C';
+					var locker = rs.sender;
+					var preoption = locker.options;
+					locker.options = {
+						"ringColor": "#ff5c6c",
+						"fillColor": "#fff",
+						"lineColor": "#ff5c6c",
+						times: 2,
+						fail: true
+					};
+					locker.draw(locker.cxt, locker.pointLocationArr, locker.linePointArr, null);
+					locker.options = preoption;
+				}
+				record = [];
+			} else {
+				alert.innerText = '请确认手势设定';
+				alert.style.color = '#888888';
+				rs.sender.clear();
+			}
+		});
+	}(mui, document));
+	function doinit(){
+		if(currlocker){
+			setTimeout(function(){
+				currlocker.clear();
+			},100);
+			
+		}
+		//是否显示金额的变化（显示）
+		localStorage.setItem("countMoneyFlag", "T");
+		transportObj=JSON.parse(localStorage.getItem("transportObj"));
+		token=getToken();
+		
+		
+	}
+	function lockinput(){
+		$('.color_main').removeClass("color_main");
+		var initstr=$("#alert").attr("initstr");
+		$("#alert").text(initstr);
+		if(currlocker){
+			setTimeout(function(){
+				currlocker.clear();
+			},100);
+			
+		}
+	}
+</script>

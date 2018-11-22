@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<title>没有标题的webview</title>
+	</head>
+
+	<body>
+	</body>
+
+</html>
+<script>
+	(function(win) {
+		document.addEventListener("plusready", function() {
+			// 执行初始化
+			brower.init();
+			setTimeout(function() {
+				plus.key.addEventListener('backbutton', function(e) {
+					return false;
+				});
+			}, 1000);
+			var wv = plus.webview.currentWebview();
+		})
+
+		var brower = {
+			init: function() {
+				var _this = this;
+				var payload = plus.storage.getItem("payload");
+				if(typeof payload != 'undefined') {
+					console.log('payload ==== '+payload)
+					payload = JSON.parse(payload)
+					_this.preWebViewid = payload.parentid
+					_this.jumpUrl = payload.url
+					_this.refreshparent = payload.refreshparent
+					_this.windowstyles.hardwareAccelerated = _this.isHardwareAccelerated()
+					_this.opensubpage(_this.jumpUrl)
+				} else {
+					plus.nativeUI.closeWaiting();
+					plus.webview.currentWebview().close("none");
+					return false
+				}
+
+			},
+			preWebViewid: '', // 前一个webview 的id
+			jumpUrl: '', // 要加载的页面url
+			refreshparent: '', // 是否刷新前一个webview
+
+			/**
+			 * 设置窗口样式
+			 */
+			windowstyles: {
+				render: 'always',
+				bounce: 'none',
+				'popGesture': 'close',
+				'scrollIndicator': 'none',
+				zindex: 1
+			},
+			/**
+			 * 是否开启硬件加速 
+			 */
+			isHardwareAccelerated: function() {
+				try {
+					var agent = plus.navigator.getUserAgent();
+					if(plus.os.name == "Android") {
+						var agent = plus.navigator.getUserAgent();
+						if(agent.indexOf("Android 4") > 0) {
+							return false;
+						}
+						if(agent.indexOf("Android 5.0") > 0 && agent.indexOf('vivo') > 0) {
+							return false;
+						}
+					}
+				} catch(e) {}
+				return true;
+			},
+			/**
+			 * 打开子页面 
+			 * @param {Object} url
+			 */
+			opensubpage: function(url) {
+				var _this = this
+				_this.windowstyles["top"] = 0;
+				_this.windowstyles["bottom"] = 0;
+				_this.subview = plus.webview.create(null, "subbrowser.html", _this.windowstyles);
+				plus.webview.currentWebview().append(_this.subview);
+				_this.subview.loadURL(url);
+			}
+		}
+
+	})(window);
+</script>

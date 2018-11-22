@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ysf_bot_footer_layout" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/ysf_include_divider" />
+    <TextView android:textSize="@dimen/ysf_text_size_14" android:textColor="@color/ysf_grey_999999" android:gravity="center" android:id="@id/ysf_bot_footer_text" android:background="@drawable/ysf_list_selector" android:paddingLeft="8.0dip" android:paddingTop="10.0dip" android:paddingRight="8.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="查看更多详情" />
+</LinearLayout>

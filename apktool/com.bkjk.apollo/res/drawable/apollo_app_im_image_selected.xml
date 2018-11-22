@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:drawable="@drawable/apollo_app_footbar_news_click" />
+    <item android:drawable="@drawable/apollo_app_footbar_news" />
+</selector>

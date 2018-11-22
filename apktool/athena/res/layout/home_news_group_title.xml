@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rl_home_couster_more" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_below="@id/ll_desk_title"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/home_view_home_bule" android:background="@color/home_c_4D7BFE" android:layout_width="3.0dip" android:layout_height="14.0dip" android:layout_marginLeft="20.0dip" android:layout_centerVertical="true" />
+    <TextView android:textSize="@dimen/x32" android:textColor="@color/home_c_333333" android:id="@id/home_newsGroup_title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x15" android:layout_toRightOf="@id/home_view_home_bule" android:layout_centerVertical="true" />
+    <TextView android:textSize="@dimen/x28" android:textColor="@color/home_c_999999" android:gravity="center_vertical" android:id="@id/im_home_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/x40" android:drawableRight="@drawable/home_icon_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <TextView android:textSize="@dimen/home_ts_small" android:textColor="@color/home_c_999999" android:gravity="center_vertical" android:id="@id/tv_home_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_see_more" android:layout_toLeftOf="@id/im_home_more" android:layout_centerVertical="true" />
+    <View android:background="@color/home_c_20999999" android:layout_width="fill_parent" android:layout_height="@dimen/x2" android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="200.0dip" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:textStyle="bold" android:layout_gravity="left" android:id="@id/lock_screen_room_name" android:paddingLeft="5.0dip" android:paddingTop="5.0dip" android:paddingRight="5.0dip" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Room name" />
+    <View android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:textStyle="bold" android:layout_gravity="left" android:id="@id/lock_screen_sender" android:paddingLeft="5.0dip" android:paddingTop="5.0dip" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SENDER" />
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:layout_gravity="left" android:id="@id/lock_screen_body" android:paddingLeft="5.0dip" android:paddingTop="5.0dip" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="A message body goes here" android:textIsSelectable="false" />
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/lock_screen_chat_send_area" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <EditText android:textAppearance="?android:textAppearanceMedium" android:layout_gravity="left" android:id="@id/lock_screen_edittext" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Type here..." android:layout_weight="1.0" />
+        <ImageButton android:textColor="#ff000000" android:layout_gravity="right" android:id="@id/lock_screen_sendbutton" android:background="@android:drawable/ic_menu_send" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/send" />
+    </LinearLayout>
+</LinearLayout>

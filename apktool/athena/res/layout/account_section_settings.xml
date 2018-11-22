@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/textView_matrix_id" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="A Matrix ID here" android:layout_alignParentTop="true" style="@style/Base.TextAppearance.AppCompat.Subhead" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/imageView_avatar" android:layout_width="@dimen/profile_avatar_size" android:layout_height="@dimen/profile_avatar_size" android:layout_marginRight="10.0dip" android:scaleType="centerCrop" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:contentDescription="@string/settings_change_avatar" />
+        <EditText android:id="@id/editText_displayName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/settings_display_name_hint" android:layout_toRightOf="@id/imageView_avatar" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        <Button android:enabled="false" android:id="@id/button_save" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_update_profile" android:layout_toRightOf="@id/imageView_avatar" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" style="@style/Base.TextAppearance.AppCompat.Button" />
+        <ProgressBar android:id="@id/profile_mask" android:background="#99cccccc" android:layout_width="fill_parent" android:layout_height="@dimen/profile_avatar_size" android:indeterminate="true" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    </RelativeLayout>
+</LinearLayout>

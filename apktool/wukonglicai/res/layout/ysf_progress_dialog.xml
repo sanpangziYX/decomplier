@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:background="@drawable/ysf_progress_dialog_bg" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="30.0dip" android:minWidth="170.0dip">
+        <ProgressBar android:id="@id/ysf_progress_dialog_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:indeterminateDrawable="@drawable/ysf_progress_bar_white" style="@android:style/Widget.ProgressBar.Small" />
+        <TextView android:textSize="@dimen/ysf_text_size_14" android:textColor="@color/ysf_white" android:ellipsize="end" android:id="@id/ysf_progress_dialog_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ysf_ptr_loading" android:maxLines="1" />
+    </LinearLayout>
+</FrameLayout>

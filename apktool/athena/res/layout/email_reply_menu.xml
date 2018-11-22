@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/email_reply_opt_fl" android:background="@color/email_c_25000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/divider_email" android:showDividers="middle">
+        <TextView android:gravity="center" android:id="@id/email_reply_tv" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="57.0dip" android:text="回复" />
+        <TextView android:gravity="center" android:id="@id/email_reply_all_tv" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="57.0dip" android:text="全部回复" />
+        <TextView android:gravity="center" android:id="@id/email_transmit_tv" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="57.0dip" android:text="转发" />
+        <TextView android:gravity="center" android:id="@id/email_cancel_tv" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="57.0dip" android:layout_marginTop="10.0dip" android:text="取消" />
+    </LinearLayout>
+</FrameLayout>

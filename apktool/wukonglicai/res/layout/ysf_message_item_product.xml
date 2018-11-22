@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/ysf_product_content" android:layout_width="@dimen/ysf_bubble_max_width" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:gravity="center_horizontal" android:id="@id/ysf_product_image" android:layout_width="77.0dip" android:layout_height="77.0dip" android:src="@drawable/ysf_image_placeholder_loading" android:scaleType="centerCrop" android:contentDescription="@null" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip">
+        <TextView android:textSize="@dimen/ysf_text_size_14" android:textColor="@color/ysf_black_222222" android:ellipsize="end" android:id="@id/ysf_product_title" android:layout_width="fill_parent" android:layout_height="20.0dip" android:maxLines="1" android:includeFontPadding="false" />
+        <TextView android:textSize="@dimen/ysf_text_size_12" android:textColor="@color/ysf_grey_666666" android:ellipsize="end" android:id="@id/ysf_product_description" android:layout_width="fill_parent" android:layout_height="33.0dip" android:layout_marginTop="5.0dip" android:maxLines="2" android:includeFontPadding="false" />
+        <TextView android:textSize="@dimen/ysf_text_size_12" android:textColor="#ffff611b" android:ellipsize="end" android:id="@id/ysf_product_note" android:layout_width="fill_parent" android:layout_height="17.0dip" android:layout_marginTop="5.0dip" android:maxLines="1" android:includeFontPadding="false" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="oval" android:useLevel="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/apollo_home_c_4D000000" />
+    <size android:height="15.0dip" android:width="15.0dip" />
+    <corners android:radius="@dimen/x28" />
+</shape>

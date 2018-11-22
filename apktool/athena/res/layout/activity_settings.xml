@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/settings_layout" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/settings_profile_information_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/settings_title_profile" style="@style/Base.TextAppearance.AppCompat.Title" />
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/settings_title_notifications" style="@style/Base.TextAppearance.AppCompat.Title" />
+        <Button android:id="@id/button_notifications_rule" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_title_notifications_rules" style="@style/Base.TextAppearance.AppCompat.Button" />
+        <TextView android:id="@id/settings_gcm_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/settings_title_gcm" style="@style/Base.TextAppearance.AppCompat.Title" />
+        <LinearLayout android:orientation="vertical" android:id="@id/gcm_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_use_gcm" android:layout_weight="1.0" android:labelFor="@id/checkbox_useGcm" style="@style/Base.TextAppearance.AppCompat.Caption" />
+                <CheckBox android:id="@id/checkbox_useGcm" android:layout_width="30.0dip" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/settings_title_rooms" style="@style/Base.TextAppearance.AppCompat.Title" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_display_all_events" android:layout_weight="1.0" android:labelFor="@id/checkbox_displayAllEvents" style="@style/Base.TextAppearance.AppCompat.Caption" />
+            <CheckBox android:id="@id/checkbox_displayAllEvents" android:layout_width="30.0dip" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_hide_unsupported_events" android:layout_weight="1.0" android:labelFor="@id/checkbox_hideUnsupportedEvenst" style="@style/Base.TextAppearance.AppCompat.Caption" />
+            <CheckBox android:id="@id/checkbox_hideUnsupportedEvenst" android:layout_width="30.0dip" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_sort_by_last_seen" android:layout_weight="1.0" android:labelFor="@id/checkbox_sortByLastSeen" style="@style/Base.TextAppearance.AppCompat.Caption" />
+            <CheckBox android:id="@id/checkbox_sortByLastSeen" android:layout_width="30.0dip" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_display_left_members" android:layout_weight="1.0" android:labelFor="@id/checkbox_displayLeftMembers" style="@style/Base.TextAppearance.AppCompat.Caption" />
+            <CheckBox android:id="@id/checkbox_displayLeftMembers" android:layout_width="30.0dip" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_display_public_rooms" android:layout_weight="1.0" android:labelFor="@id/checkbox_displayPublicRooms" style="@style/Base.TextAppearance.AppCompat.Caption" />
+            <CheckBox android:id="@id/checkbox_displayPublicRooms" android:layout_width="30.0dip" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <Button android:id="@id/button_clear_cache" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/clear_cache" style="@style/Base.TextAppearance.AppCompat.Button" />
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/settings_bugs_report" style="@style/Base.TextAppearance.AppCompat.Title" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_rage_shake" android:layout_weight="1.0" android:labelFor="@id/checkbox_rageshake" style="@style/Base.TextAppearance.AppCompat.Caption" />
+            <CheckBox android:id="@id/checkbox_rageshake" android:layout_width="30.0dip" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/settings_title_config" style="@style/Base.TextAppearance.AppCompat.Title" />
+        <TextView android:id="@id/textView_matrixConsoleVersion" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Base.TextAppearance.AppCompat.Caption" />
+        <TextView android:id="@id/textView_matrixSDKVersion" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Base.TextAppearance.AppCompat.Caption" />
+        <TextView android:id="@id/textView_matrixBuildNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Base.TextAppearance.AppCompat.Caption" />
+        <TextView android:id="@id/textView_configUsers" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Base.TextAppearance.AppCompat.Caption" />
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/settings_title_commands" style="@style/Base.TextAppearance.AppCompat.Title" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_command_commands" style="@style/Base.TextAppearance.AppCompat.Caption" />
+    </LinearLayout>
+</ScrollView>

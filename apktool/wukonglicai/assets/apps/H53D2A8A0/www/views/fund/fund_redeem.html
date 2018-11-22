@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover" />
+		<script type="text/javascript" src="../../js/headerlib.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="../../plugins/layer/layer.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../../plugins/iosselect/iosSelect.css"/>		
+		<link rel="stylesheet" type="text/css" href="../../css/fund.css"/>
+		<title>玖富宝转出</title>
+	</head>
+	<body>
+		<header id="header" class="wk-header wk-header-theme-a">
+			<div class="wk-header-left" id="goback"><img style="width:.22rem;" src="../../img/header_back.png" /></div>
+			<h3>玖富宝转出</h3>
+			<!--<div class="wk-header-right"></div>-->
+		</header>
+		<section class="wk-content pb230" id="wk-content">
+		
+		</section>
+		<div class="footer-btn">
+		 <button type="button" id="redeemSubmit">确认转出</button>
+		</div>
+		<script id="templ" type="text/html">
+			<div class="title-line">
+			<%=bankName%> (尾号<%=bankNo%>）
+		</div>
+		<div class="flexable input-warp">
+			<div class="unit"><img src="../../img/fund/yuan.png" style="width:.4rem;vertical-align: baseline;" alt="" /></div>
+			<div class="fund-redeem "> 
+				<input id="amount" class="" type="number" placeholder="可转出到卡<%=fundAvaLvol%>元" />
+			</div>
+			<div class="clear-ipt">
+				<img src="../../img/delete.png" alt="" />
+			</div>
+			<div class="green-style" id="redeemAll">
+				全部转出
+			</div>
+		</div>
+		<div class="mt24">
+			<label  class="flexable flex-align-center export">
+				<input type="radio" name="exportType" checked="checked" value="0" />
+				<div class="pl3" style="width: 100%;"> 
+					<div class="export-name">快速转出</div>
+					<div class="export-detail">预计<span class="pink"><%=quickRolloutTime%></span>到账，每日单笔限额<%=quickRolloutLimitSingle%>，每日限额<%=quickRolloutLimitDay%></div>
+				</div>
+			</label>
+			<label class="flexable flex-align-center export">
+				<input type="radio" name="exportType" value="1"/>
+				<div class="pl3" style="width: 100%;">
+					<div class="export-name">普通转出</div>
+					<div class="export-detail">预计<span class="pink"><%=toAccountDate%><%=weekDate%></span>到账，<%=today%>仍有收益，<%=normalRolloutDesc%></div>
+				</div>
+			</label>
+		</div>
+		<div class="explain">
+			<a href="" class="green-style" id="outFundExplain">转出说明</a>
+		</div>
+		<div class="common-tips mt">
+		<img  src="https://m.wukonglicai.com/applauncher/invest-detal-tips.png" alt="" />
+		</div>
+		</script>
+		<script src="../../js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../../js/baiduTemplate.js"></script>
+		<script src="../../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugins/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="fund_redeem.js" type="text/javascript" charset="utf-8"></script>
+		
+	</body>
+</html>	

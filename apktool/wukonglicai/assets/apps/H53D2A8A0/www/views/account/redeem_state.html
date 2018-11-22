@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<title>赎回状态</title>
+		<script type="text/javascript" src="../../js/rem.js"></script>
+		<link rel="stylesheet" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/redeem_state.css"/>
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/fastclick.js"></script>
+	</head>
+
+	<body>
+
+		<header class="bgcolor_main">
+			<div class="headerback_box" keepalive="true">
+				<img src="../../img/header_back.png" />
+			</div>
+			<p>赎回状态</p>
+		</header>
+
+		<section>
+			<img src="../../img/redeem_s.png" class="redeem_s"/>
+			<!--失败图片redeem_e.png-->
+			<div class="state_content">
+				<h3>赎回成功</h3>
+				<p>预计2016年10月30日到账</p>
+				<button>知道了</button>
+			</div>
+		</section>
+		
+		<footer class="foot-cyp">
+			<p>期望回报并非平台承诺收益，市场有风险，投资需谨慎</p>
+		</footer>
+
+	</body>
+<script type="application/javascript">
+//	$(function() {
+//		doinit();
+//	});
+	function doinit(){
+		var data = JSON.parse(getQueryString("data"));
+//		var data = JSON.parse('{"code":"200","message":"成功","data":{"redeemTime":"2017年05月24日","redeemStatus":-1,"bespoke":"quick","productType":"B"}}');
+		console.log("赎回结果："+JSON.stringify(data));
+		var redeemStatus = data.data.redeemStatus;
+		var bespoke = data.data.bespoke;
+		var productType = data.data.productType;
+		var redeemTime = data.data.redeemTime;
+		if(redeemStatus<0){
+			$(".redeem_s").attr('src','../../img/redeem_e.png');
+			$(".state_content h3").html("赎回失败");
+			$(".state_content h3").addClass("h3_red");
+			if(redeemStatus == -406){
+				$(".state_content p").html("日账户今日赎回额度已用完，您还可以选择预约赎回");
+				$(".state_content button").html("预约赎回");
+				$(".state_content button").attr("onclick","orderRedeem()");
+			}else{
+				$(".state_content p").html("");
+				$(".state_content button").html("再试一次");
+				$(".state_content button").attr("onclick","goBack()");
+			}
+		}else{
+			$(".redeem_s").attr('src','../../img/redeem_s.png');
+			$(".state_content h3").html("赎回成功");
+			$(".state_content button").html("知道了");
+			$(".state_content button").attr("onclick","openPage('account_detail.html','account_detail.html',{productType:'D'});");
+			if(productType == "B"){
+				if( bespoke != null  && bespoke == "quick"){
+					$(".state_content p").html("预计"+redeemTime+"到账");
+				}else{
+					$(".state_content p").html("预计T+1~3个工作日到账");
+				}
+			}else{
+				$(".state_content p").html("预计T+1~3个工作日到账");
+			}
+		}
+		setTimeout(function (){
+			hideOtherPages();
+		},100);
+	}
+	function orderRedeem(){
+		var productId=getQueryString("productId");
+		var canRedeemAmount=getQueryString("canRedeemAmount");
+		var arrivalDate="T+1~3个工作日";
+		var min_redemption_surplus_amount=getQueryString("min_redemption_surplus_amount");
+		var charge=getQueryString("charge");
+		var product_type=getQueryString("product_type");
+		
+		openPage('redeemInvest.html','redeemInvest.html',{
+			canRedeemAmount:canRedeemAmount,
+			productId:productId,
+			arrivalDate:arrivalDate,
+			min_redemption_surplus_amount:min_redemption_surplus_amount,
+			charge:charge,
+			product_type:product_type,
+			bespoke:"bespoke"
+		});
+	}
+</script>
+</html>

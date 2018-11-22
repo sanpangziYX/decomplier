@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/ysf_dialog_bg" android:layout_width="296.0dip" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/ysf_text_size_16" android:textStyle="bold" android:textColor="@color/ysf_black" android:gravity="center" android:id="@id/ysf_tv_dialog_title" android:padding="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="标题" />
+        <TextView android:textSize="@dimen/ysf_text_size_16" android:textColor="@color/ysf_black" android:gravity="center" android:id="@id/ysf_tv_dialog_message" android:padding="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="内容" />
+        <FrameLayout android:id="@id/ysf_dialog_content" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.bkjk.apollo" platformBuildVersionCode="25" platformBuildVersionName="7.1.1">
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIMAX_STATE"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BODY_SENSORS"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIMAX_STATE"/>
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="android.permission.PERSISTENT_ACTIVITY"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.READ_CELL_BROADCASTS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_INSTALL_SESSIONS"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.READ_SOCIAL_STREAM"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_STATS"/>
+    <uses-permission android:name="android.permission.READ_USER_DICTIONARY"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.RECEIVE_MMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_WAP_PUSH"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.REORDER_TASKS"/>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.SET_TIME_ZONE"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS"/>
+    <uses-permission android:name="android.permission.SUBSCRIBED_FEEDS_READ"/>
+    <uses-permission android:name="android.permission.SUBSCRIBED_FEEDS_WRITE"/>
+    <uses-permission android:name="android.permission.TRANSMIT_IR"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.USE_SIP"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_PROFILE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+    <uses-permission android:name="android.permission.WRITE_SOCIAL_STREAM"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_USER_DICTIONARY"/>
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS"/>
+    <uses-permission android:name="com.android.browser.permission.WRITE_HISTORY_BOOKMARKS"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE"/>
+    <uses-permission android:name="com.android.voicemail.permission.ADD_VOICEMAIL"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID_NOTIFICATION"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.OTHER_SERVICES"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.YouTubeUser"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.adsense"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.adwords"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.ah"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.android"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.androidsecure"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.blogger"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.cl"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.cp"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.dodgeball"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.finance"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.gbase"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.grandcentral"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.groups2"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.health"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.ig"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.jotspot"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.knol"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.lh2"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.local"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.mail"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.mobile"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.news"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.notebook"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.orkut"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.print"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.sierra"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.sierraqa"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.sierrasandbox"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.sitemaps"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.speech"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.speechpersonalization"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.talk"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.wifi"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.wise"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.writely"/>
+    <uses-permission android:name="com.google.android.googleapps.permission.GOOGLE_AUTH.youtube"/>
+    <uses-permission android:name="com.google.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.google.android.providers.talk.permission.READ_ONLY"/>
+    <uses-permission android:name="com.google.android.providers.talk.permission.WRITE_ONLY"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.READ_OWNER_DATA"/>
+    <uses-permission android:name="android.permission.WRITE_OWNER_DATA"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <uses-permission android:name="android.permission.BATTERY_STATS"/>
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.qihoo.appstore.rtservice.ACCESS_RTSERVICE"/>
+    <uses-permission android:name="android.permission.SEND_DOWNLOAD_COMPLETED_INTENTS"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+    <meta-data android:name="com.bkjk.core.service_component.imageloader.glide.ConfigGlideModule" android:value="GlideModule"/>
+    <meta-data android:name="android.support.VERSION" android:value="25.3.1"/>
+    <application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/app_app_name" android:name="com.apollo.ApolloApplication" android:supportsRtl="true" android:theme="@style/AppTheme">
+        <meta-data android:name="android.max_aspect" android:value="2.1"/>
+        <meta-data android:name="com.amap.api.v2.apikey" android:value="ce50a8047e56fbfd05b184dfe3ba93b0"/>
+        <activity android:name="com.apollo.activity.AppLaucherActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.apollo.activity.AppGuideActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity"/>
+        <activity android:name="com.apollo.activity.AppWebViewActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="bkjk.com" android:path="/app.webview" android:scheme="apollo"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.apollo.rn.RnReactActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="bkjk.com" android:path="/app.rn" android:scheme="apollo"/>
+            </intent-filter>
+        </activity>
+        <activity android:launchMode="singleTask" android:name="com.apollo.activity.AppHomeActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="bkjk.com" android:path="/app.home" android:scheme="apollo"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.bkjk.apollo_home.activity.HomeChangeCityActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="bkjk.com" android:path="/home.city" android:scheme="apollo"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.bkjk.apollo_home.activity.HomeCityListActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bkjk.apollo_home.activity.HomeCaptureActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bkjk.apollo_product.activity.MainActivity"/>
+        <activity android:name="com.bkjk.apollo_uc.activity.UCSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bkjk.apollo_uc.activity.UCCertificationInfoActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bkjk.apollo_uc.activity.UCBankCardListActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bkjk.apollo_uc.activity.UCResetPwdActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bkjk.apollo_uc.activity.UCCertificationActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="bkjk.com" android:path="/uc.authentication" android:scheme="apollo"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.bkjk.apollo_uc.activity.UCCamerActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bkjk.apollo_uc.activity.UCForgotPwdActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="bkjk.com" android:path="/uc.forgotpwd" android:scheme="apollo"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.bkjk.apollo_uc.activity.UCRegistActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="bkjk.com" android:path="/uc.regist" android:scheme="apollo"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.bkjk.apollo_uc.activity.UCLoginActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="bkjk.com" android:path="/uc.login" android:scheme="apollo"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.bkjk.apollo_uc.activity.UCSetGestureActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="bkjk.com" android:path="/uc.gesture" android:scheme="apollo"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.bkjk.apollo_uc.activity.UCModGestureActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bkjk.apollo_uc.activity.UCFingerPrintActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="bkjk.com" android:path="/uc.fingerprint" android:scheme="apollo"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.bkjk.apollo_uc.activity.UCCertificationStateActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bkjk.apollo_uc.activity.UCIDCardUploadActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bkjk.apollo_uc.activity.UCAboutBKJKActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bkjk.apollo_uc.activity.UCLoanRecordActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="bkjk.com" android:path="/uc.loanrecord" android:scheme="apollo"/>
+            </intent-filter>
+        </activity>
+        <meta-data android:name="titleHeight" android:value="88"/>
+        <meta-data android:name="width" android:value="720"/>
+        <meta-data android:name="height" android:value="1280"/>
+        <meta-data android:name="headerBtHeight" android:value="45"/>
+        <meta-data android:name="headerBtWidth" android:value="45"/>
+        <meta-data android:name="headerBtMargin" android:value="30"/>
+        <meta-data android:name="headerBtPadding" android:value="15"/>
+        <meta-data android:name="loadingwidth" android:value="120"/>
+        <meta-data android:name="loadingheight" android:value="120"/>
+        <meta-data android:name="titletextsize" android:value="36"/>
+        <service android:name="com.amap.api.location.APSService"/>
+        <provider android:authorities="com.bkjk.apollo.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
+        <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser" android:windowSoftInputMode="adjustResize"/>
+    </application>
+</manifest>

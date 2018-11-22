@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:id="@id/text_device_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:text="dsadasdsadadsad\nasdasd\ndsadasddasd\ndasdasdasdasd\ndasfasa" />
+        <TextView android:id="@id/text_usb_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:text="asdsds" />
+        <Button android:layout_gravity="center_horizontal" android:id="@id/btn_go_setting" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/padding_ext_top_bottom" android:text="@string/pub_react_debug_setting" />
+    </LinearLayout>
+</ScrollView>

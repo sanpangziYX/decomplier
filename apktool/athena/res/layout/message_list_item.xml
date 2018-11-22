@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+        <ImageView android:id="@id/read" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_marginLeft="20.0dip" android:src="@drawable/email_bg_read_flag" />
+        <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/email_c_333333" android:ellipsize="end" android:id="@id/name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:maxLines="1" android:layout_weight="1.0" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/email_c_999999" android:id="@id/date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="20.0dip" android:src="@drawable/email_goto" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/attachment" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_marginLeft="20.0dip" android:layout_marginRight="8.0dip" android:src="@drawable/email_add_attachment" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/email_c_333333" android:ellipsize="end" android:id="@id/sender_compact" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:layout_marginBottom="1.0dip" android:singleLine="true" android:layout_weight="0.3" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/email_c_333333" android:ellipsize="marquee" android:id="@id/subject" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="1.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="1.0dip" android:singleLine="true" android:layout_weight="0.7" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/email_c_333333" android:id="@id/thread_count" android:background="?messageListThreadCountBackground" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:paddingBottom="1.0dip" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:layout_marginRight="20.0dip" />
+    </LinearLayout>
+    <TextView android:textSize="16.0sp" android:textColor="@color/email_c_999999" android:gravity="top" android:id="@id/preview" android:longClickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="40.0dip" android:layout_marginRight="20.0dip" android:bufferType="spannable" android:singleLine="false" />
+    <View android:background="@color/email_c_21979797" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="40.0dip" android:layout_marginTop="15.0dip" />
+</LinearLayout>

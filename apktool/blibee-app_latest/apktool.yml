@@ -1,0 +1,28 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: blibee-app_latest.apk
+compressionType: false
+doNotCompress:
+- arsc
+- qpmd5
+- bin
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '16'
+  targetSdkVersion: '25'
+sharedLibrary: false
+unknownFiles:
+  miui_push_version: '8'
+  push_version: '8'
+  com/baidu/pano/platform/res/indoor_in.png: '8'
+  org/jcodec/testing/jm.conf: '8'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.2.4
+versionInfo:
+  versionCode: '52'
+  versionName: 2.3.4

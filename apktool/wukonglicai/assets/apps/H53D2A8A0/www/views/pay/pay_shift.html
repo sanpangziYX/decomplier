@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../plugins/layer/layer.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/pay.css" />
+		<script type="text/javascript" src="../../js/rem.js"></script>
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../plugins/layer/layer.js" defer="defer"></script>
+		<script type="text/javascript" src="../../js/fastclick.min.js"></script>
+		<script type="text/javascript" src="../../js/validatorUtil.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" defer="defer"></script>
+		<script type="text/javascript" src="pay_shift.js" defer="defer"></script>
+		
+		<title></title>
+	</head>
+
+	<body>
+		<header class="clearfix bgcolor_main" id = "header">
+			<div class="headerback_box" >
+				<img src="../../img/header_back.png" />
+			</div>
+			<p class="clearable">
+			</p>
+		</header>
+		<section class="section dlyshow">
+			<div class="ipt_money clearfix">
+				<input type="number" name="" id="inputMoney" value="" placeholder="请输入大于等于100的整数" class="fl"/>
+				<input  type="hidden" id="realAmount"/>
+				<span class="fr">元</span>
+			</div>
+			<!--玖富宝预期收益时间-->
+			<div class="income-info" style="display: none;">
+				
+			</div>
+			<p class="invest_money">
+				<span class="usable_money" id = "restAmount" style ="display: none;">剩余额度：<i></i></span>
+				<span class="limit_money" id = "singleAmount" style ="display: none;">单笔限投：<i></i></span>
+				<span class="limit_money" id = "singleAmountD" style ="display: none;">每人限投：<i></i></span>
+			</p>
+	
+			<p class="income_box clearfix">
+				<span class="fl income_1" id = "shouyi">
+						期望回报:<i>0.00元</i>
+				</span>
+				<span class="fr income_2" id="zhaiquan" style="display: none;">
+						借款信息
+				</span>
+			</p>
+	
+			<div class="gift_box clearfix" style="display: none;" >
+				<span class="gift_1 fl">优惠</span>
+				<span class="gift_2  fr"></span>
+			</div>
+			<div class="special_tips" style="display: none;">
+				您已享受最大优惠补贴，不再享受其他优惠
+			</div>
+			<div class="agree_txt">
+				<div class="clearfix">
+					<div class="agree_1 fl"></div>
+					<div class="agree_2 fl">本人已清晰知晓本计划的出借明细，并已阅读风险提示，同意进一步出借投资</div>
+				</div>
+				<p name="agre" class="agree_spe"><span>《出借咨询及管理服务协议》</span>及相关融资文件范本</p>
+				<p name="agree"><span onclick="openB('出借资金风险提示书','/trust/fxXy.htm')">《反洗钱告知暨出借承诺书》及《出借资金风险提示书》</span></p>
+				<p name="agree">
+					<span onclick="openB('开通富友金账户约定确认书','/trust/rulePay.htm')">《开通富友金账户约定确认书》</span>
+					<span onclick="openBrowser({title:'数字证书申请表及授权委托书',url:'https://static.wukonglicai.com/bfe/wk-other/wk-pdfviewer/web/viewer.html?file=https://static.wukonglicai.com/agreement/wdszzs.pdf?titlename=数字证书申请表及授权委托书'})">《数字证书申请表及授权委托书》</span>
+				</p>
+				<p name="agreeD">
+					<span onclick="openB('产品说明书','/trust/productManual.htm')">《产品说明书》</span>
+					<span onclick="openB('合格出借者风险揭示书','/trust/qualifiedInvestorRiskDisclosure.htm')">《合格出借者风险揭示书》</span>
+					<span onclick="openB('认购协议','/trust/subscriptionAgreement.htm')">《认购协议》</span>
+					<!--<span onclick="openBrowser({title:'数字证书申请表及授权委托书',url:'https://static.wukonglicai.com/bfe/wk-other/wk-pdfviewer/web/viewer.html?file=https://static.wukonglicai.com/agreement/wdszzs.pdf?titlename=数字证书申请表及授权委托书'})">《数字证书申请表及授权委托书》</span>-->
+					,并已完全理解和接受上述文件的全部内容。本人的出借决策完全基于本人的独立自主判断做出，并自愿承担出借该项目所产生的相关风险和全部后果
+				</p>
+			</div>
+			
+	
+			<!--<footer class="jfpu_footer">
+				<p><img src="../../img/jfph.png"/>玖富普惠为您提供网贷信息中介服务</p>
+				期望回报并非平台承诺收益，市场有风险，投资需谨慎
+			</footer>-->
+			<footer class="word_footer4">
+				<img src="https://m.wukonglicai.com/applauncher/invest-detal-tips.png" onerror = "this.src='../../img/invest-detal-tips.png'"/>
+			</footer>
+			<div class="mask mask_gift" onclick="colseAlert()"></div>
+			<div class="gift_bottom">
+				<dl class="gift_list">
+				</dl>
+				<p class="gift_tip">优惠不能叠加使用，只能选择其中一个</p>
+			</div>
+			
+		</section>
+		<div class="bottom_btn ">
+			<button class="btn_bg">确认出借</button>
+		</div>
+		
+		<div class="showAlert">
+			<div class="mask" onclick="colseAlert()"></div>
+			
+			<div class="content_wrap content_wrap9">
+				<h3>提示</h3>
+				<div class="txt">
+					<p>已为您设定风险成熟度最低的谨慎性偏好</p >
+				</div>
+				<button class="showbtn_2" onclick="skipAndInvest()">好哒，立即出借</button>
+				<a href="###" onclick="gotoriskpage()">不太相符，去测评</a>
+			</div>
+			
+			<div class="content_wrap content_wrap10">
+				<h3>提示</h3>
+				<div class="txt">
+					<p></p>
+				</div>
+				<button onclick="toRist();">重新测评</button>
+			</div>
+		</div>
+	</body>
+		
+</html>

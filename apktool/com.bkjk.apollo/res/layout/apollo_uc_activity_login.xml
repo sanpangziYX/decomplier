@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:id="@id/apollo_uc_logins_root" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentTop="true" android:layout_alignParentStart="true">
+        <RelativeLayout android:id="@id/rl_app_logo_login" android:background="@drawable/apollo_uc_bg_login" android:layout_width="fill_parent" android:layout_height="@dimen/x350">
+            <ImageView android:id="@id/app_change_host" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="@dimen/x168" android:src="@drawable/apollo_uc_logo" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <ImageView android:id="@id/apollo_app_iv_close" android:layout_width="@dimen/x36" android:layout_height="@dimen/x36" android:layout_marginLeft="@dimen/x40" android:layout_marginTop="@dimen/x20" android:src="@drawable/apollo_uc_login_close" android:layout_alignParentLeft="true" />
+        <include android:id="@id/app_input_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/rl_app_logo_login" layout="@layout/apollo_uc_view_login_pwd" />
+        <Button android:enabled="false" android:textSize="@dimen/appollo_uc_ts_large" android:textColor="@color/apollo_uc_c_FFFFFF" android:layout_gravity="center" android:id="@id/btn_app_login" android:background="@drawable/apollo_uc_bg_certification_normal" android:layout_width="fill_parent" android:layout_height="@dimen/x80" android:layout_marginLeft="@dimen/x136" android:layout_marginTop="@dimen/x50" android:layout_marginRight="@dimen/x136" android:text="@string/apollo_uc_login" android:layout_below="@id/app_input_layout" android:layout_centerHorizontal="true" style="?android:attr/borderlessButtonStyle" />
+        <FrameLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/x40" android:layout_marginLeft="@dimen/x136" android:layout_marginRight="@dimen/x136" android:layout_marginBottom="40.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+            <TextView android:textSize="@dimen/x32" android:textColor="@color/apollo_uc_c_59A3FF" android:id="@id/apollo_app_regist" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/apollo_uc_want_regist" />
+            <View android:layout_gravity="center" android:background="@color/apollo_uc_c_20999999" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+            <TextView android:textSize="@dimen/x32" android:textColor="@color/apollo_uc_c_59A3FF" android:layout_gravity="right" android:id="@id/apollo_app_forget_pwd" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/apollo_uc_forget_pwd" />
+        </FrameLayout>
+    </RelativeLayout>
+</RelativeLayout>

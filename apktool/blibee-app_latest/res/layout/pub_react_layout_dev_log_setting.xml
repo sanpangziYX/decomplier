@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#fff0f0f0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:background="@color/pub_react_loading_color" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip">
+        <Button android:textSize="16.0dip" android:textColor="@color/pub_react_common_white" android:id="@id/back_button" android:background="@color/pub_react_loading_color" android:layout_width="wrap_content" android:layout_height="40.0dip" android:text="后退" />
+        <TextView android:textSize="16.0dip" android:textColor="@color/pub_react_common_white" android:gravity="center" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="打印日志配置" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:gravity="center|right" android:paddingLeft="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="URL：" style="@style/pub_react_DevTextView" />
+        <EditText android:id="@id/dev_log_et_url" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/pub_react_DevEditText" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/dev_reactlog_ll_send_log" android:paddingLeft="15.0dip" android:paddingRight="40.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <CheckBox android:enabled="false" android:id="@id/dev_reactlog_cb_send_log" android:focusable="false" android:clickable="false" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginRight="10.0dip" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="开启发送日志服务" android:layout_weight="1.0" style="@style/pub_react_DevTextView" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/dev_reactlog_ll_print_as" android:paddingLeft="15.0dip" android:paddingRight="40.0dip" android:paddingBottom="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <CheckBox android:enabled="false" android:id="@id/dev_reactlog_cb_print_as" android:focusable="false" android:clickable="false" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginRight="10.0dip" android:checked="true" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="开启logcat日志打印" android:layout_weight="1.0" style="@style/pub_react_DevTextView" />
+    </LinearLayout>
+    <View android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+    <TextView android:textSize="16.0dip" android:textColor="@android:color/black" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="过滤条件" />
+    <LinearLayout android:orientation="vertical" android:id="@id/dev_log_ll_filter" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <Button android:layout_gravity="bottom" android:id="@id/dev_log_save" android:layout_width="fill_parent" android:layout_margin="10.0dip" android:text="保存" style="@style/pub_react_DevButton" />
+</LinearLayout>

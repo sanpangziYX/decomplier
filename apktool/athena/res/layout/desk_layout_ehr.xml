@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/desk_c_FFFFFF" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_desk_ehr_more" android:background="@color/desk_c_FFFFFF" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_below="@id/ll_desk_title">
+        <TextView android:textSize="@dimen/x32" android:textColor="@color/desk_c_333333" android:id="@id/tv_desk_title_item" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="21.0dip" android:text="@string/desk_ehr" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/x28" android:textColor="@color/desk_c_999999" android:gravity="center_vertical" android:id="@id/tv_desk_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:text="@string/desk_more" android:drawableRight="@drawable/desk_icon_next" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <View android:background="@color/desk_c_20999999" android:layout_width="fill_parent" android:layout_height="@dimen/x2" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="99.0dip">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_desk_rili" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="31.0dip" android:layout_centerVertical="true">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/desk_icon_rili" />
+            <TextView android:textSize="@dimen/x28" android:textColor="@color/desk_c_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="9.0dip" android:text="@string/desk_rili" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_desk_daka" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:layout_centerVertical="true">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/desk_icon_leave" />
+            <TextView android:textSize="@dimen/x28" android:textColor="@color/desk_c_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="9.0dip" android:text="@string/desk_qingjia" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_desk_wage_inquiry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="35.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/desk_icon_wage_inquiry" />
+            <TextView android:textSize="@dimen/x28" android:textColor="@color/desk_c_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="9.0dip" android:text="@string/desk_wage_inquiry" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="99.0dip">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_desk_plan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="31.0dip" android:layout_centerVertical="true">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/desk_icon_plan" />
+            <TextView android:textSize="@dimen/x28" android:textColor="@color/desk_c_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="9.0dip" android:text="@string/desk_plan" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_desk_manager_desk" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/desk_icon_manager" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/desk_c_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="9.0dip" android:text="@string/desk_manager_desk" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:id="@id/view" android:background="@color/desk_c_F5F5F5" android:layout_width="fill_parent" android:layout_height="@dimen/x20" />
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="@dimen/x280" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/home_recommend_rl" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:gravity="center_horizontal" android:id="@id/home_recommend_iv" android:layout_width="@dimen/x128" android:layout_height="@dimen/x128" android:src="@drawable/apollo_home_icon_zhanwei" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="@dimen/x28" android:textColor="@color/apollo_home_c_666666" android:gravity="center_horizontal" android:id="@id/home_recommend_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/apollo_home_product_" android:layout_below="@id/home_recommend_iv" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</LinearLayout>

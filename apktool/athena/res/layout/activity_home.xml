@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/drawer_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/relative_layout" android:background="@color/matrix_room_list_background" android:paddingTop="@dimen/x10" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/editText_search_room" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/x10">
+            <include layout="@layout/search_header_layout" />
+        </FrameLayout>
+        <View android:id="@id/matrix_search_edit_below_line" android:background="@color/core_divider_color" android:layout_width="fill_parent" android:layout_height="@dimen/x1" android:layout_marginTop="@dimen/x10" android:layout_below="@id/editText_search_room" />
+        <org.matrix.console.view.swipemenulistview.SwipeMenuListView android:id="@id/matrix_listView" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/listitem_selector" android:divider="@drawable/matrix_list_divider" android:dividerHeight="@dimen/x1" android:layout_below="@id/matrix_search_edit_below_line" />
+        <RelativeLayout android:gravity="center" android:id="@id/matrix_homelist_emptyview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/matrix_search_edit_below_line">
+            <ImageView android:id="@id/matrix_no_room_image" android:layout_width="@dimen/x100" android:layout_height="@dimen/x100" android:src="@drawable/matrix_no_room_list" android:layout_centerHorizontal="true" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x15" android:text="@string/matrix_no_room" android:layout_below="@id/matrix_no_room_image" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>手势密码登录</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/locker.css"/>
+		<script type="text/javascript" src="../../js/rem.js"></script>
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script src="../../js/muimin.js"></script>
+		<script src="../../js/mui.locker.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src='../../js/kefu.js'></script>
+	</head>
+
+	<body>
+		
+			<img src="../../img/head_pic.png" class="locker_head"/>
+			<p class="locker_tel" id="mobile">
+			</p>
+			<div class="mui-content">
+				<div id='alert'>&nbsp;</div>
+				<div id='holder' class="mui-locker" data-locker-options='{"ringColor":"#ccc","fillColor":"#fff"}' data-locker-width='300' data-locker-height='300'></div>
+			</div>
+			<div class="locker_btm clearfix">
+				<div class="btm_1" onclick="toIndex()">退出当前账户</div>
+				<div class="btm_2" onclick="toIndex()">忘记手势密码</div>
+			</div>
+			<footer class="locker_footer">
+				期望回报并非平台承诺收益，市场有风险，投资需谨慎
+			</footer>
+	</body>
+
+</html>
+
+<script>
+	function toIndex(){
+		removeUserModel();
+		removeToken();
+		kefuLogout();
+		closeAlert();
+		plus.webview.currentWebview().hide();
+		openPage('login.html','login.html',{});
+		initstartpages();
+		localStorage.removeItem("countMoneyFlag");
+	}
+	function showMobile(){
+		console.log('显示手机号');
+		var user = getUserModel();
+		var mobile = user.mobile.substr(0,3)+"*****"+user.mobile.substr(user.mobile.length-3,user.mobile.length);
+		console.log(mobile);
+		$("#mobile").html(mobile);
+	}
+	var locker=null;
+	(function($, doc) {
+		try{
+			showMobile();
+		}catch(e){}
+		
+		var holder = doc.querySelector('#holder'),
+			alert = doc.querySelector('#alert'),
+			record = [];
+		//处理事件
+		var sum = 5;
+		
+		holder.addEventListener('done', function(event) {
+			sum -= 1;
+			var rs = event.detail;
+			
+			if(rs.points.join('') == localStorage.psw) {//判断密码是否正确
+				alert.innerText = ' ';
+				locker = rs.sender;
+				
+				console.log('密码正确跳转');
+				locker.draw(locker.cxt, [], [], null);
+				rs.sender.clear();
+				setTimeout(function(){
+					plus.webview.currentWebview().hide("none");
+				},100);
+				//
+				sum=5;
+				//是否显示金额的变化（显示）
+				localStorage.setItem("countMoneyFlag", "T");
+				
+				var wkindexWB = plus.webview.getWebviewById("wkindex.html");
+				if(wkindexWB){
+					wkindexWB.evalJS("doinit()");
+				}
+				return;
+			}else if(sum > 0){
+				alert.innerText = '密码错误，还可以再输入'+ sum +'次';
+				alert.style.color = '#FF5C6C';
+				locker = rs.sender;
+				var preoption = locker.options;
+				locker.options = {
+					"ringColor": "#ff5c6c",
+					"fillColor": "#fff",
+					"lineColor": "#ff5c6c",
+					times: 2,
+					fail: true
+				};
+				locker.draw(locker.cxt, locker.pointLocationArr, locker.linePointArr, null);
+				locker.options = preoption;
+				setTimeout(function(){
+					rs.sender.clear();
+				},500);
+				return;
+			}else if(sum <= 0){
+				alert.innerText = '您已连续5次输错手势,手势密码已关闭,请重新登录';
+				rs.sender.clear();
+				setTimeout(function(){
+					sum=5;
+					alert.innerText = ' ';
+					toIndex();
+				},2000);
+//				弹窗 '您已连续5次输错手势，手势密码已关闭，请重新登录' + 重新登录button
+			}
+			
+			
+		});
+	}(mui, document));
+	
+	function lockinput(){
+		if(locker){
+			locker.clear();
+		}
+		try{
+			showMobile();
+		}catch(e){}
+		setTimeout(function(){
+			plus.webview.getWebviewById("login.html").hide("none")
+			//plus.webview.currentWebview().hide("none");
+		},400);
+		if(currlocker){
+			currlocker.clear();
+		}
+		
+	}
+</script>

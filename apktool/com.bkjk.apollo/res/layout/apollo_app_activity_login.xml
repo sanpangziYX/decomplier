@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/apollo_app_iv_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="23.0dip" android:layout_marginRight="17.0dip" android:src="@drawable/apollo_app_login_close" android:layout_alignParentRight="true" />
+    <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/rl_app_logo_login" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="115.0dip">
+            <ImageView android:id="@id/app_change_host" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:src="@drawable/apollo_app_logo" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <include android:id="@id/app_input_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/rl_app_logo_login" layout="@layout/apollo_app_view_login_pwd" />
+        <Button android:textSize="@dimen/app_ts_large" android:textColor="@color/apollo_app_c_FFFFFF" android:layout_gravity="center" android:id="@id/btn_app_login" android:background="@drawable/apollo_app_shape_recharge_btn_background" android:layout_width="220.0dip" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginTop="30.0dip" android:layout_marginRight="14.0dip" android:text="@string/app_login" android:layout_below="@id/app_input_layout" android:layout_centerHorizontal="true" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="40.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+            <TextView android:textColor="@color/apollo_app_c_59A3FF" android:id="@id/apollo_app_regist" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/apollo_app_want_regist" />
+            <View android:background="@color/apollo_app_c_20999999" android:layout_width="1.0dip" android:layout_height="13.0dip" android:layout_marginLeft="30.0dip" />
+            <TextView android:textColor="@color/apollo_app_c_59A3FF" android:id="@id/apollo_app_forget_pwd" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:text="@string/apollo_app_forget_pwd" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

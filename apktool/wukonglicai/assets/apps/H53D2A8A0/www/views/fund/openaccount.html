@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<script type="text/javascript" src="../../js/headerlib.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../plugins/layer/layer.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../plugins/iosselect/iosSelect.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/fund.css" />
+		<title>开户信息</title>
+	</head>
+
+	<body>
+		<div>
+			<div id="hidenheader" ></div>
+			<header id="header" class="wk-header wk-header-theme-a">
+				<div class="wk-header-left " id="opengoback" ><img style="width:.22rem;" src="../../img/header_back.png" /></div>
+				<h3>开户信息</h3>
+				<!--<div class="wk-header-right"></div>-->
+			</header>
+		</div>
+		<section class="wk-content" id="wk-contentinfo" style="padding-top: 0;">
+
+		</section>
+<script type="x-template" id="openaccoutntemplate">
+				<form id="openAccountform">
+				<div class="space-title">根据合规要求，开通玖富宝需要您确认以下信息</div>
+				<ul class="flexlist">
+					<li>
+						<div class="label">{{userinfo.name}}</div>
+						<div class="label">{{userinfo.idCard|hideStr(1,1)}}</div>
+						<input type="hidden" v-model="userinfo.idCard" name="certNo" />
+						<input type="hidden" v-model="userinfo.name" name="userName" />
+					</li>
+				</ul>
+				<ul class="flexlist">
+					<li>
+						<div :class="{label:userinfo.cardFlag==='F',editlable:userinfo.cardFlag==='T'}">银行</div>
+						<input type="hidden" name="parentBankId" id="parentBankId" v-model="userinfo.bankCode" />
+						<template v-if="userinfo.cardFlag==='T'">
+							<div class="text-right flexable justify-end flex-align-center" id="bankswarp" @click="showBanks">
+								<input type="text" placeholder="请选择银行" id="banks" @click="showBanks(userinfo.cardFlag)" v-model="userinfo.bankName" readonly="readonly" />
+
+								<img v-if="userinfo.cardFlag==='T'" class="to-right" src="../../img/to_right.png" alt="" />
+							</div>
+						</template>
+						<template v-if="userinfo.cardFlag==='F'">
+							<div class="label">{{userinfo.bankName}}</div>
+						</template>
+					</li>
+					<li>
+						<div :class="{label:userinfo.cardFlag==='F',editlable:userinfo.cardFlag==='T'}">银行卡</div>
+						<template v-if="userinfo.cardFlag==='T'">
+							<input type="tel" name="cardNo" placeholder="请输入银行卡号" maxlength="23" v-model="userinfo.bankCard" />
+						</template>
+						<template v-if="userinfo.cardFlag==='F'">
+							<div class="label">{{userinfo.bankCard|hideStr(0,4)}}</div>
+							<input type="hidden" name="cardNo" v-model="userinfo.bankCard" />
+						</template>
+					</li>
+					<li>
+						<div class="editlable">银行预留手机号</div>
+						<input type="tel" name="bankMobile" maxlength="11" placeholder="请填写银行卡预留手机号" v-model="userinfo.mobile" />
+					</li>
+					<li>
+						<div class="editlable">短信验证码</div>
+						<div class="text-right flexable justify-end flex-align-center" style="width:75%;">
+							<input type="text" maxlength="6" name="captcha" placeholder="请输入短信验证码" v-model="captcha" />
+							<div class="getSmscode" @click="sendSMSCode">{{smstext}}</div>
+						</div>
+					</li>
+				</ul>
+
+				<div class="v-checkbox">
+					<label for="certificateType"><input type="checkbox" v-model="iscertificateCheck" value="1" class="bluetheme" name="certificateType" id="certificateType" />仅中国税收公民</label>
+					<img class="tip-icon" @click="showTips('仅中国税收居民支持使用玖富宝，同时具备以下三种条件可以可视为仅中国税收居民:<br/><br/>①未取得其他国家或地区的国籍或永久居住权；<br/>②过去一年，未在其他国家居住或工作；<br/>③未从事其他有义务向其他国家缴纳税收的。')" src="../../img/fund/tip-icon.png" alt="" data-desc="" />
+				</div>
+				<div class="v-checkbox">
+					<label for="aggree"><input type="checkbox" name="aggree" v-model="isprotocolCheck"  value="1" />本人已阅读并同意</label>
+					<a v-for="(item, index) in userinfo.protocalList" :key="index" href="javascript:;" @click="openWebview(item)">《{{item.title}}》</a>
+				</div>
+				<div>
+					<div class="tips">预期收益并非平台承诺收益，市场有风险，投资需谨慎</div>
+				</div>
+				<div>
+					<div class="noopdiv"></div>
+					<div class="footer-wrap">
+						<div class="btn-wrap">
+							<button type="button" :disabled="!canSubmit" @click="accountConfirm">确认信息</button>
+						</div>
+					</div>
+				</div>
+			</form>
+</script>	
+		<script src="../../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugins/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugins/iosselect/iscroll.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugins/iosselect/iosSelect.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../plugins/vue/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/vuefilter/index.js" type="text/javascript" charset="utf-8"></script>
+		<script src="openaccount.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

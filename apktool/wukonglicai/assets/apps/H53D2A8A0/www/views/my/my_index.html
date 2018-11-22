@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<!--<link rel="stylesheet" type="text/css" href="../../css/mui.min.css">-->
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/my_index.css"/>
+		<link rel="stylesheet" type="text/css" href="../../plugins/dropload/magic_stick.css" />
+		<link rel="stylesheet" type="text/css" href="../../plugins/layer/layer.css"/>
+		<script type="text/javascript" src="../../js/rem.js"></script>
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../plugins/layer/layer.js" defer="defer"></script>
+		<script type="text/javascript" src="../../js/redeem.js"></script>
+		<script type="text/javascript" src="../../js/fastclick.js"></script>
+		<script type="text/javascript" src="../../js/validatorUtil.js"></script>
+		<script type="text/javascript" src="../../plugins/dropload/dropload.min.js"></script>
+		<script type="text/javascript" src="my_index.js"></script>
+		<script type="text/javascript" src='../../js/kefu.js'></script>
+		<title>我的账户</title>
+	</head>
+	<body>
+		
+		<header class="clearfix bgcolor_red my_account">				
+			<p>我的账户</p>	
+			<div class="service_wrap" >
+				<span class="service_num" style="display: none;" onclick="openKeFu()"></span>
+				<img class="service" src="../../img/service.png" alt="" onclick="openKeFu()"/>
+			</div>							
+		</header>
+		<section class="section">
+			<div class=" slidehid">
+			<!--登录-->
+			<div class="user clearfix" onclick='openPage("my_set.html","my_set.html",{})'>
+				<img src="../../img/head_pic.png" alt="" class="fl" />
+				<div class="my_tel fl">
+					<!--<i class="i2">让你的钱聪明起来</i>-->
+					<p>账户名称</p>
+					<i>会员等级</i>
+				</div>
+			</div>
+			<!--未登录-->
+			<!--<div class="user clearfix">
+				<img src="../../img/head_pic.png" alt="" class="fl" />
+				<div class="my_tel fl">
+					<p>登录赚钱</p>
+					<i class="i2">让你的钱聪明起来</i>
+				</div>
+			</div>-->
+			<dl class="my_money">
+				<dt onclick="toMyAmount()" style="border-bottom: 1px solid #eeeeee;">
+					我的账户资产
+				</dt>
+				<dd class="clearfix" id="accountList">
+					<li class="my_pic0" id="Jwarp" onclick="toAccount('J');" style="display: none;">
+						<p>玖富宝</p>
+						<span class="hide" id="J" >0.00元</span>
+					</li>
+					<li class="my_pic1" id="Dwarp" onclick="toAccount('D');" style="display: none;">
+						<p>日账户</p>
+						<span class="hide" id="D" >0.00元</span>
+					</li>
+					<li class="my_pic2" onclick="toAccount('M');">
+						<p>月账户</p>
+						<span class="hide" id="M" >0.00元</span>
+					</li>
+					<li class="my_pic3" onclick="toAccount('Q');">
+						<p>季账户</p>
+						<span class="hide" id="Q" >0.00元</span>
+					</li>
+					<li class="my_pic4" onclick="toAccount('Y');">
+						<p>年账户</p>
+						<span class=" " id="Y" >0.00元</span>
+					</li>
+					<li class="my_pic5 " onclick="toAccount('T');">
+						<p>特供账户</p>
+						<span class="hide" id="T" >0.00元</span>
+					</li>
+					<li  class="my_pic6 " onclick="toAccount('M0');">
+						<p>虚拟本金</p>
+						<span class="hide" id="X" >0.00元</span>
+					</li>
+					<!--<li  class="my_pic7 no_bottom" id="GP" style="display: none;" onclick="toAccount('W');">
+						<p>美好计划</p>
+						<span class="hide" id="W" >0.00元</span>
+					</li>-->
+				</dd>
+			</dl>
+			
+			<ul class="my_morelist">
+				<li class="mylist_5 clearfix" >
+					悟空小分队
+					<p class="head_imgs">
+						<!--<b><img src="../../img/test.jpg" alt="" /></b>
+						<b><img src="../../img/test.jpg" alt="" /></b>
+						<b><img src="../../img/head_pic.png" alt="" /></b>
+						<b>月</b>	-->
+					</p>
+					<span class="prize"></span>
+				</li>
+				<li class="mylist_1 clearfix" onclick='openPage("my_rights.html","my_rights.html",{})'>
+					我的特权 
+				</li>
+				<li class="mylist_3 clearfix" onclick="tobaibao()">
+					百宝箱
+				</li>
+				<li class="mylist_4 clearfix" onclick='openPage("my_set.html","my_set.html",{})'>
+					账户设置
+					<span class="fr">邀请码</span>
+				</li>
+				<li class="mylist_6" onclick="openPage('more.html','more.html',{})">
+					更多
+				</li>
+			</ul>
+			<div class="mybtn_box clearfix">
+				<button class="my_btn my_btn1 fl" onclick="redeemInvest()">转让退出</button>
+				<button class="my_btn my_btn2 fr" onclick='openPage("views/invest/invest.html","invest.html",{productType:"Q6"})'>马上出借</button>
+			</div>
+		</div>
+		</section>
+		<div class="word_footer3">期望回报并非平台承诺收益，市场有风险，投资需谨慎</div>
+		<div class="nav_footer">
+			<ul class="tab_footer">
+				<li><span class="monkey"></span>悟空</li>
+				<li><span class="invest"></span>投资</li>
+				<li><span class="monkeyfan"></span>空粉</li>
+				<li class="current"><span class="myself"></span>我</li>
+			</ul>
+		</div>
+		<div class="show_login" style = "display: none;">
+			<div class="show_box">
+				<img src="../../img/my_login.png"/>
+				<div class="show_txt">
+					<div class="txt">悟空理财</div>
+					<div class="show_line"></div>
+				</div>
+				<p>让你的钱聪明起来</p>
+				<div class="btn_box clearfix">
+					<button onclick="goLogin()">登录</button>
+					<button onclick="goLogin()">注册</button>
+				</div>
+			</div>
+		</div>
+	</body>
+	<div class="showAlert">
+		<div class="mask"></div>
+		
+		<div class="content_wrap content_wrap10">
+			<h3>提示</h3>
+			<div class="txt">
+				<p>您的银行卡<span class="red">支行信息</span>尚未填写，为了您的资金能顺利到账,请马上填写</p>
+			</div>
+			<button onclick="toBankCardBranch()">马上填写</button>
+		</div>
+		
+		<div class="content_wrap content_wrap7">
+			<h3>请选择您要“转让退出”的账户</h3>
+			<div class="btn_box clearfix">
+				<button onclick="toRedeemDay();">日账户</button>
+				<button onclick="gotoRedeem()">月账户</button>
+			</div>
+		</div>
+	</div>
+</html>
+<script>
+	function openKeFu(){
+		try{
+			//if(plus.os.name == 'Android') {
+				plus.webview.getLaunchWebview().evalJS("setKfing(true)");
+				if ($('.service_num').length > 0) {
+                    $('.service_num').hide();
+                }
+                if ($('.myself').length > 0) {
+                   $('.myself').removeClass('news_on');
+                }
+
+			//}
+	    }catch(e){}
+		plus.KefuP.openKeFu(function( result ) {});
+	}
+
+	function plusReady(){
+		if(plus.os.name=='Android'){
+			if(plus.os.version.toString().substr(2,1)<=4){
+			var dropload = $('.slidehid').dropload({
+		        domUp : {
+		            domClass   : 'dropload-up',
+		            domRefresh : '<div class="dropload-refresh">↓下拉刷新</div>',
+		            domUpdate  : '<div class="dropload-update">↑释放更新</div>',
+		            domLoad    : '<div class="dropload-load">加载中...</div>'
+		        },
+		        loadUpFn : function(me){	
+		        	//加遮罩层 防止tab切换
+		        	$('body').append('<div id="dropload-mask"></div>');
+					setTimeout(function(){ 
+						me.resetload();	
+						//移除遮罩层 
+            	 	 	$('#dropload-mask').remove();
+				    },600);
+				    
+				              		
+		        }
+		    });
+		}
+	}else{
+			var dropload = $('.slidehid').dropload({
+		        domUp : {
+		            domClass   : 'dropload-up',
+		            domRefresh : '<div class="dropload-refresh"><div class="magic_stick"></div></div>',//'<div class="dropload-refresh"><div class="magic_stick magic_stick_fixed"></div></div>'
+		            domUpdate  : '<div class="dropload-update"><div class="magic_stick"></div></div>',
+		            domLoad    : '<div class="dropload-load"><div class="magic_stick"></div></div>'
+		        },
+		        loadUpFn : function(me){
+		        	//加遮罩层 防止tab切换
+		        	$('body').append('<div id="dropload-mask"></div>');
+		        	 $('.magic_stick').addClass('magic_stick2');
+		           /*情况2*/
+		            setTimeout(function(){
+		            	  $('.magic_stick').addClass('big');     
+		            	  
+		            },0)
+		            setTimeout(function(){
+		            	 	 $('.magic_stick').addClass('rotate');
+		            },300)
+		            setTimeout(function(){
+		            	 	 $('.magic_stick').addClass('gone');  
+		            	 	 setTimeout(function(){
+		            	 	 	me.resetload();	
+		            	 	 	//移除遮罩层 
+		            	 	 	$('#dropload-mask').remove();
+		            	 	 },300)
+		            },1600)
+				
+		        }
+		    });
+		    $('.service_num').hide();
+		    $('.myself').removeClass('news_on');
+		}
+	}
+	if(window.plus){
+		plusReady();
+	}else{
+		document.addEventListener("plusready",plusReady,false);
+	}
+
+</script>

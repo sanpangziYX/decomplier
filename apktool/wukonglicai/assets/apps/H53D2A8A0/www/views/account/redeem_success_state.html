@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<title>预约转让退出成功</title>
+		<script type="text/javascript" src="../../js/rem.js"></script>
+		<link rel="stylesheet" href="../../css/base.css" />
+		<link rel="stylesheet" href="../../css/orderDetail.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/cash.css" />
+		<!--<link rel="stylesheet" type="text/css" href="../../css/sele_bottom.css" />-->
+		<link rel="stylesheet" type="text/css" href="../../plugins/layer/layer.css"/>
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/fastclick.js"></script>
+		<script type="text/javascript" src="../../plugins/layer/layer.js" ></script>
+		<script type="text/javascript" src="redeem_success_state.js"></script>
+	</head>
+
+	<body>
+
+		<header class="clearfix bgcolor_main">
+			<div class="headerback_box" keepalive="true">
+				<img src="../../img/header_back.png" />
+			</div>
+			<p>预约转让退出成功</p>
+			<div class="right_box" onclick="goRedeemList();">
+				<img src="../../img/cash_header.png" alt="">
+			</div>
+		</header>
+
+		<section>
+			<div class="m-ord-content out_content">
+				<p class="cash_txt1"></p>
+				<div class="m-ord-dtl out_dtl">
+					<!-- 详情退出状态添加样式 content_gray-->
+					<div class="n-titl">
+						<p class="n-t1" >预计到账时间</p>
+					</div>
+					<ul class="n-sum-box">
+						<li id="payTime"></li><!--class=“icon_cash_tips” 您暂未出借月账户-->
+					</ul>
+				</div>
+				<!-- 轮齿装饰图片-->
+				<div class="n-ordzs">
+					<img src="../../img/parting_linemain.png" alt="">
+				</div>
+				<!--详情退出状态替换图片为parting_line.png-->
+				<!-- /轮齿装饰图片 -->
+				<div class="m-info-box">
+					<ul class="m-list">
+						<li>
+							<span>最后计息日：</span>
+							<p id="lastDay"></p>
+						</li>
+					</ul>
+
+					<ul class="m-list">
+						<li>
+							<span class="long">月账户转让退出金额（元）：</span>
+							<p class="red" id = "redeemMoney"></p>
+						</li>
+					</ul>
+					
+					<!--<ul class="m-list">
+						<li>
+							<span>转让退出银行卡：</span>
+							<p class="long" id= "bankInfo">中国工商银行 ****6636</p>
+						</li>
+					</ul>-->
+				</div>
+				<p class="cash_txt2" onclick="cancleRedeem();">后悔了，想取消？</p>
+				
+				<button class="step_btn" onclick="openPage('../my/my_index.html','my_index.html',{})">确定</button>
+			</div>
+			<div class="showAlert" style="display: none;">
+				<div class="mask"></div>
+				<div class="content_wrap content_wrap1">
+					<span class="add">该身份证号已被注册，请选择对应的账户进行登录</span>
+				</div>
+				<div class="content_wrap content_wrap5">
+					<div class="txt">
+						转让退出资金已经在路上了，<br/>您确定要取消已选到账日期？
+					</div>
+					<div class="btn_box clearfix">
+						<button class="showbtn_2" onclick="closeAlert();">修改</button>
+						<button class="showbtn_3" onclick="redeemsubmit();">确定</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="foot-cyp">
+			<p>期望回报并非平台承诺收益，市场有风险，投资需谨慎</p>
+		</div>
+
+	</body>
+
+</html>

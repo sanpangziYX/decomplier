@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/apollo_product_c_FFFFFF" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:padding="@dimen/x40" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentStart="true">
+        <ImageView android:id="@id/apollo_product_id_item_icon" android:layout_width="@dimen/x120" android:layout_height="@dimen/x120" android:layout_centerVertical="true" />
+        <LinearLayout android:orientation="vertical" android:id="@id/apollo_product_id_item_des_linear" android:layout_width="@dimen/x260" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x30" android:layout_toRightOf="@id/apollo_product_id_item_icon" android:layout_centerVertical="true">
+            <TextView android:textSize="@dimen/x36" android:textColor="@color/apollo_product_c_333333" android:id="@id/apollo_product_id_item_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/apollo_product_id_item_icon" />
+            <TextView android:textSize="@dimen/x28" android:textColor="@color/apollo_product_c_999999" android:ellipsize="end" android:id="@id/apollo_product_id_item_des" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x8" android:maxEms="8" android:singleLine="true" android:layout_toRightOf="@id/apollo_product_id_item_icon" />
+        </LinearLayout>
+        <View android:id="@id/apollo_product_id_item_diver" android:background="@color/apollo_product_c_14999999" android:layout_width="@dimen/x1" android:layout_height="@dimen/x100" android:layout_marginLeft="@dimen/x430" android:layout_centerVertical="true" />
+        <RelativeLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x50" android:layout_toRightOf="@id/apollo_product_id_item_diver" android:layout_centerVertical="true">
+            <TextView android:textSize="@dimen/x48" android:textColor="@color/apollo_product_c_59A3FF" android:id="@id/apollo_product_id_item_income" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/x24" android:textColor="@color/apollo_product_c_59A3FF" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x4" android:text="%" android:layout_toRightOf="@id/apollo_product_id_item_income" android:layout_alignBaseline="@id/apollo_product_id_item_income" android:layout_alignBottom="@id/apollo_product_id_item_income" />
+            <TextView android:textSize="@dimen/x24" android:textColor="@color/apollo_product_c_999999" android:id="@id/apollo_product_id_item_incometype" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/apollo_product_id_item_income" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/apollo_product_icon_small_next" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

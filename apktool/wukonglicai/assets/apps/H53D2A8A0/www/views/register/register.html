@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<title>注册</title>
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../plugins/layer/layer.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/register.css" />
+		<script type="text/javascript" src="../../js/rem.js"></script>
+		<script type="text/javascript" src="../../plugins/layer/layer.js"></script>
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../plugins/jsrender.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/validatorUtil.js"></script>
+		<script type="text/javascript" src="../../js/fastclick.js"></script>
+		<script type="text/javascript" src='../../js/kefu.js'></script>
+		<script src="../../plugins/jsencrypt.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="register.js"></script>
+
+		
+		<style>
+			
+			.layui-m-layercont {
+				line-height: 0.8rem;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<img src="../../img/succeed.png" width="38" height="38" style="margin:0 auto;display: none;" />
+		<header class="clearfix">
+			<div class="headback_box">
+				<img src="../../img/header_back.png" />
+			</div>
+			<p>注册</p>
+		</header>
+		<section class="section">
+			<div class="message_tips">
+				短信验证码已发送至您的手机<span id="new_phone"></span>
+			</div>
+	
+			<form action="" method="" onsubmit="return false">
+				<ul class="register_list clearfix">
+					<li class="clearfix">
+						<input type="number" name="" id="smscode" value="" placeholder="请输入短信验证码" class="fl short_ipt" maxlength="4" />
+						<input type="button" class="get_code" id="get_code" onclick="code_time(this)" value="免费获取验证码" />
+					</li>
+					<li class="top_38">
+						<input type="password" name="" id="pwd" value="" placeholder="请输入登录密码" maxlength="16" /><span class="eye-type" id="eyeType"><img data-eye-img="../../img/eye-open.png" src="../../img/eye-close.png "></span>
+						<div class="delete_ipt fr">
+							<img src="../../img/delete.png"/>
+						</div>
+					</li>
+					<li class="top_38">
+						<input type="text" name="" id="inviteCode" value="666666" placeholder="请输入邀请码拿特权" maxlength="16" />
+						<div class="delete_ipt fr">
+							<img src="../../img/delete.png"/>
+						</div>
+					</li>
+				</ul>
+	
+				<div class="invitation_code">
+					* 若有好友邀请码，输入后可与好友一起拿特权；若无则默认输入邀请码666666也能拿特权。
+				</div>
+	
+				<button class="register_btn">注册领取5000元</button>
+			</form>
+			
+			<table id='key_board' border="0" cellspacing="0" cellpadding="0">
+				
+					<tr>
+						<td class="active">1</td>
+						<td>2</td>
+						<td>3</td>
+						<td class="key_delete" rowspan="2">
+							<img src="../../img/key_delete.png" />
+						</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>5</td>
+						<td>6</td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td>8</td>
+						<td>9</td>
+						<td class="key_sure" rowspan="2">确定</td>
+					</tr>
+					<tr>
+						<td class="gray"></td>
+						<td>0</td>
+						<td class="gray"></td>
+					</tr>
+				
+			</table>
+
+			<footer>
+			<div class="reg-foot-mag">
+				<span>
+					<img src="../../img/img-kfb-2.png" />
+				</span>
+			</div>
+				期望回报并非平台承诺收益，市场有风险，投资需谨慎
+			</footer>
+		</section>
+		<div class="showAlert">
+			<div class="mask"></div>
+			<div class="content_wrap content_wrap4">				
+				<p style="padding-bottom:.14rem">注册成功</p>
+				<p style="background:none; padding: 0 0 .4rem;">已领取5000元体验金</p>
+			</div>
+		</div>
+	</body>
+
+</html>
+<script id="code_content" type="text/x-jsrender">
+	<div class="code_content clearfix">
+		<input type="text" name="" id="vcode" value="" placeholder="请输入验证码" class="code_ipt" maxlength="4" />
+		<div class="code_box"><img id="wk_img" alt="" /></div>
+	</div>
+	<div class="code_tips">验证码不正确，请重新输入</div>
+</script>

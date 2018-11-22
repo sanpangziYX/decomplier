@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<title>银行卡信息</title>
+		<script type="text/javascript" src="../../js/rem.js" ></script>
+		<link rel="stylesheet" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/register.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/user_id.css"/>
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/fastclick.js"></script>
+		<script type="text/javascript" src="my_bankcard.js"></script>
+		<script type="text/javascript" src="../../js/jsrender.min.js"></script>
+	</head>
+	<body class="body_gray">
+		<header class="clearfix">
+			<div class="headerback_box" keepalive="true">
+				<img src="../../img/header_back.png" />
+			</div>
+			<p>银行卡信息</p>
+		</header>
+		<section class="section">
+			<ul class="register_list clearfix">
+			</ul>
+			<div class="bank_tips">
+				<p>*目前，银行卡信息暂不支持在线修改</p>
+				<p>*有问题请拨打客服热线：400-810-8818或微信咨询</p>
+			</div>
+			<footer class="foot-cyp">
+				<p>期望回报并非平台承诺收益，市场有风险，投资需谨慎</p>
+			</footer>
+		</section>
+		
+	</body>
+<script id="bankcard" type="text/x-jsrender">
+	<li>
+		<input type="text" name="bankName" id="bankName" value="{{:bankCardName}}" readonly="readonly"/>
+	</li>
+	<li>
+		<input type="text" name="bankNo" id="bankNo" value="{{:bankCardNo}}" readonly="readonly"/>
+		<div class="delete_ipt fr">
+			<img src="../../img/delete.png"/>
+		</div>
+	</li>
+	{{if bankCardProvince !='*'}}
+	<li class="top_38 sele">
+		<span>开户行所在省份</span>
+		<span class="option option_sele1">{{:bankCardProvince}}</span>
+	</li>
+	{{/if}}
+	{{if bankCardCity !='*'}}
+	<li class="sele option_sele2">
+		<span>开户行所在城市</span>
+		<span class="option">{{:bankCardCity}}</span>
+	</li>
+	{{/if}}
+	{{if bankCardBranchName !='*' }}
+	<li class="sele s_ipt">
+		<span>开户行支行名称</span>
+		<input type="text"  class="option" style="color:#000;" id="branch" name="branch" disabled="disabled" value="{{:bankCardBranchName}}" />
+	</li>
+	{{/if}}
+</script>
+</html>

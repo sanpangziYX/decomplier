@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/apollo_home_c_FFFFFF" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_home_net_error" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="140.0dip" android:src="@drawable/apollo_home_icon_net_error" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="18.0sp" android:textColor="@color/apollo_home_c_999999" android:id="@id/tv_home_load_fail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:text="@string/apollo_home_load_fail" android:layout_below="@id/iv_home_net_error" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="18.0sp" android:textColor="@color/apollo_home_c_999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="@string/apollo_home_load_try_again" android:layout_below="@id/tv_home_load_fail" android:layout_centerHorizontal="true" />
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<link rel="stylesheet" type="text/css" href="../../plugins/swiper/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/lead.css"/>
+		<script type="text/javascript" src="../../js/rem.js"></script>
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../plugins/swiper/swiper.jquery.min.js"></script>
+	</head>
+
+	<body>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="../../img/lead_11.jpg" alt="" />
+				</div>
+				<div class="swiper-slide">
+					<img src="../../img/lead_12.jpg" alt="" />
+				</div>
+				<div class="swiper-slide">
+					<img src="../../img/lead_13.jpg" alt="" />
+					<p class="open_index"></p>
+				</div>
+			</div>
+			<!-- 分页器 -->
+			<!--<div class="swiper-pagination"></div>-->
+		</div>
+	</body>
+
+</html>
+<script>
+
+	var mySwiper = new Swiper('.swiper-container', {
+					spaceBetween: 0,
+					freeMode: false,
+					initialSlide:0,
+					loop: false,
+					speed:200,
+					touchRatio:2,
+					longSwipesRatio:0.1,
+					useCSS3Transforms:false,
+					resistanceRatio:0
+	})
+	
+	$(".open_index").click(function(){
+		localStorage.setItem("firstshowed","true");
+		initstartpages();
+		plus.webview.show("wkindex.html","none");
+		setTimeout(function(){
+			plus.webview.close("lead","none");
+		},300);
+	});
+
+</script>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/continue_invest.css" />
+		<script type="text/javascript" src="../../js/rem.js"></script>
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/fastclick.js"></script>
+		<script type="text/javascript" src="continue_invest.js"></script>
+		<script type="text/javascript" src="../../js/jsrender.min.js"></script>
+		<title>即将到期的订单</title>
+	</head>
+
+	<body>
+		<header class="clearfix bgcolor_main">
+			<div class="headerback_box">
+				<img src="../../img/header_back.png" />
+			</div>
+			<p>即将到期的订单</p>
+		</header>
+		<!--没订单-->
+		<!--<div class="no_order_wrap">
+			<p class="no_order"></p>
+			<h3>亲，您暂无可续投订单哦～</h3>
+			<button class="footer_btn">马上出借</button>
+			<div class="word_footer2">期望回报并非平台承诺收益，市场有风险，投资需谨慎</div>
+		</div>-->
+		<!--有订单-->
+		<section class="order_wrap">	
+			<ul class="tab_content">
+				<li onclick="change('0')" class="current">可续投订单</li>
+				<li onclick="change('1')">已续投订单</li>
+			</ul>
+			<ul class="list_part" id="canX">
+				
+				<div class="continueinvest_pic" id="noListCan" style="display: none;">
+					<img src="../../img/continue_invest.png"/>
+					<p>亲，您暂无可续投订单哦～</p>
+				</div>
+			</ul>
+			<ul class="list_part" id="X">
+				
+				
+				<div class="continueinvest_pic" id="noList" style="display: none;">
+					<img src="../../img/continue_invest.png"/>
+					<p>亲，您暂无已续投订单哦～</p>
+				</div>
+			</ul>
+			<div class="word_footer">期望回报并非平台承诺收益，市场有风险，投资需谨慎</div>
+		</section>
+	</body>
+
+</html>
+<script id="itemTmplCanX" type="text/x-jsrender">
+	<li class="type1" onclick="orderDetail('{{:investNo}}','WK')">
+		<h2>
+			<!--<span>季账户-{{if productCode=='Q3'}}3{{else productCode=='Q6'}}6{{else}}9{{/if}}个月</span>-->
+			{{if productCat =='Q'}}
+				<span class="type">季账户-{{if productCode.substr(0,2)=='Q3'}}3{{else productCode.substr(0,2)=='Q6'}}6{{else}}9{{/if}}个月</span>
+			{{else productCat =='Y'}}
+				<span class="type">年账户-{{if productCode.substr(0,3)=='Y24'}}2{{else productCode.substr(0,3)=='Y36'}}3{{else productCode.substr(0,3)=='Y48'}}4{{else }}1{{/if}}年</span>
+			{{else}}
+				{{if productCode.substr(0,3)=='T45'}}
+					<span class="type">限时特供-45天</span>
+				{{else productCode.substr(0,3)=='T60'}}
+					<span class="type">限时特供-60天</span>
+				{{else productCode.substr(0,3)=='T90'}}
+					<span class="type">限时特供-90天</span>
+				{{else productCode.substr(0,4)=='T180'}}
+					<span class="type">限时特供-180天</span>
+				{{else productCode.substr(0,4)=='T270'}}
+					<span class="type">限时特供-270天</span>
+				{{else productCode.substr(0,4)=='T365'}}
+					<span class="type">限时特供-365</span>
+				{{else productCode.substr(0,4)=='T730'}}
+					<span class="type">限时特供-730天</span>
+				{{else productCode.substr(0,3)=='TFB'}}
+					<span class="type">特供新手标</span>
+				{{else}}
+					<span class="type">限时特供</span>
+				{{/if}}
+			{{/if}}
+			
+			
+			{{if restDay > 0}}
+				{{if restWorkDay > 10 }}
+					<span class="days2">剩余{{:restDay}}天</span>
+				{{else}}
+					<span class="days">剩余{{:restDay}}天</span>
+				{{/if}}
+				<span class="rent2" onclick="orderContinue('{{:investNo}}')">{{if continueStatus=='bjxt'}}本金续投{{else  continueStatus=='bxxt'}}本息续投{{else continueStatus=='dqtc'}}到期转让{{else continueStatus.substr(0,2)=='BX'}}本息续投{{else continueStatus.substr(0,2)=='BJ'}}本金续投{{else}}到期转让{{/if}}</span>
+			{{else}}
+				<span class="days2">已退出</span>
+				<span class="rent">{{if continueStatus=='bjxt'}}本金续投{{else  continueStatus=='bxxt'}}本息续投{{else continueStatus=='dqtc'}}到期转让{{else continueStatus.substr(0,2)=='BX'}}本息续投{{else continueStatus.substr(0,2)=='BJ'}}本金续投{{else}}到期转让{{/if}}</span>
+			{{/if}}
+		</h2>
+		<ul class="content">
+			<li>
+				<p class="left">期望年化</p>
+				<p class="right"> 
+					{{if privateYields>0}}
+						<span class="spe">{{:currentYields}}%</span>(基础{{:currentBaseYields}}%+优惠{{:privateYields}}%)
+					{{else}}
+						<span class="spe">{{:currentYields}}%</span>
+					{{/if}}
+				</p>
+			</li>
+			<li>
+				<p class="left">自有本金(元)</p>
+				<p class="right"><span class="spe">{{:amount}}</span></p>
+			</li>
+			<li>
+				<p class="left">剩余期望回报(元)</p>
+				<p class="right"><span class="spe">{{:restProfit}}</span></p>
+			</li>
+			<li>
+				<p class="left">出借时间</p>
+				<p class="right"><span class="spe">{{:investTime}}</span></p>
+			</li>
+			{{if restDay > 5}}
+				{{if continueStatus.substr(0,2)=='dq'||continueStatus.substr(0,2)=='DQ' }}
+					<button class="footer_btn" onclick="orderContinue('{{:investNo}}')">{{:remark}}</button>
+				{{/if}}
+			{{/if}}
+		</ul>
+	</li>
+</script>
+
+<script id="itemTmplX" type="text/x-jsrender">
+	<li class="type1" onclick="orderDetail('{{:investNo}}','WK')">
+		<h2>
+			{{if productCat =='Q'}}
+				<span class="type">季账户-{{if productCode.substr(0,2)=='Q3'}}3{{else productCode.substr(0,2)=='Q6'}}6{{else}}9{{/if}}个月</span>
+			{{else productCat =='Y'}}
+				<span class="type">年账户-{{if productCode.substr(0,3)=='Y24'}}2{{else productCode.substr(0,3)=='Y36'}}3{{else productCode.substr(0,3)=='Y48'}}4{{else }}1{{/if}}年</span>
+			{{else}}
+				{{if productCode.substr(0,3)=='T45'}}
+					<span class="type">限时特供-45天</span>
+				{{else productCode.substr(0,3)=='T60'}}
+					<span class="type">限时特供-60天</span>
+				{{else productCode.substr(0,3)=='T90'}}
+					<span class="type">限时特供-90天</span>
+				{{else productCode.substr(0,4)=='T180'}}
+					<span class="type">限时特供-180天</span>
+				{{else productCode.substr(0,4)=='T270'}}
+					<span class="type">限时特供-270天</span>
+				{{else productCode.substr(0,4)=='T365'}}
+					<span class="type">限时特供-365</span>
+				{{else productCode.substr(0,4)=='T730'}}
+					<span class="type">限时特供-730天</span>
+				{{else productCode.substr(0,3)=='TFB'}}
+					<span class="type">特供新手标</span>
+				{{else}}
+					<span class="type">限时特供</span>
+				{{/if}}
+			{{/if}}
+			
+			{{if restDay > 0}}
+				{{if restWorkDay > 10 }}
+					<span class="days2">剩余{{:restDay}}天</span>
+				{{else}}
+					<span class="days">剩余{{:restDay}}天</span>
+				{{/if}}
+				<span class="rent2" onclick="orderContinue('{{:investNo}}')">{{if continueStatus=='bjxt'}}本金续投{{else  continueStatus=='bxxt'}}本息续投{{else continueStatus=='dqtc'}}到期转让{{else continueStatus.substr(0,2)=='BX'}}本息续投{{else continueStatus.substr(0,2)=='BJ'}}本金续投{{else}}到期转让{{/if}}</span>
+			{{else}}
+				<span class="days2">已退出</span>
+				<span class="rent">{{if continueStatus=='bjxt'}}本金续投{{else  continueStatus=='bxxt'}}本息续投{{else continueStatus=='dqtc'}}到期转让{{else continueStatus.substr(0,2)=='BX'}}本息续投{{else continueStatus.substr(0,2)=='BJ'}}本金续投{{else}}到期转让{{/if}}</span>
+			{{/if}}
+		</h2>
+		<ul class="content">
+			<li>
+				<p class="left">期望年化</p>
+				<p class="right"> 
+					{{if privateYields>0}}
+						<span class="spe">{{:currentYields}}%</span>(基础{{:currentBaseYields}}%+优惠{{:privateYields}}%)
+					{{else}}
+						<span class="spe">{{:currentYields}}%</span>
+					{{/if}}
+				</p>
+			</li>
+			<li>
+				<p class="left">自有本金(元)</p>
+				<p class="right"><span class="spe">{{:amount}}</span></p>
+			</li>
+			<li>
+				<p class="left">剩余期望回报(元)</p>
+				<p class="right"><span class="spe">{{:restProfit}}</span></p>
+			</li>
+			<li>
+				<p class="left">出借时间</p>
+				<p class="right"><span class="spe">{{:investTime}}</span></p>
+			</li>
+			{{if restDay > 5}}
+				<button class="footer_btn" onclick="orderContinue('{{:investNo}}')">{{:remark}}</button>
+			{{/if}}
+		</ul>
+	</li>
+</script>

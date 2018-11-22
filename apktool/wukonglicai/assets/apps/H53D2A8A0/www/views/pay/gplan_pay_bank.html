@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>付款</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../plugins/layer/layer.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/pay_bank.css" />
+		<script type="text/javascript" src="../../js/rem.js"></script>
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../plugins/layer/layer.js" defer="defer"></script>
+		<script type="text/javascript" src="../../js/fastclick.min.js"></script>
+		<script type="text/javascript" src="../../js/validatorUtil.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" defer="defer"></script>
+		<script type="text/javascript" src="gplan_pay_bank.js" defer="defer"></script>
+	</head>
+
+	<body>
+		<header class="clearfix bgcolor_main">
+			<div class="headerback_box dlyshow" >
+				<img src="../../img/header_back.png" />
+			</div>
+			<p>付款</p>
+		</header>
+		<input type="hidden" id="llbankCardNo" />
+		<input type="hidden" id="llbankName" />
+		<input type="hidden" id="yjbankCardNo" />
+		<input type="hidden" id="yjbankName" />
+		<section class=" dlyshow" >
+			<div id="hint2">请在十分钟内完成支付，以免被其他施主抢占额度</div>
+			<div class="wait_pay dlyshow">
+				<p class="money"></p>
+				<p class="intro">待支付金额(元)</p>
+				<p class="hx_bank">出借资金将通过华夏银行完成出借</p>
+			</div>
+			<div class="pay_way dlyshow clearfix">
+				<div class="one same fl" style="display: none;" >
+					<p class="pay_word">一键支付</p>
+					<span class="other">全新支付体验</span>
+				</div>
+				<div class="line same fr" style="display: none;" >
+					<p class="pay_word">连连快捷支付</p>
+					<span class="other">安全又省心</span>
+				</div>
+			</div>
+			<!--选银行-->
+			<ul class="choose_bank" id = "yjchoose" >
+				<li class="clearfix">
+					<span class="fl">银行</span>
+					<span class="arrow fr">请选择</span>
+				</li>
+				<li class="clearfix">
+					<span class="fl">卡号</span>
+					<span class="cards fr" maxlength="22">请输入借记卡号</span>
+					<span class="delete fr"></span>
+				</li>
+			</ul>
+			<ul class="choose_bank" id = "llchoose" style="display: none;">
+				<li class="clearfix">
+					<span class="fl">银行</span>
+					<span class="arrow fr">请选择</span>
+				</li>
+				<li class="clearfix">
+					<span class="fl">卡号</span>
+					<span class="cards fr" maxlength="22">请输入借记卡号</span>
+					<span class="delete fr"></span>
+				</li>
+			</ul>
+			
+			<!--显示已有银行-->
+			<dl class="show_bank" id="yijianbank" style="display: none;">
+				<dt></dt>
+				<dd>	
+					<h3></h3>
+					<span class="other"></span>
+				</dd>
+			</dl>
+			<!--显示已有银行-->
+			<div class="bank_list_wrap" id="lianlianbank" style="display: none;">
+					<ul class="bank_list2">
+						
+						<!--<li>
+							<span class="gs_logo logo">
+								<img src="../../img/gs_logo.png"/>
+							</span>
+							<div class="intro">
+								<h3>工商银行</h3>
+								<span>单笔限额5万，单日限额25万</span>
+							</div>
+						</li>-->
+					</ul>
+				</div>
+		</section>
+		
+		<div class="word_footer2 ">
+			<img src="https://m.wukonglicai.com/applauncher/invest-detal-tips.png" onerror = "this.src='../../img/invest-detal-tips.png'"/>
+		</div>
+		<!--<div class="button_footer " onclick="toBuy();">
+			确认支付
+		</div>-->
+		<div class="bottom_btn " onclick="toBuy();">
+			<button class="btn_bg">确认支付</button>
+		</div>
+	
+		<!--确认支付弹窗-->
+		<div class="showAlert" >
+			<div class="mask"></div>
+			<div class="content_wrap">
+				<span class="img"></span>
+				<h3>安全支付</h3>
+				<span class="add">将跳转至第三方支付平台付款</span>
+			</div>		
+		</div>
+		<!--银行弹窗-->
+		<div id="bank_pop">
+			<div id="mask2"></div>
+			<div class="bank_content">
+				<ul class="bank_list clearfix" id="bank_List">
+				</ul>
+			</div>
+		</div>
+		<!--卡号弹窗-->
+		<div id="card_pop">
+			<!--<div id="mask3"></div>-->
+			<table id='key_board' border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+						<td class="key_delete" rowspan="2">
+							<img src="../../img/key_delete.png" />
+						</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>5</td>
+						<td>6</td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td>8</td>
+						<td>9</td>
+						<td class="key_sure" rowspan="2">确定</td>
+					</tr>
+					<tr>
+						<td class="gray"></td>
+						<td>0</td>
+						<td class="gray"></td>
+					</tr>
+				
+			</table>
+		</div>
+		
+	</body>
+		
+		
+</html>

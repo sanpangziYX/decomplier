@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.bkjk.athena.appdesk.widget.datepicker.DeskDatePicker android:id="@id/dp_desk_team_date_picker" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <View android:background="@color/desk_c_20979797" android:layout_width="fill_parent" android:layout_height="@dimen/x20" />
+    <TextView android:textSize="18.0sp" android:textColor="@color/desk_c_999999" android:layout_gravity="center_horizontal" android:id="@id/tv_desk_team_no_data" android:paddingTop="@dimen/x150" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/desk_sign_no_list" />
+</LinearLayout>

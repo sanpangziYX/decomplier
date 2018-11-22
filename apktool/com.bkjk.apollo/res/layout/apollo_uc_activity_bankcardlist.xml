@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/apollo_uc_c_F7F8FA" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/apollo_uc_bank_list_header_line" android:background="@color/apollo_uc_line_D4D4D4" android:layout_width="fill_parent" android:layout_height="@dimen/x1" />
+    <FrameLayout android:id="@id/apollo_uc_id_cardlist" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/apollo_uc_bank_list_header_line" />
+</RelativeLayout>

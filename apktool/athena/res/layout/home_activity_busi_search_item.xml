@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="14.0sp" android:textColor="@color/home_c_999999" android:gravity="center" android:id="@id/home_fragment_busi_search_item_time" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x30" />
+    <android.support.v7.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/home_fragment_busi_search_item_time" app:cardBackgroundColor="@android:color/white" app:cardCornerRadius="4.0dip" app:cardElevation="1.0dip" app:cardUseCompatPadding="true" app:cardPreventCornerOverlap="true">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/home_c_333333" android:ellipsize="end" android:id="@id/home_fragment_busi_search_item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x20" android:layout_marginTop="@dimen/x20" android:layout_marginRight="@dimen/x20" android:lines="1" />
+                <TextView android:textSize="14.0sp" android:textColor="@color/home_c_666666" android:id="@id/home_fragment_busi_search_item_summary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x20" android:layout_marginTop="@dimen/x20" android:layout_marginRight="@dimen/x20" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/home_fragment_busi_search_item_labellayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x20" android:layout_marginTop="@dimen/x20" android:layout_marginRight="@dimen/x20" android:layout_marginBottom="@dimen/x20" />
+                <View android:background="@color/home_c_35979797" android:layout_width="fill_parent" android:layout_height="@dimen/x1" />
+                <TextView android:textSize="13.0sp" android:id="@id/home_fragment_busi_search_item_next" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x20" android:layout_marginTop="@dimen/x20" android:layout_marginRight="@dimen/x20" android:layout_marginBottom="@dimen/x20" android:text="阅读全文" />
+            </LinearLayout>
+            <LinearLayout android:gravity="right" android:id="@id/home_fragment_busi_search_item_readstatuslayout" android:background="@drawable/home_unread_triangle" android:layout_width="@dimen/x120" android:layout_height="@dimen/x120" android:layout_alignParentEnd="true">
+                <com.bkjk.athena_home.widgets.RotateTextView android:textSize="9.0sp" android:textColor="@android:color/white" android:id="@id/home_fragment_busi_search_item_readstatus" android:padding="@dimen/x10" android:layout_width="wrap_content" android:layout_height="wrap_content" app:degree="45" />
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

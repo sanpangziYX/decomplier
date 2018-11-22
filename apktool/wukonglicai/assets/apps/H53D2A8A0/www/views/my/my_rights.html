@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/my_rights.css"/>
+		<script type="text/javascript" src="../../js/rem.js"></script>
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/fastclick.js"></script>
+		<script type="text/javascript" src="../../js/jsrender.min.js"></script>
+		<script type="text/javascript" src="../../js/validatorUtil.js" ></script>
+		<script type="text/javascript" src="my_rights.js"></script>
+		<title>我的特权</title>
+	</head>
+	<body>
+		<header class="clearfix bgcolor_main">
+			<div class="headerback_box">
+				<img src="../../img/header_back.png" />
+			</div>
+			<p >我的特权</p>
+		</header>
+		<section>
+			<ul class="tab_change">
+				<li class="current" onclick="change('profit')">特权收益</li>
+				<li onclick="change('capital')">虚拟本金</li>
+			</ul>
+			<div class="intro">
+				<h3 class="on">获得特权期望回报率<!--<i></i>--></h3>
+				<span>0<b>%</b></span>
+			</div>
+			<ul class="cards" id="profitUl">
+				
+			</ul>
+			<ul class="cards" id="capitalUl">
+				
+			</ul>
+		</section>
+		<div class="word_footer3">期望回报并非平台承诺收益，市场有风险，投资需谨慎</div>
+		<div class="bottom_btn ">
+			<button class="btn_bg" onclick="sendMoney()">给好友送虚拟本金</button>
+		</div>
+		
+		<div class="showAlert">
+			<div class="mask"></div>
+
+			<div class="content_wrap content_wrap10">
+				<div class="txt">
+					<p>您的邀请码为：<span class="red"></span>，发给好友，注册时填写即可成功发特权啦~</p>
+				</div>
+				<button onclick="closeAlert()">确定</button>
+			</div>
+		</div>
+	</body>
+	
+<!--
+	作者：lich
+	时间：2017-05-04
+	描述：特权收益模板
+-->
+<script id="profits" type="text/x-jsrender">
+	{{if isEnd==0}}
+	<li class="no">
+	  	<div class="li01 clearfix">
+			<p class="left fl">
+				{{if type=='I'}}
+		        	邀请好友{{:secrmobile}}
+	        	{{else type=='R'}}
+	        		{{if ismobel}}
+	        	        被邀注册{{:secrmobile}}
+	        	  	{{else}}
+	        	        系统发放
+	        	  	{{/if}}
+	        	{{else type=='X'}}
+	        	    创始人特权
+	        	{{else type=='V'}}
+	        	    VIP终生特权
+        	    	{{else type=='T'}}
+	        	    VIP特权
+        	    {{else type=='O'}}
+	        	    营销加息
+        	    {{else type=='N'}}
+	        	    被邀注册
+	        	{{else}}
+	        	    系统发放
+	        	{{/if}}
+			</p>
+			<p class="right fr">{{:startTime}}</p>
+		</div>
+		<div class="li02">
+			<p class="p1">特权收益：<span>+</span><b>{{:profit}}</b><i>%</i></p>
+			<p class="p2">过期时间：{{:endTime}}</p>
+			<span class="out_date">已过期</span>
+		</div>
+	</li>
+	{{else}}
+	<li>
+	  	<div class="li01">
+			<p class="left">
+				{{if type=='I'}}
+		        	邀请好友{{:secrmobile}}
+	        	{{else type=='R'}}
+	        		{{if ismobel}}
+	        	        被邀注册{{:secrmobile}}
+	        	  	{{else}}
+	        	        系统发放
+	        	  	{{/if}}
+	        	{{else type=='X'}}
+	        	    创始人特权
+	        	{{else type=='V'}}
+	        	    VIP终生特权
+        	    	{{else type=='T'}}
+	        	    VIP特权
+        	    {{else type=='O'}}
+	        	    营销加息
+        	    {{else type=='N'}}
+	        	    被邀注册
+	        	{{else}}
+	        	    系统发放
+	        	{{/if}}
+			</p>
+			<p class="right">{{:startTime}}</p>
+		</div>
+		<div class="li02">
+			<p class="p1">特权收益：<span>+</span><b>{{:profit}}</b><i>%</i></p>
+			<p class="p2">过期时间：
+				{{if endTime==null||endTime==''}}
+					永久有效
+				{{else}}
+					{{:endTime}}
+				{{/if}}
+			</p>
+		</div>
+	</li>
+	{{/if}}
+</script>
+	
+<script id="moneys" type="text/x-jsrender">
+	{{if type=='X'}}
+	{{else}}
+	    {{if isEnd=='0'}}
+	    <li class="no">
+		  	<div class="li01">
+				<p class="left">
+					{{if ismobel}}
+						{{if type=='I'}}
+						        邀请好友{{:secrmobile}}
+						  	{{else type=='R'}}
+						        被邀注册{{:secrmobile}}
+						  	{{else}}
+						        系统发放
+						  	{{/if}}
+						{{else mobile == null || mobile==""}}
+						    系统发放
+					{{else}}
+						{{:mobile}}
+					{{/if}}
+				</p>
+				<p class="right">{{:startTime}}</p>
+			</div>
+			<div class="li02">
+				<p class="p1">虚拟本金：<span>+</span><b>{{:capital}}</b><i>元</i></p>
+				<p class="p2">过期时间：
+					{{if endTime==null||endTime==''}}
+						永久有效
+					{{else}}
+						{{:endTime}}
+					{{/if}}
+				</p>
+				<span class="out_date">已过期</span>
+			</div>
+		</li>
+	    {{else}}
+	  	<li>
+		  	<div class="li01">
+				<p class="left">
+					{{if ismobel}}
+					{{if type=='I'}}
+					        邀请好友{{:secrmobile}}
+					  	{{else type=='R'}}
+					        被邀注册{{:secrmobile}}
+					  	{{else}}
+					        系统发放
+					  	{{/if}}
+					{{else mobile == null || mobile==""}}
+					    系统发放
+					{{else}}
+						{{:mobile}}
+					{{/if}}
+				</p>
+				<p class="right">{{:startTime}}</p>
+			</div>
+			<div class="li02">
+				<p class="p1">虚拟本金：<span>+</span><b>{{:capital}}</b><i>元</i></p>
+				<p class="p2">过期时间：
+					{{if endTime==null||endTime==''}}
+						永久有效
+					{{else}}
+						{{:endTime}}
+					{{/if}}
+				</p>
+			</div>
+		</li>
+	    {{/if}}
+	{{/if}}
+</script>
+</html>

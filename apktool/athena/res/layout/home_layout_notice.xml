@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_home_homepage_notice" android:layout_width="fill_parent" android:layout_height="@dimen/x90">
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/home_c_FF333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="@string/home_deal_new" />
+        <TextView android:textSize="13.0sp" android:textColor="@color/home_c_F5F5F5" android:background="@drawable/home_bg_first_new" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x1" android:text="@string/home_first_new" />
+        <ViewFlipper android:id="@id/vf_home_homepage_notice" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/x10" android:layout_marginRight="@dimen/x20" />
+    </LinearLayout>
+</LinearLayout>

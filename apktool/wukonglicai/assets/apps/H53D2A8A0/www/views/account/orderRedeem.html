@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<title>转让退出到银行卡</title>
+		
+		<link rel="stylesheet" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../plugins/layer/layer.css"/>
+		<link rel="stylesheet" href="../../css/orderDetail.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/cash.css" />
+		<!--<link rel="stylesheet" type="text/css" href="../../plugins/poppicker/mui.picker.min.css" />
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>-->
+		<link rel="stylesheet" href="../../plugins/mobiscroll/css/mobiscroll.custom-3.0.0-beta6.min.css" />
+		<script type="text/javascript" src="../../js/jquery-1.12.1.min.js"></script>
+		<script type="text/javascript" src="../../js/rem.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/fastclick.js"></script>
+		<script type="text/javascript" src="orderRedeem.js"></script>
+		<script type="text/javascript" src="../../plugins/layer/layer.js" defer="defer"></script>
+		<script type="text/javascript" src="../../plugins/mobiscroll/js/mobiscroll.custom-3.0.0-beta6.min.js"></script>
+		<!--<script type="text/javascript" src="../../plugins/poppicker/mui.min.js"></script>
+		<script type="text/javascript" src="../../plugins/poppicker/mui.picker.min.js"></script>-->
+	</head>
+
+	<body>
+
+		<header class="clearfix bgcolor_main">
+			<div class="headerback_box" keepalive="true">
+				<img src="../../img/header_back.png" />
+			</div>
+			<p>转让退出到银行卡</p>
+			<div class="right_box" onclick="goRedeemList();">
+				<img src="../../img/cash_header.png" alt="">
+			</div>
+		</header>
+
+		<section>
+			<div class="m-ord-content" id="redeemInfo" style="display: none;">
+				<div class="top_box">
+					<span class="n-ht n-ht1"><img src="../../img/od-dtail-ht.png" alt=""></span>
+					<div  class="redeem_empty" style = "display: none;">
+						<div class="m-ord-dtl content_gray">
+							<div class="n-titl">
+								<p class="n-t1" id = "redeemTitle">您出借的时间未超过</p>
+							</div>
+							<ul class="n-sum-box">
+								<li class="icon_cash_tips">30天锁定期</li>
+							</ul>
+						</div>
+						<!-- 轮齿装饰图片-->
+						<div class="n-ordzs">
+								<img src="../../img/parting_line.png"/>
+						</div>
+						<div class="m-info-box">
+							<ul class="m-list">
+								<li>
+									<span class="long1">月账户可转让退出金额：</span>
+									<p class="red">0.00元</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="redeemsta" style="display: none;">
+						<div class="m-ord-dtl ">
+							<!-- 详情退出状态添加样式 content_gray-->
+							<div class="n-titl " >
+								<p class="n-t1">请指定到账日期<em onclick="duePrompt()"><img src="../../img/icon-i.png" alt=""></em></p>
+							</div>
+							<ul class="n-sum-box" id="popUl">
+								<li>&lt;</li>
+								<li>
+									<div class="demo-wrapper demo-wrapper-selectBasic">
+										<select name="City" id="selectBasic-demo">
+										</select>
+									</div>
+								</li>
+								<li>&gt;</li>
+							</ul>
+						</div>
+						<!-- 轮齿装饰图片-->
+						<div class="n-ordzs">
+							<img src="../../img/parting_linemain.png" alt="">
+						</div>
+						<!--详情退出状态替换图片为parting_line.png-->
+						<!-- /轮齿装饰图片 -->
+						<div class="m-info-box">
+							<ul class="m-list">
+								<li>
+									<span>最后计息日：</span>
+									<p id="lastDay"></p>
+								</li>
+							</ul>
+	
+							<ul class="m-list">
+								<li>
+									<span class="long1">月账户转让退出金额（元）：</span>
+									<p class="red" id="maxCashAmount"></p>
+								</li>
+							</ul>
+						</div>
+						<p class="cash_back" style="display: none;">后悔了，想取消？</p>
+				</div>
+				</div>
+				<div class="bottom_box"  style="display: none;">
+
+					<div class="cash_ipt">
+						<span>金额(元)</span>
+						<input type="text" name="expireMoney"  placeholder="" readonly="readonly" id="expireMoney" />
+					</div>
+
+					<dl class="cash_tips">
+					</dl>
+					<div class="agree_box clearfix">
+						<div class="agree bgcolor_red"></div>
+						<div class="agree_content">
+							本人已阅读并同意<span id = "textDiv" onclick="toAgreement();"></span>
+						</div>
+					</div>
+
+				</div>
+				<button class="step_btn" onclick="btoclick()"></button>
+			</div>
+
+		</section>
+		<div class="foot-cyp">
+			<p>期望回报并非平台承诺收益，市场有风险，投资需谨慎</p>
+		</div>
+
+		<div class="showAlert" style="display: none;">
+			<div class="mask"></div>
+			<!--<div class="content_wrap content_wrap1">
+				<span class="add"></span>
+			</div>-->
+			<div class="content_wrap content_wrap5">
+				<div class="txt">
+					本次指定到账日：<i></i><br /> 下次可指定到账月份：
+					<i class="red"></i>
+				</div>
+				<div class="btn_box clearfix">
+					<button class="showbtn_2" onclick="closeAlert();">修改</button>
+					<button class="showbtn_3" onclick="redeemsubmit();">确定</button>
+				</div>
+			</div>
+		</div>
+		<!--输入金额弹窗-->
+		<div id="card_pop">
+			<!--<div id="mask3"></div>-->
+			<table id='key_board' border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td class="key_delete" rowspan="2">
+						<img src="../../img/key_delete.png" />
+					</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+					<td class="key_sure" rowspan="2">确定</td>
+				</tr>
+				<tr>
+					<td class="key_dot">.</td>
+					<td>0</td>
+					<td class="gray"></td>
+				</tr>
+
+			</table>
+		</div>
+	</body>
+
+</html>

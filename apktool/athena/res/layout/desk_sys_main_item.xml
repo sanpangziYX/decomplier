@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/desk_sys_main_icon" android:layout_width="@dimen/x50" android:layout_height="@dimen/x50" android:src="@drawable/desk_icon_keyuan" />
+    <TextView android:textSize="@dimen/x28" android:textColor="@color/desk_c_333333" android:id="@id/desk_sys_main_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="9.0dip" android:text="@string/desk_couster" />
+</LinearLayout>

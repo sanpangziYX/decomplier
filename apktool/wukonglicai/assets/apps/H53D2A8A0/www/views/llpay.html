@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form id="form" action="" method="post">
+	        <input type="hidden" id="reqdata" name="req_data" value='' />
+	   </form>
+	</body>
+</html>
+<script type="text/javascript" src="../js/zepto.min.js"></script>
+<script>
+	function posttoll(url,reqdata){
+		$("#form").attr("action",url);
+	  	$("#reqdata").val(reqdata);
+		$("#form").submit();
+	}
+</script>

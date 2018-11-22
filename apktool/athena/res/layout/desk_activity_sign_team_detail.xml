@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/desk_c_F5F5F5" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_desk_sign_team_detail" android:background="@color/desk_c_FFFFFF" android:layout_width="fill_parent" android:layout_height="@dimen/x188" android:layout_marginTop="0.5dip">
+        <TextView android:textSize="@dimen/x60" android:textStyle="bold" android:textColor="@color/desk_c_333333" android:id="@id/tv_desk_team_detatil_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x40" android:layout_marginTop="@dimen/x30" />
+        <ImageView android:id="@id/iv_desk_team_detatil_img" android:layout_width="@dimen/x80" android:layout_height="@dimen/x80" android:layout_marginLeft="@dimen/x24" android:layout_marginTop="@dimen/x32" android:src="@drawable/desk_icon_user_default_round" android:layout_toRightOf="@id/tv_desk_team_detatil_name" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/ll_desk_sign_detatil_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x40" android:layout_marginTop="@dimen/x16" android:layout_below="@id/iv_desk_team_detatil_img">
+            <TextView android:textSize="@dimen/x28" android:textColor="@color/desk_c_666666" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/desk_sign_month_has" />
+            <TextView android:textSize="@dimen/x28" android:textColor="@color/desk_c_3587F2" android:id="@id/tv_desk_team_detatil_num" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="@dimen/x28" android:textColor="@color/desk_c_666666" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/desk_sign_count" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_desk_team_select_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/desk_size_26" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <TextView android:textSize="16.0sp" android:textColor="@color/desk_c_333333" android:id="@id/tv_desk_detatil_date" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/desk_size_4" android:src="@drawable/desk_icon_team_xuanze" />
+        </LinearLayout>
+    </RelativeLayout>
+    <ExpandableListView android:id="@id/elv_desk_sign_team_record" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" android:layout_below="@id/rl_desk_sign_team_detail" />
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<script type="text/javascript" src="../../js/headerlib.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../plugins/layer/layer.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../plugins/iosselect/iosSelect.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/fund.css" />
+		<script src="../../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<title>开户信息标题</title>
+	</head>
+
+	<body>
+		<header id="header" class="wk-header wk-header-theme-a">
+			<div class="wk-header-left" id="goback"><img style="width:.22rem;" src="../../img/header_back.png" /></div>
+			<h3>开户信息</h3>
+			<!--<div class="wk-header-right"></div>-->
+		</header>
+
+		<script src="../../js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common.js" type="text/javascript" charset="utf-8"></script>
+				<script src="../../plugins/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var windowstyles = {
+				render: 'always',
+				bounce: 'none',
+				'popGesture': 'close',
+				'scrollIndicator': 'none',
+				hardwareAccelerated: isHardwareAccelerated(),
+				zindex: 1
+			};
+
+			function doinit() {
+				$('#goback').on('click', function() {
+					layer.open({
+						content: '快要完成了，确认要放弃填写信息吗？',
+						skin: 'msgbox',
+						btn: ['继续填写', '放弃填写'],
+						yes: function(index) {
+							layer.close(index);
+						},
+						no: function(index) {
+							plus.navigator.setStatusBarStyle("light");
+							setTimeout(function() {
+								plus.webview.currentWebview().close()
+							}, 100)
+							layer.close(index);
+						}
+					});
+
+				})
+				mui.plusReady(function() {
+					setTimeout(function() {
+						plus.navigator.setStatusBarStyle("dark");
+					}, 300)
+				});
+				plus.navigator.setStatusBarStyle("dark");
+				windowstyles["top"] = (lib.flexible.rem2px('0.88') + window.immersed + 1) + 'px';
+				windowstyles["bottom"] = 0;
+				subview = plus.webview.create("openaccount.html", "openaccount.html", windowstyles);
+				plus.webview.currentWebview().append(subview);
+			}
+			doinit()
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<title>转让退出记录</title>
+		<script type="text/javascript" src="../../js/rem.js"></script>
+		<link rel="stylesheet" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/record.css"/>
+		<link rel="stylesheet" type="text/css" href="../../plugins/layer/layer.css"/>
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/jsrender.min.js"></script>
+		<script type="text/javascript" src="../../js/fastclick.js"></script>
+		<script type="text/javascript" src="../../plugins/layer/layer.js" defer="defer"></script>
+		<script type="text/javascript" src="redeem_record.js"></script>
+	</head>
+	<body>
+		<header class="bgcolor_main">
+			<div class="headerback_box" keepalive="true">
+				<img src="../../img/header_back.png" />
+			</div>
+			<p>转让退出记录</p>
+		</header>
+		<section id = "noRedeemList" style="display: none;">
+			<img src="../../img/record_m.png" class="record_m"/>
+		</section>
+		<section id = "redeemList" style="display: none;">
+			<ul class="record_list" >
+				<li>
+					<span>预计到账时间： </span>
+					<p>2016-10-12 18点前</p>
+				</li>
+				<li>
+					<span>最后计息日：</span>
+					<p>2016-10-10</p>
+				</li>
+				<li>
+					<span>转让退出金额（元）：</span>
+					<p class="red">6.44</p>
+				</li>
+				<li>
+					<span>转让退出银行卡：</span>
+					<p>中国工商银行 ****6636</p>
+				</li>
+				<li>
+					<span>支付结果：</span>
+					<p class="red">等待</p>
+				</li>
+				<li>
+					<span>操作时间：</span>
+					<p>2016-09-28 10:33:27</p>
+				</li>
+				<li class="clearfix">
+					<span></span>
+					<button class="btn_back">取消</button>
+				</li>
+			</ul>
+		</section>
+		<div class="showAlert" style="display: none;">
+			<div class="mask"></div>
+			<div class="content_wrap content_wrap5">
+				<div class="txt">
+					转让退出资金已经在路上了，<i></i><br /> 您确定要取消已选到账日期？
+					<i class="red"></i>
+				</div>
+				<div class="btn_box clearfix">
+					<button class="showbtn_2" onclick="closeAlert();">修改</button>
+					<button class="showbtn_3" onclick="redeemsubmit();">确定</button>
+				</div>
+			</div>
+		</div>
+		<div class="foot-cyp">
+			<p>期望回报并非平台承诺收益，市场有风险，投资需谨慎</p>
+		</div>
+	</body>
+</html>
+<script type="text/template" id = "redeemHis">
+	<ul class="record_list" >
+		<li>
+			<span>预计到账时间： </span>
+			<p>{{:drtime}} 18点前</p>
+		</li>
+		<li>
+			<span>最后计息日：</span>
+			<p>{{:endtime}}</p>
+		</li>
+		<li>
+			<span>转让退出金额（元）：</span>
+			<p class="red">{{:amt}}</p>
+		</li>
+		<li>
+			<span>转让退出银行卡：</span>
+			<p>{{:bkname}} ****{{:bkno}}</p>
+		</li>
+		<li>
+			<span>支付结果：</span>
+			<p class="red">{{if ispay=='0'}}等待{{else}}成功{{/if}}</p>
+		</li>
+		<li>
+			<span>操作时间：</span>
+			<p>{{:ctime}}</p>
+		</li>
+		{{if ispay=='0'}}
+		<li>
+			<span></span>
+			<button class="btn_back" onclick="aClick('{{:drId}}')">取消</button>
+		</li>
+		{{/if}}
+	</ul>
+</script>

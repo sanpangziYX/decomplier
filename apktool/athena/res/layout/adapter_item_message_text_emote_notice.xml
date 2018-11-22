@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:visibility="gone" layout="@layout/message_header" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/messagesAdapter_roundAvatar_left" layout="@layout/round_avatar" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingBottom="5.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="0.0dip" android:layout_weight="1.0">
+            <include layout="@layout/message_sender" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include android:id="@id/message_timestamp_layout_left" layout="@layout/message_timestamp" />
+                <FrameLayout android:id="@id/messagesAdapter_body_layout" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textAppearance="?android:textAppearanceSmall" android:autoLink="web" android:layout_gravity="left" android:id="@id/messagesAdapter_body" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="A message body goes here" android:textIsSelectable="false" />
+                </FrameLayout>
+                <include android:id="@id/message_timestamp_layout_right" layout="@layout/message_timestamp" />
+            </LinearLayout>
+        </LinearLayout>
+        <include android:id="@id/messagesAdapter_roundAvatar_right" layout="@layout/round_avatar" />
+    </LinearLayout>
+    <include layout="@layout/message_separator" />
+</LinearLayout>

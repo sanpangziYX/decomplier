@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/uc_finger_worn_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true">
+        <TextView android:id="@id/uc_finger_worn_bt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x50" android:text="点此验证" android:layout_centerInParent="true" />
+        <ImageView android:id="@id/uc_finger_worn_im" android:layout_width="@dimen/x79" android:layout_height="@dimen/x87" android:src="@drawable/apollo_uc_fingerlight" android:layout_above="@id/uc_finger_worn_bt" android:layout_centerInParent="true" />
+        <TextView android:textSize="@dimen/x30" android:textStyle="bold" android:id="@id/uc_finger_worn_login" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/x60" android:text="@string/apollo_uc_string_relogin" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</RelativeLayout>

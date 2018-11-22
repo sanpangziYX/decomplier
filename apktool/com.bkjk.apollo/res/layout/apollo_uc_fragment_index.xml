@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:background="@color/apollo_uc_c_F7F8FA" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/apollo_uc_ll_top" android:background="@drawable/apollo_uc_icon_bkg" android:layout_width="fill_parent" android:layout_height="@dimen/x430">
+            <android.support.v7.widget.CardView android:background="@android:color/transparent" android:layout_width="@dimen/x128" android:layout_height="@dimen/x128" card_view:cardBackgroundColor="@android:color/transparent" card_view:cardCornerRadius="@dimen/x64" card_view:cardElevation="0.0dip">
+                <ImageView android:id="@id/iv_uc_icon" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/apollo_uc_icon_user_default" android:scaleType="centerCrop" />
+            </android.support.v7.widget.CardView>
+            <TextView android:textSize="@dimen/x28" android:textColor="@color/apollo_uc_c_FFFFFF" android:id="@id/apollo_uc_nologin_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x42" android:text="@string/apollo_uc_login2certificaion" android:layout_toRightOf="@id/iv_uc_icon" />
+            <TextView android:textSize="@dimen/x44" android:textColor="@color/apollo_uc_c_FFFFFF" android:id="@id/apollo_uc_id_name" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x30" android:text="@string/apollo_uc_login2certificaion" />
+            <TextView android:textSize="@dimen/x32" android:textColor="@color/apollo_uc_c_FFFFFF" android:gravity="center" android:id="@id/apollo_uc_bt_to_logins" android:background="@drawable/apollo_uc_bg_go_login" android:layout_width="@dimen/x220" android:layout_height="@dimen/x80" android:layout_marginTop="@dimen/x14" android:text="@string/apollo_uc_login_regist" />
+            <TextView android:textSize="@dimen/x36" android:textColor="@color/apollo_uc_c_FFFFFF" android:gravity="center" android:id="@id/apollo_uc_id_tel" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/x60" android:layout_marginTop="@dimen/x10" />
+        </LinearLayout>
+        <RelativeLayout android:id="@id/apollo_uc_ll_content" android:background="@color/apollo_uc_white" android:paddingLeft="@dimen/x68" android:paddingTop="@dimen/x44" android:paddingRight="@dimen/x68" android:paddingBottom="@dimen/x38" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/apollo_uc_ll_top">
+            <TextView android:textSize="@dimen/x32" android:textColor="@color/apollo_uc_c_666666" android:id="@id/apollo_uc_ll_loan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/apollo_uc_string_loanrecord" android:drawableTop="@drawable/apollo_uc_icon_jilu" android:drawablePadding="@dimen/x24" android:layout_alignParentLeft="true" />
+            <TextView android:textSize="@dimen/x32" android:textColor="@color/apollo_uc_c_666666" android:id="@id/apollo_uc_ll_bankcard" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/apollo_uc_mybank_title" android:drawableTop="@drawable/apollo_uc_icon_bankcard" android:drawablePadding="@dimen/x24" android:layout_centerInParent="true" />
+            <TextView android:textSize="@dimen/x32" android:textColor="@color/apollo_uc_c_666666" android:id="@id/apollo_uc_ll_certification" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/apollo_uc_certification" android:drawableTop="@drawable/apollo_uc_icon_info" android:drawablePadding="@dimen/x24" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <LinearLayout android:id="@id/apollo_uc_ll_setting" android:layout_marginTop="@dimen/x20" android:layout_below="@id/apollo_uc_ll_content" style="@style/uc_mine_item_root_ll">
+            <ImageView android:src="@drawable/apollo_uc_icon_shezhi" style="@style/uc_mine_item_icon" />
+            <TextView android:text="@string/apollo_uc_setting" style="@style/uc_mine_item_title" />
+            <ImageView android:src="@drawable/apollo_uc_next" style="@style/uc_mine_item_icon_2" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/apollo_uc_about_app" android:layout_below="@id/apollo_uc_ll_setting" style="@style/uc_mine_item_root_ll">
+            <ImageView android:src="@drawable/apollo_uc_icon_about" style="@style/uc_mine_item_icon" />
+            <TextView android:text="@string/apollo_uc_about_app" style="@style/uc_mine_item_title" />
+            <ImageView android:src="@drawable/apollo_uc_next" style="@style/uc_mine_item_icon_2" />
+        </LinearLayout>
+        <View android:id="@id/view_uc_devider_four" android:background="@color/apollo_uc_c_EAEAEA" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="15.0dip" android:layout_below="@id/apollo_uc_ll_setting" />
+    </RelativeLayout>
+</RelativeLayout>

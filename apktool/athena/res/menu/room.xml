@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/voice" android:id="@id/ic_action_voice_call" android:title="@string/action_voice_call" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/video" android:id="@id/ic_action_video_call" android:title="@string/action_video_call" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_material_settings_small" android:id="@id/ic_action_enable_notification" android:title="@string/action_enable_room_notification" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_material_settings_small" android:id="@id/ic_action_disable_notification" android:title="@string/action_disable_room_notification" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_material_description" android:id="@id/ic_action_room_info" android:title="@string/action_room_info" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_material_group_small" android:id="@id/ic_action_members" android:title="@string/action_members" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_material_person_add_small" android:id="@id/ic_action_invite_by_name" android:title="@string/action_invite_by_name" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_material_group_add_small" android:id="@id/ic_action_invite_by_list" android:title="@string/action_invite_by_list" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_material_exit_to_app_small" android:id="@id/ic_action_leave" android:title="@string/action_leave" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_material_settings_small" android:id="@id/ic_action_settings" android:title="@string/action_settings" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_material_bug_report_small" android:id="@id/ic_send_bug_report" android:title="@string/send_bug_report" app:showAsAction="never" />
+</menu>

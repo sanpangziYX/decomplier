@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/home_loan_record_rl" android:layout_width="fill_parent" android:layout_height="@dimen/x100">
+        <ImageView android:id="@id/apollo_home_iv_loan_circle" android:layout_width="@dimen/x36" android:layout_height="@dimen/x36" android:layout_marginLeft="@dimen/x36" android:src="@drawable/apollo_home_icon_loan_circle" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/x28" android:textColor="@color/apollo_home_c_333333" android:id="@id/home_loan_title_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x20" android:text="我的借款记录" android:layout_toRightOf="@id/apollo_home_iv_loan_circle" android:layout_centerVertical="true" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/x42" android:src="@drawable/apollo_home_icon_small_next" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:background="@color/apollo_home_c_14999999" android:layout_width="fill_parent" android:layout_height="@dimen/x1" />
+</LinearLayout>

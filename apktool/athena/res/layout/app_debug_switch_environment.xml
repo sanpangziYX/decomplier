@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/app_env_lv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:choiceMode="singleChoice" />
+    <EditText android:id="@id/app_ev_et" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="可以手动输入要切换的环境" />
+    <EditText android:id="@id/app_ev_im_et" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="可以手动输入要切换的IM环境" />
+</LinearLayout>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<!--<link rel="stylesheet" type="text/css" href="../../css/mui.min.css">-->
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/invest.css" />
+		<link rel="stylesheet" type="text/css" href="../../plugins/layer/layer.css" />
+		<link rel="stylesheet" type="text/css" href="../../plugins/dropload/magic_stick.css" />
+		<script type="text/javascript" src="../../js/rem.js"></script>
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/fastclick.js"></script>
+		<script type="text/javascript" src="../../plugins/layer/layer.js" defer="defer"></script>
+		<!--<script type="text/javascript" src="../../js/vconsole.min.js"></script>-->
+		<script type="text/javascript" src="invest.js"></script>
+		<script type="text/javascript" src="../../plugins/dropload/dropload.min.js"></script>
+		<script type="text/javascript" src='../../js/kefu.js'></script>
+		<title></title>
+	</head>
+
+	<body>
+
+		<header class="clearfix bgcolor_red">
+			<div class="header_time"></div>
+			<ul class="tab_top" id="tabTop">
+				<li id="J" style="display: none;">玖富宝</li>
+				<li id="D" style="display: none;">日账户</li>
+				<li id="M">月账户</li>
+				<li id="Q">季账户</li>
+				<li id="Y">年账户</li>
+			</ul>
+		</header>
+		<!--账户切换-->
+		<section class="section">
+			<div class="slidehid">
+				<!--玖富宝-->
+				<div class="wrap_account account_wkb">
+					<div class=" account" id="Jdiv" style="display: none;">
+						<h1>玖富宝<span class="tips">货币基金</span></h1>
+						<p class="circle">
+							<span class="num"><b></b></span>
+							<span class="intro">七日年化收益率</span>
+							<span class="check">查看详情<b></b></span>
+							<input type="hidden" />
+						</p>
+						<p class="rights">
+							<span class="mr">特权 +1%</span>
+							<span>投资满10万送1%加息券</span>
+						</p>
+						<p class="others">
+							<span class="" style="border: none;">0.01<b>元起投</b>，收益稳定，灵活存取</span>
+						
+						</p>
+						<button class="start_invest">马上投资</button>
+					</div>
+				</div>
+
+				<!--日-->
+				<div class="wrap_account account_day">
+					<div class=" account" id="Ddiv" style="display: none;">
+						<h1>日账户<span class="tips">其他</span></h1>
+						<p class="circle">
+							<span class="num"></span>
+							<span class="intro">七日年化收益率</span>
+							<span class="check">查看详情<b></b></span>
+							<input type="hidden" />
+						</p>
+						<p class="rights">
+							<!--<span class="mr"></span>
+						<span>出借满10万送1%加息券</span>-->
+						</p>
+						<p class="others">
+							<span>按日计息</span>
+							<span class="center">100<b>元起投</b></span>
+							<span><b>限投</b>10<b>万</b></span>
+						</p>
+						<button class="start_invest"></button>
+					</div>
+				</div>
+				<!--月-->
+				<div class="wrap_account account_month">
+					<div class=" account" id="Mdiv">
+						<h1>月账户<span class="tips">网贷</span></h1>
+						<p class="circle">
+							<span class="num"></span>
+							<span class="intro">期望年化回报率最高</span>
+							<span class="check">查看详情<b></b></span>
+							<input type="hidden">
+						</p>
+						<p class=""></p>
+						<p class="rights">
+							<!--<span class="mr">特权+1%</span> 
+						<span>出借满10万送1%加息券</span>-->
+						</p>
+						<p class="others">
+							<span>期望年化回报率5.0%<b>起，</b><b>逐月涨</b>+0.5%<b>，最高</b>9.5%</span>
+							<span class="center2"><b>每月可转让</b>1<b>次</b></span>
+						</p>
+						<button class="start_invest "></button>
+					</div>
+				</div>
+				<!--季-->
+				<div class="wrap_account account_quarter">
+					<div class=" account" id="Qdiv">
+						<h1>季账户<span class="tips">网贷</span></h1>
+						<p class="circle">
+							<span class="num"></span>
+							<span class="intro">期望年化回报率</span>
+							<span class="check">查看详情<b></b></span>
+							<input type="hidden">
+						</p>
+						<div class="degree_wrap">
+							<ul class="degree  clearfix">
+								<li id="Q3">3个月</li>
+								<li id="Q6">6个月</li>
+								<li id="Q9">9个月</li>
+							</ul>
+							<div id="range">
+								<span class="range_bar"></span>
+							</div>
+						</div>
+						<p class="rights">
+							<!--<span class="mr">特权+1%</span>
+						<span>出借满10万送1%加息券</span>-->
+						</p>
+						<p class="others">
+							<span></span>
+						</p>
+						<button class="start_invest"></button>
+					</div>
+				</div>
+				<!--年-->
+				<div class="wrap_account account_year">
+					<div class=" account" id="Ydiv">
+						<h1>年账户<span class="tips">网贷</span></h1>
+						<p class="circle">
+							<span class="num"></span>
+							<span class="intro">期望年化回报率</span>
+							<span class="check">查看详情<b></b></span>
+							<input type="hidden">
+						</p>
+						<div class="degree_wrap">
+							<ul class="degree degree2 clearfix">
+								<li id="Y">1年</li>
+								<li id="Y24">2年</li>
+								<li id="Y36">3年</li>
+								<li id="Y48">4年</li>
+							</ul>
+							<div id="range2">
+								<span class="range_bar2"></span>
+							</div>
+						</div>
+						<p class="rights">
+							<!--<span class="mr">特权+1%</span>
+						<span>出借满10万送1%加息券</span>-->
+						</p>
+						<p class="others">
+							<span></span>
+						</p>
+						<button class="forbidden_invest"></button>
+					</div>
+				</div>
+				<!--<div class="word_footer">期望回报并非平台承诺收益，市场有风险，投资需谨慎</div>-->
+				<!--底部-->
+				<div class="word_footer4">
+					<img src="https://m.wukonglicai.com/applauncher/invest-index-tips.png" onerror="this.src='../../img/invest-index-tips.png'" />
+				</div>
+			</div>
+		</section>
+
+		<div class="nav_footer">
+			<ul class="tab_footer">
+				<li><span class="monkey"></span>悟空</li>
+				<li class="current"><span class="invest"></span>投资</li>
+				<li><span class="monkeyfan"></span>空粉</li>
+				<li><span class="myself"></span>我</li>
+			</ul>
+		</div>
+		<div class="showAlert">
+			<div class="mask"></div>
+
+			<div class="content_wrap content_wrap9">
+				<h3>提示</h3>
+				<div class="txt">
+					<p>已为您设定风险成熟度最低的谨慎性偏好</p>
+				</div>
+				<button class="showbtn_2" onclick="skipAndInvest()">好哒，立即出借</button>
+				<a onclick="gotoriskpage()">不太相符，去测评</a>
+			</div>
+			<!--还有机会弹窗-->
+			<div class="content_wrap content_wrap8">
+				<h3>温馨提示</h3>
+				<div class="txt">
+					<p></p>
+				</div>
+				<button class="showbtn_2">我知道啦</button>
+			</div>
+			<div class="content_wrap content_wrap12">
+				<h3>提示</h3>
+				<div class="txt">
+					<p>施主，您尚未进行日账户风险测评，请先完成测评</p>
+				</div>
+				<button class="showbtn_2" onclick="gotoriskpage()">去测评</button>
+			</div>
+			<div class="content_wrap content_wrap13">
+				<h3>提示</h3>
+				<div class="txt">
+					<p>施主，您尚未进行玖富宝风险测评，请先完成测评</p>
+				</div>
+				<button class="showbtn_2" onclick="gotoriskpage('J')">去测评</button>
+			</div>
+		</div>
+
+	</body>
+
+</html>
+
+<script>
+	$(function() {
+		console.log(123 + 'width: ' + $('.tab_top li').width())
+	})
+
+	function plusReady() {
+
+		if(plus.os.name == 'Android') {
+			if(plus.os.version.toString().substr(2, 1) <= 4) {
+				var dropload = $('.slidehid').dropload({
+					domUp: {
+						domClass: 'dropload-up',
+						domRefresh: '<div class="dropload-refresh">↓下拉刷新</div>',
+						domUpdate: '<div class="dropload-update">↑释放更新</div>',
+						domLoad: '<div class="dropload-load">加载中...</div>'
+					},
+					loadUpFn: function(me) {
+						//加遮罩层 防止tab切换
+						$('body').append('<div id="dropload-mask"></div>');
+						setTimeout(function() {
+							me.resetload();
+							//移除遮罩层 
+							$('#dropload-mask').remove();
+						}, 600);
+
+					}
+				});
+			}
+
+		} else {
+			var dropload = $('.slidehid').dropload({
+				domUp: {
+					domClass: 'dropload-up',
+					domRefresh: '<div class="dropload-refresh"><div class="magic_stick magic_stick_fixed"></div></div>',
+					domUpdate: '<div class="dropload-update"><div class="magic_stick"></div></div>',
+					domLoad: '<div class="dropload-load"><div class="magic_stick"></div></div>'
+				},
+				loadUpFn: function(me) {
+					//加遮罩层 防止tab切换
+					$('body').append('<div id="dropload-mask"></div>');
+					$('.magic_stick').addClass('magic_stick2');
+					/*情况2*/
+					setTimeout(function() {
+						$('.magic_stick').addClass('big');
+
+					}, 0)
+					setTimeout(function() {
+						$('.magic_stick').addClass('rotate');
+					}, 300)
+					setTimeout(function() {
+						$('.magic_stick').addClass('gone');
+						setTimeout(function() {
+							me.resetload();
+							//移除遮罩层 
+							$('#dropload-mask').remove();
+						}, 300)
+					}, 1600)
+
+				}
+			});
+		}
+	}
+	if(window.plus) {
+		plusReady();
+	} else {
+		document.addEventListener("plusready", plusReady, false);
+	}
+</script>

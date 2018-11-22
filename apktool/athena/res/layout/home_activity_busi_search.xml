@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/home_c_F5F5F5" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:gravity="center_vertical" android:id="@id/home_busi_search_edittext" android:background="@drawable/home_bg_search_bar" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x20" android:layout_marginTop="6.0dip" android:layout_marginRight="@dimen/x20" android:imeOptions="actionSearch" style="@style/home_nb_search_style" />
+    <TextView android:textColor="@color/home_c_666666" android:gravity="right" android:id="@id/home_busi_search_count" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/x20" android:layout_below="@id/home_busi_search_edittext" />
+    <View android:background="@color/home_c_35979797" android:layout_width="fill_parent" android:layout_height="@dimen/x1" android:layout_below="@id/home_busi_search_count" />
+    <android.support.v7.widget.RecyclerView android:id="@id/home_busi_search_listview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/x20" android:layout_below="@id/home_busi_search_count" />
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.qiyukf.unicorn.widget.ViewPagerFixed android:id="@id/ysf_image_preview_view_pager" android:background="@color/ysf_black" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/activity_contacts_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/search_header_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/x25">
+        <include layout="@layout/search_header_layout" />
+    </FrameLayout>
+    <View android:id="@id/matrix_search_staff_div" android:background="@color/room_gray_20" android:layout_width="fill_parent" android:layout_height="@dimen/x1" android:layout_below="@id/search_header_layout" />
+    <RelativeLayout android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/matrix_search_staff_div">
+        <android.support.v7.widget.RecyclerView android:id="@id/matrix_contact_listview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="@dimen/x30" />
+        <org.matrix.console.view.WaveSideBarView android:id="@id/matrix_contact_sidebar" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="@dimen/x30" android:layout_marginBottom="@dimen/x170" android:layout_alignParentRight="true" app:sidebarTextColor="@color/contact_sidebar_text" />
+    </RelativeLayout>
+</RelativeLayout>

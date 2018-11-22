@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/desk_c_FFFFFF" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@color/desk_c_FFFFFF" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_below="@id/ll_desk_title">
+        <TextView android:textSize="16.0sp" android:textColor="@color/desk_c_333333" android:id="@id/tv_desk_title_item" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="21.0dip" android:text="@string/desk_other" android:layout_centerVertical="true" />
+        <View android:background="@color/desk_c_20999999" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="99.0dip">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ll_desk_dongtai" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="52.0dip" android:layout_centerVertical="true">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/desk_icon_dongtai" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/desk_c_333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="9.0dip" android:text="@string/desk_dongtai" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

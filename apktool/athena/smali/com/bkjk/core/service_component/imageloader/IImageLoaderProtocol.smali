@@ -1,0 +1,119 @@
+.class public interface abstract Lcom/bkjk/core/service_component/imageloader/IImageLoaderProtocol;
+.super Ljava/lang/Object;
+.source "IImageLoaderProtocol.java"
+
+
+# virtual methods
+.method public abstract clearCache()V
+.end method
+
+.method public abstract clearDiskCache()V
+.end method
+
+.method public abstract clearMemoryCache()V
+.end method
+
+.method public abstract getCacheSize()V
+.end method
+
+.method public abstract init(Landroid/content/Context;)V
+.end method
+
+.method public abstract loadImage(Landroid/app/Activity;IIILandroid/widget/ImageView;)V
+.end method
+
+.method public varargs abstract loadImage(Landroid/app/Activity;IIILandroid/widget/ImageView;[L0o0/OOO00O0;)V
+.end method
+
+.method public abstract loadImage(Landroid/app/Activity;Landroid/net/Uri;IILandroid/widget/ImageView;)V
+.end method
+
+.method public varargs abstract loadImage(Landroid/app/Activity;Landroid/net/Uri;IILandroid/widget/ImageView;[L0o0/OOO00O0;)V
+.end method
+
+.method public abstract loadImage(Landroid/app/Activity;Ljava/io/File;IILandroid/widget/ImageView;)V
+.end method
+
+.method public varargs abstract loadImage(Landroid/app/Activity;Ljava/io/File;IILandroid/widget/ImageView;[L0o0/OOO00O0;)V
+.end method
+
+.method public abstract loadImage(Landroid/app/Activity;Ljava/lang/String;IILandroid/widget/ImageView;)V
+.end method
+
+.method public varargs abstract loadImage(Landroid/app/Activity;Ljava/lang/String;IILandroid/widget/ImageView;[L0o0/OOO00O0;)V
+.end method
+
+.method public abstract loadImage(Landroid/content/Context;IIILandroid/widget/ImageView;)V
+.end method
+
+.method public varargs abstract loadImage(Landroid/content/Context;IIILandroid/widget/ImageView;[L0o0/OOO00O0;)V
+.end method
+
+.method public abstract loadImage(Landroid/content/Context;Landroid/net/Uri;IILandroid/widget/ImageView;)V
+.end method
+
+.method public varargs abstract loadImage(Landroid/content/Context;Landroid/net/Uri;IILandroid/widget/ImageView;[L0o0/OOO00O0;)V
+.end method
+
+.method public abstract loadImage(Landroid/content/Context;Ljava/io/File;IILandroid/widget/ImageView;)V
+.end method
+
+.method public varargs abstract loadImage(Landroid/content/Context;Ljava/io/File;IILandroid/widget/ImageView;[L0o0/OOO00O0;)V
+.end method
+
+.method public abstract loadImage(Landroid/content/Context;Ljava/lang/String;IILandroid/widget/ImageView;)V
+.end method
+
+.method public varargs abstract loadImage(Landroid/content/Context;Ljava/lang/String;IILandroid/widget/ImageView;[L0o0/OOO00O0;)V
+.end method
+
+.method public abstract loadImage(Landroid/support/v4/app/Fragment;IIILandroid/widget/ImageView;)V
+.end method
+
+.method public varargs abstract loadImage(Landroid/support/v4/app/Fragment;IIILandroid/widget/ImageView;[L0o0/OOO00O0;)V
+.end method
+
+.method public abstract loadImage(Landroid/support/v4/app/Fragment;Landroid/net/Uri;IILandroid/widget/ImageView;)V
+.end method
+
+.method public varargs abstract loadImage(Landroid/support/v4/app/Fragment;Landroid/net/Uri;IILandroid/widget/ImageView;[L0o0/OOO00O0;)V
+.end method
+
+.method public abstract loadImage(Landroid/support/v4/app/Fragment;Ljava/io/File;IILandroid/widget/ImageView;)V
+.end method
+
+.method public varargs abstract loadImage(Landroid/support/v4/app/Fragment;Ljava/io/File;IILandroid/widget/ImageView;[L0o0/OOO00O0;)V
+.end method
+
+.method public abstract loadImage(Landroid/support/v4/app/Fragment;Ljava/lang/String;IILandroid/widget/ImageView;)V
+.end method
+
+.method public varargs abstract loadImage(Landroid/support/v4/app/Fragment;Ljava/lang/String;IILandroid/widget/ImageView;[L0o0/OOO00O0;)V
+.end method
+
+.method public abstract loadImage(Landroid/support/v4/app/FragmentActivity;IIILandroid/widget/ImageView;)V
+.end method
+
+.method public varargs abstract loadImage(Landroid/support/v4/app/FragmentActivity;IIILandroid/widget/ImageView;[L0o0/OOO00O0;)V
+.end method
+
+.method public abstract loadImage(Landroid/support/v4/app/FragmentActivity;Landroid/net/Uri;IILandroid/widget/ImageView;)V
+.end method
+
+.method public varargs abstract loadImage(Landroid/support/v4/app/FragmentActivity;Landroid/net/Uri;IILandroid/widget/ImageView;[L0o0/OOO00O0;)V
+.end method
+
+.method public abstract loadImage(Landroid/support/v4/app/FragmentActivity;Ljava/io/File;IILandroid/widget/ImageView;)V
+.end method
+
+.method public varargs abstract loadImage(Landroid/support/v4/app/FragmentActivity;Ljava/io/File;IILandroid/widget/ImageView;[L0o0/OOO00O0;)V
+.end method
+
+.method public abstract loadImage(Landroid/support/v4/app/FragmentActivity;Ljava/lang/String;IILandroid/widget/ImageView;)V
+.end method
+
+.method public varargs abstract loadImage(Landroid/support/v4/app/FragmentActivity;Ljava/lang/String;IILandroid/widget/ImageView;[L0o0/OOO00O0;)V
+.end method
+
+.method public abstract trimMemory(I)V
+.end method

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/matrix_net_error_ll" android:background="@android:color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x180" android:src="@drawable/core_net_error_icon" />
+    <TextView android:paddingTop="@dimen/x48" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/core_net_error_hint" />
+    <Button android:textSize="@dimen/x36" android:textColor="@color/matrix_c_628BFF" android:id="@id/matrix_net_error_reload_btn" android:background="@drawable/matrix_selector_btn_border_bg" android:layout_width="@dimen/x240" android:layout_height="@dimen/x80" android:layout_marginTop="@dimen/x100" android:text="@string/core_iknow" />
+</LinearLayout>

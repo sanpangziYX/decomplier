@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<title>银行卡信息</title>
+		<script type="text/javascript" src="../../js/rem.js" ></script>
+		<link rel="stylesheet" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../plugins/layer/layer.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/register.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/user_id.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="../../css/sele_bottom.css"/>-->
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../plugins/layer/layer.js" defer="defer"></script>
+		<script type="text/javascript" src="../../plugins/jsrender.min.js" ></script>
+		<script type="text/javascript" src="../../js/fastclick.js"></script>
+		<script type="text/javascript" src="../../js/validatorUtil.js"></script>
+		<script type="text/javascript" src="../../js/jsAddress.js"></script>
+		<script type="text/javascript" src="redeem_bankcard.js"></script>
+		<style type="text/css">
+			.layui-m-layer0 .layui-m-layerchild{
+				height: auto;
+				box-sizing: border-box;
+				padding:.6rem;
+			}
+			.layui-m-layerchild h3{
+				padding-top: 0;
+			}
+			.layui-m-layerbtn{
+				margin-top: 0.2rem;	
+			}
+		</style>
+	</head>
+	<body>
+		<header class="bgcolor_main">
+			<div class="headerback_box" keepalive="true">
+				<img src="../../img/header_back.png" />
+			</div>
+			<p>银行卡信息</p>
+		</header>
+		<section class="section">
+			<form action="" method="" onsubmit="return false">
+				<ul class="register_list clearfix">
+					<li>
+						<input type="text" name="bankName" id="bankName" value="" placeholder="请输入银行名称" maxlength="18" />
+					</li>
+					<li>
+						<input type="text" name="bankNo" id="bankNo" value="" placeholder="请输入银行卡号" maxlength="18" />
+						<div class="delete_ipt fr">
+							<img src="../../img/delete.png"/>
+						</div>
+					</li>
+					<div id = "branchInfo">
+						<!--<li class="top_38 sele">
+							<span>开户行所在省份</span>
+							<select class="option" name="province" id="province">请选择</select>
+						</li>
+						<li class="top_38 sele option_sele2">
+							<span>开户行所在城市</span>
+							<select class="option" name="city"  id="city">请选择</select>
+						</li>
+						<li class="top_38 sele option_sele2">
+							<span>开户行所在城市</span>
+							<select class="option" name="qu" id="qu_1">请选择</select>
+						</li>
+						
+						<li class="top_38 sele s_ipt">
+							<span>开户行支行名称</span>
+							<input type="text" class="option" name="" id="" value="" placeholder="请务必准确填写" />
+						</li>-->
+					</div>
+				</ul>
+			</form>
+			<div class="bank_tips">
+				<!--<p>*点击拨打<span class="color_red">95533</span>自助查询</p>-->
+				<p>*温馨提示：支行名称不准确，将导致您的资金无法到账</p>
+			</div>
+			<button class="register_btn" onclick="btoclick()">确认</button>
+			<footer class="foot-cyp">
+				<p>期望回报并非平台承诺收益，市场有风险，投资需谨慎</p>
+			</footer>
+		</section>
+		
+		<!-- 315 去掉交易密码
+			<div class="showAlert">
+			<div class="mask"></div>
+			<div class="content_wrap content_wrap6">
+				<h3>请输入交易密码</h3>
+				<div class="txt2">
+					<div class="wrap6_money"></div>
+					<input type="password" name="dealPwd" id="dealPwd" value="" placeholder="请输入交易密码"/>
+					<p onclick="openPage('../my/forgetPayPassword.html','forgetPayPassword.html',{})">忘记交易密码？</p>
+				</div>
+				<div class="btn_box clearfix">
+					<button class="showbtn_2" onclick="closeAlert();">修改</button>
+					<button class="showbtn_3" onclick="confirmCash()">确定</button>
+				</div>
+			</div>
+		</div>-->
+		
+	</body>
+</html>
+<script id="provinceCityTempShow" type="text/x-jsrender">
+	<li class="top_38 sele">
+		<span>开户行所在省份</span>
+		<span class="option option_sele1">{{:bankCardProvince}}</span>
+	</li>
+	
+	<li class="top_38 sele option_sele2">
+		<span>开户行所在城市</span>
+		<span class="option">{{:bankCardCity}}</span>
+	</li>
+	
+	<li class="top_38 sele s_ipt">
+		<span>开户行支行名称</span>
+		<input type="text"  class="option" id="branch" name="branch" disabled="disabled" value="{{:bankCardBranchName}}" />
+	</li>
+</script>
+<script type="text/x-jsrender" id="hasCardNoBranch">
+	<li class="top_38 sele">
+		<span>开户行所在省份</span>
+		<select class="option" name="province" id="province">请选择</select>
+	</li>
+	
+	<li class="top_38 sele option_sele2">
+		<span>开户行所在城市</span>
+		<select class="option" name="city"  id="city">请选择</select>
+	</li>
+	
+	<li class="top_38 sele option_sele2" style="display: none;">
+		<span>开户行所在城市</span>
+		<select class="option" name="qu" id="qu_1">请选择</select>
+	</li>
+	
+	<li class="top_38 sele s_ipt">
+		<span>开户行支行名称</span>
+		<input type="text" class="option" id="branch" name="branch" value="" placeholder="请务必准确填写" value = ""/>
+	</li>
+</script>

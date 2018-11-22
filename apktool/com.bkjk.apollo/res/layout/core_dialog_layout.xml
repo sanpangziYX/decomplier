@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/core_dialog_main" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/core_parent_panel" android:background="@drawable/core_dialog_bg" android:visibility="visible" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <LinearLayout android:orientation="vertical" android:id="@id/core_top_panel" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/core_title_template" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/core_dialog_icon" android:layout_width="32.0dip" android:layout_height="wrap_content" android:src="@null" android:scaleType="centerInside" />
+                <TextView android:ellipsize="end" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/core_alert_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            </LinearLayout>
+            <View android:id="@id/core_title_divider" android:background="@color/core_divider_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/core_content_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:layout_gravity="center_vertical" android:id="@id/core_dialog_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textIsSelectable="true" style="?android:attr/textAppearanceMedium" />
+            </LinearLayout>
+            <FrameLayout android:id="@id/core_custom_panel" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        </LinearLayout>
+        <View android:layout_gravity="center_horizontal" android:id="@id/core_hori_divider" android:background="@color/core_divider_color" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/core_btn_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/core_btn_cancel_text" android:gravity="center" android:id="@id/core_btn_cancel" android:background="@drawable/core_cancel_btn_selector" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="cancel" android:layout_weight="1.0" />
+            <View android:layout_gravity="center_vertical" android:id="@id/core_verti_divider" android:background="@color/core_divider_color" android:visibility="visible" android:layout_width="0.5dip" android:layout_height="fill_parent" />
+            <TextView android:textColor="@color/core_btn_confirm_text" android:gravity="center" android:id="@id/core_btn_confirm" android:background="@drawable/core_confirm_btn_selector" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="ok" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

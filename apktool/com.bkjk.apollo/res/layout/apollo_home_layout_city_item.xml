@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@color/apollo_home_c_FFFFFF" android:paddingLeft="@dimen/x40" android:layout_width="fill_parent" android:layout_height="@dimen/x120">
+        <TextView android:textSize="@dimen/x32" android:textColor="@color/apollo_home_c_333333" android:id="@id/tv_city_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/im_check" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/x40" android:src="@drawable/apollo_home_icon_check" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <View android:id="@id/vw_line" android:background="@color/apollo_home_c_14999999" android:layout_width="fill_parent" android:layout_height="@dimen/x2" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0，viewport-fit=cover">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>投资结果页面</title>
+		<script type="text/javascript" src="../../js/headerlib.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css">
+		<link rel="stylesheet" href="../../css/common.css">
+		<link rel="stylesheet" href="../../css/invest_result.css">
+	</head>
+	<body>
+		<header id="header" class="wk-header wk-header-theme-a">
+			<h3></h3>
+			<div class="wk-header-right green-style" id="overBack">完成</div>
+		</header>
+		<section class="wk-content pb230" id="wk-content">
+
+		</section>
+		<div class="footer-tips">
+			<p>预期收益并非平台承诺收益，市场有风险，投资需谨慎</p>
+		</div>
+		<script type="text/html" id="temple">
+				<div id="resultBox" class="white-box n-center result-box">
+					<span class="n-img">
+					<%
+						var imgsrc = '../../img/fund/icon-process.png';
+						var stausText = '提交成功';
+						var clazz = 'suces-color';
+						if(status === '1'){
+							imgsrc = '../../img/fund/icon-fail.png';
+							stausText = '投资失败';
+							clazz = 'fail-color';
+						}else if(status === '2') {
+							imgsrc = '../../img/fund/icon-suces.png';
+							stausText = '投资成功';
+							clazz = 'suces-color';
+						}
+					%>	
+			        <img src="<%=imgsrc%>">
+			     </span>
+					<h3 class="suces-color"><%=stausText%></h3>
+					<p>金额：<%=amount%>元</p>
+					
+					<%if(status === '1'){%>
+					<p  class="resultDesc"><%=message%></p>
+					<%}else if(status === '2'){%>
+						<p class="resultDesc"><%=investMess%></p>
+					<%}%>	
+				</div>
+				<div class="fund-tips">温馨提示：资产交易信息可在玖富宝资金流水页面查看</div>
+		</script>
+		<script src="../../js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/baiduTemplate.js"></script>
+		<script type="text/javascript" src="invest_p2p_result.js"></script>
+	</body>
+
+</html>

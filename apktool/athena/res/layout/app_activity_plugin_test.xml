@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/app_pligin_test_rl" android:layout_width="@dimen/x200" android:layout_height="@dimen/x80" android:layout_marginTop="@dimen/x50" android:layout_centerHorizontal="true">
+        <EditText android:id="@id/app_plugin_test_et1" android:layout_width="@dimen/x80" android:layout_height="fill_parent" android:layout_alignParentLeft="true" android:inputType="number" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+" android:layout_centerInParent="true" />
+        <EditText android:gravity="right" android:id="@id/app_plugin_test_et2" android:layout_width="@dimen/x80" android:layout_height="fill_parent" android:layout_alignParentRight="true" android:inputType="number" />
+    </RelativeLayout>
+    <Button android:id="@id/app_plugin_test_bt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x30" android:text="插件api计算" android:layout_below="@id/app_pligin_test_rl" android:layout_centerHorizontal="true" />
+    <TextView android:id="@id/app_plugin_test_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x30" android:layout_below="@id/app_plugin_test_bt" android:layout_centerHorizontal="true" />
+    <ImageView android:id="@id/app_plugin_test_im" android:layout_width="@dimen/x250" android:layout_height="@dimen/x250" android:layout_marginTop="@dimen/x30" android:layout_below="@id/app_plugin_test_tv" android:layout_centerHorizontal="true" />
+    <Button android:id="@id/app_plugin_test_bt2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x30" android:text="加载插件资源" android:layout_below="@id/app_plugin_test_im" android:layout_centerHorizontal="true" />
+</RelativeLayout>

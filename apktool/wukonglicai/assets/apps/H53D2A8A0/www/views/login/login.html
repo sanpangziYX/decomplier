@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/register.css" />
+		<script type="text/javascript" src="../../js/rem.js"></script>
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/fastclick.js"></script>
+		<script type="text/javascript" src="login.js"></script>
+		<script type="text/javascript" src="../../js/keyboard.js"></script>
+	</head>
+	<body>
+		<header class="clearfix">
+			<div class="headerback_box" keepalive="true">
+				<img src="../../img/header_back.png" />
+			</div>
+			<p>输入手机号</p>
+		</header>
+		<section class="section">
+			<div class="head_box ">
+				<img src="../../img/head_pic.png" alt="" />
+			</div>
+			
+			<form action="" method="" onsubmit="return false">
+				<ul class="register_list clearfix">
+					<li>
+						<input type="tel" name="" id="tel_num" value=""  placeholder="请输入手机号" maxlength="11" autocomplete="off" />
+						<div class="delete_ipt fr">
+							<img src="../../img/delete.png" />
+						</div>
+					</li>
+				</ul>
+				<p class="login-msg">手机号将用于绑定账户，平台将对您个人信息保密</p>
+
+				<button class="register_btn step_btn" id="step_1">下一步</button>
+	
+				<div class="agree_box clearfix">
+					<div class="agree bgcolor_green"></div>
+					<div>
+						本人已阅读并同意<span onclick="toUserAgreement()">《用户协议》</span>
+					</div>
+				</div>
+			</form>
+			
+		</section>
+		<footer>
+				期望回报并非平台承诺收益，市场有风险，投资需谨慎
+			</footer>
+		<div class="showAlert">
+			<div class="mask"></div>
+
+			<div class="content_wrap content_wrap1">
+				<span class="add">手机号码不能为空，请输入</span>
+			</div>
+		</div>
+	</body>
+
+</html>

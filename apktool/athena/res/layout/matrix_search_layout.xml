@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/room_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/matrix_search_layout" android:padding="@dimen/x20" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <EditText android:textSize="@dimen/x30" android:id="@id/matrix_editText_search_room" android:background="@drawable/matrix_search_edit" android:paddingLeft="@dimen/x15" android:paddingTop="@dimen/x15" android:paddingBottom="@dimen/x15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:inputType="text" android:imeOptions="actionSearch" />
+    </LinearLayout>
+    <View android:id="@id/matrix_search_edit_below_line" android:background="@color/core_divider_color" android:layout_width="fill_parent" android:layout_height="@dimen/x1" android:layout_below="@id/matrix_search_layout" />
+    <FrameLayout android:id="@id/search_content_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/matrix_search_edit_below_line">
+        <android.support.v7.widget.RecyclerView android:id="@id/matrix_search_rv" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</RelativeLayout>

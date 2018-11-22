@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:padding="@dimen/x15" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/matrix_listItem_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/x15">
+        <ImageView android:id="@id/matrix_member_icon" android:background="@drawable/ic_launcher" android:layout_width="@dimen/x78" android:layout_height="@dimen/x78" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <RelativeLayout android:orientation="horizontal" android:id="@id/matrix_room_list_linear" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/x30" android:layout_toRightOf="@id/matrix_member_icon">
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="@dimen/x36" android:ellipsize="end" android:id="@id/matrix_member_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/x150" android:text="Room Name" android:singleLine="true" android:layout_weight="1.0" style="@style/Base.TextAppearance.AppCompat.Subhead" />
+        </RelativeLayout>
+        <TextView android:id="@id/matrix_go_member_detail" android:background="@drawable/matrix_member_list_item_todetail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/x30" android:ellipsize="end" android:id="@id/matrix_member_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x5" android:singleLine="true" android:layout_below="@id/matrix_room_list_linear" android:layout_alignLeft="@id/matrix_room_list_linear" android:layout_alignRight="@id/matrix_room_list_linear" style="@style/Base.TextAppearance.AppCompat.Caption" />
+    </RelativeLayout>
+</RelativeLayout>

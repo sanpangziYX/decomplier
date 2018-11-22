@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/x80"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/desk_up_pic_loading_bg" android:layout_width="@dimen/x400" android:layout_height="@dimen/x180">
+        <ImageView android:id="@id/desk_loading_iv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/desk_icon_pic_loading" />
+        <TextView android:textSize="@dimen/x32" android:textColor="@color/desk_c_FFFFFF" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x14" android:text="正在上传" />
+    </LinearLayout>
+</FrameLayout>

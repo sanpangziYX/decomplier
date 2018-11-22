@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="vertical" android:paddingTop="@dimen/x42" android:paddingBottom="@dimen/x15" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0sp" android:textColor="@color/apollo_home_c_80999999" android:padding="@dimen/x28" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/apollo_home_index_end" />
+    <ImageView android:layout_width="fill_parent" android:layout_height="@dimen/x100" android:src="@drawable/apollo_home_end_image" />
+</LinearLayout>

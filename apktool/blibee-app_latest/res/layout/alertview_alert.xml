@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bg_alertview_alert" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/include_alertheader" />
+    <ViewStub android:id="@id/viewStubHorizontal" android:layout="@layout/alertview_alert_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/viewStubVertical" android:layout="@layout/alertview_alert_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

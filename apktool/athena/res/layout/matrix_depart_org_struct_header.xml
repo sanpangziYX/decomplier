@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/x28" android:textColor="@color/contact_header_text" android:id="@id/contact_person_header" android:background="@color/contact_header_bg" android:padding="@dimen/x20" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="人员" android:layout_below="@id/search_header_layout" />
+    <LinearLayout android:orientation="vertical" android:id="@id/contact_person_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/contact_person_header" />
+    <View android:id="@id/header_divider" android:background="@color/room_gray_20" android:layout_width="fill_parent" android:layout_height="@dimen/x1" android:layout_below="@id/contact_person_layout" />
+    <TextView android:textSize="@dimen/x28" android:textColor="@color/contact_header_text" android:id="@id/contact_group_header" android:background="@color/contact_header_bg" android:padding="@dimen/x20" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="组织机构" android:layout_below="@id/header_divider" />
+    <View android:id="@id/header_divider_group" android:background="@color/room_gray_20" android:layout_width="fill_parent" android:layout_height="@dimen/x1" android:layout_below="@id/contact_group_header" />
+</LinearLayout>

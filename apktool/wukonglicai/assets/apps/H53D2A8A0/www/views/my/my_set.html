@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/my_set.css" />
+		<script type="text/javascript" src="../../js/rem.js"></script>
+		<script src="../../js/baiduTemplate.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/validatorUtil.js"></script>
+		<script type="text/javascript" src="../../js/fastclick.js"></script>
+		<script type="text/javascript" src="my_set.js"></script>
+		<script type="text/javascript" src='../../js/kefu.js'></script>
+		<title>账户设置</title>
+		<style>
+			.content_wrap .txt2 input {
+				margin: 0 0 0.3rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="clearfix bgcolor_main">
+			<div class="headerback_box">
+				<img src="../../img/header_back.png" />
+			</div>
+			<p>账户设置</p>
+		</header>
+		<section class="section" id="set-cont">
+		</section>
+		<div class="showAlert" style="display: none;">
+			<div class="mask"></div>
+
+			<div class="content_wrap content_wrap1">
+				<span class="add">您的身份认证未通过已满3次，<br>请联系【悟空理财】微信客服进行人工处理</span>
+			</div>
+
+			<div class="content_wrap content_wrap6">
+				<h3>请输入登录密码</h3>
+				<div class="txt2">
+					<input type="password" name="" id="pwd" value="" placeholder="请输入登录密码" />
+					<p id="errorMsg"></p>
+				</div>
+				<div class="btn_box clearfix">
+					<button class="showbtn_2" onclick="closeAlert();">取消</button>
+					<button class="showbtn_3" onclick="checkPassword();">确定</button>
+				</div>
+			</div>
+
+			<div class="content_wrap content_wrap7">
+				<h3>您确定退出当前账户吗？</h3>
+				<div class="btn_box clearfix">
+					<button onclick="closeAlert()">取消</button>
+					<button onclick="logout()">确定</button>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="bottom_btn">
+			<button class="btn_line" onclick="show_box(7);">安全退出</button>
+		</div>
+		<script type="text/html" id="user-setting">
+			<%
+				var userSettingInfo = userData.data.userSettingInfo;
+				// 身份证号
+				var idCard = userSettingInfo.idCardNo;
+				idCard = idCard?(idCard.substr(0, 8) + "******" + idCard.substr(-4)):'';
+				var isReal = userSettingInfo.isReal;
+			%>
+			<ul class="set_list ">
+				<li class=" no_border certified_box">
+					身份认证
+					<%if(userSettingInfo.isReal != "T") {%>
+					<span class="certified" onclick="toIdCard('<%=userSettingInfo%>');">点我认证</span>
+					<%}else {
+					  	if(userSettingInfo.isVerifyIdcard == "S") {
+							idCard+='(未通过)';
+					%>
+					<span class="certified" onclick="toIdCard('<%=userSettingInfo%>');"><%=idCard%></span>
+					<%
+						}else if(userSettingInfo.isVerifyIdcard == "T"){
+					%>
+					<span class="certified unuseable"><%=idCard%></span>
+					<%
+						}	
+						}%>
+				</li>
+			</ul>
+			<ul class="set_list">
+				<li class="no_border no_right">
+					我的邀请码
+					<span class="invitation_code"><%=userSettingInfo.invitecode%></span>
+				</li>
+				<li class=" clearfix style_box">
+					出借风格
+					<%if(userSettingInfo.ristTestingLevel){%>
+					<span class="invest_style" onclick="toRist('<%=userSettingInfo.ristTestingLevel%>');"><%=userSettingInfo.ristTestingLevel%></span>
+					<%}else{%>
+					<span class="invest_style" onclick="toRist('');">去测评</span>
+					<%}%>
+				</li>
+				<%
+					var isshow = currentData.data.isWhitelist;
+					if(isshow === 'T'){
+				%>
+				<li class="" id="dayAccountRisk">
+					日账户投资风格
+					<% 
+						var dayRiskStr = '去测评';
+						if (userSettingInfo.dayAccountRistTestingLevel){
+							dayRiskStr = userSettingInfo.dayAccountRistTestingLevel;
+						}
+					%>
+					<span id="dayAccountRiskLevel" onclick="toDayAccountRisk('<%=userSettingInfo.dayAccountRistTestingLevel%>', '<%=userSettingInfo.dayAccountRistTestingUrl%>');"><%=dayRiskStr%></span>
+				</li>
+				<%}%>
+				<li style="display: none;"></li>
+			</ul>
+			<ul class="set_list">
+				<li class="no_border" id="password" onclick="toAnyPage('resetLoginPassword.html')">修改登录密码</li>
+				<li style="display: none;"></li>					
+			</ul>
+			<%
+				var bankinfo = bankData.data;
+				var lianlianModel = bankinfo.list;
+				if(bankinfo.result === '1' && lianlianModel != null && lianlianModel.length > 0){
+			%>
+			<ul class="set_list set_list2">
+
+				<li id="myBankcard" onclick="toMyBankcard()">
+					银行卡信息
+					<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				</li>
+				<li style="display: none;"></li>
+			</ul>
+			<%}%>
+		</script>
+	</body>
+
+</html>

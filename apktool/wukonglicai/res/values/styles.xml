@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ActionSheetStyleIOS6">
+        <item name="actionSheetBackground">@drawable/dcloud_as_bg_ios6</item>
+        <item name="cancelButtonBackground">@drawable/dcloud_as_cancel_bt_bg</item>
+        <item name="otherButtonTopBackground">@drawable/dcloud_as_other_bt_bg</item>
+        <item name="otherButtonMiddleBackground">@drawable/dcloud_as_other_bt_bg</item>
+        <item name="otherButtonBottomBackground">@drawable/dcloud_as_other_bt_bg</item>
+        <item name="otherButtonSingleBackground">@drawable/dcloud_as_other_bt_bg</item>
+        <item name="cancelButtonTextColor">@android:color/white</item>
+        <item name="otherButtonTextColor">@android:color/black</item>
+        <item name="actionSheetPadding">20.0dip</item>
+        <item name="otherButtonSpacing">5.0dip</item>
+        <item name="cancelButtonMarginTop">20.0dip</item>
+        <item name="actionSheetTextSize">16.0sp</item>
+    </style>
+    <style name="ActionSheetStyleIOS7">
+        <item name="actionSheetBackground">@android:color/transparent</item>
+        <item name="cancelButtonBackground">@drawable/dcloud_slt_as_ios7_cancel_bt</item>
+        <item name="otherButtonTopBackground">@drawable/dcloud_slt_as_ios7_other_bt_top</item>
+        <item name="otherButtonTitleBackground">@drawable/dcloud_slt_as_ios7_other_bt_title</item>
+        <item name="otherButtonMiddleBackground">@drawable/dcloud_slt_as_ios7_other_bt_middle</item>
+        <item name="otherButtonBottomBackground">@drawable/dcloud_slt_as_ios7_other_bt_bottom</item>
+        <item name="otherButtonSingleBackground">@drawable/dcloud_slt_as_ios7_other_bt_single</item>
+        <item name="cancelButtonTextColor">#ff000000</item>
+        <item name="otherButtonTextColor">#ff000000</item>
+        <item name="destructiveButtonTextColor">#ffe8484a</item>
+        <item name="titleButtonTextColor">#ff8c8c8c</item>
+        <item name="actionSheetPadding">10.0dip</item>
+        <item name="otherButtonSpacing">0.0dip</item>
+        <item name="cancelButtonMarginTop">10.0dip</item>
+        <item name="actionSheetTextSize">16.0sp</item>
+    </style>
+    <style name="DCloudTheme" parent="@style/DeviceDefault.Light" />
+    <style name="DeviceDefault" parent="@android:style/Theme.DeviceDefault">
+        <item name="android:windowBackground">@color/ime_background</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <style name="DeviceDefault.Light" parent="@android:style/Theme.DeviceDefault.Light">
+        <item name="android:windowBackground">@color/ime_background</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="NotificationText" parent="@android:style/TextAppearance.StatusBar.EventContent">
+        <item name="android:textSize">13.0dip</item>
+        <item name="android:textColor">#bb000000</item>
+    </style>
+    <style name="NotificationTitle" parent="@android:style/TextAppearance.StatusBar.EventContent.Title">
+        <item name="android:textColor">#bb000000</item>
+    </style>
+    <style name="TranslucentTheme" parent="@android:style/Theme.DeviceDefault.Light">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <style name="dcloud_anim_dialog_window_in_out" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/dcloud_slide_in_from_top</item>
+        <item name="android:windowExitAnimation">@anim/dcloud_slide_out_to_top</item>
+    </style>
+    <style name="dcloud_defalut_dialog">
+        <item name="android:windowBackground">@color/image_pick_title_btn_normal</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:layout_gravity">top</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <style name="featureLossDialog" parent="@android:style/Theme.Holo.Dialog">
+        <item name="android:windowBackground">@color/image_pick_title_btn_normal</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <style name="streamDelete19Dialog" parent="@android:style/Theme.DeviceDefault.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="ysf_dialog_default_style" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowSoftInputMode">adjustResize|stateHidden</item>
+    </style>
+    <style name="ysf_dialog_window_animation_style" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/ysf_dialog_enter_animation</item>
+        <item name="android:windowExitAnimation">@anim/ysf_dialog_exit_animation</item>
+    </style>
+    <style name="ysf_form_dialog_style" parent="@android:style/Theme.Panel">
+        <item name="android:windowAnimationStyle">@style/ysf_dialog_window_animation_style</item>
+    </style>
+    <style name="ysf_horizontal_light_thin_divider">
+        <item name="android:background">@color/ysf_grey_d9d9d9</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1.0dip</item>
+    </style>
+    <style name="ysf_list_view" parent="@android:style/Widget.ListView">
+        <item name="android:scrollbarThumbHorizontal">@drawable/ysf_scrollbar_handle_holo_dark</item>
+        <item name="android:scrollbarThumbVertical">@drawable/ysf_scrollbar_handle_holo_dark</item>
+    </style>
+    <style name="ysf_popup_dialog_style" parent="@style/ysf_dialog_default_style">
+        <item name="android:windowAnimationStyle">@style/ysf_dialog_window_animation_style</item>
+    </style>
+    <style name="ysf_window_theme" parent="@android:style/Theme.NoTitleBar">
+        <item name="android:windowBackground">@color/ysf_window_background</item>
+    </style>
+</resources>

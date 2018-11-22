@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/matrix_room_list_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/search_header_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/x25">
+        <include layout="@layout/search_header_layout" />
+    </FrameLayout>
+    <View android:id="@id/matrix_search_edit_below_line" android:background="@color/core_divider_color" android:layout_width="fill_parent" android:layout_height="@dimen/x1" android:layout_below="@id/search_header_layout" />
+    <ListView android:id="@id/contact_group_list" android:background="@android:color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:divider="@color/room_gray_20" android:dividerHeight="@dimen/x1" android:layout_below="@id/search_header_layout" />
+    <android.support.v7.widget.RecyclerView android:id="@id/contact_group_rv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/matrix_search_edit_below_line" />
+</RelativeLayout>

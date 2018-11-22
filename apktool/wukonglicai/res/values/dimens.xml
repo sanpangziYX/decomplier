@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ysf_action_bar_height">48.0dip</dimen>
+    <dimen name="ysf_avatar_size">50.0dip</dimen>
+    <dimen name="ysf_bottom_component_margin_horizontal">6.0dip</dimen>
+    <dimen name="ysf_bottom_component_margin_vertical">8.0dip</dimen>
+    <dimen name="ysf_bubble_content_max_width">228.0dip</dimen>
+    <dimen name="ysf_bubble_head_margin_horizontal">4.0dip</dimen>
+    <dimen name="ysf_bubble_layout_margin_side">6.0dip</dimen>
+    <dimen name="ysf_bubble_margin_top">2.0dip</dimen>
+    <dimen name="ysf_bubble_max_width">235.0dip</dimen>
+    <dimen name="ysf_bubble_name_layout_margin_bottom">5.0dip</dimen>
+    <dimen name="ysf_bubble_time_layout_margin_bottom">8.0dip</dimen>
+    <dimen name="ysf_bubble_time_layout_margin_top">18.0dip</dimen>
+    <dimen name="ysf_bubble_unread_tip_layout_margin_top">3.0dip</dimen>
+    <dimen name="ysf_button_height">45.0dip</dimen>
+    <dimen name="ysf_button_small_height">35.0dip</dimen>
+    <dimen name="ysf_dialog_radius">2.0dip</dimen>
+    <dimen name="ysf_divider_height">0.5dip</dimen>
+    <dimen name="ysf_input_panel_image_margin_bottom">3.0dip</dimen>
+    <dimen name="ysf_input_panel_image_margin_top">20.0dip</dimen>
+    <dimen name="ysf_input_send_button_corner">5.0dip</dimen>
+    <dimen name="ysf_input_send_button_padding_hor">6.0dip</dimen>
+    <dimen name="ysf_input_send_button_padding_ver">6.0dip</dimen>
+    <dimen name="ysf_message_action_list_height">220.0dip</dimen>
+    <dimen name="ysf_message_input_height">30.0dip</dimen>
+    <dimen name="ysf_message_thumb_corner">3.0dip</dimen>
+    <dimen name="ysf_text_size_10">10.0dip</dimen>
+    <dimen name="ysf_text_size_11">11.0dip</dimen>
+    <dimen name="ysf_text_size_12">12.0dip</dimen>
+    <dimen name="ysf_text_size_13">13.0dip</dimen>
+    <dimen name="ysf_text_size_14">14.0dip</dimen>
+    <dimen name="ysf_text_size_15">15.0dip</dimen>
+    <dimen name="ysf_text_size_16">16.0dip</dimen>
+    <dimen name="ysf_text_size_17">17.0dip</dimen>
+    <dimen name="ysf_text_size_18">18.0dip</dimen>
+    <dimen name="ysf_text_size_19">19.0dip</dimen>
+    <dimen name="ysf_text_size_20">20.0dip</dimen>
+    <dimen name="ysf_text_size_21">21.0dip</dimen>
+    <dimen name="ysf_text_size_22">22.0dip</dimen>
+    <dimen name="ysf_text_size_23">23.0dip</dimen>
+    <dimen name="ysf_text_size_24">24.0dip</dimen>
+    <dimen name="ysf_text_size_9">9.0dip</dimen>
+    <dimen name="ysf_title_bar_height">48.0dip</dimen>
+    <dimen name="ysf_title_bar_icon_size">22.5dip</dimen>
+    <item type="dimen" name="ysf_title_bar_text_size">@dimen/ysf_text_size_18</item>
+</resources>

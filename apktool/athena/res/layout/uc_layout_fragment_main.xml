@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:background="@color/uc_c_F5F5F5" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/rl_uc_instruction" android:background="@color/uc_c_FFFFFF" android:layout_width="fill_parent" android:layout_height="80.0dip" android:layout_marginTop="10.0dip">
+            <android.support.v7.widget.CardView android:id="@id/uc_icon_cv" android:layout_width="62.0dip" android:layout_height="62.0dip" android:layout_marginLeft="15.0dip" app:cardCornerRadius="31.0dip" app:cardElevation="0.0dip">
+                <ImageView android:id="@id/iv_uc_icon" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+            </android.support.v7.widget.CardView>
+            <TextView android:textSize="@dimen/x36" android:textColor="#ff333333" android:id="@id/tv_uc_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginTop="10.0dip" android:layout_toRightOf="@id/uc_icon_cv" />
+            <TextView android:textSize="@dimen/x28" android:id="@id/tv_uc_tag" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginTop="@dimen/x5" android:layout_toRightOf="@id/uc_icon_cv" android:layout_below="@id/tv_uc_name" />
+        </RelativeLayout>
+        <LinearLayout android:id="@id/ll_uc_contacts" android:layout_marginTop="10.0dip" android:layout_below="@id/rl_uc_instruction" style="@style/uc_mine_item_root_ll">
+            <ImageView android:src="@drawable/uc_icon_tongxunlu" style="@style/uc_mine_item_icon" />
+            <TextView android:text="@string/uc_phone_list" style="@style/uc_mine_item_title" />
+            <ImageView android:src="@drawable/uc_next" style="@style/uc_mine_item_icon_2" />
+        </LinearLayout>
+        <View android:id="@id/view_uc_devider_one" android:background="@color/uc_c_EAEAEA" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="15.0dip" android:layout_below="@id/ll_uc_contacts" />
+        <LinearLayout android:id="@id/ll_uc_feedback" android:layout_below="@id/view_uc_devider_one" style="@style/uc_mine_item_root_ll">
+            <ImageView android:src="@drawable/uc_icon_fankui" style="@style/uc_mine_item_icon" />
+            <TextView android:text="@string/uc_feedback" style="@style/uc_mine_item_title" />
+            <ImageView android:src="@drawable/uc_next" style="@style/uc_mine_item_icon_2" />
+        </LinearLayout>
+        <View android:id="@id/view_uc_devider_two" android:background="@color/uc_c_EAEAEA" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="15.0dip" android:layout_below="@id/ll_uc_feedback" />
+        <LinearLayout android:id="@id/ll_uc_about_app" android:layout_below="@id/view_uc_devider_two" style="@style/uc_mine_item_root_ll">
+            <ImageView android:src="@drawable/uc_icon_guanyu" style="@style/uc_mine_item_icon" />
+            <TextView android:text="@string/uc_about_app" style="@style/uc_mine_item_title" />
+            <ImageView android:src="@drawable/uc_next" style="@style/uc_mine_item_icon_2" />
+        </LinearLayout>
+        <View android:id="@id/view_uc_devider_three" android:background="@color/uc_c_EAEAEA" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="15.0dip" android:layout_below="@id/ll_uc_about_app" />
+        <LinearLayout android:id="@id/ll_uc_setting" android:layout_below="@id/view_uc_devider_three" style="@style/uc_mine_item_root_ll">
+            <ImageView android:src="@drawable/uc_icon_shezhi" style="@style/uc_mine_item_icon" />
+            <TextView android:text="@string/uc_setting" style="@style/uc_mine_item_title" />
+            <ImageView android:src="@drawable/uc_next" style="@style/uc_mine_item_icon_2" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

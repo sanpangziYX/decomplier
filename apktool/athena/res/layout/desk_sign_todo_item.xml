@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingRight="@dimen/x16" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/x26" android:textColor="@color/desk_c_FFFFFF" android:orientation="vertical" android:id="@id/desk_todo_item_tv" android:background="@drawable/desk_rb_bg_checked" android:paddingLeft="@dimen/x20" android:paddingTop="@dimen/x10" android:paddingRight="@dimen/x20" android:paddingBottom="@dimen/x10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="下户"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+</FrameLayout>

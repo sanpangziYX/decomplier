@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/voice_dialog_bg" android:padding="10.0dip" android:layout_width="160.0dip" android:layout_height="160.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="50.0sp" android:textColor="@android:color/white" android:id="@id/record_lasttime" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/x110" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/record_voice_layout" android:layout_width="wrap_content" android:layout_height="@dimen/x110">
+        <ImageView android:id="@id/record_voice_left" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/icon_news_huatong" />
+        <ImageView android:id="@id/record_voice_right" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/zeffect_recordbutton_micrphone" />
+    </LinearLayout>
+    <TextView android:textSize="16.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/zeffect_recordbutton_dialog_time_tv" android:visibility="gone" android:layout_width="114.0dip" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="00:00" />
+    <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/zeffect_recordbutton_dialog_title_tv" android:layout_width="114.0dip" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="@string/zeffect_recordbutton_finger_up_to_cancal_send" />
+</LinearLayout>

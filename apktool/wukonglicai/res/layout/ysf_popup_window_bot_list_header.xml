@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/ysf_white" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <TextView android:textSize="@dimen/ysf_text_size_16" android:textColor="@color/ysf_black_222222" android:id="@id/ysf_bot_list_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="请选择你想咨询的订单" android:maxLines="1" android:layout_weight="1.0" />
+        <ImageView android:id="@id/ysf_bot_list_close" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/ysf_ic_bot_close" android:scaleType="centerInside" android:contentDescription="@null" />
+    </LinearLayout>
+    <include layout="@layout/ysf_include_divider" />
+</merge>

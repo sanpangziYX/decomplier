@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<title>更多</title>
+		<script type="text/javascript" src="../../js/rem.js"></script>
+		<link rel="stylesheet" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/more.css" />
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/fastclick.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			var inviteCode;
+			var appUrl = 'https://itunes.apple.com/cn/app/id1188618711';
+			var newversion = "3.1.7";
+			var token;
+			var getMoreInfoUrl = serverurl + "wklc/v1/getMoreInfo.html"
+
+			function doinit() {
+				token = getToken();
+				querydata(getMoreInfoUrl, {
+					platform: "IOS"
+				}, function(data) {
+					console.log("数据返回111111：" + JSON.stringify(data));
+					if(data.code == 200) {
+						if(data.data != null && data.data.appUrl != undefined && data.data.appUrl != "") {
+							appUrl = data.data.appUrl;
+							newversion = data.data.version;
+						}
+					}
+				});
+				if(plus.os.name == 'Android') {
+					var ConfigUtil = plus.android.newObject("com.wukonglicai.app.ConfigUtil");
+					if(ConfigUtil != null) {
+						var versionName = plus.android.invoke(ConfigUtil, "getVersionName");
+						$(".v").html('v' + versionName);
+					}
+				} else {
+					plus.runtime.getProperty(plus.runtime.appid, function(inf) {
+						var wgtVer = inf.version;
+						$(".v").html('v' + wgtVer);
+						console.log("当前应用版本：" + wgtVer);
+					});
+				}
+			}
+
+			function toStore() {
+				if(plus.os.name == 'iOS') {
+					toAppStore();
+				} else {
+					toAndroidMark();
+				}
+			}
+
+			function toAndroidMark() {
+				var ConfigUtil = plus.android.newObject("com.wukonglicai.app.ConfigUtil");
+				if(ConfigUtil != null) {
+					var mark = "";
+					//		            alert("channel==" + plus.android.invoke(ConfigUtil,"mark"))
+					plus.android.invoke(ConfigUtil, "mark");
+				} else {
+					//		            alert("ConfigUtil==null");
+				}
+			}
+
+			function toAppStore() {
+				console.log("1当前页面的url" + window.location.href);
+				window.location.href=appUrl;
+			}
+
+			function gotoEval(url, title) {
+				var token = getToken();
+				if(token.length < 1) {
+					token = '1';
+				}
+				var urlAll = serverMurl + url;
+				console.log(urlAll);
+				openBrowser({
+					title: title,
+					url: urlAll
+				})
+			}
+		</script>
+	</head>
+
+	<body>
+		<header class="clearfix">
+			<div class="headerback_box" keepalive="true">
+				<img src="../../img/header_back.png" />
+			</div>
+			<p>更多</p>
+		</header>
+		<section class="section">
+			<div class="head_box">
+				<img src="../../img/more_head.png" alt="" />
+				<p>悟空理财</p>
+			</div>
+			<ul class="more_list">
+				<li class="clearfix" onclick="gotoEval('weixin/story.html?versionFlag=3.0','悟空故事')">
+					悟空故事
+					<span> </span>
+				</li>
+				<!--<li class="clearfix" onclick="gotoEval('weixin/safe.html?versionFlag=3.0','安全保障')">
+					安全保障
+					<span></span>
+				</li>-->
+				<li class="clearfix" onclick="gotoEval('weixin/questions.html?versionFlag=3.0','常见问题')">
+					常见问题
+					<span></span>
+				</li>
+			</ul>
+			<ul class="more_list">
+				<li class="clearfix" onclick="openPage('wkOnline.html','wkOnline.html',{})">
+					微信客服
+					<span></span>
+				</li>
+				<li class="clearfix" onclick="toStore();">
+					鼓励悟空
+					<span></span>
+				</li>
+				<li class="clearfix">
+					当前版本
+					<span class="v" id="version"></span>
+				</li>
+			</ul>
+			<footer class="foot-cyp">
+				<p>期望回报并非平台承诺收益，市场有风险，投资需谨慎</p>
+			</footer>
+		</section>
+
+	</body>
+
+</html>

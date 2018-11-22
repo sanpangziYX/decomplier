@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/uc_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:sjy="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/view_title_line" android:background="#ffd4d4d4" android:layout_width="fill_parent" android:layout_height="@dimen/x2" />
+    <TextView android:textSize="@dimen/x36" android:textColor="@color/core_text_normal_color" android:gravity="center" android:id="@id/tv_tips_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x100" />
+    <TextView android:textSize="@dimen/x28" android:textColor="@color/core_color_grey" android:gravity="center" android:id="@id/tv_tips_msg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/tv_tips_title" android:layout_alignParentStart="true" />
+    <LinearLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/tv_bottom_tips" android:layout_below="@id/tv_tips_msg">
+        <com.bkjk.core.func_component.Gesturelock.GestureLockViewGroup android:gravity="center_vertical" android:id="@id/id_gestureLockViewGroup" android:background="@color/uc_white" android:layout_width="fill_parent" android:layout_height="fill_parent" sjy:count="3" sjy:tryTimes="5" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/x28" android:textColor="@color/core_color_grey" android:gravity="center" android:id="@id/tv_bottom_tips" android:layout_width="fill_parent" android:layout_height="@dimen/x80" android:layout_marginBottom="@dimen/x60" android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBox android:layout_gravity="center_vertical" android:id="@id/play_pause_checkbox" android:layout_width="30.0dip" android:layout_height="30.0dip" android:checked="true" android:contentDescription="@string/notification_settings_enabled" />
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/delete_imageview" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="10.0dip" android:src="@drawable/notification_delete" android:scaleType="centerCrop" android:contentDescription="@string/delete" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip">
+        <TextView android:textSize="@dimen/abc_text_size_caption_material" android:layout_gravity="center_vertical" android:id="@id/notification_pattern" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="a text here" />
+        <TextView android:textSize="@dimen/abc_text_size_caption_material" android:textStyle="italic" android:id="@id/notification_settings" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="always notified, sound, highlight" />
+    </LinearLayout>
+</LinearLayout>

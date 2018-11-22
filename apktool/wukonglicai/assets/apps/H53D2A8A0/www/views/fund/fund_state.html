@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover" />
+		<script type="text/javascript" src="../../js/headerlib.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/fund.css" />
+		<title>玖富宝转出结果</title>
+	</head>
+
+	<body>
+		<header id="header" class="wk-header wk-header-theme-a">
+			<!--<div class="wk-header-left" id="goback"><img style="width:.22rem;" src="../../img/header_back.png" /></div>-->
+			<h3>转出结果</h3>
+			<div class="wk-header-right green-style" id="backJAct">完成</div>
+		</header>
+		<section class="wk-content pb230" id="wk-content">
+		</section>
+		<script id="templ" type="text/html">
+			<%if (status === "1"){%>
+			<div class="redeem-card">
+				<img src="../../img/fund/icon-process.png" alt="" />
+				<div class="redeem-status">提交成功</div>
+				<div class="redeem-amount">金额 <%=amount%>元</div>
+				<div class="btn-wrap" style="padding-top: .6rem;padding-bottom: .15rem;">
+					<button class="light-btn" id="fetchStatus">获取最新结果</button>
+				</div>
+			</div>
+			<div class="fund-tips">温馨提示：资产交易信息可在玖富宝资金流水页面查看</div>				
+			<%} else {%>	
+			<section class="state-line">
+				<div class="turnout-item green-line">
+					<img src="../../img/fund/result-on.png" alt="" class="point-icon" />
+					<p class="greenline">转出申请已提交，等待银行处理</p>
+					<p class="grayline">转出
+						<%=amount%>元至
+						<%=bankName%>（尾号
+						<%=bankNo%>）</p>
+				</div>
+				<!--<% if (redeemType == '1') {%>
+				<div class="turnout-item">
+					<img src="../../img/fund/invest-off.png" alt="" class="point-icon" />
+					<p class="greenline">09-04仍有收益</p>
+					<p class="grayline">提交申请后，至少还有1天收益</p>
+				</div>
+				<%}%>-->
+				<!-- 普通赎回 -->
+				<% if (redeemType == '1') {%>
+				<div class="turnout-item">
+					<img src="../../img/fund/time-off.png" alt="" class="point-icon" />
+					<p class="greenline">预计
+						<%=arrayDay%>
+						<%=weekDate%>到账</p>
+					<p class="grayline">若遇银行系统维护，到账可能会延迟</p>
+				</div>
+				<!-- 快速赎回 -->
+				<%} else if (redeemType == '0') {%>
+				<div class="turnout-item">
+					<img src="../../img/fund/time-off.png" alt="" class="point-icon" />
+					<p class="greenline">预计2小时内到账</p>
+					<p class="grayline">若遇银行系统维护，到账可能会延迟</p>
+				</div>
+				<%}%>
+
+			</section>
+			<div class="btn-wrap">
+				<button type="button" id="backJAct1">查看我的玖富宝</button>
+			</div>
+			<%}%>
+			<div class="common-tips mt" style="position: fixed;left:0;right:0;bottom:.4rem;color:#cccccc;font-size: .24rem;">
+				预期收益并非平台承诺收益，市场有风险，投资需谨慎
+			</div>
+		</script>
+		<script src="../../js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../../js/baiduTemplate.js"></script>
+		<script src="../../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="fund_state.js" type="text/javascript" charset="utf-8"></script>
+
+	</body>
+
+</html>

@@ -1,0 +1,33 @@
+Manifest-Version: 1.0
+Created-By: 1.6.0_22 (Sun Microsystems Inc.)
+
+Name: res/layout/main.xml
+SHA1-Digest: mNhReeqS1cSfOO6vc9wKHKMezLU=
+
+Name: res/layout/activity_lock.xml
+SHA1-Digest: QAuXk4HY9of/LUIxflcpsipHfoE=
+
+Name: res/drawable-mdpi/ic_action_search.png
+SHA1-Digest: XjltJdEB3tvakTn9CN7KwdaNT68=
+
+Name: assets/pointer.png
+SHA1-Digest: Q9pC6zvl+/udUXM/bcCAqt6XaLw=
+
+Name: AndroidManifest.xml
+SHA1-Digest: 1RUN9WyG7hvCPbYBS+V0h/wbIxw=
+
+Name: res/drawable-mdpi/icon.png
+SHA1-Digest: 7Ft/Rirt+l/JRX2KjDREScdbCZk=
+
+Name: assets/WebElementRecorder.js
+SHA1-Digest: vLowbl1uCy8pUry5KrVFR9UUnbc=
+
+Name: resources.arsc
+SHA1-Digest: LxZXYdQEuijYSNTTfMWkbpyxclM=
+
+Name: classes.dex
+SHA1-Digest: SVYqK/8JWNk8O5cIBfdp0kFedOY=
+
+Name: res/menu/activity_lock.xml
+SHA1-Digest: DA1aSUcMSXvT1EO+0SZ97qpnGfc=
+

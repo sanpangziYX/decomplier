@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/views" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <EditText android:id="@id/editText_username" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/username" android:singleLine="true" />
+        <EditText android:id="@id/editText_password" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/password" android:ems="10" android:singleLine="true" android:inputType="textPassword" />
+        <EditText android:id="@id/editText_hs" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="http://172.29.33.24:8008" android:hint="@string/hs_url" android:singleLine="true" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/search_mask_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignLeft="@id/views" android:layout_alignTop="@id/views" android:layout_alignBottom="@id/views">
+        <View android:background="#aaaaaaaa" android:layout_width="fill_parent" android:layout_height="fill_parent" android:indeterminate="true" />
+        <ProgressBar android:layout_width="60.0dip" android:layout_height="60.0dip" android:indeterminate="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

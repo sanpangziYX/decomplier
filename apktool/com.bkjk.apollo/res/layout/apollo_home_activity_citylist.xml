@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:padding="@dimen/x30" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/apollo_home_current_city" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/apollo_home_change_city_current" />
+        <RadioButton android:background="@drawable/apollo_home_citytext_background" android:paddingLeft="@dimen/x50" android:paddingTop="@dimen/x10" android:paddingRight="@dimen/x50" android:paddingBottom="@dimen/x10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x30" android:button="@null" android:text="北京" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/apollo_home_location_city" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x30" android:layout_below="@id/apollo_home_current_city">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/apollo_home_change_city_location" />
+        <RadioButton android:background="@drawable/apollo_home_citytext_background" android:paddingLeft="@dimen/x50" android:paddingTop="@dimen/x10" android:paddingRight="@dimen/x50" android:paddingBottom="@dimen/x10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x30" android:button="@null" android:text="北京" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/apollo_home_choose_city" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x30" android:layout_below="@id/apollo_home_location_city">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/apollo_home_change_city_choose" />
+        <com.bkjk.core.service_component.widget.FlowLayout android:id="@id/apollo_home_change_city_flowlayout" android:layout_width="fill_parent" android:layout_height="fill_parent" app:lineSpacing="@dimen/x10">
+            <RadioButton android:background="@drawable/apollo_home_citytext_background" android:paddingLeft="@dimen/x50" android:paddingTop="@dimen/x10" android:paddingRight="@dimen/x50" android:paddingBottom="@dimen/x10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x30" android:button="@null" android:text="北京" />
+            <RadioButton android:background="@drawable/apollo_home_citytext_background" android:paddingLeft="@dimen/x50" android:paddingTop="@dimen/x10" android:paddingRight="@dimen/x50" android:paddingBottom="@dimen/x10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x30" android:button="@null" android:text="上海" />
+            <RadioButton android:background="@drawable/apollo_home_citytext_background" android:paddingLeft="@dimen/x50" android:paddingTop="@dimen/x10" android:paddingRight="@dimen/x50" android:paddingBottom="@dimen/x10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x30" android:button="@null" android:text="广州" />
+            <RadioButton android:background="@drawable/apollo_home_citytext_background" android:paddingLeft="@dimen/x50" android:paddingTop="@dimen/x10" android:paddingRight="@dimen/x50" android:paddingBottom="@dimen/x10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x30" android:button="@null" android:text="深圳" />
+            <RadioButton android:background="@drawable/apollo_home_citytext_background" android:paddingLeft="@dimen/x50" android:paddingTop="@dimen/x10" android:paddingRight="@dimen/x50" android:paddingBottom="@dimen/x10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x30" android:button="@null" android:text="深圳" />
+        </com.bkjk.core.service_component.widget.FlowLayout>
+    </LinearLayout>
+</RelativeLayout>

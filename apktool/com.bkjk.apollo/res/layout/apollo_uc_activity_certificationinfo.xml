@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/apollo_uc_c_F7F8FA" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/apollo_uc_certi_info_header_line" android:background="@color/apollo_uc_line_D4D4D4" android:layout_width="fill_parent" android:layout_height="@dimen/x1" />
+    <LinearLayout android:orientation="vertical" android:id="@id/apollo_regist_form_linear" android:background="@color/apollo_uc_c_FFFFFF" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/apollo_uc_certi_info_header_line">
+        <RelativeLayout android:paddingLeft="@dimen/x30" android:layout_width="fill_parent" android:layout_height="@dimen/x130">
+            <TextView android:textSize="@dimen/x28" android:textColor="@color/apollo_uc_c_999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/apollo_uc_certificationinfo_name_title" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/x32" android:textColor="@color/apollo_uc_c_333333" android:textColorHint="@color/apollo_uc_c_999999" android:id="@id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/x30" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <View android:background="@color/apollo_uc_c_999999" android:layout_width="fill_parent" android:layout_height="@dimen/x1" android:layout_alignLeft="@id/apollo_regist_et_shouji" android:layout_alignParentBottom="true" android:alpha="0.2" />
+        </RelativeLayout>
+        <RelativeLayout android:paddingLeft="@dimen/x30" android:layout_width="fill_parent" android:layout_height="@dimen/x130">
+            <TextView android:textSize="@dimen/x28" android:textColor="@color/apollo_uc_c_999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/apollo_uc_certificationinfo_phone_title" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/x32" android:textColor="@color/apollo_uc_c_333333" android:textColorHint="@color/apollo_uc_c_999999" android:id="@id/tv_phone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/x30" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <View android:background="@color/apollo_uc_c_999999" android:layout_width="fill_parent" android:layout_height="@dimen/x1" android:layout_alignLeft="@id/apollo_regist_et_shouji" android:layout_alignParentBottom="true" android:alpha="0.2" />
+        </RelativeLayout>
+        <RelativeLayout android:paddingLeft="@dimen/x30" android:layout_width="fill_parent" android:layout_height="@dimen/x130">
+            <TextView android:textSize="@dimen/x28" android:textColor="@color/apollo_uc_c_999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/apollo_uc_certificationinfo_idcardno_title" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/x32" android:textColor="@color/apollo_uc_c_333333" android:textColorHint="@color/apollo_uc_c_999999" android:id="@id/tv_identify" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/x30" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <View android:background="@color/apollo_uc_c_999999" android:layout_width="fill_parent" android:layout_height="@dimen/x1" android:layout_alignLeft="@id/apollo_regist_et_shouji" android:layout_alignParentBottom="true" android:alpha="0.2" />
+        </RelativeLayout>
+        <RelativeLayout android:paddingLeft="@dimen/x30" android:layout_width="fill_parent" android:layout_height="@dimen/x130">
+            <TextView android:textSize="@dimen/x28" android:textColor="@color/apollo_uc_c_999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/apollo_uc_certificationinfo_bankcard_title" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/x32" android:textColor="@color/apollo_uc_c_333333" android:textColorHint="@color/apollo_uc_c_999999" android:id="@id/tv_cardno" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/x30" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <View android:background="@color/apollo_uc_c_999999" android:layout_width="fill_parent" android:layout_height="@dimen/x1" android:layout_alignLeft="@id/apollo_regist_et_shouji" android:layout_alignParentBottom="true" android:alpha="0.2" />
+        </RelativeLayout>
+        <RelativeLayout android:paddingLeft="@dimen/x30" android:layout_width="fill_parent" android:layout_height="@dimen/x130">
+            <TextView android:textSize="@dimen/x28" android:textColor="@color/apollo_uc_c_999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/apollo_uc_certificationinfo_idcardimg_title" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/x32" android:textColor="@color/apollo_uc_c_59A3FF" android:id="@id/tv_idcard_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/x30" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            <View android:background="@color/apollo_uc_c_999999" android:layout_width="fill_parent" android:layout_height="@dimen/x1" android:layout_alignParentBottom="true" android:alpha="0.2" />
+        </RelativeLayout>
+    </LinearLayout>
+    <include android:visibility="visible" layout="@layout/apollo_uc_no_certification" />
+</RelativeLayout>

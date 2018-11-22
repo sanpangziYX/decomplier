@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<title>订单详情</title>
+		<script type="text/javascript" src="../../js/rem.js" ></script>
+		<link rel="stylesheet" href="../../css/base.css" />
+		<link rel="stylesheet" href="../../css/orderDetail.css" />
+		<link rel="stylesheet" type="text/css" href="../../plugins/layer/layer.css"/>
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/jsrender.min.js"></script>
+		<script src="../../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/fastclick.js"></script>
+		<script type="text/javascript" src="../../js/validatorUtil.js"></script>
+		<script type="text/javascript" src="order_detail.js"></script>
+		<script type="text/javascript" src="../../plugins/layer/layer.js" defer="defer"></script>
+	</head>
+	<body>
+		<header class="bgcolor_main">
+			<div class="headerback_box" keepalive="true">
+				<img src="../../img/header_back.png" />
+			</div>
+			<p>订单详情</p>
+		</header>
+		
+		<section>
+			<div id="container">
+			</div>
+			<div class="foot-cyp">
+				<p>期望回报并非平台承诺收益，市场有风险，投资需谨慎</p>
+			</div>
+			<div class="m-vote" style="display: none;">
+				<a n-vote-link class="border_radius">续投加息+1%</a>
+			</div>
+		</div>
+		</section>
+	</body>
+</html>
+<script id="itemTmpl" type="text/x-jsrender">
+	{{if productCat == 'M'}}
+		{{if shiftType==0}}
+			<div class="m-ord-content">
+				<span class="n-ht"><img src="../../img/od-dtail-ht.png" alt=""></span>
+					<aside class="{{if restDay>0}}m-ord-dtl{{else}}m-ord-dtl n-whitdraw{{/if}}" ><!-- 详情退出状态添加样式 -->
+					<div class="n-titl">
+						{{if restDay>0}}
+						{{else}}
+							<span class="n-remain-days color_gray">已结束</span>
+						{{/if}}
+						<p class="n-t1">{{:productName}}</p>
+						<!--<p class="n-t1-per">第WKYZH18016031801期</p>-->
+					</div>
+					<div class="n-sum-box">
+						<div class="n-s-tz">
+							<p>虚拟本金(元)</p>
+							{{if restDay>0}}
+								<p class="n-sum">{{:investorAmount}}</p>
+							{{else}}
+								<p class="n-sum"><del>{{:investorAmount}}</del></p>
+							{{/if}}
+						</div>
+						<div class="n-s-sy">
+							<p>剩余期望回报(元)</p>
+							<p class="n-sum">{{:currentYields}}</p>
+						</div>
+					</div>
+				</aside>
+				<!-- 轮齿装饰图片-->
+				<div class="n-ordzs">
+					{{if restDay>0}}
+						<img src="../../img/o-d-zsht.png" alt="">
+					{{else}}
+						<img src="../../img/parting_line.png" alt="">
+					{{/if}}
+				</div><!--详情退出状态替换图片为o-d-zsht-no.png-->
+				<!-- /轮齿装饰图片 -->
+				<div class="{{if restDay>0}}m-info-box{{else}}m-info-box m-info-box-b{{/if}}"><!--详情退出状态添加样式 m-info-box-b -->
+					<ul class="m-list">
+						<li>
+							<span >期望年化</span>
+							<p class="long">{{:totalYield}}%{{if extraYields >0}}<em class="n-gray01">(基础{{:baseYields}}%+优惠{{:extraYields}}%)</em>{{/if}}</p>
+						</li>
+						<li>
+							<span>计息天数</span>
+							<p>{{:closurePeriod}}天</p>
+						</li>
+					</ul>
+					<ul class="m-list">
+						<li>
+							<span>出借时间</span>
+							<p>{{:investTime}}</p>
+						</li>
+						<li>
+							<span>计息日</span>
+							<p>{{:interestTime}}</p>
+						</li>
+						<li>
+							<span>结束日</span>
+							<p>{{:endTime}}</p>
+						</li>
+					</ul>
+					
+					<ul class="m-list">
+						<li>
+							<span>虚拟本金来源</span>
+							<p>{{:fromType}}</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		{{else}}
+			<div class="m-ord-content">
+				<span class="n-ht"><img src="../../img/od-dtail-ht.png" alt=""></span>
+					<aside class="m-ord-dtl" ><!-- 详情退出状态添加样式 -->
+					<div class="n-titl">
+						<p class="n-t1">{{:productName}}</p>
+						<!--<p class="n-t1-per">第WKYZH18016031801期</p>-->
+					</div>
+					<div class="n-sum-box">
+						<div class="n-s-tz">
+							<p>自有本金(元)</p>
+							<p class="n-sum">{{:investorAmount}}</p>
+						</div>
+						<div class="n-s-sy">
+							<p>剩余期望回报(元)</p>
+							<p class="n-sum">{{:currentYields}}</p>
+						</div>
+					</div>
+				</aside>
+				<!-- 轮齿装饰图片-->
+				<div class="n-ordzs">
+					<img src="../../img/o-d-zsht.png" alt="">
+				</div><!--详情退出状态替换图片为o-d-zsht-no.png-->
+				<!-- /轮齿装饰图片 -->
+				<div class="m-info-box"><!--详情退出状态添加样式 m-info-box-b -->
+					<ul class="m-list">
+						<li>
+							<span >期望年化</span>
+							<p class="long">{{:totalYield}}%{{if extraYields >0}}<em class="n-gray01">(基础{{:baseYields}}%+优惠{{:extraYields}}%)</em>{{/if}}</p>
+						</li>
+						{{if participationActivities != 'F'}}
+							<li>
+								<span>参与活动</span>
+								<p>{{:participationActivities}}</p>
+							</li>
+						{{/if}}
+						{{if extraYields >0}}
+							<li>
+								<span>优惠补贴</span>
+								<p><span class="n-per-statu">特权＋{{:extraYields}}%</span></p>
+							</li>
+						{{/if}}
+					</ul>
+					<ul class="m-list">
+						<li>
+							<span>出借时间</span>
+							<p>{{:investTime}}</p>
+						</li>
+						<li>
+							<span>计息日</span>
+							<p>{{:interestTime}}</p>
+						</li>
+					</ul>
+					
+					<ul class="m-list">
+						<li>
+							<span>订单来源</span>
+							<p>{{:openSource}}</p>
+						</li>
+						<li>
+							<span>订单编号</span>
+							<p>{{:investNo}}</p>
+						</li>
+					{{if shiftType == 1}}
+						<li>
+							<span>债权信息</span>
+							<p><a href="#" class="n-link" onclick="showZP('{{:investNo}}')">查看<em><img src="../../img/ico-tz-r.png" alt=""></em></a></p>
+						</li>
+					{{/if}}
+					</ul>
+				</div>
+			</div>
+		{{/if}}
+	{{else}}
+		<div class="m-ord-content">
+			<span class="n-ht"><img src="../../img/od-dtail-ht.png" alt=""></span>
+				{{if restDay >=0}}
+				<div class="m-ord-dtl"><!-- 详情退出状态添加样式 n-whitdraw-->
+					<div class="n-titl">
+					<span class="n-remain-days">剩余{{:restDay}}天</span>
+					<p class="n-t1">{{:productName}}</p>
+					<!--<p class="n-t1-per">第WKYZH18016031801期</p>-->
+				</div>
+				<div class="n-sum-box">
+					<div class="n-s-tz">
+						<p>出借金额(元)</p>
+						<p class="n-sum">{{:investorAmount}}</p>
+					</div>
+					<div class="n-s-sy">
+						<p>{{if productCat == 'M'}}剩余期望回报(元){{else}}累计期望回报(元){{/if}}</p>
+						<p class="n-sum">{{:currentYields}}</p>
+					</div>
+				</div>
+			</div>
+			<!-- 轮齿装饰图片-->
+			<div class="n-ordzs"><img src="../../img/o-d-zsht.png" alt=""></div><!--详情退出状态替换图片为o-d-zsht-no.png-->
+			<!-- /轮齿装饰图片 -->
+			{{else}}
+			<div class="m-ord-dtl bg_gray"><!-- 详情退出状态添加样式 n-whitdraw-->
+				<div class="n-titl">
+					<span class="n-remain-days color_gray">已退出</span>
+					<p class="n-t1">{{:productName}}</p>
+				</div>
+				<div class="n-sum-box">
+					<div class="n-s-tz bg_fff">
+						<p class="color_fff">出借金额(元)</p>
+						<p class="n-sum">{{:investorAmount}}</p>
+					</div>
+					<div class="n-s-sy">
+						<p class="color_fff">{{if productCat == 'M'}}剩余期望回报(元){{else}}累计期望回报(元){{/if}}</p>
+						<p class="n-sum">{{:currentYields}}</p>
+					</div>
+				</div>
+			</div>
+			<!-- 轮齿装饰图片-->
+			<div class="n-ordzs"><img src="../../img/o-d-zshtg.png" alt=""></div><!--详情退出状态替换图片为o-d-zsht-no.png-->
+			<!-- /轮齿装饰图片 -->
+			{{/if}}
+			<div class="m-info-box"><!--详情退出状态添加样式 m-info-box-b -->
+				<ul class="m-list">
+					<li>
+						<span style="width:2rem;">期望年化</span>
+						<p class="long">{{:totalYield}}%{{if extraYields >0}}<em class="n-gray01">(基础{{:baseYields}}%+优惠{{:extraYields}}%)</em>{{/if}}</p>
+					</li>
+					<li>
+						<span>封闭期</span>
+						<p>{{:closurePeriod}}天</p>
+					</li>
+					{{if participationActivities != 'F'}}
+						<li>
+							<span>参与活动</span>
+							<p>{{:participationActivities}}</p>
+						</li>
+					{{/if}}
+					{{if extraYields >0}}
+						<li>
+							<span>优惠补贴</span>
+							{{if parentId == null}}
+								<p><span class="n-per-statu">加息＋{{:extraYields}}%</span></p>
+							{{else}}
+								<p><span class="n-per-statu">续投加息＋{{:extraYields}}%</span></p>
+							{{/if}}
+						</li>
+					{{/if}}
+					{{if discountAmount >0}}
+						<li>
+							<span>优惠补贴</span>
+							<p><span class="n-per-statu">满{{:conditionAmount}}减{{:discountAmount}}</span></p>
+						</li>
+					{{/if}}
+				</ul>
+				
+				<ul class="m-list">
+					<li>
+						<span>出借时间</span>
+						<p>{{:investTime}}</p>
+					</li>
+					<li>
+						<span>计息日</span>
+						<p>{{:interestTime}}</p>
+					</li>
+					<li>
+						<span>到期日<em onclick="duePrompt()"><img src="../../img/icon-i2.png" alt=""></em></span>
+						<p>{{:endTime}}</p>
+					</li>
+					<!--<li>
+						<span>预计到账日</span>
+						<p>2017-03-29</p>
+					</li>-->
+				</ul>
+				
+				<ul class="m-list">
+					{{if restDay > 0}}
+						<li>
+							<span>到期处理方式</span>
+							{{if restWorkDay > 5 }}
+								<p><a onclick="orderContinue('{{:investNo}}')" class="n-link">{{if continueStatus=='bjxt'}}本金续投{{else  continueStatus=='bxxt'}}本息续投{{else continueStatus=='dqtc'}}到期转让{{else continueStatus.substr(0,2)=='BX'}}本息续投{{else continueStatus.substr(0,2)=='BJ'}}本金续投{{else}}到期转让{{/if}}<em><img src="../../img/ico-tz-r.png" alt=""></em></a></p>
+							{{else}}
+								<p><a class="n-link-gray">{{if continueStatus=='bjxt'}}本金续投{{else  continueStatus=='bxxt'}}本息续投{{else continueStatus=='dqtc'}}到期转让{{else continueStatus.substr(0,2)=='BX'}}本息续投{{else continueStatus.substr(0,2)=='BJ'}}本金续投{{else}}到期转让{{/if}}</a></p>
+							{{/if}}
+						</li>
+						<li>
+							<span>订单来源</span>
+							<p>{{:openSource}}</p>
+						</li>
+						<li>
+							<span>订单编号</span>
+							<p>{{:investNo}}</p>
+						</li>
+						{{if shiftType ==1}}
+						<li>
+							<span>债权信息</span>
+							<p><a href="#" class="n-link" onclick="showZP('{{:investNo}}')">查看<em><img src="../../img/ico-tz-r.png" alt=""></em></a></p>
+						</li>
+						{{/if}}
+					{{else}}
+						<li>
+							<span>到期处理方式</span>
+							<p><a href="#" class="n-link-gray">{{if continueStatus=='bjxt'}}本金续投{{else  continueStatus=='bxxt'}}本息续投{{else continueStatus=='dqtc'}}到期转让{{else continueStatus.substr(0,2)=='BX'}}本息续投{{else continueStatus.substr(0,2)=='BJ'}}本金续投{{else}}到期转让{{/if}}</a></p>
+						</li>
+						<li>
+							<span>订单来源</span>
+							<p>{{:openSource}}</p>
+						</li>
+						<li>
+							<span>订单编号</span>
+							<p>{{:investNo}}</p>
+						</li>
+					{{/if}}
+				</ul>
+			</div>
+		</div>
+	{{/if}}
+</script>
+
+<!--钱包订单的模版-->
+<script id="itemTmplQB" type="text/x-jsrender">
+	<div class="m-ord-content">
+		<span class="n-ht"><img src="../../img/od-dtail-ht.png" alt=""></span>
+		{{if restDay >0}}
+		<div class="m-ord-dtl"><!-- 详情退出状态添加样式 n-whitdraw-->
+			<div class="n-titl">
+			<span class="n-remain-days">剩余{{:restDay}}天</span>
+			<p class="n-t1">{{:productName}}</p>
+			<!--<p class="n-t1-per">第WKYZH18016031801期</p>-->
+		</div>
+		<div class="n-sum-box">
+			<div class="n-s-tz">
+				<p>出借金额(元)</p>
+				<p class="n-sum">{{:amount}}</p>
+			</div>
+			<div class="n-s-sy">
+				<p>{{if productCat == 'M'}}剩余期望回报(元){{else}}累计期望回报(元){{/if}}</p>
+				<p class="n-sum">{{:restProfit}}</p>
+			</div>
+		</div>
+		</div>
+		<!-- 轮齿装饰图片-->
+		<div class="n-ordzs"><img src="../../img/o-d-zsht.png" alt=""></div><!--详情退出状态替换图片为o-d-zsht-no.png-->
+		<!-- /轮齿装饰图片 -->
+		{{else}}
+		<div class="m-ord-dtl bg_gray"><!-- 详情退出状态添加样式 n-whitdraw-->
+			<div class="n-titl">
+				<span class="n-remain-days color_gray">已退出</span>
+				<p class="n-t1">{{:productName}}</p>
+			</div>
+			<div class="n-sum-box">
+				<div class="n-s-tz bg_fff">
+					<p class="color_fff">出借金额(元)</p>
+					<p class="n-sum">{{:amount}}</p>
+				</div>
+				<div class="n-s-sy">
+					<p class="color_fff">{{if productCat == 'M'}}剩余期望回报(元){{else}}累计期望回报(元){{/if}}</p>
+					<p class="n-sum">{{:currentYields}}</p>
+				</div>
+			</div>
+		</div>
+		<!-- 轮齿装饰图片-->
+		<div class="n-ordzs"><img src="../../img/o-d-zshtg.png" alt=""></div><!--详情退出状态替换图片为o-d-zsht-no.png-->
+		<!-- /轮齿装饰图片 -->
+		{{/if}}
+		<div class="m-info-box"><!--详情退出状态添加样式 m-info-box-b -->
+			<ul class="m-list">
+				<li>
+					<span>期望年化</span>
+					<p class="long">{{:totalYield}}%{{if extraYields >0}}<em class="n-gray01">(基础{{:baseYields}}%+优惠{{:extraYields}}%)</em>{{/if}}</p>
+				</li>
+				<li>
+					<span>封闭期</span>
+					<p>{{:closurePeriod}}天</p>
+				</li>
+				{{if extraYields >0}}
+					<li>
+						<span>优惠补贴</span>
+						<p><span class="n-per-statu">加息＋{{:extraYields}}%</span></p>
+					</li>
+				{{/if}}
+			</ul>
+			
+			<ul class="m-list">
+				<li >
+					<div>出借时间</div>
+					<p>{{:investTime}}</p>
+				</li>
+				<li>
+					<span>计息日</span>
+					<p>{{:interestTime}}</p>
+				</li>
+				<li>
+					<span>到期日<em onclick="duePrompt()"><img src="../../img/icon-i2.png" alt=""></em></span>
+					<p>{{:endTime}}</p>
+				</li>
+				<!--<li>
+					<span>预计到账日</span>
+					<p>2017-03-29</p>
+				</li>-->
+			</ul>
+			
+			<ul class="m-list">
+					<li>
+						<span>订单来源</span>
+						<p>{{:openSource}}</p>
+					</li>
+					<li>
+						<span>订单编号</span>
+						<p>{{:investNo}}</p>
+					</li>
+					<li>
+						<span>债权信息</span>
+						<p>请前往玖富金融进行查看</p>
+					</li>					
+
+
+			</ul>
+		</div>
+	</div>
+</script>
+<div class="showAlert" style="display: none;">
+			<div class="mask"></div>
+			<!--<div class="content_wrap content_wrap1">
+				<span class="add"></span>
+			</div>-->
+			<div class="content_wrap content_wrap5">
+				<div class="txt">
+					本次指定到账日：<i></i><br /> 下次可指定到账月份：
+					<i class="red"></i>
+				</div>
+				<div class="btn_box clearfix">
+					<button class="showbtn_2" onclick="closeAlert();">修改</button>
+					<button class="showbtn_3" onclick="redeemsubmit();">确定</button>
+				</div>
+			</div>
+		</div>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<title>银行卡信息</title>
+		<script type="text/javascript" src="../../js/rem.js" ></script>
+		<link rel="stylesheet" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/register.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/user_id.css"/>
+		<link rel="stylesheet" type="text/css" href="../../plugins/layer/layer.css"/>
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../plugins/layer/layer.js" defer="defer"></script>
+		<script type="text/javascript" src="../../plugins/jsrender.min.js" ></script>
+		<script type="text/javascript" src="../../js/fastclick.js"></script>
+		<script type="text/javascript" src="../../js/validatorUtil.js"></script>
+		<script type="text/javascript" src="../../js/jsAddress.js"></script>
+		<script type="text/javascript" src="bankcard_info.js"></script>
+	</head>
+	<body>
+		<header class="bgcolor_main">
+			<div class="headerback_box" keepalive="true">
+				<img src="../../img/header_back.png" />
+			</div>
+			<p>银行卡信息</p>
+		</header>
+		<section class="section">
+			<form action="" method="" onsubmit="return false">
+				<ul class="register_list clearfix">
+					<li>
+						<input type="text" name="bankName" id="bankName" value="" placeholder="请输入银行名称" maxlength="22" readonly="readonly"/>
+					</li>
+					<li>
+						<input type="text" name="bankNo" id="bankNo" value="" placeholder="请输入银行卡号" maxlength="22" readonly="readonly"/>
+						<div class="delete_ipt fr">
+							<img src="../../img/delete.png"/>
+						</div>
+					</li>
+					<div id = "branchInfo">
+						<!--<li class="top_38 sele">
+							<span>开户行所在省份</span>
+							<select class="option" name="province" id="province">请选择</select>
+						</li>
+						<li class="top_38 sele option_sele2">
+							<span>开户行所在城市</span>
+							<select class="option" name="city"  id="city">请选择</select>
+						</li>
+						<li class="top_38 sele option_sele2">
+							<span>开户行所在城市</span>
+							<select class="option" name="qu" id="qu_1">请选择</select>
+						</li>
+						
+						<li class="top_38 sele s_ipt">
+							<span>开户行支行名称</span>
+							<input type="text" class="option" name="" id="" value="" placeholder="请务必准确填写" />
+						</li>-->
+					</div>
+				</ul>
+			</form>
+			<div class="bank_tips">
+				<!--<p>*点击拨打<span class="color_red">95533</span>自助查询</p>-->
+				<p>*温馨提示：支行名称不准确，将导致您的资金无法到账</p>
+			</div>
+			<button class="register_btn" onclick="btoclick()">确认</button>
+			<footer class="foot-cyp">
+				<p>期望回报并非平台承诺收益，市场有风险，投资需谨慎</p>
+			</footer>
+		</section>
+		
+		<div class="showAlert">
+			<div class="mask"></div>
+
+			<div class="content_wrap content_wrap1">
+				<span class="add"></span>
+			</div>
+		</div>
+		
+	</body>
+</html>
+<script type="text/x-jsrender" id="hasCardNoBranch">
+	<li class="top_38 sele">
+		<span>开户行所在省份</span>
+		<select class="option" name="province" id="province">请选择</select>
+	</li>
+	
+	<li class="sele option_sele2">
+		<span>开户行所在城市</span>
+		<select class="option" name="city"  id="city">请选择</select>
+	</li>
+	
+	<li class="sele option_sele2" style="display: none;">
+		<span>开户行所在城市</span>
+		<select class="option" name="qu" id="qu_1">请选择</select>
+	</li>
+	
+	<li class="sele s_ipt">
+		<span>开户行支行名称</span>
+		<input type="text" class="option" id="branch" name="branch" value="" placeholder="请务必准确填写" value = ""/>
+	</li>
+</script>

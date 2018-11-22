@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/im_picture" android:padding="@dimen/x10" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <FrameLayout android:id="@id/desk_reload_pic_fl" android:padding="@dimen/x10" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/desk_c_50000000" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_width="@dimen/x52" android:layout_height="@dimen/x52" android:src="@drawable/desk_icon_photo_warming" />
+            <TextView android:textSize="@dimen/x24" android:textColor="@color/desk_c_FFFFFF" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/x10" android:text="请重新上传" android:maxLines="1" />
+        </LinearLayout>
+    </FrameLayout>
+    <ImageView android:layout_gravity="right" android:id="@id/desk_del_pic_iv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/desk_icon_del_pic" />
+</FrameLayout>

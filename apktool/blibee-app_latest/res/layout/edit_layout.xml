@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/edit_bg_shape" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:textSize="20.0sp" android:id="@id/dropview_edit" android:background="@null" android:layout_width="0.0dip" android:layout_height="wrap_content" android:height="40.0dip" android:layout_weight="1.0" android:inputType="textEmailAddress" style="?android:attr/textViewStyle" />
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/dropview_image" android:paddingRight="2.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip" android:scaleType="fitXY" />
+</LinearLayout>

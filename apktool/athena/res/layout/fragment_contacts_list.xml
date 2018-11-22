@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/room_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <EditText android:id="@id/editText_contactBox" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="Search contact here..." />
+    </LinearLayout>
+    <ListView android:id="@id/listView_contacts" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

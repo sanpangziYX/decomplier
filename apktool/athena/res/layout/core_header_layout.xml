@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/core_header_container" android:layout_width="fill_parent" android:layout_height="@dimen/core_base_head_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/core_left_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/core_base_margin" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+        <ImageView android:id="@id/core_header_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerInside" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/core_title_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <TextView android:gravity="center" android:id="@id/core_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/core_right_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/core_base_margin" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <ImageView android:id="@id/core_header_action" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerInside" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/my_rights.css"/>
+		
+		<script type="text/javascript" src="../js/rem.js"></script>
+	</head>
+	<body>
+		<header class="clearfix bgcolor_main" id = "header">
+			<div class="headerback_box" >
+				<img src="../img/header_back.png" />
+			</div>
+			<p id="title">连连支付
+			</p>
+		</header>
+	</body>
+</html>
+<script type="text/javascript" src="../js/zepto.min.js"></script>
+<script>
+	$(".headerback_box").click(function() {
+		plus.webview.currentWebview().parent().evalJS("doclearAndGoBack()");
+	});
+	function setTitle(title){
+		if(!title) return ;
+		$("#title").html(title);
+	}
+
+	document.addEventListener("plusready",function(){
+		plus.key.addEventListener('backbutton', function(e) {
+			return false;
+		});
+	})
+</script>

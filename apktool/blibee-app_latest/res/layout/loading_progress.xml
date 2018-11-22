@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:textSize="13.0sp" android:textColor="#ffff5200" android:id="@id/icon" android:background="@drawable/progress_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0%" />
+    <ProgressBar android:layout_gravity="center" android:id="@id/progressbar" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_marginLeft="60.0dip" android:layout_marginTop="1.0dip" android:layout_marginRight="60.0dip" android:maxHeight="48.0dip" android:max="100" android:progress="0" android:minHeight="48.0dip" style="@style/mProgress_horizontal" />
+    <TextView android:textSize="15.0sp" android:textColor="@color/color1" android:layout_gravity="center" android:id="@id/update_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="累了么？来个焦糖布丁配拿铁" />
+</LinearLayout>

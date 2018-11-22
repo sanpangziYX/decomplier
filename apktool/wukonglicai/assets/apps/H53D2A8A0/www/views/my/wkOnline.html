@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/wkOnline.css"/>
+		<script type="text/javascript" src="../../js/rem.js"></script>
+		<script type="text/javascript" src="../../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/fastclick.js"></script>
+		<script type="text/javascript" src="../../../js/click.js"></script>
+		<script>
+			function lanuchWeixin(){
+		    	
+				if(plus.runtime.isApplicationExist({pname:'com.tencent.mm',action:'weixin://'})){
+					
+				}else{
+					plus.nativeUI.toast( "未检测到微信应用~" );
+					return;
+				}
+				
+				if ( plus.os.name == "Android" ) {
+					plus.runtime.launchApplication( {pname:"com.tencent.mm"}, function ( e ) {
+						console.log(e.message);
+					} );
+				} else if ( plus.os.name == "iOS" ) {
+					plus.runtime.launchApplication( {action:"weixin://"}, function ( e ) {
+		    			console.log(e.message);
+					} );
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<header class="clearfix">
+			<div class="headerback_box" keepalive="true">
+				<img src="../../img/header_back.png" />
+			</div>
+			<p>在线客服</p>
+		</header>
+		<section class="section">
+			<div class="wkonline_tips">
+				打开微信后
+				<p>关注<span>"悟空理财"</span>微信公众号，直接联系微信客服~</p>
+			</div>
+			
+			<img src="../../img/wkOnline.jpg" alt="" class="wkonline_pic"/>
+			
+			<button class="wkonline_btn" onclick="lanuchWeixin();">打开微信</button>
+			
+			<div class="foot-cyp">
+				<p>期望回报并非平台承诺收益，市场有风险，投资需谨慎</p>
+			</div>
+		</section>
+	</body>
+
+</html>
